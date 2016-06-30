@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:lastBlockDepth="4" MadCap:lastHeight="730" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Using Double-Click Actions</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Using Double-Click Actions" />
+            <MadCap:keyword term="Double-click Actions" />Using Double-Click Actions</h1>
+        <p class="floatright">
+            <img src="../Resources/images/doubleclickmenu.png" style="border-style: none;" border="0" />
+        </p>
+        <p>InterMapper defines <i>Double-click Actions</i> that it will perform when
+ a device is double-clicked. Many probes have a pre-defined double-click 
+ action, but this can be overridden.</p>
+        <p>To change a double-click action, right-click on the device, and select 
+ the proper choice from the sub-menu:</p>
+        <h2>
+            <MadCap:keyword term="Helper App" />Helper App</h2>
+        <p class="floatright">
+            <img src="../Resources/Images/DoubleClick-HelperApp.png" />
+        </p>
+        <p>Double-clicking will invoke a specified <a href="helperapps.html">helper application<MadCap:xref href="helperapps.html" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>. This helper application runs on the same machine 
+		 as the InterMapper client. Select the helper application from the current 
+		 list of helpers. 
+</p>
+        <h2>
+            <MadCap:keyword term="Enter:URL" />
+            <MadCap:keyword term="URL" />URL </h2>
+        <p class="floatright">
+            <img src="../Resources/Images/DoubleClick-URL1.png" />
+        </p>
+        <p>
+            <MadCap:keyword term="Enter" />
+            <MadCap:keyword term="URL:Enter" />
+            <MadCap:keyword term="Telnet" />
+            <MadCap:keyword term="FTP" />You may supply a URL (http, ftp, telnet, etc.) and InterMapper will 
+			invoke it when the device is double-clicked. Enter a URL to be invoked 
+			when the device is double-clicked. You may use the following macros: 
+		${address}, ${port}. </p>
+        <p>Enter a URL you want to use when the icon double-clicked. The default browser is launched with the specified URL.
+		</p>
+        <h3 class="pagebreakbefore">Opening an InterMapper map</h3>
+        <p>To open another InterMapper map, use this URL format:</p><pre class="code">intermapper://Host:Port/MapName</pre>
+        <ul>
+            <li><b>Host</b> is the address or DNS name of the InterMapper server hosting the map . Use $SAMEHOST$ to get to a map on the same InterMapper server.</li>
+            <li><b>Port</b> is the port for the specified InterMapper server</li>
+            <li><b>MapName</b> is the name of the map, URL-escaped (%20 for a space, %3D for a slash,etc)</li>
+        </ul>
+        <p><b>Example</b>
+        </p>
+        <p>The Example.com demonstration submaps have links back to the Example.com parent map that look like this:</p><pre class="code">intermapper://$SAMEHOST$:8181/Example.com%20National%20Map</pre>
+        <h2>
+            <MadCap:keyword term="Built In" />Built In</h2>
+        <p class="floatright">
+            <img src="../Resources/Images/DoubleClick-BuiltIn1.png" />
+        </p>
+        <p>InterMapper can invoke nearly any of the menu commands as a result 
+			of a double-click. Select the desired item from the hierarchy of menu 
+			items. 
+		</p>
+    </body>
+</html>

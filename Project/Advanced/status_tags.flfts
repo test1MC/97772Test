@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileTagSet
+  Type="Status"
+  Comment="My set of status tags">
+  <FileTag
+    Name="In Progress"
+    Comment="" />
+  <FileTag
+    Name="Done"
+    Comment="" />
+  <FileTag
+    Name="Under Review"
+    Comment="" />
+  <FileTag
+    Name="Not Started"
+    Comment="" />
+  <FileTag
+    Name="No Changes"
+    Comment="" />
+</CatapultFileTagSet>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="1189" MadCap:lastWidth="599" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Play With the Demo</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Edit menu" />
+            <MadCap:keyword term="Demo" />
+            <MadCap:keyword term="Demo:Try out" />Try out the Demo Maps</h1>
+        <p>
+            <MadCap:keyword term="Demo:Demo Map file" />
+            <MadCap:keyword term="Demo:Demo Map file:open" />The first time InterMapper launches, it will open a Demo Map file that 
+ shows simulated network activity: outages, high traffic, and other problems 
+ that you'd see in a real network. (Although not as frequently, we hope...) 
+ </p>
+        <p>The image below shows a portion of an example map with a number of devices 
+ (rectangles) connected by various kinds of links (lines). </p>
+        <p>
+            <img src="../Resources/Images/DemoMap2.png" style="width: 580px;height: 381px;" />
+        </p>
+        <p>Here are some tips 
+ to help you understand the various items on the map:</p>
+        <ul>
+            <li>Devices are displayed in <b>green</b> to indicate that the 
+ device is up and running. </li>
+            <li>Devices that are down <b>blink red</b> when InterMapper 
+ cannot communicate with them. </li>
+            <li><b style="font-weight: bold;">Click and hold</b> a device 
+ to see a status window of detailed information and outage history, or <b>Right/Ctrl-click</b> it and choose <b style="font-style: italic;">Status Window</b> from the dropdown menu.</li>
+            <li>You can <b>tear off</b> these status windows to keep them 
+ open by dragging the mouse outside their boundary. </li>
+            <li>You'll hear <b>sounds</b><MadCap:keyword term="E-mail" /> to indicate that there have been 
+ failures. (InterMapper can send e-mail or pages, too!) To silence these 
+ alarms, choose      <b><MadCap:keyword term="Suspend Sounds" />Preferences...</b> from the      <b>Edit</b> menu, click the <b style="font-style: italic;">Sounds</b> subcategory of the <b style="font-style: italic;">Behavior</b> category and clear the <b style="font-style: italic;">Play sound notifications</b> check box.</li>
+            <li>Lines (<i>links</i>) show      <b>dotted lines</b> (<i>ants</i>) <MadCap:keyword term="ants" />when traffic exceeds a threshold </li>
+            <li>Links get a <b>yellow or orange background</b> when traffic 
+ exceeds 50% or 90%, respectively. </li>
+            <li><b style="font-weight: bold;">Circles at the ends of links</b> 
+      (they look like raindrops in puddles) indicate errors that have been detected 
+ by the interface. </li>
+            <li><b>Circles close to the device</b> indicate receive errors.</li>
+            <li><b> Circles close to the network</b> indicate transmit errors. </li>
+            <li><b style="font-weight: bold;">Click and hold on a link</b>
+                <MadCap:keyword term="Port/interface" /> 
+      to see a status window of port/interface information and traffic statistics, or <b>Right/Ctrl-click</b> it and choose <b style="font-style: italic;">Status Window</b> from the dropdown menu.
+    </li>
+        </ul>
+        <p>In addition, there are other things you may note on the map as it operates:</p>
+        <ul>
+            <li>Some devices become dim from time to time. That's because 
+ they're being <i>shadowed</i> by another failure on the map. We also say 
+ that those shadowed devices      <i>depend</i> on all the devices on the path 
+ to it. InterMapper can automatically detect this state and will avoid notifying 
+ the network manager about outages if the dependent devices are unreachable 
+ because of the other failure. </li>
+            <li>On several of the demo maps, a star appears on a device. That means that it's the <i><MadCap:keyword term="Vantage Point" />Vantage Point</i> for "shadowing". 
+ InterMapper will suppress notifications for a device if it's not possible 
+ to reach the device from the Vantage Point without going through a failed 
+ device. (It's in the "shadow" of a failed device.")</li>
+        </ul>
+    </body>
+</html>

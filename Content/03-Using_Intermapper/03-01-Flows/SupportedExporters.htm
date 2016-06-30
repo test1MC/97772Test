@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="492" MadCap:lastWidth="956" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Supported Exporters</h1>
+        <p><b>NetFlow:</b> InterMapper Flows handles NetFlow v1, v5, v7, and v9 exports from routers and switches from Cisco and other NetFlow-compatible vendors as well as a number of software exporters. </p>
+        <p><b>sFlow:</b> InterMapper Flows handles sFlow versions  2, 4, and 5, including MIB Enterprise numbers 4300 and 14706 from  equipment from HP, Extreme, Foundry, Force10, and others.</p>
+        <p><b>J-Flow, CFlow:</b> Identical to NetFlow v5, implemented by different vendors. The NetVlow v5 icon appears when using these exporters </p>
+        <h2>Using InterMapper Flows with sFlow</h2>
+        <p>sFlow provides information about the traffic  through the network, including the sender and recipient of the traffic flows and the protocols used.</p>
+        <p>To configure InterMapper Flows to receive the sFlow data, you must first  enable sFlow export on the router or switch. Most modern gear uses SNMP to  enable/disable sFlow export, as described in the <a href="http://sflow.org/sflow_version_5.txt">sFlow specification</a>.</p>
+        <p>InterMapper Flows lets you specify the exporter(s) that should send data. </p>
+        <p><b>To add an sFlow exporter:</b>
+        </p>
+        <ol>
+            <li>
+                <p>Open the Flows Settings window, and click the Exporters tab.</p>
+            </li>
+            <li>
+                <p>Set the sFlow port (default is 6343) at the bottom of the window. </p>
+            </li>
+            <li>
+                <p>Click the <strong>Add sFlow exporter</strong> button. The Enter  sFlow Information window appears. </p>
+            </li>
+            <li>Enter the IP address of the exporter, the SNMP  read/write community string, choose the IP address for the collector, choose a sampling rate, and click OK. InterMapper Flows configures the selected exporter (via SNMP) to send  sFlow records to the specified collector. The exporter  appears in the Exporters list in a few moments.</li>
+        </ol>
+        <p>
+        </p>
+    </body>
+</html>

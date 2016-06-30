@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="828" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Layer 2 Features</h1>
+        <p>Use the Layer 2 Features panel to enable Layer 2 features and specify how you want to use them.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/serversettings-Layer2features.png" />
+        </p>
+        <ul>
+            <li><b>Enable Layer 2 features on this server</b> - select this check box to turn on Layer 2 features.</li>
+            <li><b>[NN] Maps Enabled</b> - Click this link to choose the maps for which Layer 2 is enabled. The Layer 2 Enabled Maps window appears as shown below.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/dlg-EnableLayer2Maps.png" />
+        </p>
+        <p><b>Note:</b> In order to use the Layer 2 features in your map, <i>after</i> enabling Layer 2 features in the Server Settings window, you must enable them in the <a href="../../04-Creating_Maps/mapsettings.html#Layer2features">Map Settings window</a> for each map that contains Layer 2 devices.</p>
+        <h2>Discovery Options</h2>
+        <ul>
+            <li><b>Layer 2 discovery period</b> - select a discovery period from the dropdown menu to specify how often to initiate discovery requests. Choose <b style="font-style: italic;">Manually</b> to collect Layer 2 information only when you choose.</li>
+            <li><b>Now</b> - click the Now button to perform a discovery and collect Layer 2 data immediately.</li>
+            <li><b>Collect complete information about devices on the network</b> - select this option to collect detailed information from SNMP devices. This may place significant CPU load on your switches and routers during discovery.</li>
+            <li><b>Limit Layer 2 discovery to CDP and LLDP only</b> - select this option to request only CDP and LLDP information from Layer 2 devices. This option reduces the CPU load on your switches during the discovery process. It has the effect of limiting discovery only to switches.</li>
+        </ul>
+    </body>
+</html>

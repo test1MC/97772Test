@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Primary.fltoc"
+  OutputFile="index.html"
+  OutputFolder="P:\Doc Projects\HelpSystems\Flare-InterMapper\InterMapperDocs\InterMapperUserGuide"
+  ConditionTagExpression="include[Primary.CurrentInfo or Primary.online] exclude[Primary.NewInfo or Primary.Omit or Primary.print or Primary.review or Primary.test] "
+  InsertMOTW="true"
+  AliasFile="/Project/Advanced/IMalias.flali"
+  Skin="/Project/Skins/HTML5-TopNav-11.flskn"
+  DisableAutoSync="true"
+  MenuSkin="/Project/Skins/F11-Menutest.flskn"
+  MasterPage="/Content/Resources/MasterPages/TopicMaster-F11.flmsp">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

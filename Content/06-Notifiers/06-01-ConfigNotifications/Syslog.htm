@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="8" MadCap:lastHeight="842" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Syslog</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Send:syslog" />
+            <MadCap:keyword term="Configuring" />
+            <MadCap:keyword term="Configuring:Syslog Notifier" />
+            <MadCap:keyword term="Syslog" />
+            <MadCap:keyword term="Syslog Notifier" />
+            <MadCap:keyword term="Syslog Notifier:Configuring" />Configuring a Syslog Notifier</h1>
+        <p>
+            <MadCap:keyword term="Unix" />Syslog is a mechanism for recording information about significant events into a log file. It originated on Unix hosts which wrote the information to a local file (the <i>system log</i> file). This was later enhanced to write the data across a network to a server that collects the entries.</p>
+        <p>
+            <MadCap:keyword term="Send" />
+            <MadCap:keyword term="Syslog:send" />InterMapper can send a syslog message as a notification. That is, when an event occurs, InterMapper can write the data to a specified syslog server on the network.</p>
+        <p>
+            <img src="../../Resources/Images/window-ConfigNotifier-Syslog.png" style="width: 554px;height: 321px;" />
+        </p>
+        <p><b><MadCap:keyword term="Send syslog" />Send syslog messages to:</b>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="DNS" /> - the IP address or DNS name of the syslog server that should receive the message</p>
+        <p><b>Facility:</b> - The syslog server administrator may specify that messages from a particular source be tagged with a certain facility code. Select the facility requested by your administrator.</p>
+        <p><b>Severity:</b> - Syslog messages can be tagged with a severity, so that the syslog files can be scanned for entries with different priority. Set the desired severity to </p>
+        <table style="width: 80%;margin-left: 5em;">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <ul>
+                            <li> Emergency
+</li>
+                            <li> Alert
+</li>
+                            <li> Critical
+</li>
+                        </ul>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <ul>
+                            <li>Error
+</li>
+                            <li>Warning
+</li>
+                            <li> Notice
+</li>
+                        </ul>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <ul>
+                            <li> Informational
+</li>
+                            <li> Debug
+</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Edit message...</b> - You may enter the format of the syslog message. 
+	See     <a href="email.html#editemailmessage">Editing the text of an E-mail Notification Message<MadCap:xref href="email.html#editemailmessage" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="Newline" />, 
+	where this process is described. Newline characters will be converted to spaces, 
+	so the message will appear as a single line. Syslog messages will contain 
+	"InterMapper" as the syslog tag. 
+  </p>
+        <p>&#160;</p>
+    </body>
+</html>

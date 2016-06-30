@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.Omit" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="856" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Miscellaneous Probes</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Cisco:Cisco Probes;Finding;Miscellaneous Probes" />Miscellaneous Probes</h1>
+        <p>
+            <MadCap:keyword term="Finding:Demo" />
+            <MadCap:keyword term="Finding:Legacy" />
+            <MadCap:keyword term="TCP" />
+            <MadCap:keyword term="Demo" />
+            <MadCap:keyword term="Demo:find" />
+            <MadCap:keyword term="TCP Check Probe" />
+            <MadCap:keyword term="Developing" />
+            <MadCap:keyword term="Developing:Nagios" />
+            <MadCap:keyword term="Nagios" />
+            <MadCap:keyword term="Nagios:developing" />
+            <MadCap:keyword term="Legacy Probes" />
+            <MadCap:keyword term="TCP Check" />
+            <MadCap:keyword term="Command-line" />Use these probes for a variety of uses. You can find the Demo, Non-Polling, 
+ and TCP Check probes. You can also find the Legacy probes (included to support 
+ older maps) and the template for developing Nagios and Command-line probes.</p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Demo:Demo Probe" /><a href="#demo"><b>Demo probe<MadCap:xref href="#demo" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a> - Use this probe to 
+ create demonstration maps, which simulate a network and its activity.</li>
+            <li><b><a href="#legacy">Legacy Probes<MadCap:xref href="#legacy" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - These probes have been deprecated. 
+ They are included to support older maps.</li>
+            <li><b><a href="#nagios">Nagios Probes<MadCap:xref href="#nagios" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - Use this probe to specify a 
+ Nagios plugin.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Non-Polling Probe" /><a href="#nonpolling">Non-polling probe<MadCap:xref href="#nonpolling" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> 
+    - Choose this probe so that the selected device is not probed.</li>
+            <li><b><a href="#snmpprototype"><b>Prototype SNMP Probe</b><MadCap:xref href="#snmpprototype" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Use this probe as the basis for creating custom SNMP&#160;probes.</li>
+            <li><a href="#tcpcheck"><b>TCP Check Probe<MadCap:xref href="#tcpcheck" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a> - checks the number of TCP 
+ connections and sends a notification if it is exceeded.</li>
+        </ul>
+        <h2><a name="demo"></a>Demo Probe</h2>
+        <p>
+            <MadCap:keyword term="Down" />
+            <MadCap:keyword term="Interconnections" />The Demo Probe is designed solely for making test maps. InterMapper creates 
+ a device with the specified number of links and the specified percentage of 
+ interconnections. InterMapper then generates random data for each of its interfaces, 
+ and randomly sets the device status to UP or DOWN.</p>
+        <p><span style="font-weight: bold;">Note:</span><span> Some InterMapper licenses 
+ specify a number of devices you can monitor. Demo probes do not reduce the number 
+ of devices available for monitoring.</span>
+        </p>
+        <h2><a name="legacy"></a>Legacy Probes</h2>
+        <p>
+            <MadCap:keyword term="MIB:following" />
+            <MadCap:keyword term="Following" />The following probes have been deprecated, but are kept available for older 
+ maps that may still be using them.</p>
+        <ul>
+            <li>
+                <MadCap:keyword term="SNMP" />
+                <MadCap:keyword term="OID" />
+                <MadCap:keyword term="Basic OID" />
+                <MadCap:keyword term="V2c" /><a href="#basicoidv2c"><b>SNMP - Basic OID (v2c)<MadCap:xref href="#basicoidv2c" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                <MadCap:keyword term="Sends SNMP" /> - 
+ Sends SNMP queries for a specified OID</li>
+            <li>
+                <MadCap:keyword term="Cisco" /><a href="#ciscov2c"><b>Cisco v2c Probe<MadCap:xref href="#ciscov2c" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                <MadCap:keyword term="64-bit" /> - same as the Cisco Probe, 
+ but uses 64-bit counters as required</li>
+            <li>
+                <MadCap:keyword term="SNMP v2c" /><a href="#snmpv2c"><b>SNMP v2c<MadCap:xref href="#snmpv2c" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                <MadCap:keyword term="MIB" />
+                <MadCap:keyword term="MIB-II" />
+                <MadCap:keyword term="Following:MIB" />
+                <MadCap:keyword term="Probes MIB-II" /> - Probes MIB-II variables, with 64-bit 
+ counters</li>
+        </ul>
+        <p><a name="basicoidv2c"></a>
+        </p>
+        <h3>SNMP - Basic OID (v2c) Probe</h3>
+        <p>
+            <MadCap:keyword term="SNMPv2c" />
+            <MadCap:keyword term="SNMPv2c Get-Next-Request" />
+            <MadCap:keyword term="Object ID" />InterMapper queries the specified OID (Object ID) using a SNMPv2c Get-Next-Request. 
+ It can interpret the full range of variable types specified by SNMP v2c. The 
+ status window displays the value of the requested variable.</p>
+        <h3><a name="ciscov2c"></a>
+        </h3>
+        <h3>Cisco (v2c) Probe</h3>
+        <p>This probe is identical to the Cisco probe, except that it uses SNMP v2c queries 
+ to use the 64-bit counters.</p>
+        <h3><a name="snmpv2c"></a>
+        </h3>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="SNMPv2c Probe" />SNMPv2c Probe</h3>
+        <p>This probe uses SNMPv2C queries to get statistics from the device. This is 
+ primarily intended to monitor the 64-bit counters present on very high speed 
+ links.</p>
+        <p>
+            <MadCap:keyword term="MIB Variable" />InterMapper queries the following MIB variables in its SNMPv2c probe. </p>
+        <p>This variable set is used on an initial scan of the device.</p>
+        <table>
+            <tr>
+                <th>MIB Variable</th>
+                <th>OID</th>
+                <th>
+                    <MadCap:keyword term="Assoc" />Assoc. MIB</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfDescr" />ifDescr</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.2</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfType" />ifType</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.3</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfMTU" />ifMTU</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.4</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfSpeed" />ifSpeed</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.5</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfPhysAddress" />ifPhysAddress</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.6</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfAdminStatus" />ifAdminStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.7</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOperStatus" />ifOperStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.8</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfName" />ifName</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.1</td>
+                <td style="text-align: right;" align="right">
+                    <MadCap:keyword term="RFC:RFC 2233" />RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfHighSpeed" />ifHighSpeed</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.15</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfPromiscuousMode" />ifPromiscuousMode</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.16</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfConnectorPresent" />ifConnectorPresent</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.17</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfAlias" />ifAlias</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.18</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+        </table>
+        <p>This variable set is polled to display statistics for the device's operation.</p>
+        <table>
+            <tr>
+                <th>MIB Variable</th>
+                <th>OID</th>
+                <th>Assoc. MIB</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;">ifAdminStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.7</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;">ifOperStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.8</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfLastChange" />ifLastChange</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.9</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInUcastPkts" /><MadCap:keyword term="Pkts" /><MadCap:keyword term="NUcastPkts" />ifInUcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.11</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInErrors" />ifInErrors</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.14</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInDiscards" />ifInDiscards</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.13</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutUcastPkts" />ifOutUcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.17</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutErrors" />ifOutErrors</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.20</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutDiscards" />ifOutDiscards</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.19</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="SysUpTime" />sysUpTime</b>
+                </td>
+                <td>1.3.6.1.2.1.1.3</td>
+                <td style="text-align: right;" align="right">MIB-II</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="Octets" /><MadCap:keyword term="IfHCInOctets" />ifHCInOctets</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.6</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfHCOutOctets" />ifHCOutOctets</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.10</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInMulticastPkts" /><MadCap:keyword term="MulticastPkts" />ifInMulticastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.2</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInBroadcastPkts" />ifInBroadcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.3</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutMulticastPkts" />ifOutMulticastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.4</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutBroadcastPkts" />ifOutBroadcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.5</td>
+                <td style="text-align: right;" align="right">RFC 2233</td>
+            </tr>
+        </table>
+        <p><b style="font-weight: bold;">Note:</b>
+            <MadCap:keyword term="SNMPv1" />
+            <MadCap:keyword term="BroadcastPkts MIB" />
+            <MadCap:keyword term="MIB-II 32" />
+            <MadCap:keyword term="HCOctets" /> In the SNMPv2c probe, the input and 
+ output MulticastPkts and BroadcastPkts MIB variables replace NUcastPkts variables 
+ of the SNMPv1 probe, which are deprecated. HCOctets replace the regular Octets 
+ counters. Pkts and errors still use the MIB-II 32 bit counters.</p>
+        <h2><a name="nagios"></a>
+            <MadCap:keyword term="Plugins" />
+            <MadCap:keyword term="Nagios Plugins" />Nagios Plugins</h2>
+        <p>Use the Nagios probe type to select plugins from the Nagios monitoring system. 
+ InterMapper can use these plugins to test devices. For more details, see <i>Nagios 
+ Plugins</i><MadCap:keyword term="Developer Guide" /> in the <a href="http://www.intermapper.com/go.php?to=intermapper.devguide" target="_blank">Developer Guide</a>.</p>
+        <h2><a name="nonpolling"></a>Non-Polling Probe</h2>
+        <p>When the Non-Polling probe is selected, InterMapper does not poll the device. 
+ Its icon becomes gray, and InterMapper's map no longer reflects the device's 
+ state.</p>
+        <p>A device that used a non-polling probe is not counted against InterMapper's device count.</p>
+        <h2><a name="snmpprototype"></a>Prototype SNMP Probe</h2>
+        <p>This probe demonstrates an InterMapper Custom SNMP probe, and many of the features that are described in the Custom Probes section of the <a href="http://www.intermapper.com/go.php?to=intermapper.devguide" target="_blank">Developer Guide</a>.<a href="http://www.intermapper.com/docs/developer/index.html/Developer Guide">&#160;</a></p>
+        <p>If you have questions about this probe, <a href="mailto:support@dartware.com">please contact us</a>.
+</p>
+        <p>This probe probably isn't really useful for production work. However, it provides an example of various techniques available in custom SNMP probes.
+
+It shows how to retrieve SNMP values from a device by specifying their OIDs and how to display those values in the device's Status Window. 
+
+The probe also has thresholds for setting the device into alarm or warning. 
+
+</p>
+        <h3><a name="tcpcheck"></a>
+        </h3>
+        <h2>TCP Check Probe</h2>
+        <p>This probe generates an alarm if the count of TCP connections is greater than the "Allowed TCP Connections" parameter. It can be used to detect people telnetting into a box that shouldn't have connections. An example is a router that might be attacked from outside your network.</p>
+        <p>
+            <MadCap:keyword term="MIB-II TCP" />
+            <MadCap:keyword term="TcpCurrEstab" />InterMapper queries the MIB-II TCP table to retrieve tcpCurrEstab (1.3.6.1.2.1.6.9.0), 
+ which measures the number of TCP connections in place. If that count exceeds 
+ the parameter, the device is placed in alarm. </p>
+    </body>
+</html>

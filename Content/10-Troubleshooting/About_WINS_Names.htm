@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:lastBlockDepth="4" MadCap:lastHeight="297" MadCap:lastWidth="532" MadCap:fileTags="status_tags.No Changes">
+    <head><title>About WINS Names</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Name;WINS;About WINS Names" />About WINS Names</h1>
+        <p>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="Name:Internet Protocol" />
+            <MadCap:keyword term="Internet Protocol" />
+            <MadCap:keyword term="Using WINS" />
+            <MadCap:keyword term="Microsoft's Windows Internet Naming Service" />Microsoft's Windows Internet Naming Service (WINS) is a name resolution 
+ service that resolves computer names to Internet Protocol (IP) address. 
+ Using WINS, the computer name can be resolved to a specific IP address.</p>
+        <p>
+            <MadCap:keyword term="WINS:use" />InterMapper uses WINS names as follows: </p>
+        <ul>
+            <li>
+                <MadCap:keyword term="DNS" />
+                <MadCap:keyword term="DHCP" />
+                <MadCap:keyword term="NetBIOS" />InterMapper (all platforms) queries devices for 
+ a NetBIOS (WINS) name. This name is used as the device's smart name if 
+ the DNS name is unknown or contains the word "DHCP". </li>
+            <li>
+                <MadCap:keyword term="NetBIOS/WINS" />
+                <MadCap:keyword term="LAN" />When adding a device that is in the same LAN as 
+ InterMapper server, you can use the device's NetBIOS/WINS name. To cause 
+ a name to be treated as a WINS name, place "\\" in front of 
+ the name when adding a device. The name is not looked up in the DNS. <br /><b><br />Note:</b> InterMapper does not use the WINS server - it only resolves 
+ local device names.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link rel="StyleSheet" href="../../../default.css" /><title>PowerShell Probes</title>
+    </head>
+    <body>
+        <!-- file updated Thu, 17 Mar 2016 15:34:26 +0000 -->
+        <h1 class="L2">PowerShell</h1>
+        <ul>
+            <li><a href="PowerShell.htm#PowerShell_Disk_Space">PowerShell &gt; Disk Space<MadCap:xref href="PowerShell.htm#PowerShell_Disk_Space" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li><a href="PowerShell.htm#PowerShell_Remoting_Disk_Space__Signed_">PowerShell &gt; Remoting &gt; Disk Space (Signed)<MadCap:xref href="PowerShell.htm#PowerShell_Remoting_Disk_Space__Signed_" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li><a href="PowerShell.htm#PowerShell_Remoting_Disk_Space">PowerShell &gt; Remoting &gt; Disk Space<MadCap:xref href="PowerShell.htm#PowerShell_Remoting_Disk_Space" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li><a href="PowerShell.htm#PowerShell_Remoting_Installed_Software">PowerShell &gt; Remoting &gt; Installed Software<MadCap:xref href="PowerShell.htm#PowerShell_Remoting_Installed_Software" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li><a href="PowerShell.htm#PowerShell_Remoting_Process_Count">PowerShell &gt; Remoting &gt; Process Count<MadCap:xref href="PowerShell.htm#PowerShell_Remoting_Process_Count" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+        </ul>
+        <blockquote>
+            <p><a href="Probe_Index.htm">To Probe Index<MadCap:xref href="Probe_Index.htm"></MadCap:xref></a>
+            </p>
+        </blockquote>
+        <h2>PowerShell &gt; Disk Space<a name="PowerShell_Disk_Space"></a></h2>
+        <blockquote>
+            <h3>Disk Space</h3>
+            <p>This probe uses PowerShell to retrieve the disk space available on a drive on the target host. It uses WMI's ability to retrieve information from a remote host instead of PowerShell's remoting capability. Specifically, it queries the Size and FreeSpace properties of the Win32_LogicalDisk class, computes percentage free space, and compares it against the Warning, Alarm and Critical parameters you set.</p>
+            <p><b>Parameters</b>
+            </p>
+            <p><i>Drive</i> - set to "All" to list all Local hard drives on the host.  Enter a list of comma-separated drive letters with colons. Drives can be listed regardless of whether they are local or not. Zero-sized drives, such as empty cd-roms, are not listed. The first drive failing the warning or critical criteria test is cited in the reason.</p>
+            <p><i>Warning, Alarm, Critical, Down (%)</i> - enter a threshold for the percentage of disk space that changes the device's state to the specified alarm level.</p>
+            <p><i>User</i> - may be a local user on the target host, or may take the form of "domain\user" for a domain login.  Leave it blank if authentication is not required, such as when the target is the localhost.</p>
+            <p><i>Password</i> - enter a password for the specified user.</p>
+            <p><i>Timeout (sec)</i> - enter a number of seconds to wait for a response from the target host.</p>
+            <p><i>PowerShell Version</i> - Choose the version of PowerShell running on the InterMapper Server's host. (Note: This is not the target device's host.)</p>
+            <p>InterMapper invokes the WindowsWmiFreeDiskSpace.ps1 companion script, placed in the Tools folder of the InterMapper Settings folder when probe is loaded.  It uses the exit value to set the condition of the device, and uses the performance data returned by the script to create a display of chartable data.</p>
+            <p class="probeinfo">Filename: <span class="code">com.helpsystems.powershell.wmi.diskspace.txt</span><br />
+Version:  <span class="code">1.0</span></p>
+            <p><a href="PowerShell.htm">Back to Top</a>
+            </p>
+        </blockquote>
+        <h2>PowerShell &gt; Remoting &gt; Disk Space (Signed)<a name="PowerShell_Remoting_Disk_Space__Signed_"></a></h2>
+        <blockquote>
+            <h3>Disk Space (Signed)</h3>
+            <p><b>This probe requires a companion script that must be signed and placed in the \InterMapper Setting\Tools folder before it can be run.</b>
+            </p>
+            <p>This probe uses PowerShell to determine the disk space available on a drive on the target host. Specifically, it queries the Size and FreeSpace properties of the Win32_LogicalDisk class, computes percentage free space, and compares it against the Warning and Critical parameters you set.  The target host must be running PowerShell with Remoting enabled.</p>
+            <p><b>Parameters</b>
+            </p>
+            <p><i>Drive</i> - set to "All" to list all Local hard drives on the host.  Use a list of comma-separated drive letters with colons. Drives can be listed regardless of whether they are local or not. Zero-sized drives (i.e. an empty cd-rom) are not listed. The first drive failing the warning or critical criteria test is cited in the reason.</p>
+            <p><i>Warning, Alarm, Critical, Down (%)</i> - enter a threshold for the percentage of disk space that changes the device's state to the specified alarm level.</p>
+            <p><i>User</i> - may be a local user on the target host, or may take the form of "domain\user" for a domain login.  Leave it blank if authentication is not required, such as when the target is the localhost.</p>
+            <p><i>Password</i> - enter a password for the specified user.</p>
+            <p><i>Timeout (sec)</i> - enter a number of seconds to wait for a response from the target host.</p>
+            <p><i>PowerShell Version</i> - Choose the version of PowerShell running on the InterMapper Server's host. (Note: This is not the target device's host.)</p>
+            <p>InterMapper attempts to invoke the WindowsRemotingFreeDiskSpace.signed.ps1 companion script after setting ExecutionPolicy to "AllSigned". If InterMapper is installed in the default location, this script is available in the C:\Program Files\InterMapper\docs\samples\powershell folder. <i>It must be copied to the Tools folder, and signed before it can be run.</i> It uses the exit value to set the condition of the device and the performance data returned by the script to create a display of the results.</p>
+            <p class="probeinfo">Filename: <span class="code">com.helpsystems.powershell.remote.diskspace.sign.txt</span><br />
+Version:  <span class="code">1.0</span></p>
+            <p><a href="PowerShell.htm">Back to Top</a>
+            </p>
+        </blockquote>
+        <h2>PowerShell &gt; Remoting &gt; Disk Space<a name="PowerShell_Remoting_Disk_Space"></a></h2>
+        <blockquote>
+            <h3>Disk Space</h3>
+            <p>This probe uses PowerShell to determine the disk space available on a drive on the target host. Specifically, it queries the Size and FreeSpace properties of the Win32_LogicalDisk class, computes percentage free space, and compares it against the Warning and Critical parameters you set.  The target host must be running PowerShell with Remoting enabled.</p>
+            <p><b>Parameters</b>
+            </p>
+            <p><i>Drive</i> - set to "All" to list all Local hard drives on the host.  Use a list of comma-separated drive letters with colons. Drives can be listed regardless of whether they are local or not. Zero-sized drives (i.e. an empty cd-rom) are not listed. The first drive failing the warning or critical criteria test is cited in the reason.</p>
+            <p><i>Warning, Alarm, Critical, Down (%)</i> - enter a threshold for the percentage of disk space that changes the device's state to the specified alarm level.</p>
+            <p><i>User</i> - may be a local user on the target host, or may take the form of "domain\user" for a domain login.  Leave it blank if authentication is not required, such as when the target is the localhost.</p>
+            <p><i>Password</i> - enter a password for the specified user.</p>
+            <p><i>Timeout (sec)</i> - enter a number of seconds to wait for a response from the target host.</p>
+            <p><i>PowerShell Version</i> - Choose the version of PowerShell running on the InterMapper Server's host. (Note: This is not the target device's host.)</p>
+            <p>InterMapper invokes the WindowsRemotingFreeDiskSpace.ps1 companion script, placed in the Tools folder of the InterMapper Settings folder when probe is loaded.  It uses the exit value to set the condition of the device, and uses the performance data returned by the script to create a display of chartable data.</p>
+            <p class="probeinfo">Filename: <span class="code">com.helpsystems.powershell.remote.diskspace.txt</span><br />
+Version:  <span class="code">1.0</span></p>
+            <p><a href="PowerShell.htm">Back to Top</a>
+            </p>
+        </blockquote>
+        <h2>PowerShell &gt; Remoting &gt; Installed Software<a name="PowerShell_Remoting_Installed_Software"></a></h2>
+        <blockquote>
+            <h3>Installed Software</h3>
+            <p>This probe uses PowerShell to provide a listing of installed software, installed updates, or both. This probe requires that <b>PowerShell 2.0</b> or later be installed, and PowerShell remoting must be enabled and configured to use this probe. This probe uses the registry, not WMI objects</p>
+            <p><b>Parameters</b>
+            </p>
+            <p><i>Software</i> - Choose whether to list installed software, software updates, or both.</p>
+            <p><i>User</i> - may be a local user on the target host, or may take the form of "domain\user" for a domain login.  Leave it blank if authentication is not required, such as when the target is the localhost.</p>
+            <p><i>Password</i> - enter a password for the specified user.</p>
+            <p><i>Authentication</i> - choose a type of authentication you want PowerShell to use to connect to the target host.</p>
+            <p><i>Timeout (sec)</i> - enter a number of seconds to wait for a response from the target host.</p>
+            <p><i>PowerShell Version</i> - Choose the version of PowerShell running on the InterMapper Server's host. (Note: This is not the target device's host.)</p>
+            <p>InterMapper invokes the included ApplicationList.ps1 companion script in InterMapper Settings/Tools.</p>
+            <p class="probeinfo">Filename: <span class="code">com.helpsystems.powershell.remote.installedSoftware.txt</span><br />
+Version:  <span class="code">1.0</span></p>
+            <p><a href="PowerShell.htm">Back to Top</a>
+            </p>
+        </blockquote>
+        <h2>PowerShell &gt; Remoting &gt; Process Count<a name="PowerShell_Remoting_Process_Count"></a></h2>
+        <blockquote>
+            <h3>Process Count</h3>
+            <p>This probe uses PowerShell's remoting capabilities and Get-Process object to retrieve the number of instances of a given process currently executing on the target host.</p>
+            <p><b>Parameters</b>
+            </p>
+            <p><i>ProcessName</i> - enter the name of the process you want to monitor.</p>
+            <p><i>User</i> - may be a local user on the target host, or may take the form of "domain\user" for a domain login.  Leave it blank if authentication is not required, such as when the target is the localhost.</p>
+            <p><i>Password</i> - enter a password for the specified user.</p>
+            <p><i>Timeout (sec)</i> - enter a number of seconds to wait for a response from the target host.</p>
+            <p><i>PowerShell Version</i> - Choose the version of PowerShell running on the InterMapper Server's host. (Note: This is not the target device's host.)</p>
+            <p>InterMapper invokes the ProcessCount.ps1 companion script, placed in the Tools folder of the InterMapper Settings folder when probe is loaded.</p>
+            <p class="probeinfo">Filename: <span class="code">com.helpsystems.powershell.remote.processcount.txt</span><br />
+Version:  <span class="code">1.0</span></p>
+            <p><a href="PowerShell.htm">Back to Top</a>
+            </p>
+        </blockquote>
+    </body>
+</html>

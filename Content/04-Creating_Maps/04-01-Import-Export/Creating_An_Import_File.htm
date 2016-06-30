@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="1575" MadCap:lastWidth="729.9999" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Creating An Import File</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <p class="h1">
+            <MadCap:keyword term="Apply;Probes;Addresses" />
+            <MadCap:keyword term="Create:An Import File" />
+            <MadCap:keyword term="Import" />Creating An Import File</p>
+        <p>Since a missing tab can cause errors in an import by causing data to be imported 
+	into the wrong fields, creating a file from scratch in a text editor is relatively 
+	error-prone. The following methods are recommended for creating import files 
+	quickly and accurately:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li><a href="Exporting_Data_From_Maps.htm">Export a map<MadCap:xref href="Exporting_Data_From_Maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, 
+	 then edit the file.</li>
+            <li><a href="#spreadsheet">Use a 
+	 spreadsheet application<MadCap:xref href="#spreadsheet" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+                <MadCap:keyword term="Create" />
+                <MadCap:keyword term="Excel" /> such as Excel to create a tab-delimited file.</li>
+            <li>Generate a file algorithmically from a database. This may 
+	 be useful if you plan to update maps regularly.</li>
+        </ul>
+        <p>An import file is text file, formatted as follows:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li><span style="font-weight: bold;"><MadCap:keyword term="Line" />The first line of the file 
+	 specifies the format of the following lines</span>
+                <MadCap:keyword term="MapName" />
+                <MadCap:keyword term="Device" /> - it specifies the file 
+	 format ("tab" in the example below), the table to be filled ("devices") 
+	 and the order of the fields. Three fields must be specified: MapName, Address, 
+	 and Probe; the remaining fields are optional.</li>
+            <li><span style="font-weight: bold;">Remaining lines contain 
+	 the data for the devices you want to import</span> - Each device occupies 
+	 a single line, and the data columns are separated by tabs (a "tab-delimited" 
+	 file.) Each column corresponds to a field in the           <span style="font-weight: bold;font-style: italic;">fields</span><span> 
+	  specification of Line 1.</span></li>
+        </ul>
+        <h3>Line 1 - specifying the format for the import file data</h3>
+        <p>
+            <MadCap:keyword term="Directive:Directive Line Technique:Importing" />The first line of the file determines the method you are going to use for 
+	importing, and can provide you with a significant amount of control over how 
+	devices are imported. There are two different methods you can use for importing; 
+	each uses a different format for the first line of the file:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li><span style="font-weight: bold;">Spreadsheet-style import</span><span><MadCap:keyword term="Directive" /><MadCap:keyword term="Directive:Directive Line" /><MadCap:keyword term="Line:Directive" /> 
+	  - This technique is used only for adding new devices to a map. The first 
+	 line of the file contains the column names associated with the data in the 
+	 remaining lines. This is the recommended method. Once you have created this 
+	 file, it is easy to change the first line to a Directive line.</span>
+            </li>
+            <li><span style="font-weight: bold;">Directive line</span> - 
+	 This method gives you a large amount of control over the import process. 
+	 In addition to inserting new devices, you can update specific attributes 
+	 of existing devices, change their appearance or location, and delete them. 
+	 This technique is documented in        <a href="../../09-Reference/09-05-Advanced_Importing/the_directive_line.htm">Advanced 
+	 Data Importing<MadCap:xref href="../../09-Reference/09-05-Advanced_Importing/the_directive_line.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="Reference" /> in the References section.</li>
+        </ul>
+        <p><![CDATA[       ]]><span style="font-weight: bold;">Notes:</span></p>
+        <ul>
+            <li>For either style of importing, data is set only in those fields whose <span style="font-weight: bold;font-style: italic;"><MadCap:keyword term="Access" />Access</span><span><MadCap:keyword term="READ-WRITE" /> 
+	  value is specified as "READ-WRITE" in the <i><MadCap:keyword term="Device Attributes" />Device Attributes</i> 
+	  and        <i><MadCap:keyword term="Apply:Vertex" /><MadCap:keyword term="Vertex" /><MadCap:keyword term="Vertex Attributes" />Vertex Attributes</i> topics, found in the in        <a href="../../09-Reference/09-05-Advanced_Importing/the_directive_line.htm">Advanced 
+	 Data Importing<MadCap:xref href="../../09-Reference/09-05-Advanced_Importing/the_directive_line.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> in the References section. </span></li>
+            <li>Text files should be encoded in UTF8 format. </li>
+            <li>Characters with values less than 255 can be imported directly. </li>
+            <li>Character values greater than 255 must be escaped using the standard XML format (<span class="code">&amp;#[character code]</span>).</li>
+        </ul>
+        <h3><a name="spreadsheet"></a>
+            <MadCap:keyword term="Spreadsheet-style Import file" />Spreadsheet-style Import file</h3>
+        <p>The recommended format for creating an import file is a spreadsheet style 
+	format, in which the first line contains tab-separated column names that correspond 
+	to the remaining rows:</p><pre class="code">LabelTemplate MapName Address 
+Machine1 Map1 192.0.0.1
+Machine2 Map1 192.0.0.2
+</pre>
+        <p>This is the equivalent of the following directive line, as explained below:<MadCap:keyword term="Name,MapName,Address" /></p><pre class="code"># format=tab table=devices fields=LabelTemplate,MapName,Address insert=LabelTemplate,MapName,Address
+Machine1 Map1 192.0.0.1 
+Machine2 Map1 192.0.0.2
+</pre>
+        <p><span style="font-weight: bold;">Notes:</span>
+        </p>
+        <ul style="list-style: disc;" type="disc">
+            <li>If you have created a spreadsheet-style import file, you 
+	 can easily change it to a <i>Directive line-based</i> file for updating 
+	 the map.</li>
+            <li>
+                <MadCap:keyword term="Vertex:applies" />
+                <MadCap:keyword term="Vertices" />You can include columns in your import file from both the 
+	 Device and Vertices tables. InterMapper automatically applies the Vertex 
+	 attributes appropriately.</li>
+        </ul>
+        <p>The columns are imported in the order specified. The last value specified 
+	takes precedence over previous values in the same line. Because of this, Help/Systems
+	recommends that you use only one the following columns when importing. If 
+	more than one of these is specified, and there are conflicts, the last column's 
+	values are used:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li><span style="font-weight: bold;">Address</span>
+            </li>
+            <li><span style="font-weight: bold;"><MadCap:keyword term="DNS:DNSName" />DNSName</span>
+            </li>
+            <li><span style="font-weight: bold;">IMProbe</span>
+            </li>
+        </ul>
+        <p>For a complete list of device attributes and corresponding field names, see 
+	<i>Device Attributes</i> in         <i><MadCap:keyword term="Advance Data Importing" /><a href="../../09-Reference/09-05-Advanced_Importing/the_directive_line.htm">Advanced 
+	 Data Importing<MadCap:xref href="../../09-Reference/09-05-Advanced_Importing/the_directive_line.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> in the References section.</i></p>
+        <h3>The Directive-Line</h3>
+        <p>Using the Directive Line technique, in addition to inserting new devices, 
+	you can update specific attributes of existing devices, change their appearance 
+	or location, and delete them. This technique is documented in <i><a href="../../09-Reference/09-05-Advanced_Importing/the_directive_line.htm">Advanced 
+	 Data Importing<MadCap:xref href="../../09-Reference/09-05-Advanced_Importing/the_directive_line.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> in the References section.</i><span style="font-weight: bold;"><br /></span></p>
+    </body>
+</html>

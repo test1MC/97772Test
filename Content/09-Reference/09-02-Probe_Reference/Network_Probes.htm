@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.Omit" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="6" MadCap:lastHeight="6753" MadCap:lastWidth="596" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Network Device Probes</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Tests Cisco Aironet;Response;Karlnet Base Station" />
+            <MadCap:keyword term="Probes">
+            </MadCap:keyword>
+            <MadCap:keyword term="Uninterruptible:Probes" />
+            <MadCap:keyword term="Network Device Probes" />Network Device Probes</h1>
+        <p>
+            <MadCap:keyword term="Access:SNMP" />
+            <MadCap:keyword term="SNMP" />
+            <MadCap:keyword term="Response:SNMP" />InterMapper has a number of probes that use SNMP to retrieve information from 
+ a device being tested. These include:</p>
+        <ul>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Apple" /><a href="#appleprobes">Apple 
+	 Probes<MadCap:xref href="#appleprobes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+            </li>
+            <ul>
+                <li>
+                    <MadCap:keyword term="Apple Airport" /><a href="#airportextreme"><b>Apple AirPort Extreme <MadCap:xref href="#airportextreme" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                    <MadCap:keyword term="Tests" />
+                    <MadCap:keyword term="Tests:Apple Airport Extreme Base Station" />
+                    <MadCap:keyword term="Apple Airport:Apple Airport Extreme Base Station" /> 
+		- Tests an Apple AirPort Extreme Base Station </li>
+                <li>
+                    <MadCap:keyword term="Graphite" /><a href="#airportgraphite"><b>Apple AirPort (Graphite) <MadCap:xref href="#airportgraphite" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                    <MadCap:keyword term="Tests:Apple Airport Base Station" />
+                    <MadCap:keyword term="Airport Base Station" />
+                    <MadCap:keyword term="Apple Airport:Apple Airport Base Station" /> 
+		- Tests an Apple AirPort Base Station (version 1, Graphite) </li>
+            </ul>
+            <li>
+                <MadCap:keyword term="Cisco" /><a href="#ciscoprobes"><b>Cisco <MadCap:xref href="#ciscoprobes" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+            </li>
+            <ul>
+                <li><b><a href="Cisco_IP_SLA_Probe.htm"><b>IP SLA&#160;Jitter</b><MadCap:xref href="Cisco_IP_SLA_Probe.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> -Uses SNMP to collect the information from the RTTMON MIB in a device configured as an IP&#160;SLA agent, allowing you to alarm jitter, latency, and packet loss, and to chart these values. </li>
+                <li>
+                    <MadCap:keyword term="CPU" /><a href="#cisco"><b>Old Cisco CPU MIB <MadCap:xref href="#cisco" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a> - Checks free memory 
+		and CPU utilization of a Cisco router</li>
+                <li><b><a href="#processmemorypool">Process and Memory Pool<MadCap:xref href="#processmemorypool" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- monitors the CPU and Memory utilization of a Cisco router.</li>
+                <li>
+                    <MadCap:keyword term="Cisco:Cisco Aironet Probe" /><a href="#aironet"><b>Cisco Aironet Probe <MadCap:xref href="#aironet" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                    <MadCap:keyword term="Access" />
+                    <MadCap:keyword term="SNMP:access" /> - Tests 
+		Cisco Aironet access points </li>
+            </ul>
+            <li><a href="#JuniperNetscreen"><b>Juniper Netscreen VPN</b><MadCap:xref href="#JuniperNetscreen" style="font-weight: bold;"> (Pg 1)</MadCap:xref></a> - monitors the status of VPN&#160;tunnels in a Netscreen Firewall.</li>
+            <li>
+                <MadCap:keyword term="Karlnet Wireless" /><a href="#karlnetwireless"><b>Karlnet Wireless <MadCap:xref href="#karlnetwireless" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a> - Tests a Karlnet 
+	 Wireless Base Station</li>
+            <li>
+                <MadCap:keyword term="UPS Probes" /><a href="#UPSprobes"><b>UPS Probes <MadCap:xref href="#UPSprobes" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                <MadCap:keyword term="Probes:uninterruptible" />
+                <MadCap:keyword term="Uninterruptible" /> - Probes for uninterruptible 
+	 power supplies.</li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="SNMP:respond" />If a device does not respond to SNMP</h2>
+        <p>
+            <MadCap:keyword term="Simple Network Management Protocol" />InterMapper uses SNMP (Simple Network Management Protocol) to learn about 
+ attached networks and to create the network clouds you see on the map. When 
+ a device doesn't answer SNMP, InterMapper automatically probes it with the 
+ standard echo probes, so you can still monitor the device.</p>
+        <p>Here are some reasons your routers might not answer:</p>
+        <ul>
+            <li>
+                <MadCap:keyword term="SNMP-speaking:queries" />
+                <MadCap:keyword term="Queries" />The device might not respond to SNMP queries with a community 
+ string of "public".</li>
+            <li>There might not be an SNMP agent running in the device.</li>
+            <li>The device might not be reachable.</li>
+            <li>The machine running InterMapper might not be entered in the 
+ device's access list.</li>
+        </ul>
+        <p>A <b>community string</b><MadCap:keyword term="Login-name" /> is akin to a login-name for a router. SNMP uses 
+ community strings to specify what variables a client can read or modify. A 
+ network manager often sets a community string of "public" to permit 
+ read-only access to SNMP data. If your site uses a different community string 
+ for read-only access, you must specify this when adding a device, or the device 
+ will not respond.</p>
+        <h2 class="pagebreakbefore"><a name="appleprobes"></a>
+            <MadCap:keyword term="Apple Probes" />Apple Probes</h2>
+        <h3><a name="airportextreme"></a>Apple AirPort (Extreme)</h3>
+        <p>
+            <MadCap:keyword term="Assoc" />
+            <MadCap:keyword term="MAC address/user" />
+            <MadCap:keyword term="DBm" />InterMapper queries an Apple AirPort Extreme Base Station. In addition to 
+ monitoring the traffic statistics (using the SNMP probe above), InterMapper 
+ displays the number of wireless clients associated with the base station along 
+ with their MAC address/user name, and the signal strength in dBm.</p>
+        <p>
+            <MadCap:keyword term="SNMP-Airport" />For the AirPort (Extreme) "UFO" version, use its password for the probe's community string. For AirPort (Extreme) "Square", use the community string defined for the unit.</p>
+        <h3><a name="airportgraphite"></a>Apple AirPort (Graphite)</h3>
+        <p>
+            <MadCap:keyword term="Apple Airport:Apple Graphite Airport Base Station" />InterMapper queries an Apple Graphite AirPort Base Station (version 1). In 
+ addition to monitoring the traffic statistics (using the SNMP probe above), 
+ InterMapper displays the number of wireless clients associated with the base 
+ station along with their MAC address/user name, and the signal strength and 
+ noise figures (0-100%).</p>
+        <p>The parameter to the SNMP-AirPort probe is the password to the AirPort Base 
+ Station.</p>
+        <p>
+            <MadCap:keyword term="SNMP:provide" />
+            <MadCap:keyword term="Snow Airport Base Station" />Note: The Snow AirPort Base Station (version 2) does not provide the SNMP 
+ information about associated clients. Help/Systems is working with Apple to find 
+ a way to address this. </p>
+        <h2 class="pagebreakbefore"><a name="ciscoprobes"></a>
+            <MadCap:keyword term="Cisco:Cisco Probes" />Cisco Probes</h2>
+        <h3><a name="cisco"></a>
+            <MadCap:keyword term="Cisco:Cisco CPU Probe" />Cisco CPU Probe</h3>
+        <p>
+            <MadCap:keyword term="User-settable" />InterMapper queries the CPU utilization and free memory of a Cisco router 
+ and places the device in warning or alarm based on user-settable thresholds.</p>
+        <h3>&#160;</h3>
+        <h3>Cisco IP SLA&#160;Jitter Probe</h3>
+        <p>This probe uses SNMP to collect the information from the RTTMON MIB in the agent, allowing you to alarm jitter, latency, and packet loss, and to chart these values. For more information, see <a href="Cisco_IP_SLA_Probe.htm">Cisco IP&#160;SLA Probe<MadCap:xref href="Cisco_IP_SLA_Probe.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <h3><a name="processmemorypool"></a>Cisco Process and Memory Pool&#160;Probe</h3>
+        <p>This probe monitors the CPU and Memory utilization of a Cisco router using variables from CISCO-MEMORY-POOL-MIB and CISCO-PROCESS-MIB. Two thresholds (<i>Alarm</i> and <i>Warning</i>) are available for CPU utilization
+, and two are available for low memory.</p>
+        <h3><a name="aironet"></a>Cisco Aironet Probe&#160;</h3>
+        <p>InterMapper queries a Cisco Aironet wireless access point. In addition to 
+ monitoring the traffic statistics (using the SNMP probe above), InterMapper 
+ displays the number of wireless clients associated with the base station, 
+ each user's MAC address and user name, and the unit's signal strength and 
+ noise figures (0-100%).</p>
+        <p>
+            <MadCap:keyword term="SNMP-Aironet">
+            </MadCap:keyword>The parameter to the SNMP-Aironet probe is the SNMP read-only community string.</p>
+        <h2><a name="JuniperNetscreen"></a>Juniper Netscreen VPN</h2>
+        <p>This probe monitors the status of VPN Tunnels in a Netscreen Firewall. It uses the nsVpnMonTable to monitor the Netscreen's active tunnels, which are treated and mapped as separate interfaces.</p>
+        <p>Some statistics may be available only if the monitoring status is on for the tunnel, as reported by <code>nsVpnMonMonState</code>.</p>
+        <h2><a name="karlnetwireless"></a>Karlnet Wireless</h2>
+        <p>
+            <MadCap:keyword term="SNMPv1" />
+            <MadCap:keyword term="Karlnet Wireless Base Station" />
+            <MadCap:keyword term="Tests:Karlnet Wireless Base Station" />
+            <MadCap:keyword term="Read/write" />
+            <MadCap:keyword term="Read/write:requires" />This probe monitors the Karlnet Wireless Base Station's custom MIB using 
+ SNMPv1. It reports the number of clients using the base stations, and the 
+ signal strength of each. It uses SNMP set-requests to tell the Karlnet Base 
+ Station to discover its clients periodically, and to test each client's signal 
+ strength. It uses SNMPv1 and requires a read/write community string.</p>
+        <h2><a name="UPSprobes"></a>UPS Probes</h2>
+        <p>
+            <MadCap:keyword term="Victron" />
+            <MadCap:keyword term="APC" />
+            <MadCap:keyword term="Liebert" />
+            <MadCap:keyword term="Exide" />
+            <MadCap:keyword term="BestPower" />
+            <MadCap:keyword term="TrippLite" />A number of probes are available to support uninterruptible power supplies 
+	from APC, BestPower, Exide, Liebert, Standard, TrippLite, and Victron.</p>
+        <p>&#160;</p>
+        <h3>Network Devices/UPS/APC UPS</h3>
+        <p><i>For APC UPS devices.</i>
+        </p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 1) <b>APC UPS MIB</b> [... enterprises.apc.products.hardware.ups / ... 1.3.6.1.4.1.318.1.1.1]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>UPS: model, firmware, status, (<i>battery</i>: capacity, time remaining, temperature, replacement status), (<i>output</i>: load percent, volts, amps, frequency), (<i>input</i>: volts, voltage range over last minute, frequency, last input failure).</p>
+        <p><b>C. Alarms</b>
+        </p>
+        <p>(1 of 3) If unit goes onto battery or goes off-line.</p>
+        <p>(2 of 3) If battery needs replacement.</p>
+        <p>(3 of 3) If the battery temperature exceeds user-specified thresholds (see "Parameters" below).</p>
+        <p><b>D. Warnings</b>
+        </p>
+        <p>(1 of 2) If unit goes onto "Smart Trim" or "Smart Boost"</p>
+        <p>(2 of 2) If the battery temperature exceeds user-specified thresholds (see "Parameters" below).</p>
+        <p><b>E. Parameters</b>
+        </p>
+        <p>(1 of 5) <i>Units of Temperature (C / F)</i>: Determines how the following thresholds are interpreted.</p>
+        <p>(2 of 5) <i>Alarm Threshold - Low Temp</i>: Threshold for alarm state (see above).</p>
+        <p>(3 of 5) <i>Warning Threshold - Low Temp</i>: Threshold for alarm state (see above).</p>
+        <p>(4 of 5) <i>Warning Threshold - High Temp</i>: Threshold for warning state (see above).</p>
+        <p>(5 of 5) <i>Alarm Threshold - High Temp</i>: Threshold for warning state (see above).</p>
+        <p><b>Bugs or Requests? </b><a href="mailto:upsbundle@intermapper.com">Please contact us.</a>
+        </p>
+        <p><i>Filename: com.dartware.ups.apc.txt</i>
+            <br /><i>Version: 3.4</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/APC UPS - AP961x</h3>
+        <p><i>For APC UPS devices that have the AP961x Network Management Card.</i>
+        </p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 2) <b>APC UPS MIB</b> [... enterprises.apc.products.hardware.ups / ... 1.3.6.1.4.1.318.1.1.1]</p>
+        <p>(2 of 2) <b>APC Environmental Monitoring MIB</b> [... enterprises.apc.products.hardware.environmentalMonitor / ... 1.3.6.1.4.1.318.1.1.10]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>UPS: model, firmware, status, (<i>battery</i>: capacity, time remaining, temperature, replacement status), (<i>output</i>: load percent, volts, amps, frequency), (<i>input</i>: volts, voltage range over last minute, frequency, last input failure).</p>
+        <p>Enviromental Monitor: probe name, number of probes, current temperature &amp; humidity, high &amp; low threshold configurations.</p>
+        <p><b>C. Alarms</b>
+        </p>
+        <p>(1 of 3) If unit goes onto battery or goes off-line.</p>
+        <p>(2 of 3) If battery needs replacement.</p>
+        <p>(3 of 3) If the UPS' internal temperature/humidity threshold is exceeded (must also be enabled).</p>
+        <p><b>D. Warnings</b>
+        </p>
+        <p>(1 of 1) If unit goes onto "Smart Trim" or "Smart Boost"</p>
+        <p><b>Bugs or Requests? </b><a href="mailto:upsbundle@intermapper.com">Please contact us.</a>
+        </p>
+        <p><i>Filename: com.dartware.ups.apc-ap961x.txt</i>
+            <br /><i>Version: 3.4</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/BestPower UPS</h3>
+        <p><i>For BestPower UPS devices.</i>
+        </p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 1) <b>BestPower MIB </b> [... enterprises.bestPower.bestLink / ... 1.2947.1]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>vendor, model, firmware version, VA Rating, time on battery, time remaining, (<i>input &amp; output:</i> voltage, current, frequency), output power, internal temperature.</p>
+        <p><b>C. Alarms &amp; Warnings</b>
+        </p>
+        <p>(1 of 2) Warning: If UPS loses AC power.</p>
+        <p>(2 of 2) Alarm: If minutes of battery life remaining is less than specified threshold.</p>
+        <p><b>D. Parameters</b>
+        </p>
+        <p>(1 of 1) <i>BatteryRemainingAlarm</i>: Threshold for alarm state (see above).</p>
+        <p><b>Bugs or Requests? </b><a href="mailto:upsbundle@intermapper.com">Please contact us.</a>
+        </p>
+        <p><i>Filename: com.dartware.ups.bestpower.txt</i>
+            <br /><i>Version: 2.10</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/Exide UPS</h3>
+        <p><i>For Exide UPS devices.</i>
+        </p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 2) <b>UPS MIB (RFC 1628)</b> [... mib-2.upsMIB / ... 1.33]</p>
+        <p>(2 of 2) <b>Exide XUPS MIB</b> [... enterprises.powerware / ... 1.534]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>vendor, model, software version, firmware version, output source, battery status, battery voltage, battery current, (<i>three input lines:</i> Hz, volts, amps, kWatts), (<i>three output lines:</i> Hz, volts, amps, kWatts, output load percent)</p>
+        <p><b>C. Alarms</b>
+        </p>
+        <p>(1 of 1) If the device is reporting any alarms. (The UPS MIB includes a comprehensive list of alarms).</p>
+        <p><b>Bugs or Requests? </b><a href="mailto:upsbundle@intermapper.com">Please contact us.</a>
+        </p>
+        <p><i>Filename: shef.ac.uk.ups.exide.txt</i>
+            <br /><i>Version: 2.11</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/Liebert UPS</h3>
+        <p><i>For Liebert UPS devices.</i>
+        </p>
+        <p><i>NOTE: This probe is meant to aid InterMapper's development of probes for the Liebert product line.</i>
+        </p>
+        <p>1) Check other probes to see if one exists for your Liebert UPS device.</p>
+        <p>2) If not, select this probe.</p>
+        <p>3) Open the status window and "Copy All" (right/option click on the window)</p>
+        <p>4) Paste into an email and <a href="mailto:upsbundle@intermapper.com">send the info</a> to us.</p>
+        <p>5) We'll try to develop a probe for your device as soon as possible.</p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 1) <b>Liebert UPS MIB</b> [... enterprises.emerson.liebertCorp.liebertUps / ... 1.476.1.1]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>MIB, vendor, model, &amp; software version</p>
+        <p><i>Filename: com.dartware.ups.liebert-ups.txt</i>
+            <br /><i>Version: 2.6</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/Liebert UPS - OpenComms</h3>
+        <p><i>For Liebert UPS devices that have the OpenComms Network Management Card.</i>
+        </p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 2) <b>UPS MIB (RFC 1628)</b> [... mib-2.upsMIB / ... 1.33]</p>
+        <p>(2 of 2) <b>Liebert Global Products MIB</b> [... enterprises.emerson.liebertCorp.liebertGlobalProducts / ... 1.476.1.42]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>vendor, model, software version, firmware version, output source, battery status, battery voltage, battery current, (<i>three input lines:</i> Hz, volts, amps, kWatts), (<i>three output lines:</i> Hz, volts, amps, kWatts, output load percent); (<i>temperatures:</i> battery, ambient)</p>
+        <p><b>C. Alarms</b>
+        </p>
+        <p>(1 of 1) If the device is reporting any alarms. (The UPS MIB includes a comprehensive list of alarms).</p>
+        <p><b>Bugs or Requests? </b><a href="mailto:upsbundle@intermapper.com">Please contact us.</a>
+        </p>
+        <p><i>Filename: com.dartware.ups.liebert-opencomms.txt</i>
+            <br /><i>Version: 2.12</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/Liebert UPS - Series 300</h3>
+        <p><i>For Liebert Series 300 UPS devices.</i>
+        </p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 1) <b>LIEBERT-SERIES-300-UPS-MIB</b> [... enterprises.emerson.liebertCorp.liebertUps.luExtensions.luCore / ... 1.476.1.1.1.1] and [... luExtensions.luUPStationS / ... 1.2]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>vendor, model, software version, firmware version, output load (%), battery voltage, battery current, (<i>three input, output, and bypass phases:</i> voltage, current),(<i>frequencies:</i> input, output, bypass)</p>
+        <p><b>C. Alarms</b>
+        </p>
+        <p>(1 of 1) If the device is reporting any alarms. (The MIB includes a comprehensive list of alarms).</p>
+        <p><b>Bugs or Requests? </b><a href="mailto:upsbundle@intermapper.com"><i>Please contact us.</i></a><code></code>
+        </p>
+        <p><i>Filename: com.dartware.ups.liebert-series300.txt</i>
+            <br /><i>Version: 2.6</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/Standard UPS (RFC1628)</h3>
+        <p><i>For standard UPS devices.</i>
+        </p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 1) <b>UPS MIB (RFC 1628)</b> [... mib-2.upsMIB / ... 1.33]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>vendor, model, software version, firmware version, output source, battery status, battery voltage, battery current, (<i>three input lines:</i> Hz, volts, amps, kWatts), (<i>three output lines:</i> Hz, volts, amps, kWatts, output load percent)</p>
+        <p><b>C. Alarms</b>
+        </p>
+        <p>(1 of 1) Alarm: If the device is reporting any alarms. (The UPS MIB includes a comprehensive list of alarms).</p>
+        <p>(2 of 2) Alarm: If the battery temp exceeds a user-defined threshold.</p>
+        <p><b>D. Parameters</b>
+        </p>
+        <p>(1 of 1) <i>UserHighBatteryTemperatureAlarm</i>: Threshold for alarm state (see above). This alarm is disabled when the threshold is set to "0" (default).</p>
+        <p><b>Bugs or Requests? </b><a href="mailto:upsbundle@intermapper.com">Please contact us.</a>
+        </p>
+        <p><i>Filename: com.dartware.ups.standard.txt</i>
+            <br /><i>Version: 3.4</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/TrippLite UPS</h3>
+        <p><i>For TrippLite UPS devices with an EnviroSense Unit.</i>
+        </p>
+        <p><b>A. Probed MIB(s)</b>
+        </p>
+        <p><i>This probe works best with devices which have implemented the listed MIB(s).</i>
+        </p>
+        <p>(1 of 2) <b>UPS MIB (RFC 1628)</b> [... mib-2.upsMIB / ... 1.33]</p>
+        <p>(2 of 2) <b>TrippUPS MIB</b> [... enterprises.tripplite.trippUPS.trippUpsEnvironment / 1.850.0.3]</p>
+        <p><b>B. Displayed Values</b>
+        </p>
+        <p>vendor, model, software version, firmware version, output source, battery status, battery voltage, battery current, (<i>three input lines:</i> Hz, volts, amps, kWatts), (<i>three output lines:</i> Hz, volts, amps, kWatts, output load percent); ambient temperature, ambient humidity</p>
+        <p><b>C. Alarms</b>
+        </p>
+        <p>(1 of 1) If the device is reporting any alarms. (The UPS MIB includes a comprehensive list of alarms).</p>
+        <p><b>Bugs or Requests? </b><a href="mailto:upsbundle@intermapper.com"><i>Please contact us.</i></a><code></code>
+        </p>
+        <p><i>Filename: com.dartware.ups.tripplite.txt</i>
+            <br /><i>Version: 2.11</i>
+            <br />
+        </p>
+        <h3>Network Devices/UPS/Victron UPS</h3>
+        <p><b>Victron UPS</b>
+        </p>
+        <p>This probe monitors some needfull USV parameters.</p>
+        <p><i>UPS Battery Status - Alarm</i> is the ALARM threshold for Battery Status.</p>
+        <p><i>If the value is 2 USV working normal.</i>
+        </p>
+        <p><i>If the value is 1 USV is on bypass, the device will enter the Alarm state.</i>
+        </p>
+        <p><i>UPS Battery Remaining - Warning</i> is the WARNING threshold for the estimated battery time remaining. If the Battery Remaining is less than this threshold, the device will enter the Warning state.</p>
+        <p><i>UPS Battery low Voltage - Warning</i> is the WARNING threshold for the min. battery voltage. If the Battery voltage is less than this threshold, the device will enter the Warning state.</p>
+        <p><i>Low Input Voltage line 1 - Alarm</i> is the ALARM threshold for min input voltage on phase 1. If the input voltage drops below this threshold, the device will enter the Alarm state.</p>
+        <p><i>Low Input Voltage line 2 - Alarm</i> is the ALARM threshold for min input voltage on phase 2. If the input voltage drops below this threshold, the device will enter the Alarm state.</p>
+        <p><i>Low Input Voltage line 3 - Alarm</i> is the ALARM threshold for min input voltage on phase 3. If the input voltage drops below this threshold, the device will enter the Alarm state.</p>
+        <p><i>Filename: de.medianet.freinet.ups.victron.txt</i>
+            <br /><i>Version: 2.9</i>
+            <br />
+        </p>
+    </body>
+</html>

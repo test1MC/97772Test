@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:id="chapter4\snmpcomm.html" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="844" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>SNMP Preferences</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="UDP Port 162 Check" />
+            <MadCap:keyword term="SNMP">
+            </MadCap:keyword>
+            <MadCap:keyword term="Set:SNMP Preferences" />
+            <MadCap:keyword term="Preferences" />
+            <MadCap:keyword term="Listen:SNMP" />
+            <MadCap:keyword term="SNMP Preferences" />SNMP Preferences</h1>
+        <p>
+            <MadCap:keyword term="SNMP:Use" />
+            <MadCap:keyword term="Set" />
+            <MadCap:keyword term="SNMP Community:setting" />
+            <MadCap:keyword term="SNMP Preferences:Setting" />Use the SNMP subsection of the Server Preferences section to set the default 
+ SNMP settings for each SNMP access method. These settings are used for 
+ all new devices.</p>
+        <h2>
+            <MadCap:keyword term="About SNMP Versions" />
+            <MadCap:keyword term="SNMP Version" />About SNMP Versions</h2>
+        <p>
+            <MadCap:keyword term="SNMP Trap:InterMapper" />InterMapper can retrieve data from devices using SNMP version 1, version 
+	2c, or version 3. Each of these can access the same SNMP information, but 
+	through different means:</p>
+        <ul>
+            <li><b><MadCap:keyword term="SNMPv1" />SNMPv1</b> was the original version, and provided 
+ a simple means for retrieving data. Security was provided through        <i><MadCap:keyword term="Strings" /><MadCap:keyword term="SNMPv1-v2c-speaking:strings" />community 
+ strings</i><MadCap:keyword term="READ-ONLY" /><MadCap:keyword term="READ-WRITE" /><MadCap:keyword term="Unencrypted" /> that acted like a password to allow or deny access to the 
+ information. The Read-Only community string gave permission to the requester 
+ to read data; the Read-Write community string gave permission to modify 
+ data. All data transmissions (including the community string) were sent 
+ "in the clear", that is, unencrypted. </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="SNMPv2c" />SNMPv2c</b>
+                <MadCap:keyword term="64-bit" /> provided 
+ additional, more efficient methods to request data, and added new data 
+ types (such as 64-bit counters) so that the monitoring system could get 
+ more accurate data. SNMPv2c is like SNMPv1 in that it uses the same community 
+ string system, and transmits data in the clear. </li>
+            <li><b><MadCap:keyword term="SNMPv3" />SNMPv3</b>
+                <MadCap:keyword term="DES" />
+                <MadCap:keyword term="Privacy" /> provides the same data retrieval facilities 
+ as SNMPv2c, with additional security. There is a secure method of providing 
+ authentication information (so the device knows whether to respond to 
+ the query or not), as well as a privacy function that encrypts the entire 
+ transmission so that eavesdroppers cannot discern the data. </li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Set:SNMP Community" />
+            <MadCap:keyword term="SNMP Community" />
+            <MadCap:keyword term="SNMP Community String" />What is an SNMP Community String?</h2>
+        <p>
+            <MadCap:keyword term="SNMP Read-only" />
+            <MadCap:keyword term="SNMP Read-only Community" />The SNMP Read-only Community string is like a user id or password that allows 
+	access to a router's or other device's statistics. InterMapper sends the community 
+	string along with all SNMP requests. If the community string is correct, the 
+	device responds with the requested information. If the community string is 
+	incorrect, the device simply ignores the request and does not respond.</p>
+        <p><b style="font-weight: bold;">Note:</b>
+            <MadCap:keyword term="Username/password" /> SNMP Community strings are used only 
+	by devices which support SNMPv1 and SNMPv2c protocol. SNMPv3 uses username/password 
+	authentication, along with an encryption key.</p>
+        <h2>
+            <MadCap:keyword term="Community:Community String Types" />Community String Types</h2>
+        <p>
+            <MadCap:keyword term="Strings:SNMPv1-v2c-speaking" />
+            <MadCap:keyword term="SNMPv1-v2c-speaking" />
+            <MadCap:keyword term="SNMPv1-v2c" />There are actually three community strings for SNMPv1-v2c-speaking devices:</p>
+        <ul>
+            <li><b style="font-weight: bold;">SNMP Read-only community string 
+	  </b>- enables a remote device to retrieve "read-only" information 
+	 from a device. InterMapper uses this information from devices on its maps. 
+	</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="SNMP Read-Write" />SNMP Read-Write community 
+	 string </b>- used in requests for information from a device and to modify 
+	 settings on that device. InterMapper does not use the read-write community 
+	 string, since it never attempts to modify any settings on its devices. </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="SNMP Trap" />SNMP Trap community string 
+	  </b>
+                <MadCap:keyword term="Listen:SNMP Traps" />- included when a device sends SNMP Traps to InterMapper. InterMapper 
+	 accepts any SNMP Trap community string.</li>
+        </ul>
+        <p>
+            <MadCap:keyword term="Firewalls" />By convention, most SNMPv1-v2c equipment ships from the factory with 
+ a read-only community string set to "public". It is standard 
+ practice for network managers to change all the community strings so that 
+ outsiders cannot see information about the internal network. (In addition, 
+ network managers may employ firewalls to block any SNMP traffic to ports 
+ 161 and 162 on the internal network.)</p>
+        <h2>
+            <MadCap:keyword term="SNMP Server Settings Pane" />SNMP Server Settings Pane</h2>
+        <p>InterMapper remembers the default settings for each of the various SNMP 
+ access methods. These are set in the <b><MadCap:keyword term="Server Settings&gt;SNMP" />Server Settings&gt;SNMP</b> preference 
+ pane. <img src="../../Resources/Images/serversettings-snmp.png" /></p>
+        <p>This pane allows you to specify the following: </p>
+        <div style="float: right;">
+            <p><i style="font-style: italic;">Setting the default SNMP preferences</i>
+            </p>
+        </div>
+        <ul>
+            <li><b style="font-weight: bold;">SNMP Version</b>
+                <MadCap:keyword term="Select" />
+                <MadCap:keyword term="Autodiscovery" /> - 
+ Select the default SNMP version to be used for new devices in autodiscovery. 
+ InterMapper will attempt to use the selected version when it discovers 
+ a new device. If it gets a response, it will continue to use that version. 
+ If that fails, then it will simply ping the device.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="SNMPv1-2c Community" />SNMPv1-2c Community</b> 
+ - If the selected SNMP Version is either SNMPv1 or SNMPv2c, InterMapper 
+ will use this community string to attempt to communicate with the device. 
+ </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="SNMPv3 Authentication" />SNMPv3 Authentication</b>
+                <MadCap:keyword term="SHA" />
+                <MadCap:keyword term="MD5" /> 
+ - If the selected SNMP version is SNMPv3, InterMapper will use the specified 
+ authentication method (SHA, MD5, or None) with the indicated password 
+ on the right to authenticate with the device. </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="User Name" />User Name</b> - The 
+ SNMPv3 user name to be used for authentication and privacy.</li>
+            <li><b style="font-weight: bold;">Privacy</b>
+                <MadCap:keyword term="AES" /> - When using SNMPv3, 
+	 the privacy method (DES, AES, or None) will be used with the encryption 
+	 password on the right. </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="SNMP:listen" /><MadCap:keyword term="SNMP Trap:Listen" /><MadCap:keyword term="UDP" /><MadCap:keyword term="Listen" />Listen for SNMP Traps 
+ on UDP Port 162</b> - Check this box if you want InterMapper to listen for 
+ SNMP traps sent from devices to the standard port 162.</li>
+            <li><b style="font-weight: bold;">Also listen for SNMP 
+ traps on UDP port </b>- InterMapper can listen for traps on a second, 
+ non-standard port (in addition to port 162). Check this box and enter 
+ the port number in the text box. Traps received on this alternate port 
+ are handled in the same manner as those received on port 162.</li>
+            <li><b style="font-weight: bold;">Verbose trap logging</b>
+                <MadCap:keyword term="OID" />
+                <MadCap:keyword term="Varbind" />
+                <MadCap:keyword term="Varbinds" /> 
+ - Check this box to instruct InterMapper to display the full OID and contents 
+ for all varbinds of a trap, instead of simply the varbind contents. </li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Specific Device" />Setting SNMP Preferences for Specific Devices</h2>
+        <p>
+            <MadCap:keyword term="Set Community" />
+            <MadCap:keyword term="Set Info submenu" />
+            <MadCap:keyword term="Set Probe" />The panel shown above sets the default SNMP preferences that InterMapper 
+	uses when querying devices. You can also set SNMP preferences for individual 
+	devices on your map using the <b style="font-style: italic;">Set Community...</b> (SNMPv1-v2c) or <b style="font-style: italic;">Set Probe...</b> (all 
+	three SNMP versions) commands, available from the Monitor menu. You can set various parameters for one or more devices at a 
+	time, by selecting the devices you want to change before executing the command.</p>
+    </body>
+</html>

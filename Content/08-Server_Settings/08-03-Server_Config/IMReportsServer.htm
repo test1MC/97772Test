@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" class="" MadCap:lastBlockDepth="4" MadCap:lastHeight="1861" MadCap:lastWidth="622" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Reports Server</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">Reports Server</h1>
+        <p>The Reports Server stores data in a database for use in reports. Use the  Reports Server panel, available from the Server Configuration section of the Server Settings panel, to specify the amount of data you want to store in the database.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Settings-ReportsServer.png" />
+            <br /><i>InterMapper Reports Server Configuration pane</i>
+        </p>
+        <p>&#160;</p>
+        <h2>Setting up the Reports Server</h2>
+        <p>If InterMapper DataCenter is running on the same host machine as InterMapper Server, the Reports Server is automatically configured, and you can start collecting data as soon as you start it.</p>
+        <p>If InterMapper DataCenter is installed on another host machine, you need to configure InterMapper to use that server.</p>
+        <p style="font-weight: bold;">To open InterMapper DataCenter and configure the Reports Server:</p>
+        <ul>
+            <li>Click  <b style="font-style: italic;">Configure...         </b> For more about configuring the Reports Server, see <a href="../../09-Reference/09-06-Data_Collection/datacenter.htm">Configuring InterMapper DataCenter</a> for more information.</li>
+        </ul>
+        <h2>Starting Data Collection</h2>
+        <p>You can start and stop collection of data on the Reports Server.</p>
+        <p><b>To start or stop collecting InterMapper data:</b>
+        </p>
+        <ul>
+            <li>Click  <b style="font-style: italic;">Start (Data collection for Reports)        </b>.</li>
+            <li>Click <b style="font-style: italic;">Stop</b> to stop data collection.</li>
+        </ul>
+        <h2>Specifying an InterMapper Reports Server connection</h2>
+        <p class="floatright">
+            <img src="../../Resources/Images/Dlg-RemoteReportsServer.png" alt="" title="" />
+        </p>
+        <p>If InterMapper DataCenter is running on a different host than the InterMapper Server, you must also specify the server, port, and an account login for the database you want InterMapper to use.</p>
+        <p><b>To configure the InterMapper Reports Server connection:</b>
+        </p>
+        <ul>
+            <li>From the  Reports Server panel of the Server Settings window, click <b style="font-style: italic;">Use Remote Reports Server...</b> and enter the information in the dialog InterMapper Reports Server Settings window as shown.</li>
+        </ul>
+        <h2 class="pagebreakbefore">Collecting Current Data&#160;&#160;</h2>
+        <p>Every minute, InterMapper Reports Server sends a request for a certain number of rows of current data
+to insert into the database. The request contains a start and end time, where
+the start time is the oldest data desired, and the end time is the newest
+(generally, the present time). 
+
+</p>
+        <p>The response from InterMapper Server contains the rows to insert into the database, as
+well as the time of the next row to request. InterMapper  Reports Server uses this information to update its notion
+of the current time, and the subsequent requests use that time.
+
+</p>
+        <p>The number of rows in the request is automatically adjusted so that the
+insertion process uses approximately half of the (one minute) time interval.
+Typically, 500 rows are requested for events and 25,000 rows are requested for data points.
+</p>
+        <p>If the time of the next row in the response is less than the requested end time,
+InterMapper Reports Server can tell that there is more data available.
+</p>
+        <h2>Collecting Pre-Existing Data</h2>
+        <p>In parallel, InterMapper Reports Server retrieves old (historical) data by working backwards (from
+newer to oldest), requesting data from the InterMapper Server. It does this by making
+requests for a set of data rows <i>older</i> than a particular time.</p>
+        <p>The InterMapper Server responds with those rows, and InterMapper Reports Server inserts them and updates the
+time of the next (oldest) row. Subsequent requests start at this time, and
+retrieve still older data rows.
+</p>
+        <p>Use the <b style="font-style: italic;">Collection Profile</b> dropdown menu to specify the
+rate at which InterMapper Reports Server  requests the historical data: 
+</p>
+        <ul>
+            <li><b>Now</b> - attempts to retrieve the historical data as fast as possible. It uses
+most of the remainder of the one-minute time interval (the time left after
+retrieving the current data) to request historical data. InterMapper Reports Server  adjusts the number
+of rows in its request so that it will finish inserting in time to start the
+next current data request.</li>
+            <li><b>Gradually</b> - retrieves historical data between every other polls for current
+data. </li>
+            <li><b>Nightly</b> - only retrieves historical data between the hours of 1AM and 3AM. 
+During this time period, it uses the "Now" profile.</li>
+            <li><b>Weekend</b> - retrieves historical data between the hours of 01:00 and 23:00 on
+Saturday and Sunday. During this time period, it uses the "Now" profile.</li>
+            <li><b>Never</b> - does not retrieve historical data at all.</li>
+        </ul>
+        <h2 class="pagebreakbefore">What Data Gets Collected?</h2>
+        <p>Certain variables for probes are recorded automatically when data is collected from a device by InterMapper Reports Server. You can also specify other variables you want to record when data for a device is stored.</p>
+        <p>For all probes, the following data is recorded:</p>
+        <ul>
+            <li>response time (in msec)</li>
+            <li>long-term packet loss
+(%)</li>
+            <li>input byte rates for all visible interfaces.
+</li>
+            <li>output byte rates for all visible interfaces.
+
+</li>
+        </ul>
+        <p>For built-in probes, Help/Systems has selected values that make sense to record for each probe.</p>
+        <p>For custom probes, you can specify which variables should be recorded. The syntax for this is described in <i>Recording Probe Data </i>in the Developer Guide.</p>
+    </body>
+</html>

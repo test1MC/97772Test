@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="1731" MadCap:lastWidth="620" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Attaching a Notifier to a Device</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Warning" /><a name="attachnotifier"></a>
+            <MadCap:keyword term="Notifier" />
+            <MadCap:keyword term="Notifier:attach" />
+            <MadCap:keyword term="Attach" />
+            <MadCap:keyword term="Attach:Notifier" />Attaching a Notifiers to Devices and Interfaces</h1>
+        <h2>Attaching Notifiers to Devices</h2>
+        <p>
+            <MadCap:keyword term="Send" />
+            <MadCap:keyword term="Send:e-mail" />
+            <MadCap:keyword term="Down" />
+            <MadCap:keyword term="Alarm" />
+            <MadCap:keyword term="E-mail" />
+            <MadCap:keyword term="E-mail:send" />You can attach one or more notifiers to any device. For each notifier, you 
+	can choose which states trigger a notification to be sent. For example, a 
+	particular device might have a notifier send an e-mail when a device goes 
+	down, but can have a second notifier that plays sounds when the same device goes down, 
+	comes up, or enters an alarm state. You might also send an e-mail to an on-site 
+	system administrator during the day, and to a different administrator outside 
+	business hours.</p>
+        <p><b style="font-weight: bold;">To attach a notifier to a device:</b>
+        </p>
+        <ol>
+            <li>Select one or more devices.</li>
+            <li>
+                <MadCap:keyword term="Monitor menu" />From the Monitor menu, choose <b style="font-style: italic;"><MadCap:keyword term="Notifiers window" />Notifiers Window</b><MadCap:keyword term="Notifier Settings window" />. 
+	 The Notifier Settings window appears, containing the notifiers currently 
+	 attached to the selected item as shown below.</li>
+            <li>Select or clear the check boxes for the device states you 
+	 want to trigger the notifier. A notification is sent when the device's state 
+	 changes to any of the selected states. <br /></li>
+        </ol>
+        <p>
+            <img src="../Resources/Images/Window-notifiers.png" style="border-style: none;width: 556px;height: 245px;" border="0" />
+        </p>
+        <p style="text-align: center;"><i style="font-style: italic;">Attach Notifier window</i>
+        </p>
+        <p><b>Notes:</b>
+        </p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Server Settings" />
+                <MadCap:keyword term="Edit Notifiers" />
+                <MadCap:keyword term="Notifier List" /> You can create a new notifier from the Notifier Settings window. 
+	The "Edit Notifiers..." button is a shortcut to the Notifier List 
+	in the Server Settings page. </li>
+            <li>You can also attach notifiers to devices from the Device Notifiers list view of the Map window.</li>
+        </ul>
+        <h2>Attaching Notifiers to Interfaces</h2>
+        <p>You can also attach notifiers to a device's interfaces, so that alerts are sent for a link when that link goes down.</p>
+        <p style="font-weight: bold;">To attach a notifier to one or more interfaces:</p>
+        <ol>
+            <li>Select the device containing the interfaces you want to attach notifiers to.</li>
+            <li>View the Interfaces window, either from the Monitor menu or from the device's context menu. The Interfaces window appears, showing the device's interfaces .</li>
+            <li>Select the interfaces you want to attach notifiers to, using Click, Shift-click, and Ctrl-click. Use Ctrl-A to select all of the device's interfaces.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" /> one of the selected interfaces and choose </li>
+            <li> <b style="font-style: italic;"><MadCap:keyword term="Notifiers window" />Notifiers Window</b><MadCap:keyword term="Notifier Settings window" /> from the context menu. 
+	 The Notifier Settings window appears, containing the notifiers currently 
+	 attached to the selected interfaces. </li>
+            <li>Choose the notifier you want to attach from the dropdown menu. </li>
+            <li>Select or clear the check boxes for the device states you 
+	 want to trigger the notifier. Set <b style="font-style: italic;">Delay</b>, <b style="font-style: italic;">Repeat</b>, and <b style="font-style: italic;">Count</b> values as appropriate. A notification is sent when any of the interfaces' states 
+	 change to one of the selected states. <br /></li>
+        </ol>
+        <p><b>Note:</b> You can also attach notifiers to interfaces from the <b style="font-style: italic;">Link Notifiers list</b> view of the Map window.</p>
+        <h2>Resetting Devices to the Default Notifier</h2>
+        <p>If you change the default notifier or any of its settings after attaching it to devices , you can reset all of the devices in a map to use the new notifier or settings:</p>
+        <ol>
+            <li>With the map window open for the map you want to reset, choose <b style="font-style: italic;">Map Settings...</b> from the Edit menu. The Map Settings window appears.</li>
+            <li>In the left pane, click <b style="font-style: italic;">Default Notifiers</b>. A list of notifiers appears.</li>
+            <li>From the Context menu (Right-click/Ctrl-click one of the devices) or from the Monitor menu, choose <b style="font-style: italic;">Notifiers Window</b>. The Notifiers winow appears as shown below.</li>
+            <li>Click <b style="font-style: italic;">Reset All</b>. The selected devices are now attached to the default notifier.</li>
+        </ol>
+        <h2>
+            <MadCap:keyword term="Repeat" />
+            <MadCap:keyword term="Count" />
+            <MadCap:keyword term="Delay" />Using the Delay, Repeat, and Count parameters</h2>
+        <p><a name="rptdelay"></a>For each notifier, you can specify      <b>Delay</b>,      <b>Repeat</b>, 
+	and      <b>Count</b> parameters. These parameters can be used 
+	to control how quicky and how frequently notifications are sent. For example, 
+	to avoid unnecessary pages you might configure a notifier to wait until a 
+	device has been down for two minutes before sending the first page. You might also choose to re-send a notifier every 10 minutes forever. Notifications are sent until 
+	the count is reached, or the device has been acknowledged.</p>
+        <h3>
+            <MadCap:keyword term="Delayed Notifiers" />How Delayed Notifiers work</h3>
+        <p>
+            <MadCap:keyword term="Critical" />
+            <MadCap:keyword term="OK" />
+            <MadCap:keyword term="WARN" />
+            <MadCap:keyword term="TRAP" />InterMapper maintains a queue of notifications to be sent. When a DOWN, WARN, 
+	ALARM or CRITICAL event happens, InterMapper places a notification in the 
+	queue, and sets its "time to be sent" according to the delay. (UP, 
+	OK and Trap notifications are never delayed.)</p>
+        <p>
+            <MadCap:keyword term="UP/OK" />When an UP or OK event occurs, InterMapper first searches the notification 
+	queue for the corresponding down, warn, or alarm notification. If it's there, 
+	InterMapper removes both the DOWN (or Warn or Alarm) notification and UP (OK) 
+	event and won't send either one. If not, then InterMapper sends the UP/OK 
+	notification straight away.</p>
+        <h3>
+            <MadCap:keyword term="Notification Escalation" />Notification Escalation</h3>
+        <p>You can use notifiers to implement a problem escalation system by creating 
+	two or more notifiers for a device. The first notifier can fire 
+	quickly to alert someone immediately. A second notifier can be delayed for 
+	a period of time, perhaps 30 minutes or an hour, before notifying a second 
+	person. If the problem remains when the second notifier's delay time is reached, 
+	the second notification is sent. As soon as a problem is acknowledged, no 
+	further notifications are sent, even if the outage lasts a long time.</p>
+    </body>
+</html>

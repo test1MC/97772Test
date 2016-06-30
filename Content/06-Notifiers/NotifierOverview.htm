@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="1638" MadCap:lastWidth="620" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Overview</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">Overview</h1>
+        <h1 MadCap:conditions="Primary.print">Notifiers and Alerts</h1>
+        <p><i style="font-style: italic;">InterMapper</i>
+            <MadCap:keyword term="Send" />
+            <MadCap:keyword term="E-mail:send" />
+            <MadCap:keyword term="Simple Network Paging Protocol;Addresses;Specifying" />
+            <MadCap:keyword term="Notifier" />
+            <MadCap:keyword term="Notifiers/Alerts" />
+            <MadCap:keyword term="Notifiers/Alerts:Overview" />
+            <MadCap:keyword term="Attach:Notifier" /> can send many different kinds 
+	of notifications to alert the network manager of problems in the network. 
+	An entire map can be configured to use a default notifier (or set of notifiers), 
+	and then individual devices can have customized notifiers.</p>
+        <h2>What is a Notifier? </h2>
+        <p>Think of a notifier as a little "robot" that watches the state 
+	of one or more devices, and performs a specified action when the device changes 
+	to a certain state. The action 
+	is called a notification.</p>
+        <p>
+            <MadCap:keyword term="SNMP:sends" />
+            <MadCap:keyword term="Down" />
+            <MadCap:keyword term="Warning" />
+            <MadCap:keyword term="Alarm:Warning" />
+            <MadCap:keyword term="E-mail:specify" />
+            <MadCap:keyword term="Notifier:attach" />
+            <MadCap:keyword term="Attach" />You can attach notifiers to a device, and then specify which states (down, 
+	up, warning, alarm, critical) should trigger the notifier. When a device changes to that 
+	state, the notifier triggers, and InterMapper sends the notification.</p>
+        <p>
+            <MadCap:keyword term="Send:e-mail" />
+            <MadCap:keyword term="Specifying:e-mail" />
+            <MadCap:keyword term="E-mail" />For example, you can create a notifier that sends an e-mail message. You then attach that notifier to a device. You might also specify that 
+	it should be triggered when the device goes down or comes back up. When the 
+	device goes into either of those states, the e-mail would be sent.<br /></p>
+        <h3><a name="notifiertypes"></a>
+            <MadCap:keyword term="Notifier Type" />Notifier Types</h3>
+        <p>There are several types of notifiers; each uses a different method to send 
+	a notification:</p>
+        <ul>
+            <li><b style="font-weight: bold;"><a href="06-01-ConfigNotifications/email.html">E-mail<MadCap:xref href="06-01-ConfigNotifications/email.html" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b> 
+	  - sends an e-mail</li>
+            <li><b style="font-weight: bold;"><a href="06-01-ConfigNotifications/pagemodem.html">Alphanumeric 
+	 Pager<MadCap:xref href="06-01-ConfigNotifications/pagemodem.html" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b>
+                <MadCap:keyword term="TAP" /> - sends a page through a dial-up modem using the TAP protocol. 
+	  <!--li><b>AppleEvent</b> - sends an event to an AppleScript</li--></li>
+            <li><b style="font-weight: bold;"><a href="06-01-ConfigNotifications/pagesnpp.html">Network 
+	 Paging<MadCap:xref href="06-01-ConfigNotifications/pagesnpp.html" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b>
+                <MadCap:keyword term="Internet" />
+                <MadCap:keyword term="SNPP" /> - sends a page across the Internet using the Simple Network 
+	 Paging Protocol (SNPP).</li>
+            <li><b><a href="06-01-ConfigNotifications/smsnotifier.htm">SMS Alert<MadCap:xref href="06-01-ConfigNotifications/smsnotifier.htm" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b> - sends a text message to a cell phone via SMS.</li>
+            <li><b style="font-weight: bold;"><a href="06-01-ConfigNotifications/audible.html">Sound<MadCap:xref href="06-01-ConfigNotifications/audible.html" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b> 
+	  - plays a sound associated with the state of the device.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Send:SNMP" /><MadCap:keyword term="SNMP" /><a href="06-01-ConfigNotifications/traps.html">SNMP 
+	 Trap<MadCap:xref href="06-01-ConfigNotifications/traps.html" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b> - sends an SNMP trap to the specified trap receiver</li>
+            <li><span style="font-weight: bold;"><MadCap:keyword term="Addresses:syslog" /><MadCap:keyword term="Syslog" /><MadCap:keyword term="Main Logger:Syslog" /><a href="06-01-ConfigNotifications/Syslog.htm">Syslog<MadCap:xref href="06-01-ConfigNotifications/Syslog.htm" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></span> 
+	  - sends a message to a syslog server</li>
+            <li><span style="font-weight: bold;"><a href="06-01-ConfigNotifications/WinPopup.htm">WinPopup<MadCap:xref href="06-01-ConfigNotifications/WinPopup.htm" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></span><span> 
+	  (Windows only) - sends a message to the specified user. The message appears 
+	 in a separate window.</span>
+            </li>
+            <li><span style="font-weight: bold;"><a href="06-01-ConfigNotifications/commandline.htm">Command 
+	 Line<MadCap:xref href="06-01-ConfigNotifications/commandline.htm" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></span><span> - executes a command on the InterMapper host machine.</span>
+            </li>
+            <li><b style="font-weight: bold;"><a href="Using_Group_Notifiers.htm">Group<MadCap:xref href="Using_Group_Notifiers.htm" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b> 
+	  - sends notifications to a group of existing notifiers.</li>
+            <li><b><a href="06-01-ConfigNotifications/PowerShell_Notifier.htm">PowerShell</a><MadCap:xref href="06-01-ConfigNotifications/PowerShell_Notifier.htm">(Pg 1)</MadCap:xref></b> - executes a PowerShell command or script on the InterMapper host machine or a remote Windows machine.</li>
+            <li><b style="font-style: italic;"><a href="06-01-ConfigNotifications/Automate_Notifier.htm">AutoMate</a><MadCap:xref href="06-01-ConfigNotifications/Automate_Notifier.htm">(Pg 1)</MadCap:xref></b> - executes a task created with HelpSystems' AutoMate software..</li>
+        </ul>
+        <h2>What You Can Do With Notifiers</h2>
+        <ul>
+            <li>The <b><MadCap:keyword term="Notifier List" />Notifier List</b> (Available from the Server Configuration section of the Server Settings window) is a library of notifiers you have 
+	 created. </li>
+            <li>You <b><a href="Working_With_Notifiers.htm#createnotifier">create a notifier<MadCap:xref href="Working_With_Notifiers.htm#createnotifier" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b><MadCap:keyword term="Default:Default Notifiers:Default Notifiers dialog" /> from the Notifier List, the Default Notifiers dialog, or the Notifiers 
+	 window.</li>
+            <li>You <b><a href="06-01-ConfigNotifications/Configuring_a_Notifier.htm#configurenotifier">configure 
+	 the notifier<MadCap:xref href="06-01-ConfigNotifications/Configuring_a_Notifier.htm#configurenotifier" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b>, then     <a href="06-01-ConfigNotifications/Configuring_a_Notifier.htm#testnotifier"><b>test it </b><MadCap:xref href="06-01-ConfigNotifications/Configuring_a_Notifier.htm#testnotifier" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a>to 
+	 make sure it's working properly.</li>
+            <li>You <b><a href="Attaching_A_Notifier.htm">attach a notifier<MadCap:xref href="Attaching_A_Notifier.htm" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b><MadCap:keyword term="Attach:Attach Notifier dialog" /> 
+	  to a device using the Attach Notifier dialog.</li>
+            <li>You <b><a href="Working_With_Notifiers.htm#remove">remove a notifier<MadCap:xref href="Working_With_Notifiers.htm#remove" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b> 
+	  using the Notifier List.</li>
+            <li>You <b><a href="Working_With_Notifiers.htm#defaultnotifiers">define a set of default 
+	 notifiers<MadCap:xref href="Working_With_Notifiers.htm#defaultnotifiers" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a></b> using the Default Notifiers dialog. When you add a new 
+	 device to a map, the default notifier set is attached to the new device 
+	 automatically. (You can also create and attach notifiers to individual items.) 
+	</li>
+            <li>You attach notifiers only to devices, not to networks.</li>
+        </ul>
+        <h3>
+            <MadCap:keyword term="Notifier:Parts" />Parts of a Notifier</h3>
+        <table style="width: 100%;border-spacing: 0px;border-spacing: 0px;" cellspacing="0" width="100%">
+            <tr>
+                <td style="text-align: left;width: 17px;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top" width="17px">&#160;</td>
+                <td style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top"><b style="font-weight: bold;"><MadCap:keyword term="Notifier Name" />Notifier Name</b>
+                </td>
+                <td style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top">
+                    <MadCap:keyword term="Syslog:Main Logger" />
+                    <MadCap:keyword term="Email" />
+                    <MadCap:keyword term="Main Logger" />
+                    <MadCap:keyword term="Network Techs" />This is a human-readable description of the notifier. It's useful 
+		to include the type and recipient in the name, e.g., "Network Techs 
+		via email" or "Syslog to Main Logger"</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;width: 17px;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top" width="17px">&#160;</td>
+                <td style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top"><b style="font-weight: bold;">Notifier Type</b>
+                </td>
+                <td style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top">There are many notifier types - e-mail, sounds, traps, etc. - as 
+		listed above. Each notifier you create will cause some kind of notification 
+		or alert, depending on its parameters.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;width: 17px;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top" width="17px">&#160;</td>
+                <td style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top"><b style="font-weight: bold;"><MadCap:keyword term="Notifier Parameters" />Notifier Parameters</b>
+                </td>
+                <td style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top">
+                    <MadCap:keyword term="Syslog:address" />The parameters of a notifier indicate the recipient or the action 
+		to be performed. Parameters can specify an e-mail address, a sound file 
+		to play, the address of a syslog or trap server, a pager account, or a 
+		script or program to run. Each notifier type determines its parameters.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;width: 17px;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top" width="17px">&#160;</td>
+                <td style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top"><b><MadCap:keyword term="Notifier Schedule" />Notifier Schedule</b>
+                </td>
+                <td style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left" valign="top">Each notifier has a schedule associated with it. The schedule specifies 
+		the days of the week, and the hours of each day during which a notifier 
+		should send notifications. If the event happens outside the schedule, 
+		no notification will be sent.</td>
+            </tr>
+        </table>
+        <h3>About the Notifier List</h3>
+        <p>
+            <MadCap:keyword term="Server Settings window" />The Notifier list is a library of notifiers that you can attach to different 
+	devices on your map. It is available from the Server Settings window. You 
+	create, configure, edit, remove, and disable notifiers from the Notifier 
+	list. Once you have created and configured the notifiers you want to use, 
+	you can attach them to devices.</p>
+        <p>
+            <MadCap:keyword term="Notifier List:open" />
+            <MadCap:keyword term="Notifiers window" />Occasionally, you may be about to attach a Notifier, and discover that you 
+	need to create a new one before you can attach it. You can quickly open the 
+	Notifier list from the Notifiers window, and create a new notifier.</p>
+        <h3>How Notifications Get Sent</h3>
+        <p>
+            <MadCap:keyword term="OK" />
+            <MadCap:keyword term="OK:Alarm" />
+            <MadCap:keyword term="Warning:Alarm" />
+            <MadCap:keyword term="Alarm" />
+            <MadCap:keyword term="Alarm:OK" />When an event occurs, for example, when a device changes to a new state (Up 
+	to Down, Warning to Alarm, Alarm to OK) InterMapper triggers the attached 
+	notifiers that apply to that new state. The notifier then sends a notification, 
+	as defined in its parameters, to the specified target users as defined by 
+	the notifier schedule. </p>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="839" MadCap:lastWidth="576" class="" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Getting Updates</title>
+        <link href="../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">Automatic Notifications of Updates</h1>
+        <p>InterMapper can automatically check to see if a new version is available for download. This check is performed at startup and again every 24 hours. </p>
+        <p>If the check has never been run before, InterMapper presents a dialog you can use to disable the automatic checking before it takes place. At any time, you can disable the feature, either by choosing Preferences from the Edit menu, then choosing the Behavior-&gt;Version Updates pane, or by opening the InterMapper Control Center.
+When a new version is available, a message appears, including a link to the new version
+</p>
+        <p>When you first start up a Windows version of InterMapper, a message asks you would like InterMapper to check for new versions. This is the only time it will ask this question. If you answer yes, the check is performed at startup and again every 24 hours.
+</p>
+        <p>To enable or disable this feature:</p>
+        <ol>
+            <li>Open InterMapper Control Center</li>
+            <li>Select or clear the "Automatically check for updates to InterMapper" check box.
+</li>
+        </ol>
+        <p>Upon detecting that a newer version of the software is available, a dialog box appears, indicating that a newer version is available, and asking if you would like to download the new version. </p>
+        <ul>
+            <li>Click "Yes" to launch a browser with the URL to the new version.
+</li>
+        </ul>
+        <h2>Using Growl for Update Notifications (Macintosh Only)</h2>
+        <p> Growl is a notification system for Mac OS X. It provides a central mechanism for controlling and customizing the delivery of notification messages from Mac OS X applications.</p>
+        <p> Growl is a free download from:  <a href="http://growl.info">http://growl.info</a></p>
+        <h2>How Notifications Appear When Growl is Running</h2>
+        <p>When Growl is available, InterMapper Control Center uses it to display notification messages instead of using the default "yellow tooltip window". If Growl is running when InterMapper Control Center starts up, Growl notifications are used automatically. If you install Growl after InterMapper Control Center is already running, you must open the InterMapper Control Center settings window before Growl is detected and used.</p>
+        <p> Growl provides a number of features not available through InterMapper Control Center's built-in message window.</p>
+        <ol>
+            <li>Growl has a plugin system that supports customizable "look-and-feel". As a result, Growl notifications look much better, and feel more natural than InterMapper's yellow window.</li>
+            <li>Most Growl plugins are customizable. You can configure the appearance of the notification, including text size and color.</li>
+            <li>You can choose which InterMapper notification messages you want to see, or alter the appearance of specific messages to match their importance. For example, you can set up DOWN and CRITICAL notifications to display in large red text, and ignore all other notifications.</li>
+            <li>You can specify that any or all InterMapper notifications are "sticky", each remaining on screen until you explicitly click it.</li>
+            <li>There are many more options. For example, you can choose to have Growl speak notification messages or email them to you.</li>
+        </ol>
+        <p style="font-weight: bold;"> To test Growl messages:</p>
+        <ol>
+            <li>Open the InterMapper Control Center window.</li>
+            <li>Select the "Show messages when InterMapper Server status changes" checkbox.  <br /><br /><b>Note:</b> Neither Growl nor InterMapper's built-in status window is used if this checkbox is not checked.</li>
+        </ol>
+        <h2>Growl Control</h2>
+        <p style="margin: 0;margin-bottom: 0.5em;margin-left: 5pt;">Use Growl's System Preference panel to configure Growl's behavior.</p>
+        <p>
+            <img src="../resources/images/growl_screenshot.png" alt="Growl System Preferences" style="width: 535px;height: 452px;" />
+        </p>
+        <p class="pagebreakbefore"> Growl provides control over the following InterMapper notifications:</p>
+        <ul>
+            <li>InterMapper New Version Available</li>
+            <li>InterMapper Starting or Stopping</li>
+            <li>InterMapper Status is Down</li>
+            <li>InterMapper Status is Critical</li>
+            <li>InterMapper Status is Alarm</li>
+            <li>InterMapper Status is Warning</li>
+            <li>InterMapper Status is Okay</li>
+            <li>InterMapper Status is Unknown</li>
+        </ul>
+        <p> You can individually enable or disable any of these messages. You can also specify different plugins for different messages or specify that certain messages require you to click on them to dismiss them (the "sticky" option).</p>
+        <p>By default, Growl support is automatically enabled in InterMapper Control Center if Growl is available. If you have Growl installed, but you do <strong>not</strong> want InterMapper to use it, disable it using the following command-line:</p><pre class="code">defaults write com.dartware.InterMapperMenu DWGrowlDisabledKey 1
+</pre>
+        <p>After executing the command, you must reopen the InterMapper Control Center Settings window for this change to take effect. </p>
+    </body>
+</html>

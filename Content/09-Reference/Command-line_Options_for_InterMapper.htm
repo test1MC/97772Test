@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1080" MadCap:lastWidth="577" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">Command-line Options for InterMapper</h1>
+        <h1 MadCap:conditions="Primary.print">Command-line Options</h1>
+        <h2 class="L2" MadCap:conditions="Primary.print">Command-line Options for InterMapper</h2>
+        <p>A number of command-line options are available for use with InterMapper.</p>
+        <p>Usage: </p><pre class="code">intermapperd [OPTIONS] (Mac OS/Linux*) <br />intermapper.exe [OPTIONS] (Windows)</pre>
+        <p class="indent">*For Mac OS and Linux, you may need to use the full path to the executable (<span class="code">/usr/local/bin/intermapperd</span>) in order for some options to work correctly. </p>
+        <table style="caption-side: top;">
+            <col style="width: 191px;" />
+            <col style="width: 75%;" />
+            <tr>
+                <td><b>Argument</b>
+                </td>
+                <td><b>Description</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>-h -? --help</p>
+                </td>
+                <td>&#160;&#160; Display this help text and exit.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;-v --version</p>
+                </td>
+                <td>&#160; Print the version number.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>-f &lt;file&gt; </p>
+                </td>
+                <td>&#160;&#160;Use the specified configuration file.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;-A &lt;user-addr&gt;</p>
+                </td>
+                <td>
+                    <p>Add the specified 'user[:pass]@address' to &#160;the access list.</p>
+                    <p>Extended options:
+-u --user &lt;name&gt; Run as this user. (Overrides 'User' directive)
+--group &lt;name&gt; Run as this group. (Overrides 'Group'
+directive)
+</p>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;-u --user &lt;name&gt; </p>
+                </td>
+                <td>&#160;Run as this user. (Overrides 'User' directive)</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--group &lt;name&gt; </p>
+                </td>
+                <td>&#160;Run as this group. (Overrides 'Group' &#160;directive)</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;&#160;--settings &lt;path&gt; </p>
+                </td>
+                <td>Specify path to 'InterMapper Settings' &#160;directory. (Overrides 'SettingsFolder' directive)</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--fonts &lt;path&gt; </p>
+                </td>
+                <td>&#160;Specify path to 'Font' directory. &#160;&#160;(Overrides 'FontFolder' directive)</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>--listen &lt;address&gt; </p>
+                </td>
+                <td>&#160;&#160;Listen only on the interface with the&#160;specified IPv4 address. Disable IPv6.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;&#160;--port &lt;port&gt; </p>
+                </td>
+                <td>Listen for remote connections on the &#160;specified TCP port.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--no-daemonize </p>
+                </td>
+                <td>&#160;Do not fork and disassociate from the&#160;controlling terminal.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--no-ipv6 </p>
+                </td>
+                <td>&#160;Disable IPv6 support.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--no-ssl </p>
+                </td>
+                <td>&#160;Disable SSL for remote connections.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>--test-only</p>
+                </td>
+                <td>&#160;&#160;Run tests and exit.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;-d --debug </p>
+                </td>
+                <td>&#160;Enable debug mode; don't disassociate from&#160;controlling terminal.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--printconfig </p>
+                </td>
+                <td>&#160;Print the daemon's configuration.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--getenv &lt;var&gt; </p>
+                </td>
+                <td>&#160;Get the value of &lt;var&gt; in the InterMappe renvironment.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;&#160;--setenv &lt;var&gt;=&lt;val&gt; </p>
+                </td>
+                <td>Set the value of &lt;var&gt; to &lt;val&gt; in the InterMapper environment.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--wrap &lt;filename&gt; </p>
+                </td>
+                <td>&#160;Wrap the probe bundle defined by the bundle header at &lt;filename&gt;.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;&#160;--output &lt;filename&gt; </p>
+                </td>
+                <td>Put output of wrap operation in file at &lt;filename&gt;.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;--suppress-avail </p>
+                </td>
+                <td>&#160;Suppress the 'availability' statistic in &#160;device status windows.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;&#160;--verify-permissions </p>
+                </td>
+                <td>Check the permissions of all files in the&#160;'InterMapper Settings' directory.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;&#160;--check-upgrade &lt;date&gt; </p>
+                </td>
+                <td>Check the release manufacture &lt;date&gt;against the maintenance contract date.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <p>&#160;&#160;--detail &lt;log&gt; </p>
+                </td>
+                <td>Turn on detailed logging for the type&#160;indicated by &lt;log&gt;.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">--ciphers &lt;all|default|list&gt;</td>
+                <td>Show supported SSL ciphers.</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">--chart-purge &lt;days&gt;</td>
+                <td>Purge chart data to maximum &lt;days&gt; history.</td>
+            </tr>
+        </table>
+    </body>
+</html>

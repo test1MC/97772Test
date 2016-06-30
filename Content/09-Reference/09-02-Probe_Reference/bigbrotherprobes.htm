@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:id="Big_Brother_Probes" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" class="" MadCap:lastBlockDepth="4" MadCap:lastHeight="709" MadCap:lastWidth="767" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Big Brother Probes</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Big Brother Probes" />Big Brother Probes</h1>
+        <p> InterMapper can act as a Big Brother server. Big Brother <MadCap:keyword term="IP" /><MadCap:keyword term="Set:IP" /><MadCap:keyword term="Network Monitor" /> has been a popular network monitoring tool that allows you to create scripts 
+ ("clients") that run on remote systems and send status reports back to the Big 
+ Brother server. This allows a network manager to test additional kinds of network 
+ devices, either by writing scripts or by using some of the many        scripts 
+ that are already available.</p>
+        <p><b>Note:</b> Big Brother was created by two developers who later joined Quest Software, continuing to work on the product. In 2012, Quest Software was purchased by Dell. (Source: <a href="https://en.wikipedia.org/wiki/Big_Brother_(software)" target="_blank">Wikipedia</a>.) </p>
+        <p>All available support information about Big Brother provided by Dell can be found at Dell's <a href="http://en.community.dell.com/techcenter/application-management/big-brother" target="_blank">Big 
+ Brother page</a>. Dell does not appear to provide client binaries, but you may be able to find them at one of the software distribution sites. A lot of additional information, including potential sources of binaries and source code, is at the Wikipedia link above.</p>
+        <h2>Using the Big Brother Probe</h2>
+        <p> When you specify a device to be tested with a Big Brother probe, InterMapper's 
+ built-in Big Brother server listens for messages coming from a Big Brother client 
+ on the corresponding machine. 
+</p>
+        <p>To configure Big Brother probe, you need to set two parameters:</p>
+        <ul>
+            <li><b>Port</b> - The default port is 1984, but you may choose a different port. If you choose a different port, 
+ make sure that the Big Brother client on the corresponding machine is also configured 
+ for the same port.
+</li>
+            <li><b>Purple Time</b> - This is the number of minutes to wait without a report before indicating a problem. In an actual Big Brother server, this is thirty minutes; Big Brother shows a device as purple if it goes this long without reports from the device. InterMapper shows it as DOWN (blinking red).</li>
+        </ul>
+        <p>
+            <MadCap:keyword term="IP:set" />
+            <MadCap:keyword term="Set" />
+            <MadCap:keyword term="BBDISPLAY" /> In order for InterMapper to receive Big Brother messages from the remote client, 
+ it must be configured correctly. In particular, the client must be configured 
+ so that its BBDISPLAY is set to the IP address of the machine where InterMapper 
+ is running.
+</p>
+        <p>
+            <MadCap:keyword term="Big Brother State" /> The Big Brother states will be mapped to InterMapper states as shown in the 
+ table below: 
+</p>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <col style="width: 185px;" />
+            <col style="width: 265px;" />
+            <tr>
+                <th style="text-align: left;">Big Brother State</th>
+                <th style="text-align: left;">
+                    <MadCap:keyword term="InterMapper Status" />InterMapper Status</th>
+            </tr>
+            <tr>
+                <td>Okay (green)</td>
+                <td>Okay (green)</td>
+            </tr>
+            <tr>
+                <td>Attention (yellow)</td>
+                <td>Warning (yellow)</td>
+            </tr>
+            <tr>
+                <td>Trouble (red)</td>
+                <td>Critical (red)</td>
+            </tr>
+        </table>
+        <p> At the moment, the only messages that InterMapper processes and represents 
+ are "status" (and "combo") messages.
+</p>
+        <p> <b>Note:</b> The Big Brother server for a given port does not start until at 
+ least one device has been configured for that port. Similarly, once the last 
+ device for that port has been removed, the server for that port shuts down.</p>
+    </body>
+</html>

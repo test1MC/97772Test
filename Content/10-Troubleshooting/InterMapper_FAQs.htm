@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="" MadCap:conditions="Primary.online,Primary.print" MadCap:lastBlockDepth="4" MadCap:lastHeight="2220" MadCap:lastWidth="545" MadCap:fileTags="status_tags.No Changes">
+    <head><title>InterMapper FAQs</title>
+        <link href="../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">InterMapper FAQs</h1>
+        <h2>How can I stop the InterMapper server from polling for a while? </h2>
+        <p>The easiest way to stop InterMapper's polling for a while is to disable all the maps. To do this: </p>
+        <ol start="1">
+            <li>Open the Server Settings... window </li>
+            <li>Click the Enabled Maps tab. </li>
+            <li>Uncheck all the maps. They will no longer be polled or tested. </li>
+        </ol>
+        <p>Alternatively, you can disable maps individually from the Map List by right-clicking on a map in the list and selecting the ‘Disable’ command.</p>
+        <h2 class="Heading2">How can I stop the InterMapper server? How can I restart it?</h2>
+        <p>On MacOS X, InterMapper installs a Menu Bar Application that gives a summary of InterMapper's status, and allows you to start and stop the InterMapper daemon. </p>
+        <p>On Windows, InterMapper installs an icon in System Tray (lower right corner) that does much the same thing. </p>
+        <p>On all Unix/Linux installations, InterMapper installs a script to control the server daemon. </p>
+        <p>We recommend you read the Readme file on the <a href="http://dartware.com/downloads/binaries/" target="_blank">Downloads page</a> for information specific to your version.</p>
+        <h2>How can I move InterMapper from one server to another?</h2>
+        <p>The recommended way to move InterMapper to another server is to follow these steps: </p>
+        <ol start="1">
+            <li>Install InterMapper on the new server, and stop the InterMapper service/daemon when installation is complete.</li>
+            <li>Stop the InterMapper service/daemon on the old server and copy your InterMapper Settings folder to the new platform, replacing the one created when you installed InterMapper on the new server.</li>
+            <li>On the new server, start the InterMapper service/daemon.</li>
+        </ol>
+        <p>The default location for the&#160; InterMapper Settings folder depends upon the platform where installed:</p>
+        <ul>
+            <li>Windows: C:\Program Files\InterMapper\InterMapper Settings</li>
+            <li>Mac OS X: /Library/Application Support/InterMapper Settings</li>
+            <li>UNIX/Linux: $HOME/InterMapper_Settings/, where $HOME is the home directory for the specified user InterMapper is running under.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>Note: If you are migrating from&#160; Mac OS X PowerPC to Mac Intel, Windows or any other Intel-based system<MadCap:conditionalText MadCap:conditions="Primary.Omit">; or from Solaris Sparc to Solaris Intel</MadCap:conditionalText>, please contact <a href="mailto:support@intermapper.com">support@intermapper.com</a> prior to installing on the new platform. Additional steps are necessary in order to preserve the historical chart data when migrating between these platforms.</p>
+        <h2 class="Heading2">How can I uninstall the InterMapper server? </h2>
+        <p>Each version of InterMapper comes with its own uninstaller. Find the original distribution file (or retrieve the current version from http://www.intermapper.com/files) and use its uninstall feature.&#160; </p>
+        <h2 class="Heading2"> I get an "intermapperd dead but subsys locked" error message when I get InterMapper status by typing "/etc/init.d/intermapperd status". What does this mean? </h2>
+        <p> The message "intermapperd dead but subsys locked" means that &#160;intermapperd is not running; the daemon has either crashed or was sent an explicit kill command by the root user. Furthermore, the InterMapper lock file /var/lock/subsys/intermapperd exists when intermapperd isn't running.</p>
+        <p>To restart InterMapper, log on to the system as root and type: </p><pre class="code">&#160;&#160;/etc/init.d/intermapperd restart</pre>
+        <p>You may also clear the lock file by typing:</p><pre class="code">&#160;&#160;rm /var/lock/subsys/intermapperd</pre>
+        <p>but this isn't required because the restart command does this. </p>
+        <p>&#160;</p>
+        <h2 class="Heading2">Why do I have trouble with Telnet using my Windows terminal program?</h2>
+        <p><b>Q:</b> When I use HyperTerminal to telnet into InterMapper's server, I don't see character echoes. Why not?</p>
+        <p><b>A: </b>Two commonly-available Windows telnet clients, HyperTerminal and the command-line telnet client, do not work correctly with InterMapper in their default configuration. Neither of them do local echoing by default, and both refuse to turn it on when asked to do so by the InterMapper server. </p>
+        <p>Therefore, neither of these clients work out-of-the-box with InterMapper, so you need to turn on local echoing yourself. </p>
+        <h3 class="Heading3">Turning On Local Echoing in HyperTerminal</h3>
+        <p>With your InterMapper session loaded, choose File-&gt;Properties. Click the Settings tab. Click the ASCII Setup... button. Check the box labelled "Echo typed characters locally". When connecting to earlier versions of InterMapper, you should also check the box labelled "Send line ends with line feeds". Later versions of InterMapper do not require this (although it won't hurt.) Click Ok to close the ASCII Setup dialog, then click Ok to put away the Properties dialog. Remember to save your session to make the new settings permanent. </p>
+        <h3 class="Heading3">Turning On Local Echoing with Built-in Telnet Client</h3>
+        <p>Start your telnet session with InterMapper. Press Ctrl+] to enable the client to process setup commands. Type "SET LOCAL_ECHO" and press Enter to turn on local echoing. Press Enter again to return to your session. I'm not aware of any way to save this setting for future sessions, so you'll need to do this each time. </p>
+        <h3 class="Heading3">Putty - Another Choice</h3>
+        <p>One free Windows telnet client we have had good luck with is Putty. Putty is available at <a href="http://www.chiark.greenend.org.uk/%7Esgtatham/putty/">http://www.chiark.greenend.org.uk/~sgtatham/putty/</a>.&#160; Putty requires no configuration to work correctly with InterMapper. You may find this nicer to use than either of the built-in options that come with Windows. </p>
+        <h2><a name="xserveserial"></a>On an Xserve, can I use the serial port for paging?</h2>
+        <p>You can use the built-in serial port to drive an external modem that can in turn send page notifications. To do this, you must disable the getty process that's usually listening on that port. </p>
+        <p>On the Xserve, open this file: </p><pre class="code">/System/Library/StartupItems/SerialTerminalSupport </pre>
+        <p>At about line 72 is: </p><pre class="code">ENABLE_SERIAL_TERMINAL=$TRUE </pre>
+        <p>Change this to: </p><pre class="code">ENABLE_SERIAL_TERMINAL=$FALSE </pre>
+        <p>Re-init the system, and there should be no getty and InterMapper will get to the modem just fine. (Thanks to Charlie Winchcombe for this tip.)</p>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:lastBlockDepth="6" MadCap:lastHeight="3118" MadCap:lastWidth="594" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1>AutoMate Notifier</h1>
+        <p>Use the Automate Notifier to run an Automate task when specified conditions are met.</p>
+        <p>
+            <img src="../../Resources/Images/config-notifier-AutoMate.png" />
+        </p>
+        <h2>Connecting to the AutoMate Server</h2>
+        <p>Before you can create an AutoMate notifier, you need to enable the connection to an AutoMate Server. The AutoMate Server must be running on the same machine  as the InterMapper Server. For more information see the section on configuring <a href="../../08-Server_Settings/08-03-Server_Config/Automate.htm">AutoMate </a><MadCap:xref href="../../08-Server_Settings/08-03-Server_Config/Automate.htm">(Pg 1)</MadCap:xref> in the Server Settings.</p>
+        <p style="font-weight: bold;">To configure an AutoMate notifier:</p>
+        <ol>
+            <li>From the Notifier Type dropdown menu, choose <b style="font-style: italic;">AutoMate</b>. The AutoMate Notifier configuration window appears.</li>
+            <li>Click <b style="font-style: italic;">Edit Task...</b> The Notifier Task window appears:<br /><img src="../../Resources/Images/select_AutoMate_Task.png" style="margin-bottom: 1em;margin-top: 1em;" /></li>
+            <li>Click <b style="font-style: italic;">Select Task...</b> to select from a list of available tasks.</li>
+            <li>In the <b style="font-style: italic;">Run By</b> section, choose whether to execute the task by <b style="font-style: italic;">Path</b> or <b style="font-style: italic;">ID</b>. HelpSystems recommends that you select <b style="font-style: italic;">ID</b>, because it reduces the traffic between InterMapper and AutoMate.</li>
+            <li>Enter a <b style="font-style: italic;">Password</b> if one is required by the AutoMate task's security configuration.</li>
+            <li>Click <b style="font-style: italic;">OK</b>. The task is selected.</li>
+            <li>Set <b style="font-style: italic;">Retry</b> and <b style="font-style: italic;">Consolidation</b> settings as described below and click <b style="font-style: italic;">Test</b> to run the notifier and execute the task.</li>
+        </ol>
+        <p><b>Note:</b> If a task is disabled in AutoMate, the task still appears in the available task list, but will not run when the notifier is triggered.</p>
+        <h2>Retry and Consolidation Settings</h2>
+        <p>Use the Retry and Consolidation settings to specify when to run or retry a task.</p>
+        <ul>
+            <li><b>Retry limit</b> - Enter the number of times the task will be re-attempted upon failure. By default, the value is 0, and the task is not re-tried.</li>
+            <li><b>Retry interval</b> - Enter the number of seconds between retries.</li>
+            <li><b>Consolidation limit</b> - Enter the maximum number of notifications sent before the task is executed. If it is set to 1, a task is executed each time the notification is sent. If it is greater than 1, the task is executed when the number of notifications reaches the Consolidation limit or the Consolidation period is reached.</li>
+            <li><b>Consolidation period</b> - Enter the number of seconds to wait for additional notifications before running the task, when the Consolidation limit is non-zero. Once a notification has been sent by the notifier, the task is run when either the Consolidation limit or the Consolidation period is reached.</li>
+        </ul>
+        <p><b>Note:</b> An AutoMate notifier is not run again until the selected AutoMate task is complete.</p>
+        <h2>Accessing InterMapper Variables in an AutoMate Task</h2>
+        <p>When an AutoMate notifier is run, InterMapper writes data about the triggering device to a CSV file, and grants the AutoMate task access to it. Through this file, AutoMate can access InterMapper variables, which can be used by the task in a wide variety of ways.</p>
+        <p style="font-weight: bold;">In order for AutoMate to access this data from an AutoMate task, the task should include these steps:</p>
+        <ol>
+            <li>Wait for exclusive access to InterMapper's CSV file. (A timeout value of 30 seconds is recommended.)</li>
+            <li>Read the CSV file into a dataset.</li>
+            <li>Iterate over the rows of the dataset, gathering the data you need.</li>
+            <li>Delete the CSV file.</li>
+        </ol>
+        <p>A sample task that completes these steps is supplied with InterMapper. The file, called <span class="code">NotifierTest.aml</span> can be found at:</p>
+        <p><span class="code">  %Installation Folder%\InterMapper\docs\samples\automate\</span>
+        </p>
+        <p><b>To run the test task:</b>
+        </p>
+        <ol>
+            <li>Drag this file into the AutoMate Task Administrator.</li>
+            <li>Create an Automate notifer.</li>
+            <li>Select the the task to be run by the Automate notifier. The task presents a dialog that displays received values for all of the parameters listed above. Edit the task in the visual editor to see how to access each parameter.</li>
+        </ol>
+        <p>In the AutoMate task editor, you can access these parameters with this syntax:</p>
+        <p class="code" xml:space="preserve">%PARAMETERS.[InterMapper variable name]%</p>
+        <p>Here is a list of available parameters:</p>
+        <ul>
+            <li><b>Notifier:</b> %PARAMETERS.NOTIFIER% - the name of the notifier.</li>
+            <li><b>Event:</b> %PARAMETERS.EVENT% - the type of event that triggered the notifier. (Down, Up, Alarm, Warning, etc.)</li>
+            <li><b>Name:</b> %PARAMETERS.NAME% - the first line of the device label.</li>
+            <li><b>ProbeGroup:</b> %PARAMETERS.PROBEGROUP% - the name of the probe group (if any) to which the probe that triggered the notifier belongs.</li>
+            <li><b>MemberProbe:</b> %PARAMETERS.MEMBERPROBE% - the name of the member probe that triggered the notifier (if the probe is a member of a probe group.)</li>
+            <li><b>Address:</b> %PARAMETERS.ADDRESS% - the address of the device.</li>
+            <li><b>Status:</b> %PARAMETERS.STATUS% - the status of the device and whether it has been acknowledged.</li>
+            <li><b>Condition:</b> %PARAMETERS.CONDITION% - the condition of the device.</li>
+            <li><b>Previous condition:</b> %PARAMETERS.PREVCONDITION% - the previous condition of the device.</li>
+            <li><b>Probe is:</b> %PARAMETERS.PROBE% - the probe type used for polling.</li>
+            <li><b>MAC address:</b> %PARAMETERS.MACADDRESS% - the MAC address of the interface associated with the device's address, if the MAC address can be found using SNMP.</li>
+            <li><b>SysUptime:</b> %PARAMETERS.SYSUPTIME% - the amount of time the system has been up.</li>
+            <li><b>Last down:</b> %PARAMETERS.LASTDOWN% - the last time the system went down.</li>
+            <li><b>Time:</b> %PARAMETERS.TIME% - the time the notifier ran the task.</li>
+            <li><b>Document:</b> %PARAMETERS.DOCUMENT% - the name of the document.</li>
+            <li><b>InterMapper version:</b> %PARAMETERS.VERSION% - the InterMapper version that was running when the notifier was triggered.</li>
+            <li><b>SysContact:</b> %PARAMETERS.SYSCONTACT% - the name of the person responsible for the device (if available).</li>
+            <li><b>SysLocation:</b> %PARAMETERS.SYSLOCATION% - the location of the device.</li>
+            <li><b>Comment:</b> %PARAMETERS.COMMENT% - a user-defined comment (if any) for the device.</li>
+            <li><b>Counts - </b> the total number of devices whose status matches the each of the four specified states below.<br /><b>down:</b> %PARAMETERS.DOWNCOUNT% <br /><b>critical:</b> %PARAMETERS.CRITCOUNT% <br /><b>alarm:</b> %PARAMETERS.ALRMCOUNT% <br /><b>warn:</b> %PARAMETERS.WARNCOUNT%</li>
+            <li><b>Acknowledge message:</b> %PARAMETERS.ACKMESSAGE% - the message entered when the device was last acknowledged</li>
+            <li><b>Send Counts</b> - the number of times this notifier has been triggered, and the maximum number that will be sent.<br /><b>send count:</b> %PARAMETERS.SENDCOUNT% <br /><b>max:</b> %PARAMETERS.MAXSENDCOUNT%</li>
+            <li><b>Map ID:</b> %PARAMETERS.MAPID% - the internal InterMapper ID&#160;of the map containing the device that triggered the notifier.</li>
+            <li><b>Device IMID:</b> %PARAMETERS.DEVICEIMID% - the internal InterMapper ID of the device that triggered the notifier.</li>
+            <li><b>Param:</b> %PARAMETERS.PARAM% - the parameters sent to the task.</li>
+            <li><b>Nickname:</b> %PARAMETERS.NICKNAME% - also called the "Smart Name". The device's DNS name, SNMP SysName, or address, tried in that order.</li>
+            <li><b>Shortened nickname:</b> %PARAMETERS.SHORTNICKNAME% - also called the "Short, Smart Name". The first part of the device's DNS name, SNMP&#160;SysName, or address, tried in that order.</li>
+            <li><b>Persist name:</b> %PARAMETERS.PERSISTNAME% - the device's domain name.</li>
+            <li><b>Short name:</b> %PARAMETERS.SHORTNAME% - the first label of the device's domain name.</li>
+            <li><b>SystDescr:</b> %PARAMETERS.SYSDESCR% - the description of the device and its software as reported by the <span class="code">sysDescr</span> variable.</li>
+            <li><b>SysName:</b> %PARAMETERS.SYSNAME% - the name of the device as reported by the <span class="code">sysName</span> variable.</li>
+            <li><b>Enterprise ID:</b> %PARAMETERS.ENTERPRISEID% - the enterprise ID&#160;of the device as reported by the <span class="code">EnterpriseID</span> variable.</li>
+            <li><b>Enterprise serial:</b> %PARAMETERS.ENTSERIALNUM% - the serial number of the device as reported by the <span class="code">EntSerialNum</span> variable.</li>
+            <li><b>Enterprise manuf name:</b> %PARAMETERS.ENTMFGNAME% - the manufacturer name of the device as reported by the <span class="code">EntMfgName</span> variable.</li>
+            <li><b>Enterprise model name:</b> %PARAMETERS.ENTMODELNAME% - the model name of the device as reported by the <span class="code">EntModelName</span> variable.</li>
+            <li><b>Context:</b> %PARAMETERS.CONTEXT% - an internal context description (could include IMID of the device, alarm point, current time, notifier type, notifier IMID, event time, event status, send count).</li>
+            <li><b>Port Name</b> - %PARAMETERS.IFPORTNAME% - the name of the port that triggered the notifier.</li>
+            <li><b>Port Number</b> - %PARAMETERS.IFPORTNUM% - the number of the interface that triggered the notifier.</li>
+            <li><b>Interface Name</b> - %PARAMETERS.IFNAME% - the name of the interface that triggered the notifier.</li>
+            <li><b>Interface Index</b> -  %PARAMETERS.IFINDEX% - the index of the interface that triggered the notifier.</li>
+        </ul>
+    </body>
+</html>

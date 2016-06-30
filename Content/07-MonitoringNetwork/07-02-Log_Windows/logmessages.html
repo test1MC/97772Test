@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="5555" MadCap:lastWidth="622" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Error Messages in the Log Windows</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Can't obtain/lock PixMap;Server Probes - Proprietary;InterMapper Settings" />
+            <MadCap:keyword term="Event Log Messages">
+            </MadCap:keyword>
+            <MadCap:keyword term="Log Messages" />Event Log Messages</h1>
+        <p>All event log messages have one of these two formats:</p>
+        <h2>
+            <MadCap:keyword term="Device" />
+            <MadCap:keyword term="Message Format" />Message Format - Devices</h2>
+        <p>
+            <MadCap:keyword term="Timestamp" />
+            <MadCap:keyword term="Name" />
+            <MadCap:keyword term="Fullname" />&lt;timestamp&gt; &lt;tag&gt; &lt;fullname&gt;:: &lt;message&gt;</p>
+        <p>The &lt;tag&gt;s are:<MadCap:keyword term="Acknowledgements:Acknowledge-message" /><MadCap:keyword term="Down" /><MadCap:keyword term="TRAP" /><MadCap:keyword term="Alrm" /><MadCap:keyword term="ACK" /><MadCap:keyword term="UNAC" /><MadCap:keyword term="Threshold-condition" /></p><pre class="code">	"UP &#160;": &lt;message&gt; = "(Was down for &lt;duration:3&gt;)"
+	"DOWN": &lt;message&gt; = "(Was up for &lt;duration:3&gt;)"
+	"okay": &lt;message&gt; = &lt;threshold-condition&gt; &#160;&#160;
+	"warn": &lt;message&gt; = &lt;threshold-condition&gt; &#160;&#160;
+	"alrm": &lt;message&gt; = &lt;threshold-condition&gt; &#160;&#160;
+	"ACK ": &lt;message&gt; = &lt;acknowledge-message&gt; &#160;&#160;
+	"UNAC": &lt;message&gt; = "" &#160;&#160;&#160;
+	"TRAP": &lt;message&gt; = &lt;trap-message&gt;
+</pre>
+        <p>where the &lt;duration:3&gt; can be one of:</p>
+        <ul>
+            <li>"[0-9]+ seconds?"</li>
+            <li>"[0-9]+ minutes?, [0-9]+ seconds?"</li>
+            <li>"[0-9]+ hours?, [0-9]+ minutes?, [0-9]+ seconds?"</li>
+            <li>"[0-9]+ days?, [0-9]+ hours?, [0-9]+ minutes?"</li>
+        </ul>
+        <h2>Message Format - All Other Events</h2><pre class="code">&lt;timestamp&gt; &lt;tag&gt; &lt;message&gt;</pre>
+        <h2 class="pagebreakbefore">Summary of Log Messages</h2>
+        <p>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="Copy:InterMapper" />
+            <MadCap:keyword term="Determine:IP" />This page lists all log messages that InterMapper writes to a log, with 
+ a description of each. Items shown in <i>italics</i><MadCap:keyword term="Create" /><MadCap:keyword term="Value" /><MadCap:keyword term="InterMapper Settings:create" /> are variable names 
+ that are substituted with the proper value when the log message is created.</p>
+        <p><b style="font-weight: bold;">Note:</b> Debug messages are not documented 
+ by Help/Systems, because they are subject to change, and do not follow a specified 
+ format.</p>
+        <h3>
+            <MadCap:keyword term="General Messages" />General Messages</h3>
+        <p>
+            <MadCap:keyword term="Event Log window" />
+            <MadCap:keyword term="Start" />
+            <MadCap:keyword term="OS" />These messages describe InterMapper's actions as it starts up, enables 
+ and disables servers, and opens and closes the map files. These messages 
+ always go to the Event Log window.</p>
+        <p class="logmsg">**** Starting <i><MadCap:keyword term="Start:appName" /><MadCap:keyword term="AppName" /><MadCap:keyword term="Quitting:appName" />appName</i></p>
+        <p class="logmsgdd">InterMapper is starting up. This entry contains the program's 
+ version number</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Quitting" />**** Quitting <i>appName</i></p>
+        <p class="logmsgdd">The InterMapper application is quitting.</p>
+        <p class="logmsg">**** Opening map <i><MadCap:keyword term="DocName" />docName</i></p>
+        <p class="logmsgdd">The named map is being opened.</p>
+        <p class="logmsg">**** Closing map <i>docName</i></p>
+        <p class="logmsgdd">The named map is being closed.</p>
+        <p class="logmsg">http Starting web server on port <i><MadCap:keyword term="Portnumber" />portnumber</i></p>
+        <p class="logmsgdd">InterMapper is starting its web server on port <i>portnumber</i></p>
+        <p class="logmsg">
+            <MadCap:keyword term="InterMapper RemoteAccess:stopping" />
+            <MadCap:keyword term="Telnet:stopping" />
+            <MadCap:keyword term="Stop" />http Stopping web server on port <i>portnumber</i></p>
+        <p class="logmsgdd">InterMapper is stopping the web server</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Kali Starting KALI" />
+            <MadCap:keyword term="Kali" />imrm Starting Remote server on port <i>portnumber</i></p>
+        <p class="logmsgdd">
+            <MadCap:keyword term="InterMapper RemoteAccess" />
+            <MadCap:keyword term="InterMapper RemoteAccess:access" />
+            <MadCap:keyword term="Remote" />
+            <MadCap:keyword term="Access" />
+            <MadCap:keyword term="Access:InterMapper RemoteAccess" />
+            <MadCap:keyword term="Stop:InterMapper RemoteAccess" />
+            <MadCap:keyword term="TCP:access" />InterMapper is starting its InterMapper RemoteAccess 
+ server on port <i>portnumber</i></p>
+        <p class="logmsg">
+            <MadCap:keyword term="Kali Stopping KALI" />imrmStopping Remote server on port <i>portnumber</i></p>
+        <p class="logmsgdd">InterMapper is stopping the InterMapper RemoteAccess server</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Telnet" />
+            <MadCap:keyword term="Stop:Telnet" />
+            <MadCap:keyword term="Tlnt TELNET:Tlnt Starting telnet" />tlnt Starting telnet server on port <i>portnumber</i></p>
+        <p class="logmsgdd">InterMapper is starting its Telnet server on port <i>portnumber</i></p>
+        <p class="logmsg">
+            <MadCap:keyword term="Tlnt TELNET:Tlnt Stopping telnet" />tlnt Stopping telnet server on port <i>portnumber</i></p>
+        <p class="logmsgdd">InterMapper is stopping the Telnet server</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Error" />
+            <MadCap:keyword term="ERR" />Start-up error: Could not open <i><MadCap:keyword term="Porttype" />porttype</i> port           <i>portnumber</i>.</p>
+        <p class="logmsgdd">InterMapper could not open the specified port during 
+ startup</p>
+        <p class="logmsg">Error sending udp packet. (Err = <i>errNumber</i>)</p>
+        <p class="logmsgdd">InterMapper received an error attempting to send a UDP 
+ packet</p>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="DNS" />
+            <MadCap:keyword term="DNS:DNS-Related Messages" />
+            <MadCap:keyword term="Determine:DNS" />
+            <MadCap:keyword term="Processing:DNS" />DNS-Related Messages</h3>
+        <p class="logmsg">
+            <MadCap:keyword term="DNS:DNS z.z.z.z" />
+            <MadCap:keyword term="Address Change" />**** Address Change: "www" changed from x.x.x.x 
+ to y.y.y.y. (DNS z.z.z.z)</p>
+        <p class="logmsgdd">The Device named www changed its IP address from x.x.x.x 
+ to y.y.y.y according to the DNS server at z.z.z.z</p>
+        <p class="logmsg">**** No IP address for "www". (DNS z.z.z.z)</p>
+        <p class="logmsgdd">
+            <MadCap:keyword term="IP:determine" />
+            <MadCap:keyword term="DNS:determine" />
+            <MadCap:keyword term="Determine" />InterMapper was not able to determine an IP address for 
+ the device named www from the DNS server at z.z.z.z</p>
+        <p class="logmsg">**** Name Change: "w.w.w.w" changed from "xxx" 
+ to "yyy". (DNS z.z.z.z)</p>
+        <p class="logmsgdd">The IP address w.w.w.w changed its DNS name from xxx 
+ to yyyy according to the DNS server at z.z.z.z</p>
+        <p class="logmsg">**** No domain name for x.x.x.x. (DNS z.z.z.z)</p>
+        <p class="logmsgdd">InterMapper was not able to determine a DNS name for 
+ x.x.x.x from the DNS server at z.z.z.z</p>
+        <p class="logmsg">
+            <MadCap:keyword term="DNS:DNS x.x.x.x" />**** "No response from DNS x.x.x.x when resolving 'yyy' to 
+ an address.</p>
+        <p class="logmsgdd">
+            <MadCap:keyword term="Id" />The DNS server at x.x.x.x did not respond when attempting 
+ to resolve the DNS name yyy to an address.</p>
+        <p class="logmsg">**** "No response from DNS x.x.x.x when resolving 
+ 'y.y.y.y' to a name.</p>
+        <p class="logmsgdd">The DNS server at x.x.x.x did not respond when resolving 
+ the address y.y.y.y to a name.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Dbug" />dbug "DNS packet with bad format from y.y.y.y"</p>
+        <p class="logmsgdd">InterMapper received a DNS response with an invalid format.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="DNS:processing" />
+            <MadCap:keyword term="SNMP:processing" />
+            <MadCap:keyword term="Processing" />
+            <MadCap:keyword term="Reply" />dbug "Error ### while processing DNS reply from y.y.y.y"</p>
+        <p class="logmsgdd">InterMapper received an error while processing a DNS 
+ response.</p>
+        <p class="logmsg">**** Connected to 
+&gt; InterMapper DataCenter at 127.0.0.1</p>
+        <p class="logmsgdd">InterMapper connected successfully to InterMapper DataCenter</p>
+        <p class="logmsg">**** Disconnected from 
+&gt; InterMapper DataCenter at 127.0.0.1</p>
+        <p class="logmsgdd">InterMapper was disconnected from InterMapper DataCenter</p>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="Probe File Error Messages" />Probe File Error Messages</h3>
+        <p>
+            <MadCap:keyword term="Custom Probe" />These messages describe problems with the Custom Probe files. Many of 
+ them are self-explanatory.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="LineStr" />
+            <MadCap:keyword term="MyProbe" />
+            <MadCap:keyword term="CFileName" />dbug "MyProbe: Can't match "MyProbe"", 
+ cFileName, lineStr</p>
+        <p class="logmsgdd">&#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Invalid Probe ID" />dbug "xxxx: Invalid Probe ID."</p>
+        <p class="logmsgdd">The probe xxxx contains an invalid ID (i.e., the package 
+ is not a valid string)</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Invalid Probe Name" />dbug "MyProbe: Invalid Probe Name.", cFileName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Invalid Probe Human Name" />dbug "MyProbe: Invalid Probe Human Name.", cFileName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">dbug "MyProbe: Probe definition does not contain a 
+ valid &lt;description&gt; section.", cFileName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="SNMP" />
+            <MadCap:keyword term="Processing:SNMP" />
+            <MadCap:keyword term="Snmp-device-variables" />dbug "MyProbe: Probe definition does not contain a 
+ valid &lt;snmp-device-variables&gt; section.", cFileName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Snmp-device-display" />dbug "xxxx: Probe definition does not contain a valid 
+ &lt;snmp-device-display&gt; section."</p>
+        <p class="logmsgdd">The xxxx probe file does not contain a valid &lt;snmp-device-display&gt; 
+ section.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="End:EndTagStr" />
+            <MadCap:keyword term="Dt" />dbug "MyProbe: Probe definition does not contain a 
+ valid end tag for &lt;MyProbe&gt;.", cFileName, endTagStr</p>
+        <p class="logmsgdd"> &#160;</p>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="Telnet Server Messages" />
+            <MadCap:keyword term="Server Messages" />Telnet Server Messages</h3>
+        <p class="logmsg">
+            <MadCap:keyword term="Access:tcp" />
+            <MadCap:keyword term="TCP" />**** x.x.x.x denied access to tcp server.</p>
+        <p class="logmsgdd">An attempt to connect to the Telnet server from address 
+ x.x.x.x was refused.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Tlnt TELNET" />tlnt TELNET - x.x.x.x denied access.</p>
+        <p class="logmsgdd">An attempt to connect to the Telnet server from address 
+ x.x.x.x was refused.</p>
+        <p class="logmsg">tlnt TELNET - x.x.x.x denied access because there are too 
+ many connections.</p>
+        <p class="logmsgdd">An attempt to connect to the Telnet server from address 
+ x.x.x.x was refused because there were too many connections already established.</p>
+        <p class="logmsg">tlnt TELNET - Accepted connection from x.x.x.x</p>
+        <p class="logmsgdd">A user at x.x.x.x successfully connected to the Telnet 
+ server.</p>
+        <p class="logmsg">tlnt TELNET - Accepted user connection from x.x.x.x</p>
+        <p class="logmsgdd">Telnet server accepted a user connection from x.x.x.x</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Username" />tlnt TELNET - x.x.x.x authenticated as "username".</p>
+        <p class="logmsgdd">The Telnet server accepted a connection from an authenticated 
+ user, "username"</p>
+        <p class="logmsg">tlnt TELNET - Closed connection from x.x.x.x</p>
+        <p class="logmsgdd">
+            <MadCap:keyword term="Disconnected" />The user at address x.x.x.x disconnected from the Telnet 
+ server.</p>
+        <h3>
+            <MadCap:keyword term="Trap-Related Messages" />Trap-Related Messages</h3>
+        <p class="logmsg">
+            <MadCap:keyword term="Msg" />
+            <MadCap:keyword term="Text-msg" />trap "y.y.y.y (not on map) :: text-msg"</p>
+        <p class="logmsgdd">InterMapper received a trap from device y.y.y.y containing 
+ the <i>text-msg</i></p>
+        <p class="logmsg">trap "An error occurred while processing a SNMP trap 
+ from y.y.y.y. (err = ###)"</p>
+        <p class="logmsgdd">InterMapper encountered an error processing a trap from 
+ y.y.y.y</p>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="Notification Messages" />Notification Messages</h3>
+        <p class="logmsg">
+            <MadCap:keyword term="Send:e-mail" />
+            <MadCap:keyword term="E-mail" />
+            <MadCap:keyword term="Silenced e-mail" />
+            <MadCap:keyword term="Ntfy" />
+            <MadCap:keyword term="Silenced" />ntfy "Silenced e-mail notification to "username"."</p>
+        <p class="logmsgdd">
+            <MadCap:keyword term="Snooze Alarm" />InterMapper suppressed an e-mail notification to the 
+ listed user because of the Snooze Alarm</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Devicename" />ERR! "Failed to send e-mail notification to "username" 
+ for "message: devicename" event. Check e-mail configuration. 
+ (err = ###)"</p>
+        <p class="logmsgdd">InterMapper was unable to send an e-mail notification 
+ to the named person because of the error code ###</p>
+        <p class="logmsg">ntfy "Sent e-mail notification to "username" 
+ for "message: devicename" event. (n 
+ of m)"</p>
+        <p class="logmsgdd">InterMapper sent an e-mail notification as indicated. 
+ The "n of m" indicates that the n'th repeated message has been 
+ sent</p>
+        <p class="logmsg">ntfy "Silenced pager message notification to "username"."</p>
+        <p class="logmsgdd">InterMapper suppressed a page to the listed user because 
+ of the Snooze Alarm</p>
+        <p class="logmsg">ERR! "Failed to send pager notification to "username" 
+ for "message: devicename". (err = ###)"</p>
+        <p class="logmsgdd">InterMapper was unable to send a page to the named person 
+ because of the error code ###</p>
+        <p class="logmsg">
+            <MadCap:keyword term="EventMesg" />
+            <MadCap:keyword term="ItsUserName" />ntfy "Sent pager message notification to "MyProbe" 
+ for "MyProbe: MyProbe".", itsUserName, eventMesg, deviceName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">**** "Silenced sound notification to "MyProbe".", 
+ itsUserName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">ERR! "Failed to send sound notification to "MyProbe". 
+ (err = %d)", itsUserName, err</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Silenced SNMP" />ntfy "Silenced SNMP trap notification to "MyProbe".", 
+ itsUserName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">ERR! "Failed to send SNMP trap notification to "MyProbe" 
+ for "MyProbe: MyProbe". (err = %d)", itsUserName, eventMesg, 
+ deviceName, err</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">ntfy "Sent SNMP trap notification to "MyProbe" 
+ for "MyProbe: MyProbe".", itsUserName, eventMesg, deviceName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">ERR! "Failed to send e-mail notification to MyProbe. 
+ Check user configuration.", itsUserName</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">ERR! "Failed to send pager notification to MyProbe. 
+ (err = %d)", itsUserName, err</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="TimeStr" />**** "Silenced all notifications until MyProbe.", 
+ timeStr</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="SMTP Failure" />
+            <MadCap:keyword term="ItsMailServer" />ERR! "SMTP Failure: Can't connect to "MyProbe". 
+ Error = %d", itsMailServer, err</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">ERR! "SMTP Failure: Server connection to "MyProbe" 
+ idle for more than 4 minutes. Disconnecting...", itsMailServer</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="ReversePath" />
+            <MadCap:keyword term="ReplyCode" />
+            <MadCap:keyword term="Server &quot;MyProbe" />ERR! "SMTP Failure: Server "MyProbe" won't 
+ accept mail from MyProbe. (Reply = %d)", itsMailServer, reversePath, 
+ replyCode</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="EmailAddr" />ERR! "SMTP Failure: Server "MyProbe" rejected 
+ recipient MyProbe. (Reply = %d)", itsMailServer, emailAddr, replyCode</p>
+        <p class="logmsgdd"> &#160;</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Send:mailto MyProbe" />
+            <MadCap:keyword term="Mailto MyProbe" />
+            <MadCap:keyword term="Cmd:CmdName" />ERR! "SMTP Failure: Server "MyProbe" failed 
+ when sending mailto MyProbe. Mail not sent. (%s Reply = %d)", itsMailServer, 
+ emailAddr, cmdName, replyCode</p>
+        <p class="logmsgdd"> &#160;</p>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="Web Server Messages" />Web Server Messages</h3>
+        <p class="logmsg">http HTTP - <i>address</i> (<i>user</i>)           <i><MadCap:keyword term="AuthLevel" />authLevel</i> --           <i>command</i><i>argument</i></p>
+        <p class="logmsgdd">InterMapper received a <i>command</i> request for           <i>argument</i> 
+ from           <i>address</i></p>
+        <p class="logmsg">
+            <MadCap:keyword term="PNG:compress" />
+            <MadCap:keyword term="JPEG" />
+            <MadCap:keyword term="Compress" />
+            <MadCap:keyword term="Compress:JPEG" />http HTTP - ERROR: JPEG compression failed. Compressed length 
+ = xxx. (Error = yyy)</p>
+        <p class="logmsgdd">InterMapper got an error code of yyy when attempting 
+ to compress the JPEG image whose length is yyy bytes.</p>
+        <p class="logmsg">http HTTP - ERROR: JPEG compression failed. Can't obtain/lock 
+ PixMap</p>
+        <p class="logmsgdd">
+            <MadCap:keyword term="Relaunch" />InterMapper was unable to compress a JPEG image because 
+ it was already compressing an image. If this problem persists, quit InterMapper 
+ and relaunch it.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Offscreen" />http HTTP - ERROR: JPEG compression failed. Can't create graphics 
+ offscreen. (Error = yyy)/dt&gt;</p>
+        <p class="logmsgdd">InterMapper received the yyy error code when attempting 
+ to compress a JPEG image.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="PNG" />
+            <MadCap:keyword term="Compress:PNG" />http HTTP - ERROR: PNG compression failed because there is not 
+ enough memory. (yyy K available)</p>
+        <p class="logmsgdd">InterMapper failed to compress a PNG</p>
+        <p class="logmsg">http "HTTP - ERROR: PNG compression failed. (Error 
+ = ###)"</p>
+        <p class="logmsgdd">InterMapper received an OS error ### when attempting 
+ to compress the PNG image</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Unknown HTTP Version" />http "HTTP - y.y.y.y -- Unknown HTTP Version: xxx"</p>
+        <p class="logmsgdd">InterMapper received an unknown version - xxx - in an 
+ HTTP request from y.y.y.y</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Missing HTTP Version" />http "HTTP - y.y.y.y -- Missing HTTP Version."</p>
+        <p class="logmsgdd">No HTTP version was included in the HTTP request from 
+ y.y.y.y</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Unknown HTTP Command" />http "HTTP - y.y.y.y -- Unknown HTTP Command: xxxx"</p>
+        <p class="logmsgdd">An HTTP request from y.y.y.y contained an unknown "xxxx" 
+ command</p>
+        <p class="pagebreakafter">&#160;</p>
+        <p class="logmsg">http "HTTP - y.y.y.y -- Disconnected before response 
+ was sent."</p>
+        <p class="logmsgdd">The HTTP client at y.y.y.y disconnected before InterMapper 
+ had sent the entire response</p>
+        <p class="logmsg">http "HTTP - ERROR: Unable to create ### x ### JPEG 
+ image. (Error = err)"</p>
+        <p class="logmsgdd">InterMapper received an <i>err</i> OS error code when 
+ attempting to generate a ### x ### JPEG image.</p>
+        <p class="logmsg">http "HTTP - ERROR: Unable to create ### x ### PNG 
+ image. (Error = err)"</p>
+        <p class="logmsgdd">InterMapper received an <i>err</i> OS error code when 
+ attempting to generate a ### x ### PNG image.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="IfDescr" />
+            <MadCap:keyword term="IfIndex" />
+            <MadCap:keyword term="Util" />link "msg (util%) : [ifIndex] device-name - ifDescr"</p>
+        <p class="logmsgdd">Logged to the event log when the utilization crosses 
+ some threshold. 'msg' is a message of the form "util &lt; nn" 
+ or "util &gt;= nn" where 'nn' is the threshold. The actual link 
+ utilization follows in parentheses. 'ifIndex', 'device-name', and 'ifDescr' 
+ identify the individual interface.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Bps" />
+            <MadCap:keyword term="UpTimePrev" />
+            <MadCap:keyword term="OutOctetPrev" />
+            <MadCap:keyword term="UpTimeNow" />
+            <MadCap:keyword term="InOctetPrev" />
+            <MadCap:keyword term="OutOctetNow" />dbug "device-name UTIL[ifIndex]=util? type: upTimeNow=nn, 
+ upTimePrev=nn;inOctetNow=nn, inOctetPrev=nn; outOctetNow=nn, outOctetPrev=nn; 
+ bps=nn</p>
+        <p class="logmsgdd">
+            <MadCap:keyword term="Value:sysUpTime.0" />
+            <MadCap:keyword term="IfInOctets" />
+            <MadCap:keyword term="IfOutOctets" />
+            <MadCap:keyword term="Baseband" />
+            <MadCap:keyword term="IfSpeed" />
+            <MadCap:keyword term="SysUpTime.0" />
+            <MadCap:keyword term="FullDuplex" />Logged to the event log when the interface utilization 
+ calculated is greater than 110%. In general, a value greater than 100% 
+ indicates an erroneous value for one of the inputs; this log message prints 
+ out all the inputs to the calculation for later analysis. device-name 
+ and ifIndex indicate the interface, util is the utilization percentage, 
+ type indicates the type of calculation: FullDuplex or Baseband. The other 
+ numbers are the values of sysUpTime.0, ifInOctets, ifOutOctets, and ifSpeed.</p>
+        <p class="logmsg">
+            <MadCap:keyword term="Copy" />dbug Saved backup copy of <i><MadCap:keyword term="MapName" /><MadCap:keyword term="Copy:mapname" />mapname</i><MadCap:keyword term="Old Maps" /> in "InterMapper 
+ Settings:Old Maps" folder.</p>
+        <p class="logmsgdd">InterMapper saved a copy of the original file (<i>mapname</i>) 
+ in the Old Maps folder before saving a version of the file in a newer 
+ format. This allows you to retrieve the earlier file and use it with an 
+ older copy of InterMapper.</p>
+        <p class="logmsg">dbug An error occurred while attempting to save backup 
+ copy of <i>mapname</i></p>
+        <p class="logmsgdd">InterMapper was not able to create a backup copy of the 
+ named map</p>
+        <p class="logmsg">dbug Can't locate backup folder to save backup copy of 
+ <i>mapname</i></p>
+        <p class="logmsgdd">InterMapper couldn't locate or create the InterMapper 
+ Settings:Old Maps folder.</p>
+        <p class="logmsg">dbug Device '<i>devicename</i>' was using non-existent 
+ probe '<i><MadCap:keyword term="Probename" />probename</i>', now set to non-polling.</p>
+        <p class="logmsgdd">The named device was set to be probed with a non-existent 
+ probe type. It has been set to "non-polling", and will no longer 
+ be probed.</p>
+        <h3 class="pagebreakbefore">InterMapper RemoteAccess Server Messages</h3>
+        <p class="logmsg">imrn "Accepted user connection from y.y.y.y."</p>
+        <p class="logmsgdd">An InterMapper RemoteAccess user connected in from y.y.y.y</p>
+        <p class="logmsg">imrn "Closed connection from y.y.y.y."</p>
+        <p class="logmsgdd">InterMapper closed the connection to the Remote client 
+ at address y.y.y.y</p>
+        <p class="logmsg">imrn "y.y.y.y denied access."</p>
+        <p class="logmsgdd">The InterMapper RemoteAccess client at y.y.y.y was denied access</p>
+        <p class="logmsg">imrn "y.y.y.y denied; too many connections."</p>
+        <p class="logmsgdd">InterMapper denied access to an InterMapper RemoteAccess client 
+ because it already had too many connections operating.</p>
+    </body>
+</html>

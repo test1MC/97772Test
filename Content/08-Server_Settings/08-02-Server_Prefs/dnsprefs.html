@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="414" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>DNS/WINS Settings</title>
+        <link rel="stylesheet" href="../../default.css" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Specifying" />
+            <MadCap:keyword term="DNS">
+            </MadCap:keyword>
+            <MadCap:keyword term="DNS:DNS Monitor Preferences:Setting" />
+            <MadCap:keyword term="DNS:DNS/WINS Settings" />
+            <MadCap:keyword term="Set" />
+            <MadCap:keyword term="Specifying:DNS" />
+            <MadCap:keyword term="Comma-separated list:WINS" />
+            <MadCap:keyword term="WINS" />
+            <MadCap:keyword term="WINS Preferences:Setting" />DNS/WINS Settings</h1>
+        <p>
+            <MadCap:keyword term="MacOS:InterMapper" />
+            <MadCap:keyword term="DNS:specify" />
+            <MadCap:keyword term="DNS:DNS/WINS Settings:Use" />
+            <MadCap:keyword term="WINS:use" />Use the DNS/WINS Settings section to specify the DNS server(s) and WINS 
+	server(s) that InterMapper uses. InterMapper uses your current DNS servers 
+	as its default.</p>
+        <p>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="Enter:list" />
+            <MadCap:keyword term="Domain Name:Domain Name Service" />InterMapper can use one or more Domain Name Service servers (DNS) to convert 
+ DNS names to addresses and back. InterMapper checks the listed DNS server(s) 
+ at regular intervals to make sure that the DNS name and IP address for a device 
+ match.<br /></p>
+        <p>
+            <MadCap:keyword term="MacOS" />
+            <MadCap:keyword term="Enter" />
+            <MadCap:keyword term="Windows" />
+            <MadCap:keyword term="Unix" />
+            <MadCap:keyword term="WINS Scope:Enter" />When you start InterMapper on a MacOS X or Windows machine, the DNS servers 
+ specified by the current network configuration are used. On Unix machines, you 
+ must enter one or more DNS server addresses manually. </p>
+        <p>The DNS addresses are optional: if the preference is empty, InterMapper does 
+ not attempt to make DNS &lt;-&gt; IP address conversions.</p>
+        <p>
+            <MadCap:keyword term="IP:corresponding" />For example, when InterMapper polls a device that has a name assigned, it looks 
+ up the corresponding IP address in the DNS. If the resulting address has changed 
+ since the device was added to a map, InterMapper logs an error message.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/serversettings-dns.png" />
+            <br /><i>DNS/WINS Settings pane.</i>
+        </p>
+        <h2 class="pagebreakbefore">
+            <MadCap:keyword term="DNS:DNS Monitor Preferences" />
+            <MadCap:keyword term="Set:DNS Monitor Preferences" />Setting DNS Monitor Preferences</h2>
+        <p>
+            <MadCap:keyword term="Set DNS Monitor" />Set DNS Monitor preferences as follows:</p>
+        <ul>
+            <li><b><MadCap:keyword term="Comma-separated list" /><MadCap:keyword term="Comma-separated list:Domain Name Server" /><MadCap:keyword term="WINS:Comma-separated list" /><MadCap:keyword term="Domain Name:Domain Name Server" /><MadCap:keyword term="Domain Name:Domain Name Server:Comma-separated list" />Comma-separated list of Domain Name Server addresses - </b>Enter a 
+	 list of Domain Name Server addresses, separated by commas.</li>
+            <li><b><MadCap:keyword term="Search Domain" />Search Domain </b>
+                <MadCap:keyword term="Fully-qualified" /> - Enter a name to append to a partial domain name 
+	 to make a fully-qualified domain name.</li>
+            <li><b>Minimum interval between DNS checks</b><b> - </b>Set this value to 
+	 the amount of time to wait between successive queries for a host. Use a 
+	 larger value to reduce the number of times the DNS is checked.</li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Set:WINS Preferences" />
+            <MadCap:keyword term="WINS Preferences" />Setting WINS Preferences</h2>
+        <p>
+            <MadCap:keyword term="Enter:WINS Scope" />
+            <MadCap:keyword term="WINS Scope" />
+            <MadCap:keyword term="WINS Scope:leave" />
+            <MadCap:keyword term="WINS/NetBIOS" />You can specify one or more WINS servers that InterMapper will use for WINS 
+	lookups. InterMapper can also fall back to broadcast lookups for WINS/NetBIOS 
+	name lookups. Unless instructed by your network administrator, you should 
+	usually leave the WINS Scope blank.</p>
+        <ul>
+            <li><b>Use WINS name resolution</b> - Check this box to allow InterMapper 
+	 to use the specified WINS servers to look up device names and addresses.</li>
+            <li><b>Comma-separated list of WINS server addresses</b> - Enter a list of 
+	 addresses, separated by commas.</li>
+            <li><b>Use broadcast if lookup fails</b> - Check this box to allow InterMapper 
+	 to use broadcast lookups for WINS/NetBIOS lookups if the WINS lookup fails.</li>
+            <li><b>WINS Scope</b> - Enter a WINS Scope. This should only be necessary 
+	 if instructed by your network administrator.</li>
+        </ul>
+        <p>
+            <br />
+        </p>
+    </body>
+</html>

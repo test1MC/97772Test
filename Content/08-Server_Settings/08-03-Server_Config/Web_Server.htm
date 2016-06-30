@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="1212" MadCap:lastWidth="873" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Web Server</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Web Server's Stop button;Web Servers;Adding" />
+            <MadCap:keyword term="Access:Web Server">
+            </MadCap:keyword>
+            <MadCap:keyword term="Start:Web Server" />
+            <MadCap:keyword term="Stop:Web Server" />
+            <MadCap:keyword term="Connecting:Web Server" />The Web Server</h1>
+        <p>InterMapper can act as a web server, publishing most of the information available 
+	from the InterMapper application. </p>
+        <p><b>Note:</b> Before InterMapper will allow web connections, 
+	you must configure the web preferences as described in <a href="firewall.html">Configuring a Firewall</a><MadCap:xref href="firewall.html" class="ConceptPageNumber"> (Pg 1)</MadCap:xref>. You must also make sure that any other firewalls protecting the InterMapper machine allow traffic to the port specified below.</p>
+        <p>
+            <MadCap:keyword term="Server Configuration" />
+            <MadCap:keyword term="Server Settings window" />
+            <MadCap:keyword term="Server Settings" />
+            <MadCap:keyword term="Web Servers:stop" />
+            <MadCap:keyword term="Web Servers:start" />
+            <MadCap:keyword term="Start" />
+            <MadCap:keyword term="Stop" />You start, stop, and configure the Web Server from the Web Server panel, 
+	in the Server Configuration section of the Server Settings window, as shown 
+	below.</p>
+        <p>
+            <img src="../../Resources/Images/serversettings-webserver.png" />
+        </p>
+        <p><b>Note:</b> When configuring the InterMapper web server on a machine where IIS is also
+installed, do not use the default port 80. IIS uses port 80 by default, and this
+will prevent the InterMapper web server from starting. </p>
+        <p class="pagebreakbefore"><b style="font-weight: bold;">To start, stop or configure the Web Server:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Edit menu" />From the Edit menu, choose <b><i>Server Settings...</i></b> 
+	  The Server Settings window appears. </li>
+            <li>In the Server Configuration section, click <i><b>Web Server</b>.</i> 
+	  The Web Server panel appears.</li>
+        </ol>
+        <ul>
+            <li>To start the Web Server, click <b><i>Start</i></b>. </li>
+            <li>To stop the Web Server when it is running, click <b><i>Stop</i></b>. 
+	</li>
+            <li>
+                <MadCap:keyword term="Enter" />
+                <MadCap:keyword term="Enter:TCP" />
+                <MadCap:keyword term="URL:Enter" />
+                <MadCap:keyword term="Web Servers:use" />
+                <MadCap:keyword term="TCP" />
+                <MadCap:keyword term="TCP:Enter" />Enter a TCP port number, or use the default value. </li>
+            <li>To use a secure protocol, check the <b><i><MadCap:keyword term="SSLv3/TLS" />Use a secure protocol 
+	 (SSLv3/TLS)</i></b> box. </li>
+            <li>
+                <MadCap:keyword term="Access" />
+                <MadCap:keyword term="Web Servers:access" />To configure access to the Web Server, click <b><i>Add...</i></b><MadCap:keyword term="Addresses" /><MadCap:keyword term="Addresses:Web Server firewall" /><MadCap:keyword term="Configuring" /><MadCap:keyword term="Configuring:firewalls" /><MadCap:keyword term="Firewalls" /><MadCap:keyword term="Firewalls:configuring" /><MadCap:keyword term="Web Server firewall" /><MadCap:keyword term="Web Server firewall:addresses" /> 
+	  to add addresses to the Web Server firewall. For more information on configuring 
+	 firewalls, see        <a href="firewall.html">Configuring a Firewall<MadCap:xref href="firewall.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. </li>
+            <li>From the <b><i><MadCap:keyword term="Send" />Send log file entries to:</i></b> menu, choose a log file to which you want to send log entries.</li>
+        </ul>
+        <p><b style="font-weight: bold;">Note:</b> The Server Settings window is available 
+	only to users who have administrator privileges.</p>
+        <p>For more information on configuring your Web Server, see <a href="accesscontrol.html">Server 
+	Access Control<MadCap:xref href="accesscontrol.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="IP" /><MadCap:keyword term="IP:firewall's list" /><MadCap:keyword term="Firewall's list" /><MadCap:keyword term="Firewall's list:IP" />. It describes how to set your Web Server's port, discusses 
+	encryption and when to use it, and describes how to configure the built-in 
+	firewall's list of IP addresses.</p>
+        <p>For more information on users and groups, see <a href="08-03-01-Users/users.html">Users 
+	and Groups<MadCap:xref href="08-03-01-Users/users.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. It describes how to set up users and groups, and how you specify
+	who may use the Web Server. It also discusses administrator access to the 
+	Web Server.<MadCap:keyword term="Username" /></p>
+        <p>For more information on setting permissions for a particular map, see <a href="mapaccess.html">Controlling 
+	Access to a Map<MadCap:xref href="mapaccess.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. It describes how to set up unique access controls (by 
+	username) for an individual map.</p>
+        <h2>
+            <MadCap:keyword term="Web Servers:Connecting" />
+            <MadCap:keyword term="Connecting" />Connecting to the Web Server</h2>
+        <p>
+            <MadCap:keyword term="Enter:URL" />
+            <MadCap:keyword term="URL" />Once you have started the Web Server, a URL appears below the Web Server's 
+	<b><i>Stop</i></b><MadCap:keyword term="InterMapper Web Server" /> button. Click the URL, or enter the URL in a web browser. 
+	If the Web Server is configured correctly, the InterMapper Web Server's home 
+	page appears in your browser window.</p>
+    </body>
+</html>

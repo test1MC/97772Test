@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="1821" MadCap:lastWidth="873" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Map Attributes</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Map Attributes" />Map Attributes</h1>
+        <p>The <span class="code">maps</span> directive contains data to describe maps. All fields are READ-ONLY.</p>
+        <p>Use these attributes with the following table specification in line 1:</p><pre class="code">table=maps</pre>
+        <ul style="list-style: disc;" type="disc">
+            <li>Fields marked with an asterisk (*) are required.</li>
+            <li>Fields marked with an plus(+) can be updated during import.</li>
+        </ul>
+        <table class="fieldtable">
+            <tr>
+                <th>Field Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="fieldname">MapId</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />A unique, persistant identifier for this map instance.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MapName</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Name of the map.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MapPath</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Full path of the map, including the name of the map.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Status</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Status of the map (e.g. down, critical, alarm, warning, okay).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DeviceCount</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Number of devices in the map.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">NetworkCount</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Number of networks in the map.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">InterfaceCount</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Number of interfaces in the map.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DownCount</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Number of devices that are down.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">CriticalCount</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Number of devices in critical status.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">AlarmCount</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Number of devices in alarm status.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">WarningCount</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Number of devices in warning status.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">OkayCount</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Number of okay devices.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DataRetentionPolicy</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Database retention policy.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IMID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Identifier of the map in the IMID format.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Enabled</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the map is currently running.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Layer2</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the map is enabled for layer 2 polling.<br /></td>
+            </tr>
+        </table>
+    </body>
+</html>

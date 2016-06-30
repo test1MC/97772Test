@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="5" MadCap:lastHeight="851" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Using Geographic Coordinates</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Maps, Free;Server Probes - Proprietary;Adding" />
+            <MadCap:keyword term="Using Geographic Coordinates">
+            </MadCap:keyword>
+            <MadCap:keyword term="Geographic Coordinates" />Using Geographic Coordinates</h1>
+        <p>
+            <MadCap:keyword term="Device" />
+            <MadCap:keyword term="Map" />
+            <MadCap:keyword term="Latitude" />
+            <MadCap:keyword term="Import:Devices" />
+            <MadCap:keyword term="Longitude" />You can use geographic Latitude and Longitude coordinates to place devices 
+ on your map. This can be useful if you have many devices at different 
+ locations. The procedure is relatively simple:</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Create a new map on which you want to place the devices.</li>
+            <li>
+                <MadCap:keyword term="PNG" />
+                <MadCap:keyword term="JPEG" />
+                <MadCap:keyword term="Import" />
+                <MadCap:keyword term="GIF" />
+                <MadCap:keyword term="Image" />Obtain a map image you want to use as the background for 
+	 the map. You can scan your own map to create the image, or get one from 
+	 one of the sites listed below. InterMapper can import image files in PNG, 
+	 JPEG, or GIF format.</li>
+            <li>
+                <MadCap:keyword term="Set" />Set the image as the background for your map as described 
+	 in <a href="../../05-Arranging_Your_Map/backgroundimages.html">Background Images<MadCap:xref href="../../05-Arranging_Your_Map/backgroundimages.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+            <li>Set <span style="font-style: italic;"><MadCap:keyword term="Set:Benchmarks" /><MadCap:keyword term="Benchmarks" />benchmarks</span><MadCap:keyword term="IP" /> 
+	  in the map as described below. This sets the relationship between your map 
+	 image and real geographic coordinates.</li>
+            <li>
+                <MadCap:keyword term="Addresses" />Create a text file containing a list of your devices with 
+	 their IP addresses and Latitude and Longitude coordinates. You can specify 
+	 many other parameters for each device within this file as well. For more 
+	 information, see <MadCap:keyword term="Device:Importing" /><a href="Importing_Data_Into_Maps.htm">Importing Data Into 
+	 Maps<MadCap:xref href="Importing_Data_Into_Maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. A sample data file is shown below, containing geographic coordinates.</li>
+            <li>Import the text file. The devices appear at the correct 
+	 location on the map.</li>
+        </ol>
+        <h2><a name="benchmarks"></a>
+            <MadCap:keyword term="Benchmarks:Setting" />Setting Benchmarks in Your Map</h2>
+        <p class="floatright">
+            <img src="../../Resources/Images/dlg-AddBenchmark.png" style="border-style: none;" border="0" />
+        </p>
+        <p>A <i>benchmark</i> is an icon on a map that specifies the latitude and 
+ longitude of that point. InterMapper uses the benchmarks to determine 
+ the proper location for icons on the map.</p>
+        <p><b>To place a benchmark on a map:</b>
+        </p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>
+                <MadCap:keyword term="Ctrl-click" /> Right-click (CTRL-click) a known location (on for which 
+	 you know the actual latitude and longitude) in the map's background image 
+	 and choose <b>Add benchmark...</b><MadCap:keyword term="Add Benchmark Coordinates window" /> The Add Benchmark Coordinates window 
+	 appears.</li>
+            <li> 
+      Enter the latitude and longitude for the point. A small triangular icon 
+ appears to represent the benchmark. InterMapper supports multiple formats for latitude and longitude. (See below)<br /></li>
+            <li> Follow steps 1 and 2 to enter a second benchmark to complete 
+	 the geographic information. Your map is now ready for you to import devices 
+	 with specified geographic coordinates.</li>
+        </ol>
+        <p class="pagebreakbefore"><b><MadCap:keyword term="Remove" />To remove a benchmark on a map:</b>
+        </p>
+        <ul>
+            <li> Right-click (CTRL-click) an existing benchmark, choose 
+	  <b>Remove benchmark...</b> The benchmark disappears from the map.</li>
+        </ul>
+        <p><b><MadCap:keyword term="Both" />To remove both benchmarks from a map:</b>
+        </p>
+        <ul>
+            <li> Right-click (CTRL-click) anywhere in the map's background 
+	 image and choose <b>Clear benchmarks...</b> Both benchmarks disappear from 
+	 the map.</li>
+        </ul>
+        <h2>Accepted Geographic Coordinate Formats</h2>
+        <p>InterMapper supports a wide variety of formats for entering geographic coordinates. Any coordinate can be entered as follows:</p>
+        <ul>
+            <li>- Decimal degrees: 43.692 or 72.272</li>
+            <li>- Degrees, minutes, seconds: 43:16:34.56</li>
+            <li>- Degrees with decimal minutes: 43:23.341</li>
+            <li>- Use 'W' and 'S' suffixes as alternatives to negative values.</li>
+        </ul>
+        <p>Sample accepted formats:</p>
+        <ul>
+            <li>[+|-]dd.dd:mm.mm:ss.ss
+</li>
+            <li>[+|-]dd.dd:mm.mm
+</li>
+            <li>[+|-]dd.dd
+</li>
+            <li>[+|-]dd.dd mm.mm ss.ss
+</li>
+            <li>[+|-]dd.dd mm.mm
+</li>
+        </ul>
+        <p>Allowable suffixes: </p>
+        <ul>
+            <li>s, n, e, w, S, N, E, W.</li>
+        </ul>
+        <p>Acceptable Data Elements (in order)</p>
+        <ul>
+            <li>an optional negative sign
+</li>
+            <li>a real number
+</li>
+            <li>anything except letters, digits, -, or .
+</li>
+            <li>a real number
+</li>
+            <li>anything except letters, digits, -, or .
+</li>
+            <li>a real number
+</li>
+            <li>an optional ending directional notation (N, S, E, W, n, s, e, w (depends on the field)) or " (e.g. in the case 
+of 43˚ 16' 23")
+</li>
+        </ul>
+        <p>&#160;</p>
+        <h2 class="pagebreakbefore"><a name="Importing"></a>Importing Devices with Geographic Coordinates</h2>
+        <p>
+            <MadCap:keyword term="DNS" />
+            <MadCap:keyword term="SNMP" />
+            <MadCap:keyword term="Name, IP Address" />You can create a tab-delimited file with information about the devices 
+ to be added to the map. This information can include any of following 
+ fields: Name, IP Address, DNS name, port, type of device, SNMP community 
+ string, latitude, longitude, and many other fields. Fields left unspecified 
+ are filled with default values. For more information, see <a href="Importing_Data_Into_Maps.htm">Importing 
+ Data Into Maps<MadCap:xref href="Importing_Data_Into_Maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <p>An import file is formatted as follows:</p>
+        <ul style="list-style: disc;" type="disc">
+            <li><span style="font-weight: bold;"><MadCap:keyword term="Line" />Line 1 specifies 
+ the format of the following lines</span>
+                <MadCap:keyword term="MapName" /> - it specifies the file format 
+ ("tab" in the example below), the table to be filled ("devices") 
+ and the order of the fields. Three fields must be specified: MapName, 
+ Address, and Probe: the remainder are optional.</li>
+            <li><span style="font-weight: bold;">Remaining lines 
+ contain the data for the devices you want to import</span> - Each device 
+ occupies a single line, and the data columns are separated by tabs (a 
+ "tab-delimited" file.) Each column corresponds to a field in 
+ the             <span style="font-weight: bold;font-style: italic;">fields</span><span> 
+ specification of Line 1.</span></li>
+        </ul>
+        <p>
+            <MadCap:keyword term="Probes" />In this example import file, there are five fields to import. InterMapper 
+ places these items on the map named "MapA", using the address 
+ specified to create HTTP probes. They are placed at the indicated latitude 
+ and longitude.</p><pre class="code"><tt style="font-family: monospace;"># format=tab table=devices fields=MapName,Address,Probe,Latitude,Longitude 
+MapA	192.168.2.100	http	43.3	-72.0
+MapA	192.168.2.101	http	43.9	-72.3
+MapA	192.168.2.102	http	43.8	-72.8
+MapA	192.168.2.103	http	43.0	-72.4
+MapA	192.168.2.104	http	43.2	-72.3
+MapA	192.168.2.105	http	43.6	-72.2</tt></pre>
+        <h2 class="pagebreakbefore"><a name="mapsources"></a>Sources of Maps</h2>
+        <p>There are a huge number of mapping services available through the web. 
+ Here are several that we have found useful:</p>
+        <table>
+            <tr>
+                <th style="padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;text-align: left;">
+                    <MadCap:keyword term="Web-based Service" />Web-based <br />Service</th>
+                <th style="text-align: left;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" align="left">Description</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://www.Google.com/imghp?hl=en&amp;tab=wi&amp;ie=UTF-8&amp;q="><b style="font-weight: bold;">Google Image Search</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://www.google.com/imghp?hl=en&amp;amp;tab=wi&amp;amp;ie=UTF-8&amp;amp;q=">http://www.Google.com/imghp?hl=en&amp;tab=wi&amp;ie=UTF-8&amp;q=</a>
+                        <br />Search their Images section for the word "map" plus the name 
+		 of the country, province, state, etc. you need. Free.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://www.maporama.com"><b style="font-weight: bold;">Maporama</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://www.maporama.com/">http://www.maporama.com</a>
+                        <br />Attractive street maps with different styles and coloring that are 
+		 good for backgrounds. Large maps available. Free.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://www.mapblast.com"><b style="font-weight: bold;">Mapblast</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://www.mapblast.com/">http://www.mapblast.com</a>
+                        <br />Another site showing street maps suitable for backgrounds. Large maps 
+		 available. Free.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://www.nationalatlas.gov"><b style="font-weight: bold;">National 
+		Atlas</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://www.nationalatlas.gov/">http://www.nationalatlas.gov</a>
+                        <br />A source of national and state maps. Free.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://www.terraserver.com"><b style="font-weight: bold;">terraserver.com</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://www.terraserver.com/">http://www.terraserver.com</a>
+                        <br />Aerial photographs. Clever interactive latitude and longitude indicator 
+		 using mouse rollover. 1 m/px resolution.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://msrmaps.com/"><b style="font-weight: bold;">Microsoft 
+		Research Maps</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;">
+                    <p><a href="http://msrmaps.com/">http://msrmaps.com/</a>
+                        <br />
+                        <MadCap:keyword term="USGS Aerial" />USGS Aerial photos, and topo maps to 1 m resolution. Clicking shows latitude and 
+		 longitude of the clicked point. Also allows large, medium, and small 
+		 maps. Free.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top">
+                    <MadCap:keyword term="Census" /><a href="http://www.census.gov/geo/www/maps"><b style="font-weight: bold;">US 
+		Census Bureau</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://www.census.gov/geo/www/maps">http://www.census.gov/geo/www/maps</a>
+                        <br />
+                        <MadCap:keyword term="River/water" />Construct a map from Census data as well as street, political, river/water 
+		 data. Free.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://dir.yahoo.com/Science/Geography/Cartography/Maps/Interactive/"><b style="font-weight: bold;">Yahoo! Listing of Map Resources</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://dir.yahoo.com/Science/Geography/Cartography/Maps/Interactive/">http://dir.yahoo.com/Science/Geography/Cartography/Maps/Interactive/</a>
+                        <br />Yahoo! Search for interactive maps. Lists many interesting mapping 
+		 sites. Free.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://dmoz.org/Science/Social_Sciences/Geography/Geographic_Information_Systems/"><b style="font-weight: bold;">dmoz Open Directory</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://dmoz.org/Science/Social_Sciences/Geography/Geographic_Information_Systems/">http://dmoz.org/Science/Social_Sciences/Geography/Geographic_Information_Systems/</a>
+                        <br />
+                        <MadCap:keyword term="Geographic Information Systems" />Links to many Geographic Information Systems sites. Free.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://www.geocode.com/"><b style="font-weight: bold;">Geocode.com</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://www.geocode.com/">http://www.geocode.com/</a>
+                        <br />
+                        <MadCap:keyword term="Geocoding" />An inexpensive geocoding service that converts street addresses to 
+		 latitude and longitude.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" align="right" valign="top"><a href="http://www.cplus.org/rmw/english1.html"><b style="font-weight: bold;">Radio 
+		Mobile</b></a>
+                </td>
+                <td style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-bottom: 0px;padding-top: 0px;" valign="top">
+                    <p><a href="http://www.cplus.org/rmw/english1.html">http://www.cplus.org/rmw/english1.html</a>
+                        <br />Software that predicts the performance of a radio system based on topographic 
+		 maps. Free.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

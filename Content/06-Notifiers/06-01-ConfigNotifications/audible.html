@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="5" MadCap:lastHeight="900" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Configuring a Sound Notifier</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Trap - Plays" />
+            <MadCap:keyword term="Configuring">
+            </MadCap:keyword>
+            <MadCap:keyword term="Configuring:Sound Notifier" />
+            <MadCap:keyword term="Sound" />
+            <MadCap:keyword term="Sound Notifier" />
+            <MadCap:keyword term="Sound Notifier:Configuring" />Configuring a Sound Notifier</h1>
+        <p>
+            <MadCap:keyword term="State" />A sound notifier plays a sound whenever a device enters a new state. For 
+	each state, you can assign a different sound.</p>
+        <table>
+            <tr>
+                <td style="padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;">
+                    <p style="text-align: center;">
+                        <img src="../../Resources/Images/window-ConfigNotifier-sound.png" />
+                    </p>
+                    <p><i style="font-style: italic;"><MadCap:keyword term="Notifier Type" /><MadCap:keyword term="Configure Notifier:Configure Notifier window" /><MadCap:keyword term="Sound:Configure Notifier window" />The Configure Notifier window for Sound 
+ notifier type. For each device state, you can select a different sound.</i>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <p><b style="font-weight: bold;">To configure a sound notifier:</b>
+        </p>
+        <ol>
+            <li>Create or edit the notifier you want to configure. 
+ </li>
+            <li>In the <b><i>Notifier Type</i></b> dropdown menu, choose         <b><i><MadCap:keyword term="Alert" />Alert by Sound</i></b> if it is not already chosen. The Sound Notifier 
+ configuration panel appears as shown in above.</li>
+            <li>For each state, use the <b><i><MadCap:keyword term="Sound Name" />Sound Name</i></b><MadCap:keyword term="Set" /> 
+ dropdown menu to choose the sound you want to play when the device changes 
+ to that state. If you do not want sounds to play for certain states, set 
+ those states to         <b><i><MadCap:keyword term="State:None" />None</i></b>. The states are described below.</li>
+            <li><b><span style="font-weight: normal;">If the sound 
+ you want to use for a particular state does not appear, click </span><span style="font-weight: bold;font-style: italic;"><MadCap:keyword term="Import Sound" />Import Sound...</span><span style="font-weight: normal;"> to import a sound file containing the sound 
+ you want to use</span></b><b><span style="font-weight: normal;">.</span></b>
+            </li>
+            <!--li>For each state, use the <b><i>Volume</i></b> dropdown menu to choose a volume 
+    setting for the sound.</li-->
+        </ol>
+        <p><b style="font-weight: normal;"><span style="font-weight: bold;">Notes:</span></b>
+        </p>
+        <ul style="list-style: disc;" type="disc">
+            <li>
+                <MadCap:keyword term="Windows" />On Windows machines, the available sounds are located in 
+ the <i><MadCap:keyword term="InterMapper Settings/Sounds" />InterMapper Settings/Sounds</i> folder. </li>
+            <li>
+                <MadCap:keyword term="Mac OS" />On Mac OS X machines, the available sounds include any system 
+ sounds or the sound files in <i><MadCap:keyword term="System/Library/Sounds" />/System/Library/Sounds</i> folder, as well as those in the <i>/InterMapper Settings/Sounds</i> folder.</li>
+            <li>
+                <MadCap:keyword term="AU" />
+                <MadCap:keyword term="WAV" />
+                <MadCap:keyword term="AIF" />Supported sound file formats: .WAV, .AIF, and .AU.</li>
+            <li>
+                <MadCap:keyword term="InterMapper RemoteAccess" />InterMapper RemoteAccess must download each sound file from the 
+ InterMapper server, but once it is downloaded it is cached on the remote 
+ machine. Bear in mind that large sound files may affect system performance 
+ for remote users.</li>
+            <li>Sounds are queued up for playing. One sound does not start until the previously 
+ queued sound is completely finished playing. Relatively short sound files 
+ are recommended.</li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Device States" />Device States</h2>
+        <ul>
+            <li><b style="font-weight: bold;">Up</b> - Plays a sound when 
+	 a device responds normally after being down. </li>
+            <li><b style="font-weight: bold;">Down</b> - Plays a sound when 
+	 a device goes down (fails to respond to InterMapper's queries.)</li>
+            <li><b><MadCap:keyword term="Critical" />Critical</b> - Plays a sound when a device enters Critical state.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Alarm" />Alarm</b> - Plays a sound 
+	 when a device enters Alarm state. </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Warning" />Warning</b> - Plays a sound 
+	 when a device enters Warning state.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="OK" />OK</b> - Plays a sound when 
+	 a device is no longer in critical, alarm, or warning state.</li>
+            <li><b style="font-weight: bold;">Trap</b>
+                <MadCap:keyword term="SNMP" /> - Plays a sound when 
+	 InterMapper receives an SNMP trap from the device.</li>
+        </ul>
+        <p>InterMapper's default sound notifiers are as follows:</p>
+        <ul>
+            <li><b style="font-weight: bold;">Down </b>- plays the         <i><MadCap:keyword term="Klaxon" />Klaxon</i> sound</li>
+            <li><b style="font-weight: bold;">Up</b> - plays the         <i>Yahoo</i> sound</li>
+            <li>All other states are set to <b><i>None</i></b>.</li>
+        </ul>
+        <h2>What you can do with sounds</h2>
+        <p>You can use sounds in many different ways to help give you audible indicators 
+ the condition of your network. Here are two possible uses for sound notifiers.</p>
+        <ul>
+            <li><b style="font-weight: bold;">Create different sound sets 
+	 for different times of day, or for different days</b> - create different 
+	 sound notifiers, each having a different notifier schedule. This can be 
+	 helpful if you need to, for example, use certain notification sounds during 
+	 working hours in a busy office, and have louder, more easily distinguishable 
+	 sounds outside working hours, when you are working away from your computer.</li>
+            <li><span style="font-weight: bold;">Create different 
+ sound sets for certain devices</span> - create sound notifiers for certain 
+ kinds of devices, and use different sounds. You can tell without looking 
+ if, for example, a certain machine or router goes down. It is also useful 
+ if you been having trouble with a particular device.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/images/blank.gif" style="width: 1px;height: 1px;margin-left: 10px;margin-right: 10px;border-style: none;border-style: none;" width="1" height="1" border="0" />
+        </p>
+        <p>Sound files must be placed in the InterMapper Settings/Sounds folder before they can be made available in the Server Configuration Notifier List panel of the Server Settings window.</p>
+    </body>
+</html>

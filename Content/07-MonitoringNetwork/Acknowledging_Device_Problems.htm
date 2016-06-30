@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:id="Acknowledging_Failures" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="5" MadCap:lastHeight="2464" MadCap:lastWidth="616" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Acknowledging Device Problems</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Timed acknowledgement" />
+            <MadCap:keyword term="Acknowledgements:Acknowledging">
+            </MadCap:keyword>
+            <MadCap:keyword term="Acknowledgements:Device Problems" />
+            <MadCap:keyword term="Device" />
+            <MadCap:keyword term="ACK" />
+            <MadCap:keyword term="Device Problems" />
+            <MadCap:keyword term="Device Problems:Acknowledging" />Acknowledging Device &amp; Link Problems</h1>
+        <p>
+            <MadCap:keyword term="Monitor menu" />Use the Acknowledge command, available from the Monitor Menu, to 
+ acknowledge failures or problems in the network. When you acknowledge 
+ a problem, the InterMapper program does the following: </p>
+        <ul>
+            <li>Changes the device's icon or link color to blue to show that 
+ the problem has been acknowledged. </li>
+            <li>Stops further notifications of the problem, either 
+ for the duration of this outage, or for a specified time period. </li>
+            <li>
+                <MadCap:keyword term="IP" />
+                <MadCap:keyword term="Enter" />
+                <MadCap:keyword term="Event Log file" />Writes any comment you enter into to the Event Log file, 
+	 along with the name and IP address of the user who acknowledged the problem. 
+	</li>
+            <li>
+                <MadCap:keyword term="Status window" />Displays the comment in the device or link's Status Window. 
+ </li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Acknowledgements" />
+            <MadCap:keyword term="Remove:acknowledgement" />Why are Acknowledgment useful?</h2>
+        <p>Acknowledgments allow the network administrator to see the state of 
+ the network, as well as the responses that have been made to the current 
+ set of problems. </p>
+        <p>Use Acknowledgements to: </p>
+        <ul>
+            <li><b style="font-weight: bold;">Indicate that someone has 
+	 taken responsibility for a problem</b> - Because acknowledging a problem 
+	 turns the affected device's icon blue, it's easy to see that someone is 
+	 aware of (and is presumably working on) the problem. </li>
+            <li><b style="font-weight: bold;">Emphasize new problems</b> 
+ - The normal color of icons on a map should be green (operating correctly) 
+ or blue (having trouble, but being worked on.) When a new problem occurs, 
+ the affected devices' color are red, orange or yellow, depending on the 
+ severity. This makes it easy to see where new troubles lie. After acknowledgment, 
+ these devices will also be blue. </li>
+            <li><b style="font-weight: bold;">Suppress notification for 
+	 a problem device </b>- When a device has been acknowledged, no further notifications 
+	 are sent. </li>
+            <li><b style="font-weight: bold;">Provide information about 
+	 the problem and its management </b>- Enter a comment to convey information 
+	 about the failure, and/or the corrective action. </li>
+        </ul>
+        <h2>Acknowledging a problem</h2>
+        <p class="floatright">
+            <img src="../Resources/Images/window-ack.png" />
+        </p>
+        <p><b style="font-weight: bold;">To acknowledge a problem with a device: 
+ </b>
+        </p>
+        <ol>
+            <li>For devices, click or <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" /> the device(s) you want to acknowledge. <br />For interfaces, <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" /> the link.</li>
+            <li>From the Monitor menu or Context menu, choose <b style="font-style: italic;">Acknowledge... </b><MadCap:keyword term="Acknowledgements:Acknowledge window" /><MadCap:keyword term="Cmd" /><MadCap:keyword term="Ctrl" />(Cmd-' 
+ or Ctrl-'). The Acknowledge window appears. <br /></li>
+            <li>If you want keep the device or link in Acknowledgment mode 
+ for a specific period of time, or for an indefinite period, choose <b style="font-style: italic;">Indefinite</b> 
+ or           <b style="font-style: italic;">Timed...</b> in the           <b style="font-style: italic;">Ack</b> column.</li>
+            <li>
+                <MadCap:keyword term="Select" />
+                <MadCap:keyword term="Block:select" />If you want to suppress notifications for devices 
+ that depend on this device, click to select the <b style="font-style: italic;"><MadCap:keyword term="Select:Block" /><MadCap:keyword term="Block" />Block notifications for dependent devices</b><MadCap:keyword term="Block:Check" /> check box.</li>
+            <li>Enter a comment, then click <b style="font-style: italic;">Acknowledge</b>. 
+ The selected device's icon changes to blue, and your comment is written 
+ to the Event Log file. Notifications are cancelled for the selected device 
+ for the duration of this outage. </li>
+        </ol>
+        <h3>
+            <MadCap:keyword term="Basic, Timed" />
+            <MadCap:keyword term="Indefinite Acknowledgements" />Basic, Timed and Indefinite Acknowledgments</h3>
+        <p>InterMapper offers three kinds of acknowledgments for devices: </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <tr valign="top">
+                <td style="padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;"><b style="font-weight: bold;">Basic</b>
+                </td>
+                <td style="width: 62%;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" width="62%">
+                    <p>The device or link is acknowledged, and notifications are suppressed until it 
+ gets better or worse. The device icon or link turns blue to indicate that someone has 
+ taken responsibility for it, and that no further notifications will be 
+ sent.</p>
+                    <p>As soon as the device or link state changes to any other status, its acknowledge 
+ status is automatically cleared, and notifications resume. From then on, 
+ notifications are sent for any subsequent failures.</p>
+                </td>
+                <td style="padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;font-style: italic;">
+                    <img src="../Resources/images/ack-basic.png" border="0" />
+                    <br />Down, with Basic Acknowledgment<br /><br /><img src="../Resources/Images/LinkAck-basic.png" style="border-style: none;" border="0" /><br /><i>Link, with Basic Acknowledgment</i></td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;"><b style="font-weight: bold;">Timed</b>
+                </td>
+                <td style="width: 62%;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" width="62%">
+                    <p>The device or link is acknowledged, and notifications suppressed for the specified 
+ period of time.  In this case, the state of the device is OK.</p>
+                    <p>The icon or link turns blue if it's not okay, and the clock 
+ badge appears to show that notifications are blocked for the specified 
+ time.</p>
+                </td>
+                <td style="padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;">
+                    <img src="../Resources/Images/Ack-Up-Timed.png" style="border-style: none;" border="0" />
+                    <br /><i>Up, with Timed Acknowledgement</i>
+                    <br />
+                    <br />
+                    <img src="../Resources/Images/LinkAck-clock.png" style="border-style: none;" border="0" />
+                    <br /><i>Link, with Timed Acknowledgment</i>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;"><b style="font-weight: bold;">Indefinite</b>
+                </td>
+                <td style="width: 62%;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;" width="62%">
+                    <p>The device or link remains acknowledged until the operator <i><MadCap:keyword term="Unacknowledge" />unacknowledges</i> 
+ it. </p>
+                    <p>As with the <b>Timed</b> acknowledgment, the icon turns blue and the 
+ wrench badge appears to remind the operator that notifications are suppressed. In this case, the device is DOWN.</p>
+                </td>
+                <td style="padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;">
+                    <img src="../Resources/Images/Ack-Indefinite.png" style="border-style: none;" border="0" />
+                    <p><i>Down, with Indefinite Acknowledgment</i>
+                        <br />
+                        <br />
+                        <img src="../Resources/Images/LinkAck-wrench.png" style="border-style: none;" border="0" />
+                        <br /><i>Link, with Indefinite Acknowledgement</i>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <p><b style="font-weight: bold;">Notes:</b>
+        </p>
+        <ul>
+            <li> When you acknowledge an interface outage, the interface's link turns blue, rather than the device itself, and an X, wrench, or clock appears on the link, depending on whether it is a Basic, Indefinite, or Timed Acknowledgment.</li>
+            <li>
+                <MadCap:keyword term="Basic Acknowledge" /> With timed and indefinite acknowledge, 
+ you can acknowledge a device even when it is up and okay (i.e., green). 
+ This is useful if you know that there may be future outages (for example, 
+ planned maintenance) with the device, and you want to avoid extraneous 
+ notifications. You cannot do this with Basic Acknowledge.</li>
+            <li> The presence of the wrench badge 
+ is a safety measure. When you scan the map visually, the wrench indicates 
+ devices whose notifications are currently being blocked.</li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Dependencies" />Acknowledgements and Dependencies</h2>
+        <p>When you acknowledge a device, use the <b style="font-style: italic;">Block notifications for dependent devices </b>check box to specify whether the acknowledged 
+ device should be considered in finding dependencies. Checking the box 
+ suppresses notifications for any device "on the other side" 
+ of the device being acknowledged. </p>
+        <p><b style="font-weight: bold;">To suppress notifications for all devices 
+ that are dependent on the selected device:</b>
+        </p>
+        <ul>
+            <li>Check the <b>Block notifications for dependent devices</b> 
+ box. Notifications are suppressed for any device that depends on the selected 
+ device.</li>
+        </ul>
+        <p>For more information on dependencies and dependent devices, see <a href="../06-Notifiers/dependencies.html">Using 
+ Notification Dependencies<MadCap:xref href="../06-Notifiers/dependencies.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. </p>
+        <h2>
+            <MadCap:keyword term="Device:Unacknowledging" />Unacknowledging a Device or Link</h2>
+        <p>Use the Unacknowledge command to restore the device to its current notification state. </p>
+        <p><b style="font-weight: bold;"><MadCap:keyword term="Acknowledgements:remove" /><MadCap:keyword term="Remove" />To remove the acknowledgment for a device:</b>
+        </p>
+        <ol>
+            <li>Click to select the device, or choose multiple devices.</li>
+            <li>From the Monitor menu, choose <b style="font-style: italic;"><MadCap:keyword term="Un-Acknowledge" />Un-Acknowledge</b>. 
+ The selected devices are returned to their current notification states, 
+ and their notifications are no longer suppressed.</li>
+        </ol>
+        <p><b style="font-weight: bold;"><MadCap:keyword term="Acknowledgements:remove" /><MadCap:keyword term="Remove" />To remove the acknowledgment for a link:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" /> the link. A context menu appears.</li>
+            <li>From the context menu, choose <b style="font-style: italic;"><MadCap:keyword term="Un-Acknowledge" />Un-Acknowledge</b>. 
+ The selected link is returned to its current notification state, 
+ and notifications for the link are no longer suppressed.</li>
+        </ol>
+    </body>
+</html>

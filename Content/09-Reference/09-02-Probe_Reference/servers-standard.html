@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.Omit" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="6" MadCap:lastHeight="7599" MadCap:lastWidth="930" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Server Probes - Standard</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="RFC:RFC 2068;RFC:RFC 1436;Internet Message Access Protocol;Internet Relay Chat;Real Time Streaming Protocol;Lightweight Directory Access Protocol;Text Substring;Bind Name;Simple Mail Transfer Protocol;IMAP4 CAPABILITY;Issues:IMAP4 CAPABILITY;Issues:PAGE pagerid;Network News Transfer Protocol;PAGE pagerid;Server Probes - Proprietary;Server Probes - Proprietary;Server Probes - Proprietary;DHCP:DHCP Inform;DHCP:DHCP Discover;Adding;Specifying" />
+            <MadCap:keyword term="Send:Server Probes - Standard">
+            </MadCap:keyword>
+            <MadCap:keyword term="Send:Server Probes - Standard" />
+            <MadCap:keyword term="DNS:probe" />
+            <MadCap:keyword term="Tests:Server Probes - Standard" />
+            <MadCap:keyword term="Tests:Server Probes - Standard" />
+            <MadCap:keyword term="Probes" />
+            <MadCap:keyword term="Server Probes" />
+            <MadCap:keyword term="Server Probes - Standard" />
+            <MadCap:keyword term="Server Probes - Standard" />
+            <MadCap:keyword term="Server Probes - Standard" />
+            <MadCap:keyword term="SMTP:Probe" />
+            <MadCap:keyword term="Server Probes - Standard" />Server Probes - Standard</h1>
+        <p>
+            <MadCap:keyword term="Adding:InterMapper" />InterMapper can test a number of standard servers. </p>
+        <p><b style="font-weight: bold;">Note:</b>
+            <MadCap:keyword term="NS" />
+            <MadCap:keyword term="Request:NS" /> For each probe that compares 
+ a response string with a specified string, InterMapper checks to see if 
+ the specified string is contained in the response string. An exact match 
+ is not required.</p>
+        <ul>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="TCP" /><MadCap:keyword term="Connecting:TCP" /><MadCap:keyword term="Establish:TCP" /><a href="#basictcp">Basic 
+	 TCP<MadCap:xref href="#basictcp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                <MadCap:keyword term="TCP:Connects" />- Connects to a TCP port</li>
+            <li>
+                <MadCap:keyword term="Value:Basic TCP" />
+                <MadCap:keyword term="Basic TCP" /><a href="#basictcpblocked"><b>Basic TCP (Blocked) <MadCap:xref href="#basictcpblocked" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                <MadCap:keyword term="DNS:tests" />
+                <MadCap:keyword term="Telnet:Tests" />
+                <MadCap:keyword term="Tests" />
+                <MadCap:keyword term="FTP:tests" /> 
+	  - Tests a blocked TCP port </li>
+            <li><b style="font-weight: bold;"><a href="#customtcp">Custom 
+	 TCP<MadCap:xref href="#customtcp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                <MadCap:keyword term="Send" />- Connects to a TCP port, sends a string and checks the response 
+	</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="CVS Server" /><a href="#cvs">CVS Server<MadCap:xref href="#cvs" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                <MadCap:keyword term="Tests:Concurrent Version System" />
+                <MadCap:keyword term="Version" />
+                <MadCap:keyword term="Concurrent Version System" />- Tests a Concurrent Version System (CVS) server</li>
+            <li>
+                <MadCap:keyword term="Tests:DHCP" />
+                <MadCap:keyword term="DHCP" /><a href="#dhcp"><b>DHCPv4/BOOTP <MadCap:xref href="#dhcp" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a> - tests a DHCP server</li>
+            <li>
+                <MadCap:keyword term="DNS" />
+                <MadCap:keyword term="Specifying:DNS" />
+                <MadCap:keyword term="Name" />
+                <MadCap:keyword term="Tests:DNS" />
+                <MadCap:keyword term="Probes:DNS" />
+                <MadCap:keyword term="Queries:DNS" />
+                <MadCap:keyword term="Force:DNS" />
+                <MadCap:keyword term="Domain Name" />
+                <MadCap:keyword term="Lookup:Name" /><a href="#dns"><b>Domain Name (DNS) <MadCap:xref href="#dns" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a> - tests a DNS 
+	 server</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:FTP" /><MadCap:keyword term="FTP" /><MadCap:keyword term="FTP Probes" /><a href="#ftpprobes">FTP Probes<MadCap:xref href="#ftpprobes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+            </li>
+            <ul>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Login" /><a href="#ftplogin">FTP 
+		(Login)<MadCap:xref href="#ftplogin" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - Logs in and tests an FTP server</li>
+                <li><b style="font-weight: bold;"><a href="#ftpnologin">FTP 
+		(No login)<MadCap:xref href="#ftpnologin" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - Tests an FTP server without logging in </li>
+            </ul>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:Gopher" /><MadCap:keyword term="Gopher" /><a href="#gopher">Gopher<MadCap:xref href="#gopher" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests a Gopher server</li>
+            <li><a href="#hostresources"><b>Host Resources <MadCap:xref href="#hostresources" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                <MadCap:keyword term="Monitor" /> - Monitors 
+	 CPU, memory, and disk utilization</li>
+            <li><b style="font-weight: bold;"><a href="#httpprobes">HTTP 
+	 Probes<MadCap:xref href="#httpprobes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+            </li>
+            <ul>
+                <li><b style="font-weight: bold;"><a href="#http">HTTP<MadCap:xref href="#http" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                    <MadCap:keyword term="Establish:SSL" />
+                    <MadCap:keyword term="SSL" />- Tests an HTTP server without SSL </li>
+                <li><b><a href="#httpfollow">HTTP Follow Redirects<MadCap:xref href="#httpfollow" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - Tests that a web server is redirecting certain URLs to a specific URL.</li>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="POST" /><a href="#httppost">HTTP 
+		Post<MadCap:xref href="#httppost" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                    <MadCap:keyword term="DNS:query" />- Tests an HTTP server with a POST query without SSL </li>
+                <li><b style="font-weight: bold;"><a href="#httpproxy">HTTP 
+		Proxy<MadCap:xref href="#httpproxy" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an HTTP Proxy server </li>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Redirect" /><a href="#httpredir">HTTP 
+		Redirection<MadCap:xref href="#httpredir" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Test that HTTP redirection is working properly </li>
+            </ul>
+            <li><b style="font-weight: bold;"><a href="#httpsprobes">HTTPS<MadCap:xref href="#httpsprobes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+            </li>
+            <ul>
+                <li><b style="font-weight: bold;"><a href="#https">HTTPS<MadCap:xref href="#https" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an HTTP server with SSL</li>
+                <li><b style="font-weight: bold;"><a href="#httpspost">HTTPS 
+		Post<MadCap:xref href="#httpspost" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an HTTP server with a POST query with SSL </li>
+            </ul>
+            <li><b><a href="#IPMI">IPMI v2.0<MadCap:xref href="#IPMI" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - Uses Intelligent Platform Management&#160;Interface (IPMI)&#160;version 2.0 to test a Baseboard Management Controller (BMC).</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:IRC" /><MadCap:keyword term="IRC" /><a href="#irc">IRC<MadCap:xref href="#irc" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- 
+	 Tests an IRC server </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:LDAP" /><MadCap:keyword term="LDAP" /><a href="#ldap">LDAP<MadCap:xref href="#ldap" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> 
+	  - Tests an LDAP server without SSL</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="LDAP-SSL" /><a href="#ldapssl">LDAP-SSL<MadCap:xref href="#ldapssl" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an LDAP server with SSL</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:LPR" /><MadCap:keyword term="LPR" /><a href="#lpr">LPR<MadCap:xref href="#lpr" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> 
+	  - Tests an LPR print server </li>
+            <li><b style="font-weight: bold;"><a href="#mailprobes">Mail 
+	 Probes<MadCap:xref href="#mailprobes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+            </li>
+            <ul>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:IMAP4" /><MadCap:keyword term="IMAP4" /><a href="#imap4probes">IMAP4<MadCap:xref href="#imap4probes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                </li>
+                <ul>
+                    <li><b style="font-weight: bold;"><a href="#imap4">IMAP4<MadCap:xref href="#imap4" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an IMAP4 server without SSL </li>
+                    <li><b style="font-weight: bold;"><MadCap:keyword term="IMAP4-SSL" /><a href="#imap4ssl">IMAP4-SSL<MadCap:xref href="#imap4ssl" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an IMAP4 server with SSL </li>
+                </ul>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:POP3" /><MadCap:keyword term="POP3" /><a href="#pop3probes">POP3<MadCap:xref href="#pop3probes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                </li>
+                <ul>
+                    <li><b style="font-weight: bold;"><a href="#pop3">POP3<MadCap:xref href="#pop3" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests a POP3 server, without SSL</li>
+                    <li><b style="font-weight: bold;"><MadCap:keyword term="POP3-SSL" /><a href="#pop3ssl">POP3-SSL 
+		  <MadCap:xref href="#pop3ssl" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests a POP3 server, with SSL</li>
+                </ul>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:SMTP" /><MadCap:keyword term="SMTP" /><a href="#smtpprobes">SMTP<MadCap:xref href="#smtpprobes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                </li>
+                <ul>
+                    <li><b style="font-weight: bold;"><a href="#smtp">SMTP<MadCap:xref href="#smtp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an SMTP server without encryption</li>
+                    <li><b style="font-weight: bold;"><MadCap:keyword term="TLS" /><MadCap:keyword term="SMTP-TLS" /><a href="#smtptls">SMTP-TLS<MadCap:xref href="#smtptls" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an SMTP server with encryption</li>
+                </ul>
+            </ul>
+            <li><b style="font-weight: bold;"><a href="#multimedia">Multimedia<MadCap:xref href="#multimedia" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+            </li>
+            <ul>
+                <li>
+                    <MadCap:keyword term="Multicast" />
+                    <MadCap:keyword term="Tests:multicast" />
+                    <MadCap:keyword term="Multicast Listener" /><a href="#multicast"><b>Multicast Listener <MadCap:xref href="#multicast" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a> - Tests 
+		a multicast stream</li>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:RTSP" /><MadCap:keyword term="RTSP" /><a href="#rtsp">RTSP<MadCap:xref href="#rtsp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests an RTSP streaming server </li>
+                <li><b>Session Initiation protocol (SIP) over UDP</b> - Sends a UDP&#160;packet and tests for a valid SIP response.</li>
+            </ul>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Request:NTP" /><MadCap:keyword term="NTP" /><a href="#networktime">Network 
+	 Time (NTP)<MadCap:xref href="#networktime" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                <MadCap:keyword term="Tests:Network Time Server" />
+                <MadCap:keyword term="Network Time Server" /> - Tests a Network Time Server</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="NNTP" /><a href="#nntp">NNTP<MadCap:xref href="#nntp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                <MadCap:keyword term="Tests:Network News" />
+                <MadCap:keyword term="Network News" />- 
+	 Tests a Network News server </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:Radius" /><MadCap:keyword term="RADIUS" /><a href="#radius">RADIUS<MadCap:xref href="#radius" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> 
+	  - Tests a Radius authentication server</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:SNPP" /><MadCap:keyword term="SNPP" /><a href="#snpp">SNPP<MadCap:xref href="#snpp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- 
+	 Tests a SNPP server </li>
+            <li><b><MadCap:keyword term="SSH" /><a href="#SSH">SSH<MadCap:xref href="#SSH" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - Tests a remote login through a secure 
+	 shell.</li>
+            <li><b><MadCap:keyword term="Tests:Subversion" /><MadCap:keyword term="Subversion" /><a href="#subversion">Subversion<MadCap:xref href="#subversion" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                <MadCap:keyword term="Subversion Server" />
+                <MadCap:keyword term="Apache" /> - tests a Subversion server, 
+	 running either stand-alone, or as an Apache module.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Telnet" /><MadCap:keyword term="Tests:Telnet" /><a href="#telnet">Telnet<MadCap:xref href="#telnet" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests a Telnet server </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Tests:VNC" /><MadCap:keyword term="VNC Server" /><a href="#vnc">VNC Server<MadCap:xref href="#vnc" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>- Tests a VNC server</li>
+        </ul>
+        <p><a name="basictcp"></a>
+        </p>
+        <h2 class="pagebreakbefore">Basic TCP</h2>
+        <p>
+            <MadCap:keyword term="Set:DOWN" />
+            <MadCap:keyword term="Down" />
+            <MadCap:keyword term="TCP:establish" />
+            <MadCap:keyword term="Establish" />InterMapper attempts to establish a TCP connection to the specified 
+ port. The device is shown as UP if the connection completes within the 
+ default time interval (at which point the connection is disconnected); 
+ otherwise, the device is shown as DOWN.</p>
+        <p><b style="font-weight: bold;">Note:</b>
+            <MadCap:keyword term="Value" />
+            <MadCap:keyword term="Connecting" /> The default port value for the 
+ Basic TCP probe is 23, the Telnet port. You test many different kinds 
+ of servers by connecting to the proper port. For a list of port numbers 
+ and their common uses, see                    <a href="http://www.iss.net/security_center/advice/Exploits/Ports/">http://www.iss.net/security_center/advice/Exploits/Ports/</a>.</p>
+        <h2><a name="basictcpblocked"></a>
+        </h2>
+        <h2>Basic TCP (Blocked)</h2>
+        <p>This probe tests to see if a TCP is <i>not</i><MadCap:keyword term="Firewall" /><MadCap:keyword term="DNS:specify" /><MadCap:keyword term="OK" /> accepting connections. 
+ It can be used to make sure a firewall is working properly, or that a 
+ particular TCP service is never operating on an important machine. If 
+ the specified connection fails, device status is reported as OK. For each 
+ device, you can specify the reporting level to use if the port accepts 
+ the connection.</p>
+        <p><a name="customtcp"></a>
+        </p>
+        <h2>
+            <MadCap:keyword term="Custom TCP" />Custom TCP</h2>
+        <p>
+            <MadCap:keyword term="Warning" />
+            <MadCap:keyword term="Alarm" />
+            <MadCap:keyword term="Id" />InterMapper attempts to establish a TCP connection to the specified 
+ port. Once the connection has been established, InterMapper sends the 
+ "string to send" and waits the interval specified in the "seconds 
+ to wait" for a response to return from the device. The response text 
+ is compared to the specified OK, WARNING, ALARM, or DOWN strings, and 
+ the device is displayed in the corresponding state. If the response text 
+ does not match one of the specified strings, the device is considered 
+ to be DOWN.</p>
+        <h2><a name="cvs"></a>
+        </h2>
+        <h2>CVS Server</h2>
+        <p>
+            <MadCap:keyword term="Password" />InterMapper attempts to establish a TCP connection to port 2401 on a 
+ CVS server. It then attempts to log into the server using the supplied 
+ name and password. InterMapper scrambles the password as described in 
+ the CVS protocol specification, <a href="http://www.loria.fr/~molli/cvs/doc/cvsclient_4.html#SEC4">http://www.loria.fr/~molli/cvs/doc/cvsclient_4.html#SEC4</a>.</p>
+        <p><a name="dhcp"></a>
+        </p>
+        <h2>
+            <MadCap:keyword term="DHCP" />DHCPv4/BOOTP</h2>
+        <p>InterMapper sends a DHCP <i>Discover</i> or DHCP                    <i>Inform</i><MadCap:keyword term="PTR:request" /><MadCap:keyword term="Request" /> request 
+ to the device as specified in the configuration window, and waits for 
+ an appropriate response. </p>
+        <p>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="Subnet" />
+            <MadCap:keyword term="BootP Relay Address" />InterMapper sends the request to the specified BootP Relay Address (normally 
+ the IP broadcast address, 255.255.255.255). If the BootP Relay Address 
+ is empty, InterMapper sends the request directly to the device. InterMapper 
+ then checks the response to ensure that the returned IP address is correct, 
+ and if specified, that the returned subnet mask and router address are 
+ correct. If it receives multiple responses, it gives a warning if the responses are inconsistent.</p>
+        <p><a name="dns"></a>
+        </p>
+        <h2 class="pagebreakbefore">Domain Name (DNS) Probes</h2>
+        <p>
+            <MadCap:keyword term="Set" />
+            <MadCap:keyword term="Set:Failure Status" />
+            <MadCap:keyword term="Down:set" />
+            <MadCap:keyword term="Failure Status" />
+            <MadCap:keyword term="Failure Status:set" />
+            <MadCap:keyword term="Verify" />InterMapper sends the specified query to the DNS server being tested, and 
+	verifies that the response contains the correct information. Check the "Recursion 
+	Desired:" box to allow the target DNS server to interrogate other servers; 
+	leave it unchecked to verify that the target DNS server has a non-cached copy 
+	of the information. The device is set to the Failure Status if the response 
+	isn't correct. </p>
+        <ul>
+            <li>Check the <i><b><MadCap:keyword term="Recursion Desired" />Recursion Desired</b></i><MadCap:keyword term="DNS:force" /><MadCap:keyword term="Force" /> to allow the target 
+	 DNS server to interrogate other DNS servers recursively; leave it unchecked 
+	 to verify that the target DNS server has a non-cached copy of the information. 
+	 Force the DNS server being tested to use its own database, and return an 
+	 error if the address is not available. <br /><br /></li>
+            <li>
+                <MadCap:keyword term="Failure Status:Choose" />Choose a <i><b>Failure Status</b></i> dropdown menu to indicate 
+	 the severity of a failure to receive a response or an incorrect answer in 
+	 the response.</li>
+        </ul>
+        <p>
+            <MadCap:keyword term="Queries" />You can probe a DNS server using the following queries:<br /></p>
+        <ul>
+            <li><b>(A) Address</b> - InterMapper sends a DNS                    <i>"A" record </i>query 
+	 to the device for the specified Domain Name, and expects to receive the 
+	 specified IP address in the DNS response.</li>
+            <li><b><MadCap:keyword term="MX" /><MadCap:keyword term="Mail Server" />(MX) Mail Server</b> - Sends a request for a MX record for the specified 
+	 Domain Name, and checks it against the DNS name specified in the Mail Server 
+	 field.</li>
+            <li><b><MadCap:keyword term="Name Server" />(NS) Name Server</b> - sends a request for a NS record for the specified 
+	 Domain Name, and checks it against the DNS name specified in the Name Server 
+	 field.<br /></li>
+            <li><b><MadCap:keyword term="Name:Lookup" /><MadCap:keyword term="PTR" /><MadCap:keyword term="Request:PTR" /><MadCap:keyword term="Reverse Lookup" /><MadCap:keyword term="Lookup" />(PTR) Reverse Lookup</b> - sends a request for a PTR record for the 
+	 specified IP address, and checks it against the DNS name specified in the 
+	 Domain Name field.</li>
+            <li><b><MadCap:keyword term="TXT" /><MadCap:keyword term="Request:TXT" /><MadCap:keyword term="Text Record" />(TXT) Text Record</b> - sends a request for a TXT record for the specified 
+	 Domain Name, and checks it against the text string specified in the Text 
+	 Substring field.<br /></li>
+        </ul>
+        <h2><a name="ftpprobes"></a>FTP Probes</h2>
+        <p><a name="ftplogin"></a>
+        </p>
+        <h3>FTP (Login)</h3>
+        <p>
+            <MadCap:keyword term="Send:QUIT" />
+            <MadCap:keyword term="Username" />
+            <MadCap:keyword term="QUIT" />
+            <MadCap:keyword term="NOOP" />
+            <MadCap:keyword term="Issues" />
+            <MadCap:keyword term="Issues:QUIT" />
+            <MadCap:keyword term="Issues:NOOP" />
+            <MadCap:keyword term="File Transfer Protocol" />
+            <MadCap:keyword term="RFC:RFC 959" />InterMapper connects to a port (default is 21) on a File Transfer Protocol 
+ server (RFC 959) and attempts to log in using the specified username and 
+ password. It then issues a NOOP command, and finally a QUIT command.</p>
+        <p><a name="ftpnologin"></a>
+        </p>
+        <h3>FTP (No login)</h3>
+        <p>
+            <MadCap:keyword term="FTP:checking" />InterMapper connects to a port (default is 21) on an FTP server (RFC 
+ 959). It then issues a NOOP command and a QUIT command. This command is 
+ useful for checking an FTP server frequently without filling its log files 
+ with login attempts.</p>
+        <p><a name="gopher"></a>
+        </p>
+        <h3>Gopher</h3>
+        <p>InterMapper connects to a port (default is 70) on a Gopher server (RFC 
+ 1436). It then sends the specified selector string (the default is an 
+ empty string). The presence of any response indicates that the server 
+ is up; no error checking is performed on the response.</p>
+        <h2><a name="hostresources"></a>
+            <MadCap:keyword term="Host Resources Probe" /> Host Resources Probe</h2>
+        <p>
+            <MadCap:keyword term="RFC:RFC2790" />This probe tests selected RFC2790 variables and indicates if they exceed 
+ user-set values. This probe queries and displays the following variables: 
+ </p>
+        <table>
+            <tr>
+                <th style="text-align: right;width: 202px;" align="right" width="202px">
+                    <MadCap:keyword term="MIB Variable" />MIB Variable</th>
+                <th>
+                    <MadCap:keyword term="OID" />OID</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="HrSystemUptime" />hrSystemUptime</b>
+                </td>
+                <td>1.3.6.1.2.1.25.1.1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="HrSystemDate" />hrSystemDate</b>
+                </td>
+                <td>1.3.6.1.2.1.25.1.2 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="HrSystemNumUsers" />hrSystemNumUsers</b>
+                </td>
+                <td>1.3.6.1.2.1.25.1.5 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="HrSystemProcesses" />hrSystemProcesses</b>
+                </td>
+                <td>1.3.6.1.2.1.25.1.6 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="HrMemorySize" />hrMemorySize</b>
+                </td>
+                <td>1.3.6.1.2.1.25.2.2 </td>
+            </tr>
+        </table>
+        <p>It traverses the <b><MadCap:keyword term="HrStorageTable" />hrStorageTable</b> and queries and displays the 
+ following variables for each entry: </p>
+        <table>
+            <tr>
+                <th style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;">MIB Variable</b>
+                </th>
+                <th style="width: 122px;" width="122px">OID</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;"><MadCap:keyword term="HrStorageIndex" />hrStorageIndex</b>
+                </td>
+                <td style="width: 122px;" width="122px">1.3.6.1.2.1.25.2.3.1.1 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;"><MadCap:keyword term="HrStorageType" />hrStorageType</b>
+                </td>
+                <td style="width: 122px;" width="122px">1.3.6.1.2.1.25.2.3.1.2 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;"><MadCap:keyword term="HrStorageDescr" />hrStorageDescr</b>
+                </td>
+                <td style="width: 122px;" width="122px">1.3.6.1.2.1.25.2.3.1.3 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;"><MadCap:keyword term="HrStorageAllocationUnits" />hrStorageAllocationUnits</b>
+                </td>
+                <td style="width: 122px;" width="122px">1.3.6.1.2.1.25.2.3.1.4 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;"><MadCap:keyword term="HrStorageSize" />hrStorageSize</b>
+                </td>
+                <td style="width: 122px;" width="122px">1.3.6.1.2.1.25.2.3.1.5 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;"><MadCap:keyword term="HrStorageUsed" />hrStorageUsed</b>
+                </td>
+                <td style="width: 122px;" width="122px">1.3.6.1.2.1.25.2.3.1.6 </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;"><MadCap:keyword term="HrStorageAllocationFailures" />hrStorageAllocationFailures</b>
+                </td>
+                <td style="width: 122px;" width="122px">1.3.6.1.2.1.25.2.3.1.7 </td>
+            </tr>
+        </table>
+        <p>It traverses the <b><MadCap:keyword term="HrProcessorTable" />hrProcessorTable</b> and queries and displays the 
+ following variable for each entry: </p>
+        <table>
+            <tr>
+                <td style="text-align: right;width: 202px;" align="right" width="202px"><b style="font-weight: bold;"><MadCap:keyword term="HrProcessorLoad" />hrProcessorLoad</b>
+                </td>
+                <td>1.3.6.1.2.1.25.3.3.1.2 </td>
+            </tr>
+        </table>
+        <p>For the <b>hrStorageTable </b>and the <b>hrProcessorTable</b>, in addition to displaying 
+ the values for each entry, it calculates processor load, memory usage, 
+ and disk usage, and indicates a warning or an alarm if an entry exceeds 
+ user-defined thresholds for these values. </p>
+        <p>This probe also queries and displays variables from the
+UCD-SNMP-MIB where available, as described below.</p>
+        <p>It traverses the <b>laTable </b>and queries and displays the following variables for
+each entry:
+</p>
+        <table>
+            <col style="width: 202px;" />
+            <col style="width: 122px;" />
+            <tr>
+                <th style="text-align: right;" align="right"><b style="font-weight: bold;">MIB Variable</b>
+                </th>
+                <th>OID</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">laIndex</td>
+                <td>1.3.6.1.4.1.2021.10.1.1
+</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">laNames
+                    </td>
+                <td>1.3.6.1.4.1.2021.10.1.2
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">laLoad
+                    </td>
+                <td>1.3.6.1.4.1.2021.10.1.3
+                    </td>
+            </tr>
+        </table>
+        <p>It queries the following CPU variables, displaying them and using 
+them to calculate and report CPU load.</p>
+        <table>
+            <col style="width: 202px;" />
+            <col style="width: 138px;" />
+            <tr>
+                <th style="text-align: right;" align="right"><b style="font-weight: bold;">MIB Variable</b>
+                </th>
+                <th>OID</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">ssIndex</td>
+                <td>1.3.6.1.4.1.2021.11.1
+</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">ssCpuRawUser
+                    </td>
+                <td>1.3.6.1.4.1.2021.11.50
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">ssCpuRawNice
+                    </td>
+                <td>1.3.6.1.4.1.2021.11.51
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">ssCpuRawSystem
+                    </td>
+                <td>1.3.6.1.4.1.2021.11.52
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">ssCpuRawIdle
+                    </td>
+                <td>1.3.6.1.4.1.2021.11.53
+                    </td>
+            </tr>
+        </table>
+        <p>It queries the following memory variables, displaying them and using 
+them to calculate and report memory usage.</p>
+        <table>
+            <col style="width: 202px;" />
+            <col style="width: 141px;" />
+            <tr>
+                <th style="text-align: right;" align="right"><b style="font-weight: bold;">MIB Variable</b>
+                </th>
+                <th>OID</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">memIndex
+                    </td>
+                <td>1.3.6.1.4.1.2021.4.1
+
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">memTotalSwap
+                    </td>
+                <td>1.3.6.1.4.1.2021.4.3
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">memAvailSwap
+                    </td>
+                <td>1.3.6.1.4.1.2021.4.4
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">memTotalReal
+                    </td>
+                <td>1.3.6.1.4.1.2021.4.5
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">memAvailReal
+                    </td>
+                <td>1.3.6.1.4.1.2021.4.6
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">memShared
+                    </td>
+                <td>1.3.6.1.4.1.2021.4.13
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">memBuffer
+                    </td>
+                <td>1.3.6.1.4.1.2021.4.14
+                    </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;font-weight: bold;">memCached
+                    </td>
+                <td>1.3.6.1.4.1.2021.4.15
+                    </td>
+            </tr>
+        </table>
+        <p>In addition to displaying these values, it calculates CPU load, swap, and real
+memory usage, and indicates a warning or an alarm if an entry exceeds
+user-defined thresholds for these values.</p>
+        <h2><a name="httpprobes"></a>HTTP Probes</h2>
+        <p><a name="http"></a>
+        </p>
+        <h3>HTTP</h3>
+        <p>
+            <MadCap:keyword term="URL" />
+            <MadCap:keyword term="URL Path" />InterMapper connects to a port (default is 80) on an HTTP server (RFC 
+ 2068 &amp; 1945). It then sends an HTTP GET request with the specified 
+ URL Path (the default is "/"). It then examines the resulting 
+ response for the presence of the "string to verify". You may 
+ also specify a name and password to be sent along with the HTTP request 
+ to test the authentication.</p>
+        <p>
+            <MadCap:keyword term="Host Name" />To test virtual hosting on a particular server, specify a DNS name in 
+ the "Host Name" parameter. InterMapper will include that in 
+ the HTTP Get request header.</p>
+        <h3>HTTP (Follow Redirects)</h3>
+        <p><a name="httpfollow"></a>This TCP probe lets you download a specific web page and scan it for a specific string of HTML. This probe will follow a limited number of page redirects to the same HTTP server.</p>
+        <p><a name="httppost"></a>
+        </p>
+        <h3>HTTP (POST)</h3>
+        <p>
+            <MadCap:keyword term="Form Data" />In order to test web form submissions, InterMapper can send an HTTP 
+ POST request to the server. InterMapper connects to a port (default is 
+ 80) and sends the specified URL Path and Form Data strings in the request. 
+ It then searches the response for the "string to verify".</p>
+        <p><a name="httpproxy"></a>
+        </p>
+        <h3>HTTP (Proxy)</h3>
+        <p>
+            <MadCap:keyword term="URL:containing" />InterMapper can test proxy web servers to ensure that they are delivering 
+ pages properly. InterMapper sends an HTTP GET request containing a URL 
+ of some other host to the proxy server. If the response matches the "string 
+ to verify", the proxy server is shown as UP. You may optionally specify 
+ a proxy user ID and password which, by default, are empty.</p>
+        <p><a name="httpredir"></a>
+        </p>
+        <h3>HTTP (Redirect)</h3>
+        <p>InterMapper uses the HTTP (Authenticate) probe to connect to the device 
+ on the specified port. It checks the response for the presence of a 301 
+ Moved Permanently status giving the specified "Redirect path".</p>
+        <h2><a name="httpsprobes"></a>HTTPS Probes</h2>
+        <p><a name="https"></a>
+        </p>
+        <h3>HTTPS</h3>
+        <p>InterMapper establishes an SSL connection to a HTTPS server (default 
+ port is 443), requests a page, and checks for the presence of a specified 
+ string on the resulting page. You can also specify the host name, the 
+ file's path, the expected string, and an optional user name and password. 
+ This probe is identical to the HTTP probe, except that it establishes 
+ the SSL connection.</p>
+        <p><a name="httpspost"></a>
+        </p>
+        <h3>HTTPS (Post)</h3>
+        <p>InterMapper establishes a SSL connection to a HTTPS server (default 
+ port is 443) and posts form data to the server. This probe is identical 
+ to the HTTP (Post) probe, except that it establishes the SSL connection</p>
+        <h2><a name="IPMI"></a>Intelligent Platform Management Interface (IPMI v2.0)</h2>
+        <p>This probe implements version 2.0 of the Intelligent Platform Management Interface (IPMI) over a LAN. It sends UDP-based RMCP+ packets to a Baseboard Management Controller (BMC) located within a server or workstation. The BMC is hardware which permits network-based management of the computer even when it is turned off, i.e. "lights-out management".</p>
+        <ul>
+            <li><i>User</i> is an administrator-level user name to the BMC. This parameter is required.</li>
+            <li><i>Password</i> is the password for the desired administrator-level user. This parameter is required.</li>
+            <li><i>Dialect</i> specifies the variant of the IPMI protocol. Unfortunately, there are subtle differences in implementations of IPMI in various products. To use this probe with an Apple XServe, set the "Dialect" parameter to "XServe". For Dell Servers and possibly other products, set the "Dialect" parameter to "Other".</li>
+        </ul>
+        <p>This probe supports one-key, non-anonymous logins only. Internally, it uses RAKP-HMAC-SHA1 and AES-CBS-128 for authentication and confidentiality, respectively. The firewall configuration of the BMC must permit UDP packets from InterMapper.</p>
+        <p><a name="irc"></a>
+        </p>
+        <h2>IRC</h2>
+        <p>
+            <MadCap:keyword term="RFC:RFC 1459" />InterMapper connects to a port (default is 6667) on an Internet Relay 
+ Chat (RFC 1459) server. It then logs in using the IRC protocol with the 
+ specified Nickname, Password, and Username. It then compares the response 
+ to the "string to verify".</p>
+        <p><a name="ldap"></a>
+        </p>
+        <h2>LDAP</h2>
+        <p>
+            <MadCap:keyword term="Bind Password" />
+            <MadCap:keyword term="RFC:RFC 2251" />InterMapper connects to a port (the default is 389) on a Lightweight Directory 
+	Access Protocol (RFC 2251) server. It then attempts to use the specified "Bind 
+	Name" and optional "Bind Password" to look up the name specified 
+	in "Name to Lookup". If no response is returned, or if the response 
+	indicates an error, InterMapper shows the device as DOWN.</p>
+        <p><a name="ldapssl"></a>
+        </p>
+        <h2>LDAP-SSL</h2>
+        <p>InterMapper performs the same tests as the <a href="#ldap">LDAP probe 
+ (above)<MadCap:xref href="#ldap" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> over an SSL connection.</p>
+        <p><a name="lpr"></a>
+        </p>
+        <h2>LPR</h2>
+        <p>InterMapper connects to a port (default is 515) and requests information 
+ about a specified queue. If the response is correct, the device is considered 
+ to be UP.</p>
+        <h2 class="pagebreakbefore"><a name="mailprobes"></a>
+            <MadCap:keyword term="Mail Probes" />Mail Probes</h2>
+        <p><a name="imap4probes"></a>
+        </p>
+        <h3>
+            <MadCap:keyword term="IMAP4 Probes" />IMAP4 Probes</h3>
+        <p><a name="imap4"></a>
+        </p>
+        <h4>IMAP4</h4>
+        <p>
+            <MadCap:keyword term="LOGOUT" />
+            <MadCap:keyword term="IMAP4rev1" />
+            <MadCap:keyword term="RFC:RFC 2060" />InterMapper connects to a port (the default is 143) on an Internet Message 
+ Access Protocol - Version 4 (RFC 2060) server. It then issues the IMAP4 
+ CAPABILITY, NOOP, and LOGOUT commands sequentially. It also checks the 
+ response of the CAPABILITY command to ensure that the device supports 
+ IMAP4 or IMAP4rev1.</p>
+        <p><a name="imap4ssl"></a>
+        </p>
+        <h4>IMAP4-SSL</h4>
+        <p>InterMapper performs same tests as the <a href="#imap4">IMAP4 probe 
+ (above)<MadCap:xref href="#imap4" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> over an SSL connection.</p>
+        <h3><a name="pop3probes"></a>
+        </h3>
+        <h3>
+            <MadCap:keyword term="POP3 Probes" />POP3 Probes</h3>
+        <p><a name="pop3"></a>
+        </p>
+        <h4>POP3</h4>
+        <p>
+            <MadCap:keyword term="Post Office Protocol" />
+            <MadCap:keyword term="RFC:RFC 1939" />InterMapper connects to a port (default is 110) on a Post Office Protocol 
+ - version 3 (RFC 1939) server, and verifies that the response contains 
+ "+OK".</p>
+        <p><a name="pop3ssl"></a>
+        </p>
+        <h4>POP3-SSL</h4>
+        <p>InterMapper connects to an SSL port (default is 995) on a Post Office 
+ Protocol - version 3 (RFC 1939) server, and verifies that the response 
+ contains "+OK".</p>
+        <p><a name="smtpprobes"></a>
+        </p>
+        <h3>
+            <MadCap:keyword term="SMTP Probes" />SMTP Probes</h3>
+        <p><a name="smtp"></a>
+        </p>
+        <h4>SMTP</h4>
+        <p>
+            <MadCap:keyword term="Send:HELO" />
+            <MadCap:keyword term="E-mail" />
+            <MadCap:keyword term="HELO" />
+            <MadCap:keyword term="E-mail Address" />
+            <MadCap:keyword term="VRFY" />
+            <MadCap:keyword term="RFC:RFC 821" />InterMapper connects to a port (default is 25) on a Simple Mail Transfer 
+ Protocol (RFC 821) server and attempts to verify an e-mail address. It 
+ connects, then sends a HELO command, a VRFY command with the specified 
+ "E-mail Address", and then a QUIT command.</p>
+        <p><a name="smtptls"></a>
+        </p>
+        <h4>SMTP-TLS</h4>
+        <p>InterMapper performs the <a href="#smtp">SMTP probe (above)<MadCap:xref href="#smtp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> over 
+ a connection using TLS encryption.<a name="multimedia"></a></p>
+        <h2 class="pagebreakbefore">
+            <MadCap:keyword term="Multimedia Probes" />Multimedia Probes</h2>
+        <p><a name="multicast"></a>
+        </p>
+        <h3>Multicast Listener</h3>
+        <p>
+            <MadCap:keyword term="UDP" />
+            <MadCap:keyword term="Multicastaddress" />InterMapper listens to the stream of packets arriving on the specified 
+ multicastaddress and UDP port. </p>
+        <ul>
+            <li>If a packet fails to arrive within the specified 
+ time period, InterMapper sets the device status to DOWN. </li>
+            <li>If the <i>Verify source address</i> flag is true, 
+ then InterMapper accepts packets only from the device's IP address. Packets 
+ from other sources are ignored.</li>
+        </ul>
+        <p>
+            <MadCap:keyword term="Monitor:RTP" />
+            <MadCap:keyword term="QuickTime" />
+            <MadCap:keyword term="Session Description Protocol" />
+            <MadCap:keyword term="RTP" />
+            <MadCap:keyword term="RealNetworks" />This is most useful for monitoring RTP streams, such as those sent by 
+ QuickTime and RealNetworks servers. The settings for this probe are contained 
+ in the Session Description Protocol (SDP) file associated with the multicast 
+ broadcast. </p>
+        <p>
+            <MadCap:keyword term="SDP file" />
+            <MadCap:keyword term="SDP file:Open" />Open the SDP file using a text editor, and locate the required values 
+ into the configuration window. Here is an excerpt from an SDP file:</p><pre class="code">o=- 3151391188 3157116984 IN IP4 192.168.152.11 <span style="color: #008000;">&lt;-- <i>&#160;source is 192.168.152.11<br /></i></span>s=Sample QuickTime SDP File
+i=Copyright @ 2005 &#160;
+a=x-qt-text-nam: My QuickTime broadcast
+a=x-qt-text-cpy:Copyright © My Broadcast
+a=x-qt-text-cmt:Broadcast by Sorenson Broadcaster 1.00.307.100
+c=IN IP4 224.2.166.240/15/1    <span style="color: #008000;">&lt;-- <i>multicast address is 224.2.166.240</i></span><br /><MadCap:keyword term="RTP:RTP/AVP 12" />t=3157116984 0
+m=audio 18562 RTP/AVP 12&#160;<span style="color: #008000;">&lt;-- <i>port for the audio is 18562<br /></i></span><MadCap:keyword term="X-bufferdelay" /><MadCap:keyword term="Rtpmap" /><MadCap:keyword term="X-QDM" /><MadCap:keyword term="X-QT/600" />a=rtpmap:99 X-QT/600
+a=rtpmap:102 X-QDM
+a=x-bufferdelay:8
+</pre>
+        <p><b style="font-weight: bold;">Note:</b> An SDP file may describe a broadcast 
+ with many tracks (audio, video, text, etc.) Each of these has a "m= 
+ xxxxx port#" line. InterMapper may monitor multiple tracks, but uses 
+ a separate device for each.</p>
+        <p><a name="rtsp"></a>
+        </p>
+        <h3>RTSP</h3>
+        <p>
+            <MadCap:keyword term="Start" />
+            <MadCap:keyword term="Stop" />
+            <MadCap:keyword term="Access-Request:sending" />
+            <MadCap:keyword term="RFC:RFC's 1889" />InterMapper connects to a port (default is 554) to on a Real Time Streaming 
+ Protocol server (RFC's 1889 &amp; 2326) and verifies its operation. It 
+ causes the specified movie to play for the specified number of seconds 
+ by sending a sequence of CONNECT, START, and STOP commands.</p>
+        <h3><a name="sip"></a>Session Initiation Protocol (SIP)&#160;over UDP</h3>
+        <p>The protocol used to set up voice communications for Voice over IP (VOIP), as  described in <a href="http://www.ietf.org/rfc/rfc3261.txt" target="_blank">RFC 3261</a>. This probe sends a SIP request in a single UDP packet  and checks for a valid SIP response.</p>
+        <p>By default, this probe sends an  OPTIONS command to the target device. However, some VOIP systems will not  answer un-authenticated OPTIONS requests. For these devices, change the  command to REGISTER.</p>
+        <ul>
+            <li><b>URI</b> is the SIP uniform resource  identifier in the request.</li>
+            <li><b>Command</b> is the SIP command  to send in the request.</li>
+        </ul>
+        <h2><a name="networktime"></a>Network Time Server</h2>
+        <p>This probe sends a client-mode request to an NTP server asking for the 
+ current time, and displays an error if no response is returned. By default, 
+ NTP requests are sent on UDP port 123.</p>
+        <p><b style="font-weight: bold;">Note:</b> This probe does not validate 
+ the time in the NTP response.</p>
+        <p><a name="nntp"></a>
+        </p>
+        <h2>NNTP</h2>
+        <p>
+            <MadCap:keyword term="Group" />
+            <MadCap:keyword term="RFC:RFC 977" />InterMapper connects to a port (default is 119) on an Network News Transfer 
+ Protocol (RFC 977) server and requests information about the specified 
+ group with a GROUP command. It then sends a QUIT command to terminate 
+ the session.</p>
+        <p><a name="radius"></a>
+        </p>
+        <h2>
+            <MadCap:keyword term="Remote Authentication Dial-in User Service" />RADIUS (Remote Authentication Dial-in User Service)</h2>
+        <p>This probe tests a RADIUS server by sending an <i><MadCap:keyword term="Send:Access-Request" /><MadCap:keyword term="Access-Request" />Access-Request </i>packet 
+ to authenticate a specific user name and password. (A RADIUS server does 
+ not answer access-requests from a client it doesn't recognize.)</p>
+        <p>Before you can use this probe with a particular RADIUS server, you must 
+ add the InterMapper computer's IP address to the RADIUS server and choose 
+ a "shared secret" for it. The "shared secret" is used 
+ by the RADIUS protocol to encrypt passwords in RADIUS requests.</p>
+        <p><a name="snpp"></a>
+        </p>
+        <h2>
+            <MadCap:keyword term="Simple Network Paging Protocol" />Simple Network Paging Protocol (SNPP)</h2>
+        <p>
+            <MadCap:keyword term="RFC:RFC 1861" />This probe tests a SNPP server using the protocol defined in RFC 1861. 
+ It connects to the server (default port is 444), and then issues a PAGE 
+ <i>pagerid</i> command. If it receives a valid response, it issues a QUIT 
+ command to the server and sets the device status to OK. If an "Invalid 
+ pager ID" response comes back, InterMapper marks the device in the 
+ Alarm state. If no connection could be made, or if the response is unknown, 
+ the device is set to the DOWN status.</p>
+        <p><a name="SSH"></a>
+        </p>
+        <h2>
+            <MadCap:keyword term="Secure Shell" />Secure Shell (SSH)</h2>
+        <p>
+            <MadCap:keyword term="FRC 4253" />This TCP probe opens a connection to the specified port and looks for the 
+	identification string that indicates an SSH server as specified in FRC 4253. 
+	The default TCP port number for SSH connections is port 22. </p>
+        <p><a name="subversion"></a>
+        </p>
+        <h2>Subversion</h2>
+        <h3>Subversion Server (Apache module)</h3>
+        <p>
+            <MadCap:keyword term="WebDAV/DeltaV" />This probe tests a Subversion server running as an Apache module. The subversion 
+	module lets Apache function as a WebDAV/DeltaV server. Since the server responds 
+	normally to HTTP GET requests, testing whether it is up is the same as performing 
+	an HTTP GET request and checking to ensure the location was found.</p>
+        <h3>
+            <MadCap:keyword term="Connecting:svnserve" />
+            <MadCap:keyword term="Subversion Standalone Server" />
+            <MadCap:keyword term="Svnserve" />Subversion Standalone Server (svnserve)</h3>
+        <p>
+            <MadCap:keyword term="CRAM-MD5" />
+            <MadCap:keyword term="Sserver" />
+            <MadCap:keyword term="Svnserve Subversion" />This probe tests a stand-alone svnserve Subversion server. It connects to 
+	the svnserve using its default port 3690. The Sserver returns a response to 
+	indicate it is running. If a repository location is specified, the probe then 
+	tries to connect to that repository. If a username is specified, the probe 
+	tries to authenticate using CRAM-MD5, otherwise it connects anonymously.</p>
+        <p><a name="telnet"></a>
+        </p>
+        <h2>Telnet</h2>
+        <p>
+            <MadCap:keyword term="RFC:RFC 845" />InterMapper connects to a port (default is 23) on a Telnet (RFC 845) 
+ server and attempts log in using the specified name and password. You 
+ also have the option to enter a command.</p>
+        <p><a name="vnc"></a>
+        </p>
+        <h2>VNC Server</h2>
+        <p>
+            <MadCap:keyword term="RFB.003.003" />
+            <MadCap:keyword term="Virtual Network Computer" />This probe tests a VNC (Virtual Network Computer) server by connecting 
+ to port 5900 (by default). If it receives "RFB.003.003" response, 
+ the server is assumed to be UP. If no connection is made, or if the response 
+ is unknown, then the device is considered DOWN. VNC is described at: <a href="http://www.realvnc.com">http://www.realvnc.com</a></p>
+    </body>
+</html>

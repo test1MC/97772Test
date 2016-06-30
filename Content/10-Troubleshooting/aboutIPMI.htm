@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.test" class="" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">IPMI and Service Processors </h1>
+        <h2>(aka "Lights-Out Management")</h2>
+        <p>Many servers these days are being shipped with Service Processors. A Service Processor is a separate processor inside the chassis (usually on the motherboard) that runs independently of the main computing system. The Service Processor has its own network identity and is connected to sensors on the motherboard and chassis. The sensors enable the Service Processor to independently monitor and manage the main computing system. As a simple "computer within the computer", the Service Processor can retrieve statistics, restart a hung system, power on/off the system, or reconfigure how the system boots.</p>
+        <p>The Intelligent Platform Management Interface (IPMI) is a vendor-independent protocol for talking to Service Processors.</p>
+        <p>InterMapper 5.0 supports IPMI v2.0 for monitoring the service processors in Apple XServes and Dell 9-series PowerEdge servers over an IPv4 LAN.</p>
+        <h3>Preliminary IPMI Implementation Notes</h3>
+        <ul>
+            <li>
+                <p>Read-only operation; no remote configuration, power on/off, or LED control.</p>
+            </li>
+            <li>
+                <p>No vendor-specific functionality. For example, we can't show everything that Apple's Server Monitor can show.</p>
+            </li>
+            <li>
+                <p>IPMI is an incredibly "chatty" protocol; there are still optimizations to be made in our polling engine.</p>
+            </li>
+            <li>
+                <p>We only support the "required" IPMIv2 authentication, integrity, and encryption algorithms (HMAC<em>SHA1, HMAC</em>SHA1<em>96 and AES</em>CBC_128). We don't support un-encrypted operation.</p>
+            </li>
+            <li>
+                <p>We don't support IPMI 1.5.</p>
+            </li>
+            <li>
+                <p>We've done preliminary testing with Apple XServe (Intel) and a Dell 9-series PowerEdge server. We have not tested any other IPMI implementations.</p>
+            </li>
+        </ul>
+        <h3>Known bugs</h3>
+        <ul>
+            <li>
+                <p>Losing a packet causes a device probed with the IPMI probe to go down,</p>
+            </li>
+            <li>
+                <p>Sometimes a temperature sensor shows a negative value.</p>
+            </li>
+        </ul>
+    </body>
+</html>

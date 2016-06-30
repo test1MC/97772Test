@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:lastBlockDepth="7" MadCap:lastHeight="68" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Exporting Data From Maps</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.print">Importing and Exporting Maps</h1>
+        <h2 MadCap:conditions="Primary.print" class="L2">Exporting Data From Maps</h2>
+        <h1 MadCap:conditions="Primary.online">Exporting Data From Maps</h1>
+        <p>
+            <MadCap:keyword term="Add All;Field Export Order;Adding">
+            </MadCap:keyword>
+            <MadCap:keyword term="Map">
+            </MadCap:keyword>
+            <MadCap:keyword term="Data From Maps">
+            </MadCap:keyword>
+            <MadCap:keyword term="Data From Maps:Exporting">
+            </MadCap:keyword>
+            <MadCap:keyword term="Exporting">
+            </MadCap:keyword>
+            <MadCap:keyword term="Exporting:Data From Maps">
+            </MadCap:keyword>InterMapper exports data about the devices on its maps. This makes it 
+ possible to use the map data in a number of ways, for example: </p>
+        <ul>
+            <li>To review the map's configuration to check for consistency 
+ </li>
+            <li>To edit the map data using some external tool, and 
+ then re-import it (using the <a href="Importing_Data_Into_Maps.htm">Import 
+ Command<MadCap:xref href="Importing_Data_Into_Maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> ) back into the map, updating the affected devices. </li>
+            <li>To use the configuration in some down-stream application 
+ </li>
+        </ul>
+        <p>You can export data for <i>all maps</i>, for          <i>the current map</i>, or only 
+	for          <i>selected items in the current map</i>.</p>
+        <p><b>Note:</b>
+            <MadCap:keyword term="InterMapper RemoteAccess" /> You can automate the exporting of map data by sending commands 
+	 to InterMapper RemoteAccess through its command-line interface or through the HTTP API. This allows 
+	 you to interact with InterMapper through your own scripts. For more information, 
+	 see     <a href="../../09-Reference/09-05-Advanced_Importing/IMRA-CommandLineOptions.htm">Command-line options for RemoteAccess</a>, (in this manual) as well as       <i>InterMapper HTTP API</i> in the <a href="http://intermapper.com/go.php?to=intermapper.devguide" target="_blank">Developer Guide</a>.<br /></p>
+        <h2>Types of data you can export</h2>
+        <table style="width: 100%;border-spacing: 0px;border-spacing: 0px;" cellspacing="0" width="100%">
+            <col style="width: 28.526%;" />
+            <col style="width: 71.474%;" />
+            <tr valign="top">
+                <td style="width: 28.526%;padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;border-left-style: none;border-top-style: none;" width="28.526%">
+                    <p style="font-weight: bold;"> Map
+	  </p>
+                </td>
+                <td style="width: 71.474%;padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-top-style: none;border-right-style: none;" width="71.474%">
+                    <p>
+                        <MadCap:keyword term="PNG:Save" />
+                        <MadCap:keyword term="File Save dialog" />
+                        <MadCap:keyword term="Save" />Save a copy of the map from the server on which it's running to a file 
+		 on a local computer. A standard File Save dialog appears.
+	  </p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="width: 28.526%;padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;border-left-style: none;" width="28.526%">
+                    <p style="font-weight: bold;">Data file
+	  </p>
+                </td>
+                <td style="width: 71.474%;padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;" width="71.474%">
+                    <p>Save a text file containing information about a map in one of these 
+		 formats:
+		</p>
+                    <ul>
+                        <li><b>Tab-delimited</b> - creates a text file with all field data separated 
+			by tab characters.</li>
+                        <li><b><MadCap:keyword term="CSV" />CSV</b> - creates a text file with all field data separated by 
+			commas. </li>
+                        <li><b><MadCap:keyword term="HTML" />HTML</b> - creates a text file containing field data in HTML 
+			tables. </li>
+                        <li><b><MadCap:keyword term="XML" />XML</b> - creates a text file containing field data in XML format.</li>
+                    </ul>
+                    <p>A standard File Save dialog appears.
+	  </p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="width: 28.526%;padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;border-left-style: none;" width="28.526%">
+                    <p style="font-weight: bold;">Image file
+	  </p>
+                </td>
+                <td style="width: 71.474%;padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;" width="71.474%">
+                    <p>
+                        <MadCap:keyword term="PNG" />
+                        <MadCap:keyword term="Save:PNG" />Save a PNG image of the current map. A standard File Save dialog appears.
+	  </p>
+                </td>
+            </tr>
+        </table>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/window-ExportMap.png" style="width: 551px;height: 306px;" />
+            <br /><span style="font-style: italic;"><MadCap:keyword term="Export Map Data window" />The Export Map Data window.</span>
+        </p>
+        <p><span style="font-weight: bold;">To export map data:</span>
+        </p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>
+                <MadCap:keyword term="Export submenu" /> From the File menu's Export submenu, choose <span style="font-weight: bold;">Data File... </span>The Export Map Data window appears 
+	 as shown below.</li>
+            <li> From the <span style="font-weight: bold;font-style: italic;">Table</span>drop-down menu, choose <span style="font-weight: bold;font-style: italic;">devices</span> (device attributes), 
+	  <span style="font-weight: bold;font-style: italic;">vertices</span> 
+	  (appearance attributes), <b style="font-style: italic;">maps</b>, <b style="font-style: italic;">notifiers</b>, <b style="font-style: italic;">users</b>, or <span style="font-weight: bold;font-style: italic;">schema</span><MadCap:keyword term="Output" /> 
+	  (output file attributes).</li>
+            <li> From the <span style="font-weight: bold;font-style: italic;"><MadCap:keyword term="Fields" />Fields</span> 
+	  box, click to choose the fields you want to export.          <span style="font-style: italic;">Shift-click</span><span style="font-weight: bold;"></span> to select a contiguous series, or          <span style="font-style: italic;"><MadCap:keyword term="Ctrl-click" />Ctrl-click</span> 
+	  to choose non-contiguous fields. </li>
+            <li> Click <span style="font-weight: bold;font-style: italic;">Add&gt;&gt;</span>. The selected fields appear in the          <span style="font-weight: bold;font-style: italic;">Field 
+	 Export Order </span> box. If you want to export all fields, click          <span style="font-weight: bold;font-style: italic;">Add 
+	 All</span>. </li>
+            <li> In the <span style="font-weight: bold;font-style: italic;">Field 
+	 Export Order</span> box, drag the field names up or down to set the order 
+	 you want the fields to appear in the export file.</li>
+            <li> Click to choose <span style="font-weight: bold;font-style: italic;">Export 
+	 data from all maps</span> or          <span style="font-weight: bold;font-style: italic;">Export 
+	 this map</span>. </li>
+            <li> If you want to export data only for the selected items 
+	 on the map, click <span style="font-weight: bold;font-style: italic;">Only 
+	 export selected items</span>.</li>
+            <li> From the <span style="font-weight: bold;font-style: italic;">Output 
+	 format</span> drop-down menu, choose	<b style="font-style: italic;">Tab-delimited</b>, <b style="font-style: italic;">CSV</b>, <b style="font-style: italic;">HTML</b>, or <b style="font-style: italic;">XML</b>.  For information on these formats, see the table above. </li>
+            <li> Click <span style="font-style: italic; font-weight: bold;">Export</span>. A standard File Save dialog appears. 
+	</li>
+            <li> Choose a name and location for the export file, and click 
+	  <span style="font-weight: bold;font-style: italic;">Save</span>. The export 
+	 file is saved in the specified location.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

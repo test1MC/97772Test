@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2204" MadCap:lastWidth="1148" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">The Device Info Window</h1>
+        <p>Use the Device Info window to view and edit information about a device.</p>
+        <p style="text-align: left;">
+            <img src="../Resources/images/DevInfo-gen-callouts.png" style="border-style: none;border-style: none;width: 571px;height: 546px;" border="0" />
+        </p>
+        <p>To use the device window:</p>
+        <ul>
+            <li>Click a section on the left to edit that info type.</li>
+            <li>Edit the info as described below.</li>
+            <li>Click <b style="font-style: italic;">Apply</b> to save your changes.</li>
+            <li>Click <b style="font-style: italic;">OK</b> to save your changes and close the Info window.</li>
+        </ul>
+        <h2 class="pagebreakbefore">General Pane</h2>
+        <p>Use the Device Info window's General pane to edit general information about the device.</p>
+        <h3>Editing General Info</h3>
+        <ul>
+            <li><b>Address</b> - view or edit the device address. This is the address that is used when the device is polled.</li>
+            <li><b>Host Name</b> - view or edit the device's host name. This is the host name that is used to resolve the address</li>
+            <li><b>Resolve</b> - choose <b style="font-style: italic;">address to set name</b>, <b style="font-style: italic;">name to set address</b>, or <b style="font-style: italic;">neither</b>.</li>
+            <li>Select <b style="font-style: italic;">Use as Map's Vantage Point</b> to use this network as the map's <a href="../06-Notifiers/dependencies.html">Vantage Point<MadCap:xref href="../06-Notifiers/dependencies.html"> (Pg 1)</MadCap:xref></a>.</li>
+            <li><b>IMID</b> - view InterMappers internal device ID. (This info is read-only.)</li>
+            <li><b>Kind</b> - choose from the dropdown menu to specify the type of device.</li>
+            <li><b>Retention Policy</b> - choose a Retention Policy to specify how data for this device is saved.</li>
+            <li><b>Latitude</b> - set the device's latitude.</li>
+            <li><b>Longitude</b> - set the device's longitude.</li>
+            <li><b>Comment</b> - enter text in the <b style="font-style: italic;">Comment</b> box to add a comment to the device.</li>
+        </ul>
+        <h2>SNMP Pane</h2>
+        <p>Use the Info window's SNMP pane to view available SNMP information. This is a read-only pane, so there are no options to edit.</p>
+        <h2>Probes Pane</h2>
+        <p>Use the Device Info window's Probes pane to view and edit the device's probes.</p>
+        <h3>Editing Probe Info</h3>
+        <p>From the Probes pane, you can add and remove probes, and edit a probe's information.</p>
+        <p><b>To edit a probe's information:</b>
+        </p>
+        <ol>
+            <li>Make the map editable by clicking the Lock icon at lower left.</li>
+            <li>To change the probe, right-click (or Control-click) the probe you want to edit, and choose <b style="font-style: italic;">Set Probe...</b> from the context menu. The Set Probe window appears.</li>
+            <li>Choose the probe you want to use and edit the settings as needed.</li>
+            <li>Click <b style="font-style: italic;">OK</b> to close the Set Probe window.</li>
+        </ol>
+        <p style="font-weight: bold;">To add a probe:</p>
+        <ol>
+            <li>Click the plus icon (+) at the bottom of the Probes pane. The Set Probe window appears.</li>
+            <li>Click to choose a probe from the probe list on the left.</li>
+            <li>Edit the probe settings as needed.</li>
+            <li>Click <b style="font-style: italic;">OK</b> to close the Set Probe window.</li>
+        </ol>
+        <p><b>Note:</b> When you add a probe, the device becomes a probe group.</p>
+        <h2 class="pagebreakbefore">Thresholds Pane</h2>
+        <p>Use the Device Info window's Thresholds pane to view and edit threshold settings for the device.</p>
+        <h3>Editing Threshold Info</h3>
+        <ol>
+            <li>Open the Info window for the device you want to edit.</li>
+            <li>Make sure the map is in Edit mode.</li>
+            <li>Click <b style="font-style: italic;">Thresholds</b> to view the Thresholds pane.</li>
+            <li>Select the <b style="font-style: italic;">Ignore Outages</b> check box to suppress alerts for the device when it goes down or comes up.<br /><br /><b>Note:</b> The <b style="font-style: italic;">Ignore Outages</b> check box suppresses alerts only with respect to outages, not to other state changes, thresholds, or to any alerts triggers by probes attached to the device. This is useful if a device such as a laptop or mobile device goes up or down (or leaves the network completely) as part of its normal operation.<br /><br /></li>
+            <li>Clear the <b><i>Use Map Defaults</i></b> check box.</li>
+            <li>Enter new values in the boxes you want to change.</li>
+            <li>Click Apply to activate the changes without closing the window or <b style="font-style: italic;">OK</b> to activate and close the window. The selected device uses the new values.</li>
+        </ol>
+        <h2><a name="Icon"></a>Icon Pane</h2>
+        <p>Use the Device Info window's Icon pane to change the icon for the device.</p>
+        <h3>Editing Icon Info</h3>
+        <p>To change the device's icon:</p>
+        <ol>
+            <li>From the dropdown menu at the top of the pane, choose an icon set.</li>
+            <li>Scroll through the set and choose an icon. You can see what it looks like by clicking on it. You can see what it looks like in different states by clicking the colored buttons below the preview area.</li>
+            <li>When you have found an icon you want to use, click <b style="font-style: italic;">Apply</b> to activate the icon without closing the window or <b style="font-style: italic;">OK</b> to activate the icon and close the window.</li>
+        </ol>
+        <h2><a name="Label"></a>Label Pane</h2>
+        <p>Use the Device Info window's Label pane to edit the device's label.</p>
+        <h3>Editing a Label</h3>
+        <p>A label can contain any combination of text, variables, and JavaScript. For detailed information on editing labels see <a href="../05-Arranging_Your_Map/labels.html">Editing Labels<MadCap:xref href="../05-Arranging_Your_Map/labels.html">(Pg 1)</MadCap:xref></a> and <a href="../05-Arranging_Your_Map/Dynamic_Label_Text.htm">Dynamic Label and Alert Text<MadCap:xref href="../05-Arranging_Your_Map/Dynamic_Label_Text.htm">(Pg 1)</MadCap:xref></a>.</p>
+        <h2 class="pagebreakbefore"><a name="Advanced"></a>Advanced Pane</h2>
+        <p>Use the Advanced pane to choose the mapping behavior of a device, and whether to collect Layer 2 information.</p>
+        <h3>Mapping Behavior</h3>
+        <ul>
+            <li><b>Determine network information for each port separately</b> - use this option when mapping Routers.</li>
+            <li><b>Propagate all network number information from one port to all ports</b> - use this option when mapping switches.</li>
+            <li><b>Do not propagate network information about the ports</b> - use this option when mapping hubs and end systems.</li>
+        </ul>
+        <h3>Layer 2</h3>
+        <ul>
+            <li><b>Poll this address for Layer 2 information</b> - clear this box to prevent this device's IP address from being polled for Layer 2 information. This is equivalent to the <b style="font-style: italic;">Remove switch from Layer 2 database</b> command, available when you right-click a switch in the <a href="Filter_Pane.htm">Layer 2 view's Filter pane</a>.</li>
+            <li><b>Allow Layer 2 connection</b> - clear this box to prevent InterMapper from making a connection from this device to other devices on the map using Layer 2 information.</li>
+        </ul>
+    </body>
+</html>

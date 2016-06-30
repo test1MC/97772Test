@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.Omit" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" class="" MadCap:lastBlockDepth="4" MadCap:lastHeight="830" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link rel="StyleSheet" href="../../default.css" /><title>Basic Probes</title>
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="ICMP Echo Request;Send:ICMP Echo Request" />
+            <MadCap:keyword term="Basic Probes" />Basic Probes</h1>
+        <p>InterMapper comes with a set of utility probes that serve a great number 
+ of uses. These probe types are described below:</p>
+        <ul>
+            <li><b><MadCap:keyword term="Automatic Probe" /><a href="#automatic">Automatic Probe<MadCap:xref href="#automatic" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>
+                <MadCap:keyword term="IP" />
+                <MadCap:keyword term="SNMP" /> - uses SNMP or IP pings 
+ as required</li>
+            <li>
+                <MadCap:keyword term="Map Status" />
+                <MadCap:keyword term="Map Status Probe" /><a href="#mapstatus"><b>Map Status Probe <MadCap:xref href="#mapstatus" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a> - link 
+ to another map.</li>
+            <li>
+                <MadCap:keyword term="Ping/Echo" />
+                <MadCap:keyword term="Echo" />
+                <MadCap:keyword term="Ping/Echo Probe" /><a href="#ping"><b>Ping/Echo Probe <MadCap:xref href="#ping" target="" title="" alt="" MadCap:conditions="Primary.print" /></b></a>
+                <MadCap:keyword term="ICMP" /> - tests a device using ICMP echo packets</li>
+            <li><b><a href="#snmptraffic">SNMP&#160;Traffic Probe<MadCap:xref href="#snmptraffic" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - retrieves system and traffic information from a device. </li>
+        </ul>
+        <h2><a name="automatic"></a>Automatic Probe</h2>
+        <p>
+            <MadCap:keyword term="Simple Network Management Protocol" />InterMapper first tries to use the Simple Network Management Protocol (SNMP) 
+ to communicate with the device. If SNMP is enabled and a SNMP response is received, 
+ the probe type automatically changes to "SNMP Traffic" and InterMapper continues to 
+ poll the device using SNMP.</p>
+        <p>
+            <MadCap:keyword term="SNMP:elicit" />If InterMapper is unable to elicit a SNMP response after a number of attempts, 
+ the probe type automatically changes to "Ping/Echo" and InterMapper continues 
+ to test for basic connectivity.</p>
+        <h2><a name="mapstatus"></a>Map Status Probe</h2>
+        <p>Use the Map Status probe to place an icon in a map which represents the status 
+ of another map. For more information, see <a href="../../04-Creating_Maps/usingsubmaps.htm">Creating 
+ Sub-maps<MadCap:xref href="../../04-Creating_Maps/usingsubmaps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. Use the Map Status probe to place an item on your map which 
+ represents another map. You can use this probe to hide map detail by creating 
+ "sub-maps".</p>
+        <p>The device shows the current state of the most serious condition on the sub-map.</p>
+        <h2><a name="ping"></a>Ping/Echo Probe</h2>
+        <p>This probe sends an ICMP <i>Echo</i> Request to the device's 
+ address. </p>
+        <p>The data area in an Echo packet is 20 bytes long and contains the version of 
+ InterMapper that sent the request.</p>
+        <h2><a name="snmptraffic"></a>SNMP Traffic Probe</h2>
+        <p>This probe  retrieves system and traffic information from a device. The information comes from the system and interfaces groups of SNMP MIB-II.</p>
+        <p>To view traffic (bytes/second, packets/second, errors/minute)&#160;for any interface, right-click a link attached to the interface, and choose <b style="font-style: italic;">Status Window</b>. The Status window also shows sysLocation, sysContact, and sysUptime from the system group in the device's Status window.</p>
+        <p><b>Note:</b> The SNMP Traffic probe was formerly known as SNMP MIB-II in earlier versions. It was renamed to reflect its purpose more accurately. You can see all of the available SNMP&#160;probes in the <a href="snmpprobes.htm">SNMP&#160;Probes</a> topic.</p>
+    </body>
+</html>

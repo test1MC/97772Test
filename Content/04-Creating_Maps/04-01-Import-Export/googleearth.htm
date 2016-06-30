@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="804" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Exporting Information to Google Earth</h1>
+        <p>InterMapper exports the following information so that Google Earth can place devices in the proper location. This information is exported as a .KML file compatible with Google Earth.</p>
+        <p>Each InterMapper map appears as a place in the left pane of Google earth. Items are shown as follows:</p>
+        <ul>
+            <li><b>Devices</b> are represented by their status badges (green, yellow, orange, red circle icons)</li>
+            <li><b>Network ovals</b> are shown as small circles.</li>
+            <li><b>Links</b> between devices are shown as lines connecting the icons.</li>
+            <li><b>A Status window</b> for each of the above items displayed when you click the item.</li>
+        </ul>
+        <p>To be displayed in Google Earth, a device must have geographic information; devices that do not have geographic information are not displayed at all. </p>
+        <p><b>Geographic coordinates may be set in two ways:</b>
+        </p>
+        <ul>
+            <li><b>Explicitly</b> -  by using   <b style="font-style: italic;">Set Latitude and Longitude...</b> for each device. You can set latitude and longitude values for many devices at once by <a href="Using_Geographic_Coordinates.htm#Importing">importing a text file containing the correct information<MadCap:xref href="Using_Geographic_Coordinates.htm#Importing" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+            <li><b>Implicitly</b> - When benchmarks are are placed on a map, the device's latitude and longitude are inferred from the x/y position on the map, relative to the established benchmarks. Use the Insert menu's <a href="Using_Geographic_Coordinates.htm#benchmarks"><b style="font-style: italic;">Map Benchmark...</b><MadCap:xref href="Using_Geographic_Coordinates.htm#benchmarks" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. to add benchmarks. Use of benchmarks is inherently less precise than using explicit coordinates.</li>
+        </ul>
+        <p>In the case where both explicitly set coordinates and benchmarks are used, InterMapper uses the explicit coordinates and ignores the benchmarks.</p>
+        <h2>How it works</h2>
+        <ul>
+            <li><b>Google Earth requests information from the InterMapper server using HTTP</b>. Consequently, the InterMapper web server interface must be enabled in the Server Settings. </li>
+            <li><b>The Google Earth connection uses the same authentication method as the web interface</b>; you must have appropriate web access permissions for any map you wish to view in Google Earth. (Google Earth will prompt you for the username and password.) </li>
+            <li><b>Google Earth does not need to be installed on the InterMapper server</b>, though its machine must have appropriate access permissions established in the InterMapper web server firewall.</li>
+            <li><b>Google Earth uses a "Network Link"</b> with a URL that Google Earth uses to request information from InterMapper.</li>
+        </ul>
+        <h2 class="pagebreakbefore">How to use it</h2>
+        <p>The easiest way to get the URL is through the InterMapper web interface.</p>
+        <ol>
+            <li>Download and install Google Earth.</li>
+            <li>From the Server Configuration section of the Server Settings window, click <b style="font-style: italic;">Web Server</b>. The Web Server settings pane appears in the right pane.</li>
+            <li>Make sure the web server is running, then click the URL to launch a browser with the InterMapper Web interface. </li>
+            <li>In the InterMapper web interface, click <b style="font-style: italic;">Map List</b>. A list of maps on your server appears.</li>
+            <li>Click the link to a map that contains latitude/longitude information, either implicitly or explicitly. The map appears in the browser.</li>
+            <li>At the bottom of the map, click <b style="font-style: italic;">View this map in Google Earth</b>. This is a link to the map's .KML&#160;file, a data file used by Google Earth. Assuming Google Earth has been installed properly, your browser offers to use Google Earth to open the file.</li>
+        </ol>
+        <p>If everything is set up properly, the status badges for your devices hover over the surface of the Earth in appropriate locations.  </p>
+        <p>To view a device's status window:</p>
+        <ul>
+            <li>Click the device's badge. The device's Status Window appears in the Google Earth window.</li>
+        </ul>
+        <p>The map refreshes automatically every 5 minutes.</p>
+        <h3 class="pagebreakbefore">What you see</h3>
+        <p>The images below show the original map, the mapped devices displayed from two different zoom levels, and the status window for one of the devices.</p>
+        <p style="text-align: center;font-style: italic;">
+            <img src="../../Resources/images/unakleet-im.png" />
+            <br />Original map in InterMapper</p>
+        <p style="text-align: center;font-style: italic;">
+            <img src="../../Resources/images/unakleet-gearth-wide.png" />
+            <br />Wide view in Google Earth<br /></p>
+        <p style="text-align: center;font-style: italic;">
+            <img src="../../Resources/images/unakleet-gearth-zoom.png" />
+            <br />Closer view in Google Earth</p>
+        <p style="text-align: center;font-style: italic;">
+            <img src="../../Resources/images/unakleet-gearth-statwin.png" />
+            <br />Status window in Google Earth</p>
+        <p>&#160;</p>
+    </body>
+</html>

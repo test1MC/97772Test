@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link rel="StyleSheet" href="../default.css" /><title>Adding Unmanaged Hubs and Switches to a Map</title>
+    </head>
+    <body>
+        <h1 class="L2"><a name="top"></a>
+            <MadCap:keyword term="Adding" />
+            <MadCap:keyword term="Adding:Unmanaged Hubs" />
+            <MadCap:keyword term="Map" />
+            <MadCap:keyword term="Map:Switches" />
+            <MadCap:keyword term="Unmanaged Hubs" />
+            <MadCap:keyword term="Unmanaged Hubs:Adding" />
+            <MadCap:keyword term="Switches" />
+            <MadCap:keyword term="Switches:Map" />Adding Unmanaged Hubs and Switches to a Map</h1>
+        <p>
+            <MadCap:keyword term="IP" />InterMapper cannot automatically discover or monitor unmanaged switches and 
+	hubs (so-called 'dumb' devices) since they have no IP address. However, there 
+	is a workaround that allows you to represent them on an InterMapper map.</p>
+        <p>
+            <MadCap:keyword term="Interconnections" />
+            <MadCap:keyword term="Interconnections:display" />
+            <MadCap:keyword term="Link" />
+            <MadCap:keyword term="Display" />
+            <MadCap:keyword term="Display:interconnections" />To do this, you can create a placeholder icon, and then manually drag the 
+	links from the appropriate devices to this new icon. Although InterMapper 
+	cannot test or monitor this "fake" equipment, it will appear on the map and 
+	display the interconnections of your network as a tool to diagnose problems.</p>
+        <p>Here is a step-by-step description of the process. Note that
+this description works equally well for either switches or
+hubs.</p>
+        <p>
+            <MadCap:keyword term="Label" />In the starting map, notice that InterMapper has automatically connected 
+ a number of devices to the network oval labeled "192.168.1.0/24". We happen 
+ to know that the top three devices --IP addresses 192.168.1.91, .89, and .79-- 
+ are in fact, connected to a dumb (e.g., unmanaged) hub on the floor above. 
+ This page shows how to create a placeholder icon to represent the hub and 
+ connect those three devices to it.</p>
+        <table border="0" cellpadding="5">
+            <tr>
+                <td valign="top">
+                    <img src="../Resources/images/example_dumbhub1.png" border="0" />
+                    <!-- truth in advertising - they're all 75% :-) -->
+                </td>
+                <td valign="top">
+                    <h2>The problem</h2>
+                    <p>The top three devices - IP addresses 192.168.1.91, .89, and .79 - are 
+ in fact, connected to a dumb (e.g., unmanaged) hub upstairs. </p>
+                    <p>We want to create a placeholder icon that represents the hub, and then 
+ move the connections for those devices to the placeholder.</p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <img src="../Resources/images/example_dumbhub2.png" border="0" />
+                </td>
+                <td valign="top">
+                    <h2>Step 1: Create a placeholder to represent your hub</h2>
+                    <p>The first step is to create a new (empty) network.</p>
+                    <p><b>To create the new network:</b>
+                    </p>
+                    <ol>
+                        <li>
+                            <MadCap:keyword term="Insert menu" />From the Insert menu, choose <b><MadCap:keyword term="Add Network" />Network...</b></li>
+                        <li>
+                            <MadCap:keyword term="Enter" />
+                            <MadCap:keyword term="Enter:subnet" />
+                            <MadCap:keyword term="Subnet" />
+                            <MadCap:keyword term="Subnet:Enter" />Enter a subnet number that's the same as the device's current subnet 
+ (oval) as shown in <a href="../04-Creating_Maps/addnets.html">Adding Networks to a Map<MadCap:xref href="../04-Creating_Maps/addnets.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. <br /><br />The new network appears as an oval, with the subnet number you entered 
+ (not "0.0.0.0/0", as shown in this example).</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <img src="../Resources/images/example_dumbhub3.png" border="0" />
+                </td>
+                <td valign="top">
+                    <h2>Step 2: Tidy up</h2>
+                    <p>Tidy up the appearance of the item: </p>
+                    <ol>
+                        <li>Move the new network up a little bit</li>
+                        <li>Change its shape to a rectangle using the <b>Icon...</b><MadCap:keyword term="Format menu" /> command 
+			from the Format menu.</li>
+                        <li>Change its name to "Upstairs Hub" using the <b><MadCap:keyword term="Cmd:Cmd-L" />Label (Cmd-L)</b> from 
+ the Format menu.</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <img src="../Resources/images/example_dumbhub4.png" border="0" />
+                </td>
+                <td valign="top">
+                    <h2>Step 3: Connect the hub to the network</h2>
+                    <p>Connect this new rectangle to the oval below. </p>
+                    <p><b>To connect the "hub" to the network:</b>
+                    </p>
+                    <ol>
+                        <li>Click to select the new rectangle.</li>
+                        <li>From the Insert menu, choose <b><i>Link</i></b>. A line appears, 
+ connected on one end to the rectangle, and to your mouse cursor on 
+ the other. You can also right-click one of the selected devices and choose    <b><i><MadCap:keyword term="Attach:Attach To" />Attach To</i></b> from the device's context menu.</li>
+                        <li>Click the network oval below the rectangle. The "hub" 
+ is connected to the network</li>
+                    </ol>
+                    <p>A line appears, connecting the two items together. This line persists 
+ as you move the items around your map.</p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <img src="../Resources/images/example_dumbhub5.png" border="0" />
+                </td>
+                <td valign="top">
+                    <h2>Step 4: Connect the devices to the "hub"</h2>
+                    <p>Drag each of the links for the three devices from the oval to the new 
+ rectangle. </p>
+                    <p><b>To connect the devices to the "hub":</b>
+                    </p>
+                    <ol>
+                        <li>Click on a link (line) for the first device, and drag it toward the 
+ "Upstairs Hub" rectangle. </li>
+                        <li>Let go of the mouse when it's over the rectangle. </li>
+                    </ol>
+                    <p>The line "sticks" to the new rectangle. Do this for all three 
+ links.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="../Resources/images/example_dumbhub6.png" border="0" />
+                </td>
+                <td valign="top">
+                    <h2>The result</h2>
+                    <p>Your map should look like this after dragging the three links from the 
+		 oval to the "fake" hub. </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

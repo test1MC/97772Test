@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="459" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Quick Intro to IPv6 Address Formatting</h1>
+        <p>This table gives the major forms of IPv6 addresses. The most important/common are <strong>Localhost</strong> (::1), <strong>Global Unicast</strong> (usually starting with "200x"), and <strong>Link-Local Unicast</strong> (starting with "FF80").</p>
+        <table cellspacing="0" border="1" summary="Major IPv6 Address formats" margin="10" style="width: 547px;">
+            <thead>
+                <tr>
+                    <th scope="col">Address Type</th>
+                    <th scope="col">Binary Prefix</th>
+                    <th scope="col">IPv6 Notation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Unspecified</td>
+                    <td>00...0 (128 bits)</td>
+                    <td>::/128</td>
+                </tr>
+                <tr>
+                    <td>Loopback</td>
+                    <td>00...1 (128 bits)</td>
+                    <td>::1/128</td>
+                </tr>
+                <tr>
+                    <td>Multicast</td>
+                    <td>1111 1111</td>
+                    <td>FF00::/8</td>
+                </tr>
+                <tr>
+                    <td>Link-Local Unicast</td>
+                    <td>1111 1110 10</td>
+                    <td>FE80::/10</td>
+                </tr>
+                <tr>
+                    <td>ULA (*)</td>
+                    <td>1111 110</td>
+                    <td>FC00::/7</td>
+                </tr>
+                <tr>
+                    <td>Global Unicast&#160;(**)</td>
+                    <td>001 </td>
+                    <td>2000::/3 </td>
+                </tr>
+                <tr>
+                    <td>IPv4-Mapped</td>
+                    <td>00...0:1111 1111:IPv4</td>
+                    <td>::FFFF:IPv4/128</td>
+                </tr>
+                <tr>
+                    <td>Site-Local Unicast (***)</td>
+                    <td>1111 1110 11</td>
+                    <td>FECO::/10</td>
+                </tr>
+                <tr>
+                    <td>IPv4-compatible (***)</td>
+                    <td>00...0 (96 bits)</td>
+                    <td>::IPv4/128</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br />		* Unique Local Address (ULA)&#160;is an IPv6 unicast address that is generated to be unique in a local context. It is highly likely to be unique globally.</p>
+        <p>** Global Unicast address are all currently being assigned with a 2000::/3 prefix.&#160;Other three-bit prefixes are reserved for future use.</p>
+        <p>*** Site-Local Unicast and IPv4-compatible prefixes are deprecated. Use ULA and IPv4-mapped addresses, respectively.</p>
+    </body>
+</html>

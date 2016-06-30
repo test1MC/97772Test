@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="863" MadCap:lastWidth="578" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">The Endpoints Pane</h1>
+        <h2 class="L2" MadCap:conditions="Primary.print">Understanding and Using the Endpoints Pane</h2>
+        <p>The Layer 2 view's Endpoints pane lists all <i>endpoint</i> devices (servers, workstations, and routers) and the switch ports they are connected to. It does <i>not</i> include managed switches, which are not considered to be endpoints. </p>
+        <p>The columns of the Endpoints pane are:</p>
+        <ul>
+            <li><b>Flags</b> - flags that give detailed information about the port or device. See <a href="Layer_2_Flags.htm">Layer 2 Flags<MadCap:xref href="Layer_2_Flags.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> for more information.</li>
+            <li><b>Switch and Port</b> - describe a particular switch port</li>
+            <li><b>MAC and Address</b> - contain the MAC address and the IP Address of the device.</li>
+            <li><b>DNS</b> - the DNS name of the device (if known).</li>
+            <li><b>VLAN</b> - the VLAN(s) supported by this port.</li>
+            <li><b>NIC Manufacturer</b> - the manufacturer of the Network Interface Card (NIC), derived from the MAC address.</li>
+            <li><b>First Seen</b> - the time the device was first detecting during a Layer 2 scan. </li>
+            <li><b>Last Seen</b> - the most recent time the device was detected during a Layer 2 scan.</li>
+            <li><b>Present</b> - two numbers, separated by "/". The first is the number of times this device was seen during a scan, the second is the total number of scans.</li>
+            <li><b>ifAlias</b> - the ifAlias taken from the Switch and Port (if available).</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/images/L2-EndpointsPane-55.png" style="width: 578px;height: 225px;" />
+        </p>
+        <h2>Controlling what you see in the Endpoints Pane</h2>
+        <ul>
+            <li>In the Filter pane, click various combinations of Switch, VLAN, and NIC Manufacture to control the rows that appear in the Endpoints pane.</li>
+            <li>In the Endpoints pane, click a column heading to sort by that column. Click again to reverse the sort.</li>
+            <li>Click the sprocket at the right end of the Endpoints pane's column heading bar to add to or remove columns from the Endpoints Pane.</li>
+            <li>By default, the Endpoints pane shows endpoints only - it hides ports connected to other switches, ports with no devices attached (regardless of whether they are up or down) or devices marked as "fuzzy." Select the Show All Ports box near the top of the <a href="Filter_Pane.htm">Filter pane<MadCap:xref href="Filter_Pane.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> to show all ports.</li>
+        </ul>
+        <h2>Using Layer 2 Information to Update Map Connections</h2>
+        <p>In addition to this tabular view, InterMapper can pass the connection information back into the Map view, automatically showing the connection of each device on the map to the proper port on the switch. This simplifies the creation and arrangement of your maps; all you need to do is tidy up the map. Turn this feature on from the Layer 2 Features pane of the <a href="../04-Creating_Maps/mapsettings.html#Layer2features">Map Settings<MadCap:xref href="../04-Creating_Maps/mapsettings.html#Layer2features" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> window.</p>
+    </body>
+</html>

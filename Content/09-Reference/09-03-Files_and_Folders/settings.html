@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="8" MadCap:lastHeight="849" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>InterMapper Settings</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="InterMapper Settings" />
+            <MadCap:keyword term="InterMapper Settings Folder" />The InterMapper Settings Folder</h1>
+        <p>The InterMapper Settings folder contains all the settings, preferences, 
+ and configuration of InterMapper. The location of this folder varies, depending on your platform. For more information, see <a href="filesfolders.html">Files and Folders<MadCap:xref href="filesfolders.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <p>The InterMapper Settings folder contains the following items:</p>
+        <ul>
+            <li><b style="font-weight: bold;">Certificates folder</b> - 
+ Contains certificates used by secure servers to verify that they are the 
+ InterMapper servers they claim to be. Also contains key files and pending 
+ certificate signing requests.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Chart:Chart Data" />Chart Data folder</b> 
+ - Contains the saved data of charts. When InterMapper starts up, 
+ it reads the data from these files to restore the charts' history.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Custom Icons" />Custom Icons folder</b> 
+ - Contains custom icons you add to maps to enhance InterMapper's built-in 
+ icon set. See               <a href="../../05-Arranging_Your_Map/Icons_On_Maps.html">Custom 
+ Icons<MadCap:xref href="../../05-Arranging_Your_Map/Icons_On_Maps.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="Adding" /> for details about making and adding custom icons.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="InterMapper Logs" />InterMapper Logs folder</b> 
+ - Contains text files that log events that InterMapper has detected.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="InterMapper Prefs file" />InterMapper Prefs file</b> 
+ - Contains the current settings of all InterMapper preferences.</li>
+            <li><b style="font-weight: bold;">Maps folder</b> - Contains maps saved from InterMapper. All maps in this folder are opened automatically when you start InterMapper.
+<ul style="list-style-type: circle;"><li><b>[Version Number] folder</b> - For each version of InterMapper that has been installed, (starting with 5.4) a new folder is created for each version. Maps from a previous version are copied into the new folder, which becomes the active maps folder. The folder for each new version contains a Disabled folder and a Deleted folder.
+<ul style="list-style-type: square;"><li><b style="font-weight: bold;"><MadCap:keyword term="Maps:Enabled" />Enabled folder</b><MadCap:keyword term="Server Settings window" /><MadCap:keyword term="Map Files" /> 
+						- Contains maps that have been disabled by removing the check mark in 
+					the Map Files panel of the Server Settings window.</li><li><b style="font-weight: bold;"><MadCap:keyword term="Maps:Disabled" />Disabled folder</b><MadCap:keyword term="Server Settings window" /><MadCap:keyword term="Map Files" /> 
+ - Contains maps that have been disabled by removing the check mark in 
+ the Map Files panel of the Server Settings window.</li></ul></li><li><b style="font-weight: bold;"><MadCap:keyword term="Maps:Deleted" />Deleted folder</b>  - Contains maps that have been removed using the Map Files panel of the 
+ Server Settings window.</li><li><b>Backups folder</b> - Contains backups created using the Backup command.</li></ul></li>
+            <li><b>MIB Files folder</b> - Contains SNMP MIB files that ship with the product, or have
+been added using the<b style="font-style: italic;">Import&#160;&gt;&#160;MIB...</b> command. InterMapper parses the MIB files in this folder and uses
+the information to convert between variable names and OIDs.
+</li>
+            <li><b style="font-weight: bold;">Probes folder</b>- 
+ Contains built-in and custom probes. Probes are text files that add functionality 
+ to InterMapper so that it can test new devices. See Customizing InterMapper's 
+ Probes for details about creating and customizing probes.</li>
+        </ul>
+        <blockquote>
+            <p><b>Note:</b> Built-in probes are stored in a ZIP&#160;archive named BuiltinProbes.zip. To view or modify a built-in probe, you'll need to unzip the archive. InterMapper scans the archive as well as the unzipped contents of the folder. If a built-in probe's filename matches an unzipped version, the probe's version number, then the last-modified date, is used to determine which probe is teh most recent. If you are developing or modifying a built-in probe, be sure to advance the version number to be sure that InterMapper uses the modified version.</p>
+        </blockquote>
+        <ul>
+            <li><b style="font-weight: bold;">Sounds folder</b>
+                <MadCap:keyword term="WAV" />
+                <MadCap:keyword term="Aiff" /> - 
+ Add .aiff, .wav, and other sound files to this folder to make them 
+ available for InterMapper notifications. For more information on sounds 
+ and how to use them, see         <a href="../../06-Notifiers/06-01-ConfigNotifications/audible.html">Configuring 
+ a Sound Notifier<MadCap:xref href="../../06-Notifiers/06-01-ConfigNotifications/audible.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Web Page" />Web Pages folder</b>  - Contains the template and target files that describe the web pages that the InterMapper server displays. See Customizing Web Pages for details  about customizing these pages.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="InterMapper User List" />InterMapper User List 
+ folder</b> - Previous versions of InterMapper kept the user list in a 
+ separate file. Now, these user and group settings have been incorporated 
+ into the               <i>InterMapper Prefs</i> file. You may leave this file in place 
+ without affecting InterMapper's operation.</li>
+            <li><b style="font-weight: bold;">Tools folder</b> - 
+ Contains executable files (or aliases/links/shortcuts to them) that will 
+ be used as command-line probes or notifiers.</li>
+            <li style="font-weight: normal;"><b>Fonts folder</b> - (optional) Contains TrueType fonts used by the web server.<br /><br /><b>Note:</b> On Windows machines, the Windows font directory is also available, giving access to all available TrueType fonts installed on the machine. On Macs, InterMapper looks in <i>/Library/Fonts</i> and <i>/System/Library/Fonts</i>, as well as in the /InterMapper Settings/Fonts folder.</li>
+            <li><b>Temporary folder</b> - When files are uploaded, they 
+are initially uploaded and saved into this directory until 
+the upload is complete. At that point, they are moved into a more 
+appropriate directory. If something goes wrong, and an upload is 
+interrupted, a file may remain in the "Temporary" directory.<br /><br />When you exit InterMapper, it leaves the files in the Temporary directory 
+alone, so debugging information can be collected. 
+When InterMapper starts up, it checks the Temporary directory, and deletes all files in it. Therefore, InterMapper users should not 
+rely on the contents of the Temporary directory remaining long, and 
+should not park files there.
+</li>
+        </ul>
+    </body>
+</html>

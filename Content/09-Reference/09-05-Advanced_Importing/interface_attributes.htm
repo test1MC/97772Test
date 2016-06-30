@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="874" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Interface Attributes</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Interface Attributes" />Interface Attributes</h1>
+        <p>The <span class="code">interfaces</span> data type imports data specific to the switch and router interfaces.</p>
+        <p>Use these attributes with the following table specification in line 1:</p><pre class="code">table=interfaces</pre>
+        <ul style="list-style: disc;" type="disc">
+            <li>Fields marked with an asterisk (*) are required.</li>
+            <li>Fields marked with an plus(+) can be updated during import.</li>
+        </ul>
+        <h2>Interface Attributes</h2>
+        <table class="fieldtable">
+            <tr>
+                <th>Field Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="fieldname">MapName</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The name of the map to which the interface belongs.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">InterfaceID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>INDEX<br /><b>Description: </b><br />A unique persistent identifier for this interface instance.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DeviceID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The unique persistent identifier for the adjacent device.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">NetworkID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The unique persistent identifier for the adjacent network.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Index</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface index (i.e. ifIndex) of the interface.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IntegerIndex</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface index (i.e. ifIndex) of the interface, as an integer.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Description</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface description (i.e. ifDescr).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Name</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface name (i.e. ifName).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Alias</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface alias (i.e. ifAlias).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">PhysAddress</td>
+                <td class="fielddesc"><b>Type: </b>ADDRESS<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface's data-link layer address (i.e. ifPhysAddr) .<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Type</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface type as a human-readable string (i.e. ifType).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MTU</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface MTU (i.e. ifMTU).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Address</td>
+                <td class="fielddesc"><b>Type: </b>ADDRESS<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface's first network-layer address.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SubnetMask</td>
+                <td class="fielddesc"><b>Type: </b>ADDRESS<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The subnet mask associated with "Address".<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SubnetList</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />A comma-separated list of addresses/masks on this interface.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SubnetPrefixList</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />A comma-separated list of addresses/prefixes on this interface.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Speed</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface's speed in bits per second. (Derived from preferred speed and reported speed.)<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">PreferredSpeed <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The preferred speed of the interface as set by the customer.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">ReportedSpeed</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The speed of the interface as reported by the interface.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">LastChange</td>
+                <td class="fielddesc"><b>Type: </b>TIMESTAMP<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The timestamp when the interface last changed status.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Status</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The status of the interface (e.g. UP, DOWN, or ADMIN-DOWN).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Enabled <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Flag which indicates whether the interface is enabled or not.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MapId</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The unique persistent identifier for the map to which the interface belongs.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IMID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>INDEX<br /><b>Description: </b><br />Identifier of the interface in the IMID format.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">TypeInt</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The interface type as a number.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">RecvSpeed <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Unsigned 64-bit integer. 0 means baseband; speed in Speed. <br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">StatusInt</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The status of the interface as integer. Values correspond to {UP, DOWN, ADMIN-DOWN, DOWN but locally acked}. <br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">CustomerNameReference</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Customer-supplied name, for referencing an external database.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DataRetentionPolicy</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Database data retention policy.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Duplex</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Interface Duplex status.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">VLANs</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Comma-separated list of this interface's VLANs.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">NatVLAN <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Native VLAN. Signed integer (0-4093). 0 means none. <br /></td>
+            </tr>
+        </table>
+    </body>
+</html>

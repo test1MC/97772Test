@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="303" MadCap:lastWidth="625">
+    <head>
+        <link rel="shortcut icon" href="../favicon.ico" />
+        <link href="../default.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="InterMapper from HelpSystems" />
+    </head>
+    <body>
+        <div id="hs_toclink" class="hs_toclink" MadCap:conditions="Primary.Omit"><a name="hs_a" href="#">Show TOC</a>
+        </div>
+        <div class="pagewidth">
+            <MadCap:bodyProxy />
+            <MadCap:miniTocProxy />
+        </div>
+        <p>
+            <noscript>Javascript is required to view this help file. It is currently disabled or not supported by this browser.</noscript>
+            <script id="hs_js" name="hs_js" type="text/javascript" src="../hs_js.js">
+            </script>
+        </p>
+        <div class="webfooterblock small-12 medium-6 columns" MadCap:conditions="Primary.online" id="webfooter">
+            <p class="licensetext">Copyright © <MadCap:variable name="hsvariables.hs_long" />. <MadCap:variable name="InterMapper-Primary.IMBrandName" /> is a division of <MadCap:variable name="hsvariables.hs_short" />.<br />All trademarks and registered trademarks are the property of their respective owners.<br /><MadCap:variable name="hsvariables.datetime" />.</p>
+        </div>
+    </body>
+</html>

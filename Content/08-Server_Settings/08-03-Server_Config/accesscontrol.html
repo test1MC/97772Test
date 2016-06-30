@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:id="CH4-Server_Settings_Window\Server_Config\accesscontrol.html" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="6" MadCap:lastHeight="849" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Controlling Access</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Firewall's list" />
+            <MadCap:keyword term="Access" />
+            <MadCap:keyword term="Access:Controlling" />
+            <MadCap:keyword term="Control" />
+            <MadCap:keyword term="Control:Access" />
+            <MadCap:keyword term="Telnet:access" />
+            <MadCap:keyword term="Auth" />Controlling Access to Your Server</h1>
+        <p>
+            <MadCap:keyword term="Firewall" />
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="Firewalls" />
+            <MadCap:keyword term="Firewalls:InterMapper's" />
+            <MadCap:keyword term="DENY" />
+            <MadCap:keyword term="Matches:DENY" />You can configure the firewalls of InterMapper's built-in servers to 
+ accept or deny connections from a client based on its IP address. You 
+ can also require a user name and password. Once accepted, a connection 
+ is associated with a user name that is used to determine which maps and 
+ permissions are available. For some examples of typical access control 
+ setups, see <a href="08-03-01-Users/examples.html">Access Control Examples<MadCap:xref href="08-03-01-Users/examples.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <p style="font-weight: normal;"><b>Notes:</b> <![CDATA[ ]]></p>
+        <ul>
+            <li style="font-weight: normal;">You can also control access through the <a href="authserver.htm">InterMapper Authentication Server<MadCap:xref href="authserver.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, which connects to an external authentication server such as Radius, LDAP, or ActiveDirectory to authenticate a user. For more information, see    <a href="authserver.htm">Authentication Server<MadCap:xref href="authserver.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+            <li style="font-weight: normal;">Any firewall that is protecting the machine that is running InterMapper must be configured to allow access to the ports specified for remote access. This includes the port specified for use by the web server.</li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Access Control Process" />The Access Control Process</h2>
+        <p>
+            <MadCap:keyword term="Request" />
+            <MadCap:keyword term="Username/password:request" />When a user attempts to connect to one of the InterMapper servers, the 
+ request goes through these steps:</p>
+        <ol>
+            <li><b style="font-weight: bold;">The client's IP address is 
+	 checked against the list of firewall definitions.</b>
+                <MadCap:keyword term="Automatic Login:matches" />
+                <MadCap:keyword term="DENY:matches" />
+                <MadCap:keyword term="ALLOW" />
+                <MadCap:keyword term="Matches" /> If the address matches 
+	 a DENY address in the firewall list, or if the address fails to match an 
+	 ALLOW address, the connection is dropped with a "not allowed" 
+	 response.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Automatic Login" /><MadCap:keyword term="Matches:Automatic Login" />The client's IP address is 
+	 checked against the list of Automatic Login addresses.</b>
+                <br />
+                <br />If the client's IP address matches an Automatic Login address, the connection 
+	 is accepted and is assigned the user name associated with that Automatic 
+	 Login. <br /><br /></li>
+            <li>
+                <MadCap:keyword term="Username" />If the client's IP address does not match an Automatic Login address, 
+	 the connection is accepted and authentication by a username and password 
+	 begins, as follows:<br /></li>
+            <ol style="list-style: lower-alpha;list-style-type: lower-alpha;">
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Web" />Web server</b>
+                    <MadCap:keyword term="Request:username/password" />
+                    <MadCap:keyword term="Username/password" /> - issues 
+		a "401 Unauthorized" response, which forces the web browser 
+		to request a username/password from the user.</li>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Access:Telnet" /><MadCap:keyword term="Telnet" />Telnet server</b>
+                    <MadCap:keyword term="Username:prompts" />
+                    <MadCap:keyword term="Prompts" /> - prompts 
+		for a username and password.</li>
+                <li><b style="font-weight: bold;"><MadCap:keyword term="Remote" />Remote server</b>
+                    <MadCap:keyword term="InterMapper RemoteAccess" />
+                    <MadCap:keyword term="Username:supplies" /> - proceeds 
+		after the InterMapper RemoteAccess client requests and supplies a username 
+		and password.</li>
+            </ol>
+            <li><b style="font-weight: bold;">The username and password 
+	 are verified against InterMapper's built-in authentication database.</b> 
+	  If they match, the connection is assigned the user name. Otherwise, the 
+	 connection is dropped with a "not allowed" response. When using 
+	 the Remote and Telnet servers, an error message appears, saying that the 
+	 user name is not allowed. When using the Web server, a web page appears, 
+	 saying that the user is not allowed access.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Special Group" />The users is checked for 
+	 membership in a Special Group.</b> These special groups give broader access:<br /><ul><li><b style="font-weight: bold;"><MadCap:keyword term="Administrator" /><MadCap:keyword term="Administrator:Administrators Group" />Administrators Group</b><br /><MadCap:keyword term="Read/write" />If the user is a member of the Administrators group, the connection 
+		 is given full (read/write) access to every map and setting.</li><li><b style="font-weight: bold;"><MadCap:keyword term="FullWebAccess Group" /><MadCap:keyword term="FullWebAccess" />FullWebAccess Group</b><br />If you have created a group named <i>FullWebAccess</i><MadCap:keyword term="Map Access" />, all members 
+		 of that group are given full access to all maps through the web server. 
+		 As with all web access rights, this is a read-only view. This membership 
+		 also overrides any individual map access settings.<br /><i>FullWebAccess</i> members can also acknowledge down devices.</li><li><b style="font-weight: bold;"><MadCap:keyword term="FullTelnetAccess" /><MadCap:keyword term="FullTelnetAccess Group" />FullTelnetAccess Group</b><br />If you have created a group named <i>FullTelnetAccess</i>, all members 
+		 of that group are given full access to the Telnet server. </li><li style="font-style: normal;"><b style="font-style: normal;"><MadCap:keyword term="FullLogAccess" />FullLogAccess Group</b><br />If you have created a group named <i>FullLogAccess, </i>all members of that group are given full access to all log files.</li></ul></li>
+            <li><b style="font-weight: bold;">The user is granted access 
+	 to maps.</b> Once a connection has a user name associated with it, InterMapper 
+	 then checks to see which information is available for that user. Access 
+	 to individual maps can be granted using the "Map Access" server 
+	 setting (see          <a href="mapaccess.html">Map Access<MadCap:xref href="mapaccess.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> for more info). </li>
+        </ol>
+        <p>If a user is not in the Administrators, FullWebAccess, or FullTelnetAccess 
+ group, and has no access to an individual map, the connection is dropped 
+ with a "not allowed" response, since the user has no options 
+ for access.</p>
+    </body>
+</html>

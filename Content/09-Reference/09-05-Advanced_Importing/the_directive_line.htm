@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="7" MadCap:lastHeight="4725" MadCap:lastWidth="817" MadCap:fileTags="status_tags.No Changes">
+    <head><title>The Directive Line</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.print">Advanced Data Importing</h1>
+        <h1 class="L2" MadCap:conditions="Primary.online">Introduction - The Directive Line</h1>
+        <h2 class="L2" MadCap:conditions="">Introduction - The Directive Line</h2>
+        <p>
+            <MadCap:keyword term="Apply" />
+            <MadCap:keyword term="Directive" />
+            <MadCap:keyword term="Directive Line" />
+            <MadCap:keyword term="Device" />
+            <MadCap:keyword term="Insert" />
+            <MadCap:keyword term="Import file" />
+            <MadCap:keyword term="Spreadsheet-style Import file" />If you need more control over the import process, you can use the Directive line technique instead of a spreadsheet-style import file. In addition to inserting new devices, you can update specific attributes of existing devices, change their appearance or location, and delete them.</p>
+        <p><b>Note: </b>You can automate the importing of map data by sending commands 
+	 to InterMapper RemoteAccess through its command-line interface. This allows 
+	 you to interact with InterMapper through your own scripts. For more information, 
+	 see     <i><MadCap:keyword term="Command Line:Command Line Interface" /><MadCap:keyword term="Using" /><MadCap:keyword term="Using:Command Line Interface" />Using the Command Line Interface</i> in the <a href="http://dartware.com/go.php?to=intermapper.devguide" target="_blank">Developer Guide</a>.</p>
+        <p>The first line, known as the <span style="font-weight: bold;font-style: italic;">directive</span> line, is formatted as in this example:</p>
+        <blockquote><pre><MadCap:keyword term="Specifying:Address" /><MadCap:keyword term="Id" /><MadCap:keyword term="Id,name,address" /># format=tab table=devices fields=id,name,address modify=address match=id
+</pre>
+        </blockquote>
+        <p>Each of the elements below is separated by a tab:</p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Pound/hash" />The first line must begin with pound/hash sign ("#").</li>
+            <li>The <i>table=devices</i> parameter specifies which table the data should be imported into.<br /><br /><MadCap:keyword term="Map" /><MadCap:keyword term="Vertices" />Valid choices are detailed in <a href="#datatypes">Data types<MadCap:xref href="#datatypes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, below.<br /><br /><b>Notes:</b><br /><ul><li><MadCap:keyword term="IP" /><MadCap:keyword term="Exporting" /><MadCap:keyword term="Schema:exporting" />You can generate a list of fields and descriptions for any data type 
+		 by exporting the <span style="font-weight: bold;font-style: italic;"><MadCap:keyword term="Exporting:Schema" /><MadCap:keyword term="Schema" />Schema</span> table. For more information, see <a href="../../04-Creating_Maps/04-01-Import-Export/exporting_data_from_maps.htm">Exporting 
+		 Data From Maps<MadCap:xref href="../../04-Creating_Maps/04-01-Import-Export/exporting_data_from_maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li><li><MadCap:keyword term="Vertex:applies" />You can include columns in your import file from both the Device and Vertices tables. InterMapper automatically applies the Vertex attributes appropriately to the vertex linked to the indicated device.<br /><br /></li></ul></li>
+            <li>The <i>fields=id,name,address</i> parameter identifies the order of the data in the columns. In this example, there are three columns for the device's ID, name, and address.</li>
+            <li>The <span style="font-style: italic;">modify</span> and <span style="font-style: italic;">match</span>parameters combine to specify which device attributes to change, and which device attributes to use to verify that the correct device has been found.</li>
+        </ul>
+        <p class="pagebreakafter">&#160;</p>
+        <table style="border-spacing: 0px;caption-side: top;" cellspacing="0">
+            <col style="width: 40pt;" />
+            <col style="width: 65%;" />
+            <tr valign="top">
+                <td>
+                    <p style="font-weight: bold;">
+                        <MadCap:keyword term="Directive:Directive Parameter" />Directive Parameter</p>
+                </td>
+                <td>
+                    <p style="font-weight: bold;">
+                        <MadCap:keyword term="Format/Options" />Format/Options</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1">
+                    <p style="font-style: italic;"><span>Format</span>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>Supported file formats:</p>
+                    <ul>
+                        <li><b style="font-style: italic;">tab</b> - tab-delimited</li>
+                        <li><b style="font-style: italic;">csv </b>- comma-separated</li>
+                        <li><b style="font-style: italic;">xml </b>- XML format (see an exported file for the format)</li>
+                    </ul>
+                    <p><b>Example:</b>
+                    </p><pre class="code">format=tab
+</pre>&#160;
+          </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <p style="font-style: italic;">Table</p>
+                </td>
+                <td>
+                    <p> Available values for the <span class="code">table </span>directive are listed in <a href="#datatypes">Data types<MadCap:xref href="#datatypes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, below.</p>
+                    <p>Examples:</p><pre class="code">table=devices
+table=vertices
+</pre>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <p><span style="font-style: italic;">Modify</span>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <MadCap:keyword term="Comma-separated list" />Comma-separated list of field names. Use this parameter to specify which of the columns you want to update. You can combine this with the optional <span style="font-weight: bold;font-style: italic;">Match</span> parameter.</p>
+                    <p><span style="font-weight: bold;">Note:</span> If there is no                  <span style="font-weight: bold;font-style: italic;">Match</span> parameter, the                  <span style="font-weight: bold;font-style: italic;">ID</span><MadCap:keyword term="Matches" /> field is used to find matches. If no <span style="font-weight: bold;font-style: italic;">ID</span>field exists, the import fails.</p>
+                    <p>Example:</p><pre class="code"><MadCap:keyword term="MapName" /><MadCap:keyword term="Latitude" /><MadCap:keyword term="MapName,Address" /><MadCap:keyword term="ID,MapName,Address,Latitude,Longitude" /><MadCap:keyword term="Longitude" />modify=ID,MapName,Address,Latitude,Longitude
+</pre>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1">
+                    <p><span style="font-style: italic;">Match</span>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>Comma-separated list of field names. Use this parameter to specify which of the columns you want to use to determine whether to modify device values.<br /><br />If no <span style="font-style: italic;font-weight: bold;">Match</span> parameter is included, the                  <span style="font-weight: bold;font-style: italic;">ID</span> field is used to find matches.<br /><br />If no <span style="font-weight: bold;font-style: italic;">ID</span> field is included in the file, the import fails.</p>
+                    <p><b>Example:</b>
+                    </p><pre class="code">match=MapName,Address
+</pre>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1">
+                    <p><span style="font-style: italic;">Insert</span>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>Comma-separated list of field names. Use this parameter to specify the fields you want to set when creating the device.<br /><br /><MadCap:keyword term="Access" /><MadCap:keyword term="DNS:DNSName" /><MadCap:keyword term="Create" /><MadCap:keyword term="IMProbe" />You must include a combination of at least two fields whose Access attribute is "CREATE" (MapPath, Address, DNSName, IMProbe, MapID). To see the valid combinations, see <a href="device_attributes.htm">Device Attributes<MadCap:xref href="device_attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. When no valid MapPath is included, one is created for you, named "Untitled 1".</p>
+                    <p>Once the device is created using one or more of these fields, InterMapper attempts to set the values of the remaining fields specified in the Insert parameter to the values in the corresponding columns.</p>
+                    <p><i>Insert</i> fields are evaluated from left to right. If, for example, you specify an Address, DNSName, and IMProbe in that order, the Address is set, and the DNSName is resolved to it, and remaining fields are set from the IMProbe parameter.</p>
+                    <p><b>Examples:</b>
+                    </p><pre class="code"><MadCap:keyword term="MapName,Address,Name,Latitude,Longitude" />Insert=MapPath,Address,Name,Latitude,Longitude
+</pre>
+                    <p>
+                        <MadCap:keyword term="Addresses" />&#160;(The example above creates devices in the specified maps with the specified addresses, names, latitude, and longitude)<br /></p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1">
+                    <p><span style="font-style: italic;">Delete</span>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>Comma-separated list of field names. Use this parameter to specify which of the columns you want to use to determine whether a device should be deleted.</p>
+                    <p>Example:</p><pre class="code"><MadCap:keyword term="MapName,Probe" />delete=MapName,Probe
+</pre>
+                    <p>
+                        <MadCap:keyword term="Probes" />(The example above would delete all devices in the specified maps that use the specified probes)</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td><i>Group</i>
+                </td>
+                <td>
+                    <p>Comma-separated list of field names. </p>
+                    <p>Behaves exactly like the Insert directive, except when it encounters a device to be inserted as a probe group. Devices immediately following the probe group with the same address (and not a probe group) are added to the group. </p>
+                    <p>When another probe group is encountered, the previous group is ended, and subsequent entries are added to the new group.</p>
+                    <p style="margin-bottom: 0.75em; margin-top: 0.75em;"><b>Note:</b> If the InterMapper server cannot resolve the DNS name, a probe group is added by IP address. This may prevent subsequent entries from being added to the probe group.</p>
+                    <p style="margin-bottom: 0.75em; margin-top: 0.75em;">Examples:</p><pre xml:space="preserve" class="code">group=MapName,MapPath,Address,Name,Latitude,Longitude
+</pre>
+                </td>
+            </tr>
+        </table>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="Specifying" />Remaining lines - specifying the data</h3>
+        <p>The remaining lines of the file contain the data as specified in the <span style="font-weight: bold;font-style: italic;">fields</span> definition described above. Each column is separated by a tab, and columns must appear in the order specified in the                  <span style="font-weight: bold;font-style: italic;">fields</span> definition (for directive line imports) or must correspond to the field names specified in the first line of the file (spreadsheet-style imports).</p>
+        <p> Available values for the <span class="code">table</span> directive are listed in <a href="#datatypes">Data types<MadCap:xref href="#datatypes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, below.</p>
+        <h3>
+            <MadCap:keyword term="Import File Example" />Import File Example</h3>
+        <p>Below is an example of an Import file. This file specifies itself as a tab-delimited file containing a list of devices. All devices are going into the map named "MapA", and each device definition contains Address, Probe, Latitude, and Longitude columns.</p><pre class="code"><tt style="font-family: monospace;"># format=tab table=devices fields=MapName,Address,Probe,Latitude,Longitude 
+MapA 192.168.2.100 http 43.3 -72.0
+MapA 192.168.2.101 http 43.9 -72.3
+MapA 192.168.2.102 http 43.8 -72.8
+MapA 192.168.2.103 http 43.0 -72.4
+MapA 192.168.2.104 http 43.2 -72.3
+MapA 192.168.2.105 http 43.6 -72.2</tt></pre>
+        <p><b>Note:</b> The example above creates the devices and assigns probes, but does not set the parameters for the probes. The most efficient way to do this is using the <a href="the_improbe_url.htm">IMProbe URL</a><MadCap:xref href="the_improbe_url.htm">(Pg 1)</MadCap:xref>. It lets you specify the SNMP community string, the probe by file name, and any parameters needed.</p>
+        <h3>Creating Probe Groups</h3>
+        <p>Use the <span class="code">group </span>directive to create a device and add probes to it as a group. The following example adds six devices, with the last one having a probe group. Groups are created in order - probes are added to the group until the IP address changes.</p>
+        <p><b>Note:</b> Like the example above, this one creates the devices and assigns probes, but does not set the parameters for the probes. The most efficient way to create and configure a probe group is to use the <a href="the_improbe_url.htm">IMProbe URL</a><MadCap:xref href="the_improbe_url.htm">(Pg 1)</MadCap:xref>. It lets you specify the SNMP community string, the probe by file name, and any parameters needed.</p><pre class="code">
+# format=tab table=devices fields=MapName,Address,Probe,Latitude,Longitude
+group=MapName,Address,Probe,Latitude,Longitude 
+MapA 192.168.2.100 http 43.3 -72.0
+MapA 192.168.2.101 http 43.9 -72.3
+MapA 192.168.2.102 http 43.8 -72.8
+MapA 192.168.2.103 http 43.0 -72.4
+MapA 192.168.2.104 http 43.2 -72.3
+MapA 192.168.2.105 group 43.6 -72.2
+MapA 192.168.2.105 http 43.6 -72.2
+MapA 192.168.2.105 snmp 43.6 -72.2		</pre>
+        <h3>
+            <MadCap:keyword term="Device:Automatic Placement" />
+            <MadCap:keyword term="Automatic Placement" />Automatic Placement of Devices</h3>
+        <p>If your map contains no benchmarks (as described in <MadCap:keyword term="Using Geographic Coordinates" /><a href="../../04-Creating_Maps/04-01-Import-Export/Using_Geographic_Coordinates.htm">Using Geographic Coordinates<MadCap:xref href="../../04-Creating_Maps/04-01-Import-Export/Using_Geographic_Coordinates.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="YCoordinate" /><MadCap:keyword term="XCoordinate" />) latitude and longitude fields are ignored. You can place devices at specific locations using the XCoordinate and YCoordinate fields (described in the                  <a href="Vertex_Attributes.htm">Vertex Attributes<MadCap:xref href="Vertex_Attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>). X and Y coordinates are calculated from the upper left.</p>
+        <p>If the map contains benchmarks to specify geographic coordinates, InterMapper uses them to place devices at the proper location in the map.</p>
+        <p><span style="font-weight: bold;">Note:</span> In order for InterMapper to place devices accurately using geographic coordinates, two benchmarks must be specified before you import or update the devices. If you have imported the devices to the map before specifying the benchmarks, you can create an export file containing the MapPath, ID, Latitude and Longitude, then re-import the file after specifying your benchmarks. The devices are moved to the appropriate locations on the map.</p>
+        <h3>
+            <MadCap:keyword term="InterMapper Inserts Devices" />How InterMapper Inserts Devices</h3>
+        <p>InterMapper places new devices in horizontal rows across the top of the specified map. If either X/Y coordinates or geographic coordinates are specified for the device, InterMapper places it at the specified location on the map.</p>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="Default" />
+            <MadCap:keyword term="InterMapper Handles Errors" />How InterMapper Handles Errors and Defaults</h3>
+        <p style="margin-bottom: 0.75em;margin-top: 0.75em;">
+            <MadCap:keyword term="DNS:DNS Name" />InterMapper strives to use sensible defaults. The import file needs only a server name, map path, and either an IP address or DNS Name for a new device. InterMapper uses its default settings for other values and parameters.</p>
+        <p style="margin-bottom: 0.75em; margin-top: 0.75em;"><b>Note:</b> If the InterMapper server cannot resolve the DNS name , the device is added by IP address.</p>
+        <p style="margin-bottom: 0.75em;margin-top: 0.75em;">
+            <MadCap:keyword term="Event Log file" />
+            <MadCap:keyword term="InterMapper Event Log file" />The import process recovers sensibly from faulty, ill-formatted, or inconsistent input values. An invalid format for an IP address, for example, cannot succeed, and is reported as an error. Most other data is passed along so the device can be added to the map with appropriate defaults. The InterMapper Event Log file contains a line for each newly added device, along with indication of success or error.</p>
+        <p style="margin-bottom: 0.75em;margin-top: 0.75em;">If the attribute name in the header of the imported file is not recognized as a valid attribute, InterMapper displays an error message and ignores the contents of that column.</p>
+        <p style="margin-bottom: 0.75em;margin-top: 0.75em;">When the import is finished, a summary is written to the Event Log file.</p>
+        <p style="margin-bottom: 0.75em;margin-top: 0.75em;"><i style="font-style: italic; font-weight: bold;">Notes:</i>
+        </p>
+        <ul style="margin-bottom: 0.75em;margin-top: 0.75em;">
+            <li>Every InterMapper server maintains a unique identifier (the "id") for each of its devices on each map. This makes it a convenient value for matching updated information to an existing device.</li>
+            <li>InterMapper defines a new                  <i>IMProbe</i><MadCap:keyword term="URL" /><MadCap:keyword term="InterMapper Probe" /> URL that completely specifies all the parameters of an InterMapper Probe. This IMProbe: URL is defined in                  <i><MadCap:keyword term="IMProbe URL" /><a href="the_improbe_url.htm">The IMProbe URL<MadCap:xref href="the_improbe_url.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></i>.</li>
+        </ul>
+        <h2><a name="datatypes"></a>Data types</h2>
+        <p style="margin-bottom: 0.75em;margin-top: 0.75em;">For each table for which data can be imported or exported, a data type is defined. For information on the different data types, and what information is readable, writable, or both, see the Attributes topic for each data type as linked below. </p><pre class="code">table=[data type]</pre>
+        <ul style="margin-top: 0.75em;margin-bottom: 0em;">
+            <li><span style="font-weight: bold;">devices</span> - imports data specific to devices. See the <a href="Device_Attributes.htm">Device Attributes<MadCap:xref href="Device_Attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> table.</li>
+            <li><span style="font-weight: bold;">vertices</span> - You can also control other aspects of a device in a map, such as the device's color, label, shape, or font. The <span class="code">vertices </span>type imports data specific to the appearance of devices. See the                  <a href="Vertex_Attributes.htm">Vertex Attributes<MadCap:xref href="Vertex_Attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> table.</li>
+            <li><span style="font-weight: bold;">interfaces</span> - imports data specific to the switch and router interfaces. See the           <a href="Interface_Attributes.htm">Interface Attributes<MadCap:xref href="Interface_Attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> table.</li>
+            <li><b>maps</b> - imports data specific to maps. See the <a href="Map_Attributes.htm">Map Attributes<MadCap:xref href="Map_Attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> table.</li>
+            <li><b>notifiers</b> - imports data to describe notifiers. See the <a href="notifierattributes.htm">Notifier Attributes<MadCap:xref href="notifierattributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> table.</li>
+            <li><b>notifierrules</b> - imports data to describe how a notifier is applied. See the <a href="notifierrules.htm">Notifier Rules Attributes table.<MadCap:xref href="notifierrules.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></li>
+            <li><b>users </b>- imports user account information. See the <a href="User_Attributes.htm">User Attributes<MadCap:xref href="User_Attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> table.</li>
+            <li><b>retentionpolicies</b>- imports user account information. See the <a href="Retention_Policy_Attributes.htm">Retention Policy Attributes<MadCap:xref href="Retention_Policy_Attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> table</li>
+        </ul>
+    </body>
+</html>

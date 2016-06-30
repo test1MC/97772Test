@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="2" MadCap:lastHeight="865" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Telnet Server Command Reference</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="HelpNo;QuitNo;Ss  DOWN-ACK;ErrorThe ERROR;Ss  DOWN;KalidDisplays;Lists:kalidDisplays;Addresses;Showing;Windows" />
+            <MadCap:keyword term="Command" />
+            <MadCap:keyword term="End:telnet" />
+            <MadCap:keyword term="Telnet" />
+            <MadCap:keyword term="Telnet Server" />
+            <MadCap:keyword term="Telnet Server Command Reference" />Telnet Server Command Reference</h1>
+        <p>
+            <MadCap:keyword term="Id" />
+            <MadCap:keyword term="Line" />The Telnet Server uses a text-based command-line interface to provide 
+ information about devices and networks in maps that are open in InterMapper.</p>
+        <p>
+            <MadCap:keyword term="Help" />
+            <MadCap:keyword term="Pkts:sum" />
+            <MadCap:keyword term="Sum" />Here is summary of the features and functions available from the Telnet 
+ Server, as shown through the server's help system. For each command listed 
+ below, click <span class="code">[&#160;details&#160;]</span> to 
+ view the server help for that command:</p><pre class="code">Welcome to the InterMapper [version #] operations interface.
+Enter 'help' for command list.
+&gt; help
+========</pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="Error" />ERROR</b> 
+- &#160;&#160;Shows a report of all devices and links that exceed some threshold. This
+ &#160;&#160;&#160;report is updated every minute. For detailed information about the fields
+ &#160;&#160;&#160;and columns of this report, type "help error". This is the default command
+ &#160;&#160;&#160;when you connect.<a href="#error">[ details ]<MadCap:xref href="#error" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>(Abbreviations: &#160;"E", "ERR")</pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="FULL" />FULL</b> 
+- &#160;&#160;Shows a report of all devices and links being monitored. &#160;<a href="#full">[ details ]<MadCap:xref href="#full" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> (Abbreviations: &#160;"F")</pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="NODE" />NODE</b> &lt;name-prefix&gt;
+- &#160;&#160;Shows a report of the named device using the same format as the "ERROR"
+ &#160;&#160;&#160;report. This report is updated every time InterMapper polls the device. &#160;<br /><a href="#node">[ details ]<MadCap:xref href="#node" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> (Abbreviations: "N")</pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="Bus" />BUS</b> &lt;name-prefix&gt;
+- &#160;&#160;Shows a report of the named network or segment using the same format as
+ &#160;&#160;&#160;the "ERROR" report. This report is updated every minute.<br /> &#160;<a href="#bus">[ details ]<MadCap:xref href="#bus" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>(Abbreviations: "B")</pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="Down" />DOWN</b><MadCap:keyword term="Lists" /><MadCap:keyword term="ERRORS" />- &#160;&#160;Lists all devices that are down. &#160;The same functionality is also provided
+ &#160;&#160;&#160;by the ERRORS command. &#160;<a href="#down">[ details ]<MadCap:xref href="#down" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="LDOWN" />LDOWN</b>- &#160;&#160;Lists all interfaces (ie links) that are down. &#160;The same functionality is
+ &#160;&#160;&#160;also provided by the ERRORS command.           <a href="#ldown">[ details ]<MadCap:xref href="#ldown" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="LOG" />LOG</b> [ <num-lines> ]
+- &#160;&#160;Displays the last <num-lines><MadCap:keyword term="Event Log" /> entries from the event log window and continuously
+ &#160;&#160;&#160;displays new log lines. &#160;<a href="#log">[ details ]<MadCap:xref href="#log" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></num-lines></num-lines></pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="Kali" />KALI</b> [ <conn><MadCap:keyword term="Compress" /><MadCap:keyword term="KILL" />&lt;conn&gt; [ "compress" | "kill" ] ]
+- &#160;Displays list of Kali connections and allows you to debug them. &#160;<a href="#kali">[ details ]<MadCap:xref href="#kali" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></conn></pre><pre class="code"><b>KALID</b><br />- Displays a list of the maps, log, lists, and other shared resources open by each <br />&#160;&#160;Remote connection.<br /> &#160;<a href="#kalid">[ details ]<MadCap:xref href="#kalid" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre><pre class="code"><b style="font-weight: bold;">HELP</b> [ &lt;topic&gt; ]
+- &#160;&#160;Without a parameter, the help command displays this help text. If you include the <br />&#160;&#160;&#160;&#160;name of the command as the parameter, it displays detailed information about the <br />&#160;&#160;&#160;format of the report generated by it.     <a href="#help">[ details ]<MadCap:xref href="#help" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre><pre class="code"><b style="font-weight: bold;"><MadCap:keyword term="QUIT" />QUIT</b><MadCap:keyword term="End" /><MadCap:keyword term="Telnet:End" />- &#160;&#160;End the telnet session and disconnect. &#160;<a href="#quit">[ details ]<MadCap:xref href="#quit" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre><pre class="code"><b>RELOAD
+</b>- Closes all map files and reopens them. This command is only implemented in the <br />&#160;&#160;server/daemon version of InterMapper.&#160;<a href="#reload">[ details ]<MadCap:xref href="#reload" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre><pre class="code" xml:space="preserve">&#160;<MadCap:keyword term="REMOTE" /><b>REMOTE </b>&lt;hostname&gt; [ &lt;port&gt; ]
+-  Initiates a remote connection with a client at hostname, listening on &lt;port&gt;,
+   rather than the usual procedure of a client initiating a connection with the
+server.
+   This is useful when the server is behind a firewall. InterMapper Support may
+   occasionally ask you to do this in order to let us take a look at your system
+   without requiring you to adjust your firewall. If the port is not specified,
+it is assumed to be 8181.</pre><pre class="code" xml:space="preserve"><MadCap:keyword term="DETAILS" /><b>DETAILS</b> &lt; "net" | "graph" | "collaborator" | "smtp" | "probe" &gt;
+-  Toggles detailed logging to the debug log for the indicated class
+of events. InterMapper Support may occasionally ask you to do this in order
+to provide us with more detailed information about what is happening
+when  you run InterMapper.</pre><pre class="code"><b>SERVER &lt;server&gt; &lt; "start" | "stop" | "status" &gt; [ &lt;port&gt; ] [ "secure" ]</b><br />- Start, stop or change one of the three servers: Web, Telnet or Remote.&#160;<a href="#server">[ details ]<MadCap:xref href="#server" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre><pre class="code" xml:space="preserve"><b>TELNET
+</b>- Displays a list of current connections to the Telnet server.&#160;<a href="#telnet">[ details ]<MadCap:xref href="#telnet" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre><pre class="code" xml:space="preserve"><b>USERS [&lt;UID&gt;]</b> - Displays a list of users with user IDs. Include the user ID to delete the user.</pre><pre class="code"><b>WEB
+</b>- Displays a list of current connections to the Web server. <a href="#web">[ details ]<MadCap:xref href="#web" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></pre>
+        <h2><a name="full"></a><a name="error"></a><a name="node"></a><a name="bus"></a>
+            <MadCap:keyword term="Command Details" />Command Details</h2><pre class="code">&gt;&#160;<b>help error</b><MadCap:keyword term="Stat" /><MadCap:keyword term="NODE REPORT" /><MadCap:keyword term="LINK REPORT" /><br />The ERROR, FULL, NODE, and BUS commands emit a report with three parts: 
+ &#160;&#160;&#160;(1) a status line summarizing the condition of the entire network
+ &#160;&#160;&#160;(2) a node report
+ &#160;&#160;&#160;(3) a link report.<br /><br />Example:<br /><MadCap:keyword term="SysUpTime" /><MadCap:keyword term="Running:Probe" /><MadCap:keyword term="By/s" /><MadCap:keyword term="Pk/s" /><MadCap:keyword term="Addr" /><br />Jul 31 11:11:58 &#160;&#160;2 nodes, &#160;&#160;1 down, &#160;&#160;8 links, &#160;&#160;0 down, &#160;461 pk/s, &#160;141 K by/s
+Name &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Stat &#160;SysUpTime &#160;&#160;&#160;Probe &#160;Address
+egg-1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DOWN &#160;&#160;0+00:00:00 &#160;ICMP &#160;&#160;127.110.13.210<br /><MadCap:keyword term="TErr" /><MadCap:keyword term="RErr" /><MadCap:keyword term="TPkt" /><MadCap:keyword term="RPkt" /><MadCap:keyword term="TBytes" /><MadCap:keyword term="RBytes" /><MadCap:keyword term="TDis" /><MadCap:keyword term="RDis" /><MadCap:keyword term="Prt" /><br />Name &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Prt Stat TPkt TBytes TErr TDis &#160;RPkt RBytes RErr RDis &#160;Util 
+Segment
+egg-1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1 &#160;UP &#160;&#160;&#160;46 &#160;13790 &#160;&#160;&#160;0 &#160;&#160;&#160;0 &#160;&#160;&#160;67 &#160;10152 &#160;&#160;12* &#160;&#160;0 &#160;&#160;&#160;1% 127.0.13.0/24
+egg-1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2 &#160;UP &#160;&#160;&#160;78 &#160;&#160;8330 &#160;&#160;&#160;0 &#160;&#160;&#160;0 &#160;&#160;586 144524 &#160;&#160;14* &#160;&#160;0 &#160;&#160;12% 127.0.14.0/24<br /><br />(1) THE STATUS LINE<br />Jul 31 11:11:58 &#160;&#160;2 nodes, &#160;&#160;1 down, &#160;&#160;8 links, &#160;&#160;0 down, &#160;461 pk/s, &#160;141 K by/s<br /><MadCap:keyword term="Pkts" /><MadCap:keyword term="Pkts:number" /><MadCap:keyword term="Sum:pkts" />In order, these fields are:
+ &#160;- the date and time of the report
+ &#160;- the total number of devices
+ &#160;- the number of devices which are down
+ &#160;- the total number of links
+ &#160;- the number of links which are down
+ &#160;- the sum of pkts per second transmitted on all links
+ &#160;- the sum of bytes per second transmitted on all links<br /><br />(2) NODE REPORT<br />Name &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Stat &#160;SysUpTime &#160;&#160;&#160;Probe &#160;Address<br /><br /><MadCap:keyword term="Probes" /><MadCap:keyword term="Probes:running" /><MadCap:keyword term="Running" /><MadCap:keyword term="ACK" />The columns are:
+ &#160;Name &#160;&#160;&#160;&#160;&#160;- the name of the device
+ &#160;Stat &#160;&#160;&#160;&#160;&#160;- the status of the device (UP, DOWN, or ACK)
+ &#160;SysUpTime - the number of days + hh:mm:ss that the device has been running
+ &#160;Probe &#160;&#160;&#160;&#160;- the type of probe used to check the device
+ &#160;Address &#160;&#160;- the address of the device (where the probes are sent)<br /><br />(3) LINK REPORT<br />Name &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Prt Stat TPkt TBytes TErr TDis &#160;RPkt RBytes RErr RDis &#160;Util 
+Segment<br /><br />The columns are:
+ &#160;Name &#160;&#160;&#160;- the name of the device
+ &#160;Prt &#160;&#160;&#160;&#160;- the interface number
+ &#160;Stat &#160;&#160;&#160;- the status of the interface (UP, DOWN, or ACK)
+ &#160;TPkt &#160;&#160;&#160;- the number of pkts per second transmitted on this interface
+ &#160;TBytes &#160;- the number of bytes per second transmitted on this interface
+ &#160;TErr &#160;&#160;&#160;- the number of packets per minute lost due to errors
+ &#160;TDis &#160;&#160;&#160;- the number of packets per minute dropped due to resource limitations
+ &#160;RPkt &#160;&#160;&#160;- the number of pkts per second received on this interface
+ &#160;RBytes &#160;- the number of bytes per second received on this interface 
+ &#160;RErr &#160;&#160;&#160;- the number of packets per minute received with an error
+ &#160;RDis &#160;&#160;&#160;- the number of packets per minute dropped due to resource limitations
+ &#160;Util &#160;&#160;&#160;- the percentage utilization of the interface
+ &#160;Segment - the name of the network or segment attached to this interface<br /><br />The * following a value indicates that the value is above the threshold. This is
+useful because it tells you why the link is being displayed as part of the error
+report.</pre><pre class="code"><a name="down"></a>&gt;<b>&#160;help down</b><br /><MadCap:keyword term="DOWN-ACK" /><br />The DOWN command lists all devices which currently have the 'DOWN' or
+'DOWN-ACK' status.<br /><br /><MadCap:keyword term="Line:DOWN list" /><MadCap:keyword term="DOWN list" />Each line of the DOWN list has the format:<br /><br /><MadCap:keyword term="Device-Name" />mm/dd hh:mm:ss &#160;DOWN &#160;&#160;&#160;&#160;&#160;&lt;Device-Name&gt;<br /><br />For devices which are acknowledged down, the following format is used:<br /><br />mm/dd hh:mm:ss &#160;DOWN-ACK &#160;&lt;Device-Name&gt;<br /></pre><pre class="code"><a name="help"></a>&gt;&#160;<b>help</b><br />HELP [&lt;topic&gt;]<br />-   Without a parameter, the help command displays this help text. If you
+    include the name of the command as the parameter, it displays detailed
+    information about the format of the report generated by it.</pre><pre class="code"><a name="kali"></a>&gt;           <b>help kali</b><br /><br />KALI [ <conn> [ "compress" | "kill" ] ]</conn><br /><MadCap:keyword term="InterMapper RemoteAccess" /><MadCap:keyword term="Remote" />Displays a list of current InterMapper RemoteAccess connections and allows you to
+monitor them.<br /><br />When you enter "KALI" without any arguments, the response is a list of the
+current InterMapper RemoteAccess connections in the form:<br /><br />ID &#160;&#160;&#160;&#160;&#160;&#160;USER &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;REMOTE ADDRESS &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IN &#160;&#160;&#160;OUT &#160;&#160;&#160;LOGIN@
+366a58 &#160;&#160;&lt;listener&gt; &#160;&#160;&lt;server-port 8181&gt; &#160;&#160;&#160;&#160;&#160;&#160;&#160;0 &#160;&#160;&#160;&#160;&#160;0 &#160;&#160;&#160;- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+485d58 &#160;&#160;Guest &#160;&#160;&#160;&#160;&#160;&#160;&#160;198.115.166.18:58619 &#160;20339 177408 &#160;&#160;&#160;Oct 02, 15:51:12 
+2d18b8 &#160;&#160;&lt;listener&gt; &#160;&#160;&lt;server-port 8181&gt; &#160;&#160;&#160;&#160;&#160;&#160;&#160;0 &#160;&#160;&#160;&#160;&#160;0 &#160;&#160;&#160;- &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br /><br /><MadCap:keyword term="KALI NEXT" />The second and third columns identify the user and their source IP address. The
+two users marked "&lt;listener&gt;" are the server's two pending listening
+connections for port 8181.
+The first column of output is the identifier for the connection. To monitor an
+existing connection, type "KALI &lt;conn&gt;" where &lt;conn&gt; is a connection
+ID. 
+To monitor the next new connection to the server, use "next" for the connection
+ID; i.e. type "KALI NEXT".
+Monitoring a remote connection turns off compression for the data stream; this
+makes it easier to see the actual traffic. To leave compression enabled when
+while monitoring, include the "compress" option; i.e. type "KALI &lt;conn&gt;
+COMPRESS".
+To forcibly disconnect an existing connection, type "KALI &lt;conn&gt; KILL".
+This command will terminate the remote connection and release its resources on the
+server.</pre><pre class="code"><a name="kalid"></a>&gt;&#160;<b>help kalid</b><MadCap:keyword term="CKaliOpenLogList" /><MadCap:keyword term="CKaliOpenMapList" /><MadCap:keyword term="CKaliOpenSoundSetList" /><MadCap:keyword term="ADMIN" /><br /><br />Displays a list of the maps, log, lists, and other shared resources open by
+each Remote connection.
+<br />Here is some sample output:
+<br />+ CKaliOpenMapList [2d6008] user='Guest' [ADMIN]
+ &#160;- [485d58] &#160;Guest@198.115.166.18:58619
++ CKaliOpenLogList [351cd8] addr='198.115.166.18' user='Guest' [ADMIN]
+ &#160;- [485d58] &#160;Guest@198.115.166.18:58619
++ CKaliOpenSoundSetList [351d68]
+ &#160;- [485d58] &#160;Guest@198.115.166.18:58619
+<br />This indicates that the remote connection [485d58] is responsible for an "open
+map list", an "open log list", and an "open sound list". Essentially, this
+means that client will be notified of any changes to those lists. If this user
+had opened a map, you would see them registered for that "open map"; i.e. they
+would be notified of any changes.
+<br />Multiple connections may be registered for the same resource, the output above
+only shows the server state with one connection.</pre><pre class="code"><a name="ldown"></a>&gt;&#160;<b>help ldown</b>&#160;<br />The LDOWN command lists all interfaces which currently have the 'DOWN'
+status. &#160;The LDOWN report does not include interfaces which are hidden
+and therefore not being polled.<br />Each line has the following format:<br /><br /><MadCap:keyword term="IfDescr" /><MadCap:keyword term="IfIndex" />mm/dd hh:mm:ss &#160;DOWN &#160;&#160;&#160;&#160;&lt;Device-Name&gt;:&lt;ifIndex&gt;:&lt;ifDescr&gt;<br /><MadCap:keyword term="IP" />&lt;ifIndex&gt; is the index of the interface in the interface table,
+and &lt;ifDescr&gt; is a description of the interface.</pre><pre class="code"><a name="log"></a>&gt;&#160;<b>help log</b><br /><MadCap:keyword term="Num-lines" />Displays the last &lt;num-lines&gt; entries from the event log window and
+continuously displays new log lines. 
+The format of the LOG output is exactly the same as the format of the
+"Event Log" window of the InterMapper program.</pre><pre class="code"><a name="quit"></a>&gt;&#160;<b>help quit</b><br />QUIT<br />-   End the telnet session and disconnect.
+
+</pre><pre class="code"><a name="reload"></a>&gt; <b>help reload</b><br />RELOAD
+
+Closes all map files and reopens them. This command is only implemented in the
+server/daemon version of InterMapper.
+
+This command is for experimental purposes. You should avoid using it; it may go
+away in future versions.
+</pre><pre class="code"><a name="server"></a>&gt; <b>help server</b><br />SERVER &lt;server&gt; &lt; "start" | "stop" | "status" &gt; [ &lt;port&gt; ] [ "secure" ]
+<br />Start, stop or change one of the three servers: Web, Telnet or Remote.
+
+To start a server on the same or different port number (with SSL/TLS disabled), type:
+
+server &lt;server&gt; start &lt;port&gt;
+<br />To start the server with SSL/TLS enabled, type:
+<br />server &lt;server&gt; start &lt;port&gt; secure
+<br />In both cases, &lt;server&gt; must be one of "web", "telnet" or "remote".
+<br />To stop a server, type:
+<br />server &lt;server&gt; stop
+<br />Note: You cannot stop the Telnet server using the SERVER command. However, you
+can restart the telnet server on a different port number. When you do this,
+your own telnet connection will be disconnected immediately.
+<br />To receive a quick status report on all three servers, type "server status".
+This command combines the output of the "web", "telnet" and "kali" commands.
+</pre><pre class="code"><a name="telnet"></a>&gt;<b> help telnet</b><br /><br />TELNET
+
+Displays a list of current connections to the Telnet server.<br /><br />ID USER REMOTE ADDRESS IN OUT LOGIN@
+404c28 &lt;listener&gt; &lt;server-port 23&gt; 0 0 - 
+3f63a8 Guest 192.168.1.21:49176 0 0 - 
+2d60e8 &lt;listener&gt; &lt;server-port 23&gt; 0 0 - 
+
+<br />This command is similar in output to the KALI command. It lists the source and
+login ID of any existing telnet connections. However, unlike the KALI command,
+you cannot monitor or terminate telnet connections using the TELNET command;
+you can only receive a status report.
+
+<br />Note: The IN, OUT, and LOGIN@ stats are not implemented for the TELNET command.</pre><pre class="code"><a name="web"></a>&gt;<b> help web</b><br /><br />WEB
+
+Displays a list of current connections to the Web server. The web server
+normally does not allow HTTP connections to linger, so the list of current
+connections should never grow very large.<br /><br />ID USER REMOTE ADDRESS IN OUT LOGIN@
+38af68 &lt;listener&gt; &lt;server-port 80&gt; 0 0 - 
+35f518 &lt;listener&gt; &lt;server-port 80&gt; 0 0 - 
+478478 &lt;listener&gt; &lt;server-port 80&gt; 0 0 - 
+39f308 &lt;listener&gt; &lt;server-port 80&gt; 0 0 - 
+473e98 &lt;listener&gt; &lt;server-port 80&gt; 0 0 - 
+481bb8 &lt;listener&gt; &lt;server-port 80&gt; 0 0 - 
+
+<br />This command is similar in output to the KALI command. It lists the source and
+login ID of any existing web connections. Since the web server has to deal with
+the possibility of many simultaneous hits, the number of reserve pending
+listeners is larger than for the other server.
+<br />Unlike the KALI command, you cannot monitor or terminate web connections using
+the WEB command; you can only receive a status report.
+
+<br />Note: The IN, OUT, and LOGIN@ stats are not implemented for the WEB command.
+</pre>
+    </body>
+</html>

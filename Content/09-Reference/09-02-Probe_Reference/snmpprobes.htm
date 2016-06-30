@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="857" MadCap:lastWidth="576" class="" MadCap:conditions="Primary.Omit" MadCap:fileTags="status_tags.No Changes">
+    <head><title>SNMP Probes</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">SNMP Probes</h1>
+        <p>Use the SNMP probes to perform a wide variety of queries 
+ on SNMP devices.</p>
+        <ul>
+            <li><b><a href="#basicoid">Basic OID<MadCap:xref href="#basicoid" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - monitor a single, user-defined MIB variable.</li>
+            <li><b><a href="#comparison">Comparison<MadCap:xref href="#comparison" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - 
+retrieves a single SNMP MIB variable, compares it to a specified value, and sets the device's severity based on the comparison.</li>
+            <li><b><a href="#hithreshold">High Threshold<MadCap:xref href="#hithreshold" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - use a specified MIB variable to change the device's state when a specified threshold value is reached.</li>
+            <li><b><a href="#lothreshold"><b>Low Threshold</b><MadCap:xref href="#lothreshold" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b>-  use a specified MIB variable to change the device's state when its value falls below a specified threshold value.</li>
+            <li><b><a href="#rangethreshold"><b>Range Threshold</b><MadCap:xref href="#rangethreshold" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> -  - use a specified MIB variable to change the device's state when its value goes out side a specified range.</li>
+            <li><b><a href="#singleoid"><b>Single OID</b><MadCap:xref href="#singleoid" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - retrieves a single SNMP MIB&#160;variable and displays it in the device's Status Window.</li>
+            <li><b><a href="#tableviewer">Table Viewer<MadCap:xref href="#tableviewer" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - displays the contents of several useful tables from common SNMP MIBs.</li>
+            <li><b><a href="#trapviewer"><b>Trap Viewer</b><MadCap:xref href="#trapviewer" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - listens for trap packet. When a trap arrives, it displays the contents of the trap in the Status window.</li>
+        </ul>
+        <h2><a name="basicoid"></a>Basic OID</h2>
+        <p>This probe lets you monitor a single, user-defined MIB variable.</p>
+        <p><i>Object Name</i> is the name of the value that you want to monitor. This parameter is optional; the "object name" value only customizes the display in the status window and chart legend.</p>
+        <p><i>Object ID</i> is the object identifier (OID) of the value that you want to monitor. If you wish to retrieve the value of a MIB variable that is not in a table, the OID must end with ".0" (e.g. "1.3.6.1.2.1.1.1.0").
+</p>
+        <h2><a name="comparison"></a>Comparison</h2>
+        <p>This probe retrieves a single SNMP MIB variable, compares it to a specified value, and sets the device's severity based on the comparison. It also displays the value in the Status Window.
+</p>
+        <p><i>Variable</i> specifies the MIB name or OID for the value to retrieve. If you have imported the MIB for this device, you may enter the symbolic name for this value, otherwise, simply enter its OID here. 
+
+</p>
+        <p><i>Test</i> set the dropdown to indicate whether to alarm if the device is equal/not equal to the \ib\Value\p\ parameter. 
+
+</p>
+        <p><i>Value</i> is the value to compare against.
+
+</p>
+        <p><i>Severity</i> for the device if the comparison isn't as expected. 
+</p>
+        <p><i>Legend</i> is a text string used to identify the variable in the status window and any charts. If left blank, the variable's name or OID will be used.
+</p>
+        <p><i>Units</i> is an optional text string that will be displayed next to the value in the Status Window. You can use it for the unit of measure (packets/sec, degrees, etc.) 
+</p>
+        <h2><a name="hithreshold"></a>High Threshold</h2>
+        <p>This probe retrieves a single SNMP MIB variable and compares it to the specified thresholds. If the value goes above any of these thresholds, the device severity changes to the indicated state.</p>
+        <ul>
+            <li><b style="font-style: italic;">Variable</b> - specifies the MIB name or OID for the value to retrieve. If you have imported the MIB for this device, you may enter the symbolic name for this value. Otherwise, enter its OID.</li>
+            <li><b style="font-style: italic;">Critical</b>, <b style="font-style: italic;">Alarm</b>, and <b style="font-style: italic;">Warning</b> - threshold values required to set the device to one of these states. They may be positive or negative numbers.</li>
+            <li><b style="font-style: italic;">Legend</b> - a text string used to identify the variable in the Status window or a chart. If left blank, the variable's name or OID&#160;is used.</li>
+            <li><b style="font-style: italic;">Units</b> - a text string to be displayed next to the value in the Status window. You can use it to indicate a unit of measure (packets/second, degrees, etc.)</li>
+        </ul>
+        <h2><a name="lothreshold"></a>Low Threshold</h2>
+        <p>This probe retrieves a single SNMP MIB variable and compares it to the specified thresholds. If the value goes below any of these thresholds, the device severity changes to the indicated state.</p>
+        <ul>
+            <li><b style="font-style: italic;">Variable</b> - specifies the MIB name or OID for the value to retrieve. If you have imported the MIB for this device, you may enter the symbolic name for this value. Otherwise, enter its OID.</li>
+            <li><b style="font-style: italic;">Critical</b>, <b style="font-style: italic;">Alarm</b>, and <b style="font-style: italic;">Warning</b> - threshold values required to set the device to one of these states. They may be positive or negative numbers.</li>
+            <li><b style="font-style: italic;">Legend</b> - a text string used to identify the variable in the Status window or a chart. If left blank, the variable's name or OID&#160;is used.</li>
+            <li><b style="font-style: italic;">Units</b> - a text string to be displayed next to the value in the Status window. You can use it to indicate a unit of measure (packets/second, degrees, etc.)</li>
+        </ul>
+        <h2><a name="rangethreshold"></a>Range Threshold</h2>
+        <p>This probe retrieves a single SNMP MIB variable and compares it to the specified thresholds. If the value goes outside the specified ranges,  the device severity changes to the indicated state.</p>
+        <ul>
+            <li><b style="font-style: italic;">Variable</b> - specifies the MIB name or OID for the value to retrieve. If you have imported the MIB for this device, you may enter the symbolic name for this value. Otherwise, enter its OID.</li>
+            <li><b style="font-style: italic;">Critical</b>, <b style="font-style: italic;">Alarm</b>, and <b style="font-style: italic;">Warning</b> - threshold values required to set the device to one of these states. They may be positive or negative numbers.</li>
+            <li><b style="font-style: italic;">Legend</b> - a text string used to identify the variable in the Status window or a chart. If left blank, the variable's name or OID&#160;is used.</li>
+            <li><b style="font-style: italic;">Units</b> - a text string to be displayed next to the value in the Status window. You can use it to indicate a unit of measure (packets/second, degrees, etc.)</li>
+        </ul>
+        <h2><a name="singleoid"></a>Single OID</h2>
+        <p>This probe retrieves a single SNMP MIB&#160;variable and displays it in the device's Status Window.</p>
+        <ul>
+            <li><b style="font-style: italic;">Variable</b> - specifies the MIB name or OID for the value to retrieve. If you have imported the MIB for this device, you may enter the symbolic name for this value. Otherwise, enter its OID.</li>
+            <li><b style="font-style: italic;"></b><b style="font-style: italic;">Legend</b> - a text string used to identify the variable in the Status window or a chart. If left blank, the variable's name or OID&#160;is used.</li>
+            <li><b style="font-style: italic;">Units</b> - a text string to be displayed next to the value in the Status window. You can use it to indicate a unit of measure (packets/second, degrees, etc.)</li>
+        </ul>
+        <h2><a name="tableviewer"></a>Table Viewer</h2>
+        <p>This probe displays the contents of several useful tables from common SNMP MIBs. It retrieves its data by walking the SNMP data values in the tables.
+</p>
+        <p><b>ifTable </b>- The "Interfaces" table gives information about the physical and logical interfaces of the device. It displays the following columns: i<i>fIndex</i>, <i>ifDescr</i>, <i>ifType</i>, <i>ifSpeed</i>, <i>ifPhysAddress</i>, <i>ifOperStatus</i>, and <i>ifAdminStatus</i>.
+
+</p>
+        <p><b>ifXTable </b>- The Extended Interfaces table defined in IF-MIB. This is an extended version of ifTable and adds the <i>ifName</i> and <i>ifAlias</i> fields/columns to those shown in the ifTable above.
+
+</p>
+        <p><b>ipNetToMediaTable </b>- The Net Address to Media Address table (also known as the "ARP Table") displays these fields/columns: <i>ipNetToMediaIfIndex</i>, <i>ipNetToMediaNetAddress</i>, <i>ipNetToMediaPhysAddress</i>, and <i>ipNetToMediaType</i>.
+
+</p>
+        <p><b>ipAddrTable </b>- This table displays the IP address/mask/broadcast address for each interface. Includes <i>ipAdEntAddr</i>, <i>ipAdEntifIndex</i>, <i>ipAdEntNetMask</i>, <i>ipAdEntBcastAddr</i>,  and <i>ipAdEntReasmMaxSize</i>. 
+</p>
+        <p><b>tcpConnTable </b>- Displays information about any connections that are present: Variables include <i>tcpConnLocalAddress</i>, <i>tcpConnLocalPort</i>, <i>tcpConnRemAddress</i>, and <i>tcpConnRemPort</i>.</p>
+        <p><b>udpTable </b>- Displays information about any UDP listeners that are present: Variables include <i>udpLocalAddress</i>, <i>udpLocalPort</i>,
+
+
+</p>
+        <p>The Status Window contains links to each of these tables. Click the link to see the contents of the table on the selected device.
+</p>
+        <h2 class="pagebreakbefore"><a name="trapviewer"></a>Trap Viewer</h2>
+        <p>This probe listens for trap packet. When a trap arrives, it displays the contents of the trap in the Status window. It does not actively poll the device, nor does it take any action based on the trap contents.</p>
+        <h3>How the Trap Viewer Probe Works</h3>
+        <p>When a trap arrives, the probe parses the trap to get the values from the trap's header, as well as the first ten items in its Varbind List. It assigns all of these values to variables that can be used in the probe and displayed in the Status window.</p>
+        <p>To see how this probe works, you can configure your equipment to send traps to InterMapper, or use the net-snmp <b style="font-style: italic;">snmptrap</b> command. Either way, the Status window shows the values present in any traps that arrive.</p>
+        <p>For more information on the snmptrap command, see the net-snmp documentation for the<a href="http://www.net-snmp.org/tutorial/tutorial-4/commands/snmptrap.html"> trap tutorial</a> and the <a href="http://www.net-snmp.org/docs/man/snmpinform.html">snmptrap command</a>.</p>
+        <p>Here are two examples of how to send a trap with variables from the<a href="../../06-Notifiers/06-01-ConfigNotifications/dartwaremib.html"> Dartware MIB<MadCap:xref href="../../06-Notifiers/06-01-ConfigNotifications/dartwaremib.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>:</p>
+        <p><b>SNMPv1 Traps</b>
+        </p>
+        <ol>
+            <li>Add a device to a map with the IP address <i>192.168.56.78</i></li>
+            <li>Set it to use the trap viewer probe</li>
+            <li>Issue the snmptrap command below from the command line (it should all be on one line):</li>
+        </ol><pre class="code">snmptrap -v 1 -c commString localhost <br />&#160;&#160;&#160;1.3.6.1.4.1.6306 192.168.56.78 6 123 4567890 <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.1.0 s "05/08 23:26:35"<br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.2.0 s Critical <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.3.0 s "Big Router" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.4.0 s "Critical: High Traffic" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.5.0 s "127.0.0.1" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.6.0 s "SNMP Traffic Probe" <br /></pre>
+        <p><b>SNMPv2c Traps</b>
+        </p>
+        <ol>
+            <li>Add a device to the map with an IP address of <i>localhost</i></li>
+            <li>Set it to use the trap viewer probe</li>
+            <li>Issue the snmptrap command below from the command line (it should all be on one line)</li>
+        </ol><pre class="code">snmptrap -v 2c -c commString localhost <br />&#160;&#160;&#160;4567890 1.3.6.1.4.1.6306 <br />&#160;&#160;&#160;1.3.6.1.4.1.6306 192.168.56.78 6 123 4567890 <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.1.0 s "05/08 13:26:35"<br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.2.0 s Critical <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.3.0 s "Big Router" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.4.0 s "Critical: High Traffic" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.5.0 s "127.0.0.1" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.6.0 s "SNMP Traffic Probe" </pre><pre class="code">snmptrap -v 2c -c commString localhost <br />&#160;&#160;&#160;4567890 1.3.6.1.4.1.6306 <br />&#160;&#160;&#160;1.3.6.1.4.1.6306 192.168.56.78 6 123 4567890 <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.1.0 s "05/08 13:26:35"<br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.2.0 s Critical <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.3.0 s "Big Router" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.4.0 s "Critical: High Traffic" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.5.0 s "127.0.0.1" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.6.0 s "SNMP Traffic Probe" </pre><pre class="code">snmptrap -v 2c -c commString localhost <br />&#160;&#160;&#160;4567890 1.3.6.1.4.1.6306 <br />&#160;&#160;&#160;1.3.6.1.4.1.6306 192.168.56.78 6 123 4567890 <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.1.0 s "05/08 13:26:35"<br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.2.0 s Critical <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.3.0 s "Big Router" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.4.0 s "Critical: High Traffic" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.5.0 s "127.0.0.1" <br />&#160;&#160;&#160;1.3.6.1.4.1.6306.2.1.6.0 s "SNMP Traffic Probe" </pre>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="68" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1" MadCap:conditions="Primary.print">Using InterMapper DataCenter</h1>
+        <h2 MadCap:conditions="Primary.print" class="L2">Configuring InterMapper DataCenter</h2>
+        <h1 MadCap:conditions="Primary.online">Configuring InterMapper DataCenter</h1>
+        <p>InterMapper DataCenter is installed automatically when you install InterMapper. </p>
+        <p><b>Note:</b> Unless you want to do one of the following, you do not to take any of the steps described in this topic:</p>
+        <ul>
+            <li>If you want to install and run InterMapper DataCenter from another machine.</li>
+            <li>If you want to specify an outgoing email server for error and bug reporting.</li>
+            <li>If you want to change the logging setup.</li>
+        </ul>
+        <p>To open the InterMapper DataCenter web UI:</p>
+        <ul>
+            <li>From the Reports Server pane of InterMapper's Server Settings window, click <b style="font-style: italic;">Configure...</b></li>
+            <li>Go to this URL:<br /><br />&#160;&#160;<a href="#dummylink">https://127.0.0.1:8182/</a></li>
+        </ul>
+        <p><b>Note:</b> If this is a fresh installation, InterMapper DataCenter automatically generates an SSL certificate, used to encrypt communication with your browser and the InterMapper server. Because a new certificate is generated for every installation, the certificate cannot be signed by a recognized certificate authority. As a result, your browser may display a message alerting you to an invalid certificate. To avoid seeing the message in the future, choose the option to continue, and tell your browser to add the certificate to its list of trusted certificates. In some browsers, including Firefox, you may need to click a link on the warning page and use a separate pane to add an exception for the certificate.</p>
+        <p>You can replace the generated certificate with one of your own by visiting the Services List. Click the Change Settings link for the InterMapper DataCenter Daemon, once initial setup is complete.<br /></p>
+        <h2>Setting the Password for the Admin Account</h2>
+        <p>Before you can use InterMapper DataCenter from another machine, you must set the password for the InterMapper DataCenter admin account.</p>
+        <p><b>To set the password for the InterMapper DataCenter admin account:</b>
+        </p>
+        <ol>
+            <li>Click the <b style="font-style: italic;">Settings</b> tab.</li>
+            <li>In the <b style="font-style: italic;">Username</b> box, enter a username. The default username is "admin".</li>
+            <li>In the <b style="font-style: italic;">Password</b> box, enter a password.</li>
+            <li>In the <b style="font-style: italic;">Confirm Password</b> box, re-enter the password.</li>
+            <li>Click <b style="font-style: italic;">Save Settings</b> at the bottom of the page.</li>
+        </ol>
+        <p><b>Note:</b> By default, you can log in to InterMapper DataCenter from the machine it is installed on without any authentication. You can choose to force authentication even on the local machine by unchecking the <b style="font-style: italic;">Skip authentication for local connections</b> box, and creating a password as described above.</p>
+        <p>If you are planning to use an existing database, you are now ready to <a href="UsingIMDatabase.htm">configure it<MadCap:xref href="UsingIMDatabase.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. If you are planning to use <a href="../../08-Server_Settings/08-03-Server_Config/authserver.htm">InterMapper Authentication Server<MadCap:xref href="../../08-Server_Settings/08-03-Server_Config/authserver.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, you are also ready to configure it now.</p>
+        <h2>Setting Up InterMapper DataCenter Logging and Event Collection</h2>
+        <p>InterMapper DataCenter can log status information, connection attempts by InterMapper servers, and error information obtained when connecting to directory services. InterMapper DataCenter logs to a file called <i>log/imdc.log</i> within the IMDC install folder. For the location of the log file for your platform, see <a href="../09-03-Files_and_Folders/filesfolders.html#locations">InterMapper Files and Folders<MadCap:xref href="../09-03-Files_and_Folders/filesfolders.html#locations" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a>.</p>
+        <p><b>To set the logging level:</b>
+        </p>
+        <ol>
+            <li>Click the <b style="font-style: italic;">Log</b> button in the upper-left corner of the page. The Log Viewer appears.</li>
+            <li>From the <b style="font-style: italic;">Logging Level</b> dropdown menu, choose the level you want to use.</li>
+            <li>Click <b style="font-style: italic;">Save</b>. The InterMapper DataCenter installation is complete.</li>
+        </ol>
+        <h2>Setting up InterMapper DataCenter's Error Reporting</h2>
+        <p>InterMapper DataCenter can report problems and send bug reports to InterMapper Support. To do this, you need to specify one or more SMTP&#160;hosts and user information.</p>
+        <p><b>To set up error reporting:</b>
+        </p>
+        <ol>
+            <li>In the InterMapper DataCenter section of the InterMapper DataCenter home page, click the <b style="font-style: italic;">Settings</b> tab. The DataCenter Settings page appears.</li>
+            <li>In the Primary SMTP section of the Error Reporting section, enter a <b style="font-style: italic;">Host</b>, <b style="font-style: italic;">Port</b> (if different from the default), a valid <b style="font-style: italic;">Username</b> and <b style="font-style: italic;">Password</b> for the email account you want to use to send messages, and a <b style="font-style: italic;">From</b> address for the messages. Enter (optional) SMTP settings for a secondary SMTP&#160;host.</li>
+            <li>To send an E-mail notification when an error occurs in InterMapper DataCenter, click to select the <b style="font-style: italic;">On errors, send E-mail to</b> check box.</li>
+            <li>To send an email notification to Help/Systems when an error occurs, click to select the <b style="font-style: italic;">Automatically E-mail bug reports to Help/Systems</b> check box.</li>
+            <li>To test your SMTP&#160;connection, click <b style="font-style: italic;">Send Test E-mail</b>. A test email message is sent to the specified address.</li>
+        </ol>
+    </body>
+</html>

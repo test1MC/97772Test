@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultReportFile
+  Tables="topics-not-linked,unused-condition-tags,unused-content-files,unused-csh-ids,unused-images,unused-styles,unused-variables"
+  Title="All Unused Files"></CatapultReportFile>

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="8293" MadCap:lastWidth="622" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Device Attributes</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Addresses" />
+            <MadCap:keyword term="Device Attributes">
+            </MadCap:keyword>Device Attributes</h1>
+        <p>Device attributes are supported as described in the table below. At minimum, <span style="font-weight: bold;font-style: italic;">MapName</span> and           <span style="font-weight: bold;font-style: italic;">Address</span> are required. To create a device by importing, the following is required:</p>
+        <ul>
+            <li>One of <b>MapPath   </b>or <b>MapID </b></li>
+            <li>One of <b>Address</b>, 
+<b>DNSName</b>, or <b>NetBIOSName </b></li>
+        </ul>
+        <p>For any attribute that is not in the file, a default value is used. For example, if no probe is specified, the           <span style="font-style: italic;font-weight: bold;">Automatic</span> probe is used.</p>
+        <p>Use these attributes with the following table specification in line 1:</p><pre class="code">table=device</pre>
+        <p><span style="font-weight: bold;">Notes:</span>
+        </p>
+        <ul style="list-style: disc;" type="disc">
+            <li>Fields marked with an asterisk (*) are required.</li>
+            <li>Fields marked with an plus(+) can be updated during import.</li>
+            <li>
+                <MadCap:keyword term="Access" />
+                <MadCap:keyword term="SENSITIVE" />Fields with the Access attribute of "SENSITIVE" can only be imported by an administrator over a secure SSL&#160;connection. </li>
+            <li>The columns are imported in the order specified. The last value specified takes precedence over previous values in the same line. Because of this, Help/Systems recommends that you use only one the following columns when importing: <span style="font-weight: bold;font-style: italic;">Address</span><span>,</span><span style="font-weight: bold;font-style: italic;"><MadCap:keyword term="DNS:DNSName" />DNSName</span><span>,</span><span style="font-weight: bold;font-style: italic;"><MadCap:keyword term="IMProbe" />IMProbe</span><span>.</span> If more than one of these is specified, and there are conflicts, the last column's values are used.</li>
+        </ul>
+        <h2>Device Attributes</h2>
+        <table class="fieldtable">
+            <tr>
+                <th>Field Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="fieldname">MapName</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Name of the map containing the device.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MapPath</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>CREATE<br /><b>Description: </b><br />Full path of the map containing the device, including the name of the map.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Address <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>ADDRESS<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>CREATE<br /><b>Description: </b><br />The IP or AppleTalk address of the device that is probed by InterMapper. The IP address is represented in dotted-decimal notation, e.g. 'a.b.c.d'. The AppleTalk address is represented in slash notation, e.g. 'a/b'.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Id</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>INDEX<br /><b>Description: </b><br />A unique, persistent identifier for this device instance. The id will be unique across all maps on a single InterMapper server.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Name</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The name of the device. The name is the first non-empty line in a device's label on a map.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Probe <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The human-readable name of the InterMapper probe.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Comment <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The comment associated with the device.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Community <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE<br /><b>Description: </b><br />The SNMP community of the device.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DisplayIfUnNumbered <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the device's behaviour is set to display unnumbered interfaces.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DNSName <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>CREATE<br /><b>Description: </b><br />The fully-qualified DNS name of the device.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IgnoreIfAppleTalk <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the device's behaviour is to ignore AppleTalk interface information.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IgnoreIfDiscards <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the device's behaviour is to ignore interface discards.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IgnoreIfErrors <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the device's behaviour is to ignore interface errors.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IgnoreOutages <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the device's behaviour is to ignore outages.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">AllowPeriodicReprobe <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the device's behaviour is to allow periodic reprobe.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IMProbe <span style="font-weight: normal;">*+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE,CREATE<br /><b>Description: </b><br />A special URL representation describing the InterMapper probe and its parameters, e.g. improbe://address:port/...<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Latitude <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The latitude of the device. The value will be a double within the range [-90..90] or empty string if the device does not have this attribute set.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Longitude <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The longitude of the device. The value will be a double within the range [-180..180] or empty string if the device does not have this attribute set.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">LastTimeDown</td>
+                <td class="fielddesc"><b>Type: </b>TIMESTAMP<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The time when the device last went down. Value is 0 if device has not gone down since we started monitoring it.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">LastTimeSysUp</td>
+                <td class="fielddesc"><b>Type: </b>TIMESTAMP<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The time when the device last came up (ie rebooted), based on the value of sysUpTime. The value is 0 if unknown.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">LastTimeUp</td>
+                <td class="fielddesc"><b>Type: </b>TIMESTAMP<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The time when the device status last transitioned from DOWN to UP. Value is 0 if this has not happened since we started monitoring.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MACAddress</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The device's MAC Address. If the device has multiple interfaces, this field will contain the MAC Address associated with the device's main IP Address (the same address in the address field).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MapAs <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Value is one of {  ROUTER ,  SWITCH , HUB, END SYSTEM  }<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MapId</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>CREATE<br /><b>Description: </b><br />The unique Id of the map file containing the device.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MaxTries <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The maximum number of attempts to reach the device, typically indicates the maximum number of packets to send during each poll, for packet-based probes.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">NetBIOSName <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>CREATE<br /><b>Description: </b><br />The NetBIOS/WINS name of the device.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">PctLoss</td>
+                <td class="fielddesc"><b>Type: </b>DOUBLE<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The percent loss (# packets lost/total # packets sent).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">ShortTermPctLoss</td>
+                <td class="fielddesc"><b>Type: </b>DOUBLE<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The short-term percent loss (# packets lost/# packets sent).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Availability</td>
+                <td class="fielddesc"><b>Type: </b>DOUBLE<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The percent availability (time up/time monitored).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">PollInterval <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The poll interval of the device, in seconds. Value is 0 if non-polling.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Port <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The UDP or TCP port number. If the port number is not applicable, this value is always 0. (e.g. for ICMP)<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Resolve <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Value is one of {  name ,  addr ,  none  }.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">RoundTripTime</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The last round-trip time in milliseconds, if known.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SNMPv3AuthPassword <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE<br /><b>Description: </b><br />The device's SNMPv3 authentication password.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SNMPv3AuthProtocol <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The device's SNMPv3 authentication protocol (MD5, SHA, None).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SNMPv3PrivPassword <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE<br /><b>Description: </b><br />The device's SNMPv3 privacy password.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SNMPv3PrivProtocol <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The device's SNMPv3 privacy protocol (DES, None).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SNMPv3UserName <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The device's SNMPv3 user name.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SNMPVersion <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The device's SNMP version (SNMPv1, SNMPv2c, or SNMPv3).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Status</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The status of the device. The value is one of { 'UP', 'DOWN', 'UNKNOWN' }.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">StatusLevel</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The status level of the device. The value is one of { 'Unknown', 'OK', 'Warning, Acked', 'Warning', 'Alarm, Acked', 'Alarm', 'Critical', 'Critical, Acked', 'Down', 'Down, Acked'}.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">StatusLevelReason</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The reason the device has its status level.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SysDescr</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The value of sysDescr.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SysName</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The value of sysName.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SysContact</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The value of sysContact.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SysLocation</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The value of sysLocation.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SysObjectID</td>
+                <td class="fielddesc"><b>Type: </b>ADDRESS<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The value of sysObjectID.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">TimeOut <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The timeout of the device, in seconds. Value is 0 if not-applicable to the probe.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">IMID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>INDEX<br /><b>Description: </b><br />Identifier of the device in the IMID format.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Type</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />One of { none, other, snmp, tcp, udp, icmp, cmd, bigbro, ntsvcs }. These values have been updated in 5.0 to match the values used by the database in the probekind field of the devices table.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">ProbeXML</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>SENSITIVE<br /><b>Description: </b><br />XML dataset DTD, type='probe'.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SNMPVersionInt</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />1, 2, 3 - SNMP versions. 0 for non-SNMP.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SysServices</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />16-bits integer.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">EntSerialNum</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />SnmpAdminString (entPhysicalSerialNum of chassis).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">EntMfgName</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />SnmpAdminString (entPhysicalMfgName of chassis).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">EntModelName</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />SnmpAdminString (entPhysicalModelName of chassis).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DataRetentionPolicy</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Data retention policy for IM Database<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">CustomerNameReference</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Customer-supplied device name reference, for linking to an external database.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">EnterpriseID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The value of sysEnterpriseID.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DeviceKind</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />User-specified device type.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">SysUpTime</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />System uptime.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">LastModified</td>
+                <td class="fielddesc"><b>Type: </b>TIMESTAMP<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Timestamp of last modification to this device.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Parent</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Device ID of the parent probe group; this device's id if this device is a probe group; 0 if the device is not part of a probe group.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Acknowledge <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The acknowledgement state of the device; one of { 'None', 'Basic', 'Maintenance' }.  The AckMessage field must also be set to import this field.  Indefinite maintenance will be set if AckExpiration is missing and state is set to 'Maintenance'.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">AckMessage <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The message associated with the acknowledge state. If Acknowledge is not set and an AckMessage is supplied, Acknowledge will be set to 'Basic'. <br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">AckExpiration <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The absolute time when the timed acknowledgement expires, if any.  The AckMessage field must also be set to import this field. Acknowledge will be set to 'Maintenance' if not supplied.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">AckTimer</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The time in seconds remaining until the timed acknowledgement expires, if any.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">VertexId</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The Vertex Id of the vertex associated with the device. Matches the VertexId of the corresponding vertex in the vertices table.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Layer2</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if layer2 mapping is enabled for this device.<br /></td>
+            </tr>
+        </table>
+    </body>
+</html>

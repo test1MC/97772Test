@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="6" MadCap:lastHeight="4138" MadCap:lastWidth="586" MadCap:fileTags="status_tags.Under Review">
+    <head><title>Using Auto-discover</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Discovery Status bar;Windows;Specifying" />
+            <MadCap:keyword term="Auto-Discover" />
+            <MadCap:keyword term="Using Auto-discover" />Using Auto-Discover</h1>
+        <p>You can use Auto-Discover to create a new map. If your network contains Layer 2-enabled switches, you can also use Layer 2 information to increase the accuracy of a map's representation of your network topology. For more information, see <a href="../07-MonitoringNetwork/MappingWithLayer2.htm">Mapping With Layer 2<MadCap:xref href="../07-MonitoringNetwork/MappingWithLayer2.htm"> (Pg 1)</MadCap:xref></a>.</p>
+        <p>For existing maps, you will need to use the <a href="../07-MonitoringNetwork/MappingWithLayer2.htm#existing">manual technique<MadCap:xref href="../07-MonitoringNetwork/MappingWithLayer2.htm#existing"> (Pg 1)</MadCap:xref></a> for converting the map. For new maps you create with Auto-Discovery, use the <a href="../07-MonitoringNetwork/MappingWithLayer2.htm#new">automatic technique<MadCap:xref href="../07-MonitoringNetwork/MappingWithLayer2.htm#new"> (Pg 1)</MadCap:xref></a>.</p>
+        <p class="floatright">
+            <img src="../Resources/Images/Dlg-NewMapConstructor.png" />
+            <br />
+            <br />
+        </p>
+        <p><b style="font-weight: bold;"><MadCap:keyword term="Create" />To Auto-Discover to create 
+ an initial network map:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="File Menu" />From the File menu, choose <b><MadCap:keyword term="New" />New...</b><MadCap:keyword term="New Map Constructor window" /> The New Map Con-structor window 
+	appears. </li>
+            <li>Enter a map name and click <b style="font-style: italic;">Next</b>.</li>
+        </ol>
+        <p class="clearboth">&#160;</p>
+        <p class="floatright">
+            <img src="../Resources/Images/Dlg-Autodiscovery.png" />
+        </p>
+        <ol start="3">
+            <li>Click to choose <b style="font-style: italic;">Auto-discovery</b>, then click             <b style="font-style: italic;">Create</b><MadCap:keyword term="Automatic Device Discovery dialog" />. The Automatic Device Discovery window appears, as shown 
+	below.</li>
+        </ol>
+        <p class="clearboth">&#160;</p>
+        <p class="floatright">
+            <img src="../Resources/Images/dlg-Autodiscovery-610.png" />
+        </p>
+        <ol start="3" MadCap:continue="true">
+            <li>
+                <MadCap:annotation MadCap:createDate="2016-06-06T10:47:16.9181321-04:00" MadCap:creator="BobM" MadCap:initials="BM" MadCap:comment="Placeholder screenshot - 19844" MadCap:editor="BobM" MadCap:editDate="2016-06-07T10:25:11.6241211-04:00">In the <b style="font-style: italic;">Enter a starting host name, or IP address</b> box, 
+                enter the host name or IP address </MadCap:annotation>you want to use as the starting point for 
+				auto-discovery.<br />A name is suggested for you. It is the DNS name or IP address of a router, 
+	or if there's no router, the computer InterMapper is running on. Use the default 
+				value, or enter any of the following:<MadCap:keyword term="IP" /><MadCap:keyword term="Stop:Auto-discovery" /><MadCap:keyword term="SNMP-speaking:address" /><MadCap:keyword term="Auto-discovery" /> <MadCap:keyword term="DNS" /><MadCap:keyword term="SNMP:If" /><ul><li>A DNS name</li><li>An IP address (if you want to create a map of another part of a network.) 
+		<br /><MadCap:keyword term="SNMP" /><MadCap:keyword term="Specifying:SNMP" /><MadCap:keyword term="Interconnections" /><MadCap:keyword term="Addresses:SNMP-speaking" /><MadCap:keyword term="SNMP-speaking" />If you enter the name or address of an SNMP-speaking router, InterMapper 
+		draws interconnections to other routers in the network more quickly.</li></ul></li>
+            <li>If you would like to discover a range of addresses, rather than all addresses, enter them in the <b style="font-style: italic;">Enter an IP&#160;address range to discover</b> box. Use hyphens, wildcards, and CIDR slash notation  to specify an IP address range. For more information, see <MadCap:xref href="Entering_an_IP_Address_Range.htm" class="text_and_pg">Entering an IP Address Range (Pg 1).</MadCap:xref></li>
+            <li>
+                <MadCap:keyword term="SNMP:specify" />If you have SNMP-speaking devices in your network, enter an <a href="../10-Troubleshooting/snmpfaq.html#rocs">SNMP 
+	Community<MadCap:xref href="../10-Troubleshooting/snmpfaq.html#rocs" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> string in the <b style="font-style: italic;">Specify an SNMP Community</b> box.</li>
+            <li>Select your <b style="font-style: italic;">Discovery Options</b>, as explained in <a href="Using_Auto-discover.htm#adwindow">The Auto-Discovery Window<MadCap:xref href="Using_Auto-discover.htm#adwindow" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> below.</li>
+            <li>Click the <b style="font-style: italic;">Filter</b>&#160;button to set a filter for the discovery.</li>
+            <li>Click <b style="font-style: italic;"><MadCap:keyword term="OK" />OK</b> to start the Auto-discovery process. A Discovery 
+	Status bar appears as shown. The status bar shows progress statistics for subnets, queued routers, and addresses remaining to be scanned:<br /><img src="../Resources/Images/DiscoveryStats.png" style="margin-left: 2em;" /></li>
+            <li>As the network is scanned, discovered devices appear in the current map (or in a list if you have cleared the <b style="font-style: italic;">Automatically Layout</b> check box.) When <i>InterMapper</i><MadCap:keyword term="Subnet" /> 
+	has found all the devices within the specified subnet, the Discovery Status 
+	bar disappears.</li>
+        </ol>
+        <ul>
+            <li>
+                <img src="../Resources/images/tool-iconview.PNG" style="border-style: none;float: left;vertical-align: middle;" border="0" />
+                <MadCap:keyword term="Map window" />
+                <MadCap:keyword term="Map View button" />Click 
+	 the Map View button near the upper left corner of the Map window to view 
+	 your network as a map, showing devices and networks as icons, with the interconnections 
+	 between them. </li>
+        </ul>
+        <p><b style="font-weight: bold;"><MadCap:keyword term="Stop" /><MadCap:keyword term="Auto-Discover:stop" />To stop the Auto-discover process:</b>
+        </p>
+        <ul>
+            <li>Click the <b style="font-style: italic;">Cancel</b> button. The discovery process is stopped, 
+	and no new devices or networks are added. All devices added before you stopped 
+	the process remain in the list.</li>
+        </ul>
+        <h2><a name="adwindow"></a>
+            <MadCap:keyword term="Automatic Device Discovery window" />The Automatic Device Discovery Window</h2>
+        <p>You control the starting point, the <a href="../10-Troubleshooting/snmpfaq.html#rocs">SNMP 
+ Community string<MadCap:xref href="../10-Troubleshooting/snmpfaq.html#rocs" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, the breadth of the network search, and the kinds 
+ of devices that are automatically added to the map using this window. </p>
+        <p class="floatright">
+            <img src="../Resources/Images/dlg-Autodiscovery-610.png" />
+        </p>
+        <ul style="list-style: disc;" type="disc">
+            <li><b style="font-weight: bold;">Starting host name 
+ </b>-             <span style="font-weight: normal;">The <a href="../10-Troubleshooting/dns.html">DNS 
+ name<MadCap:xref href="../10-Troubleshooting/dns.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>,             <a href="../10-Troubleshooting/ipaddressing.html">IP address<MadCap:xref href="../10-Troubleshooting/ipaddressing.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, 
+ or             <MadCap:keyword term="WINS" /><a href="../10-Troubleshooting/About_WINS_Names.htm">WINS name<MadCap:xref href="../10-Troubleshooting/About_WINS_Names.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="Autodiscovery" /> 
+ of a device to use as a starting point for the auto-discovery.</span></li>
+            <li><b>IP Address Range</b> - Use hyphens, wildcards, and CIDR slash notation to specify an IP address range. For more information, see <MadCap:xref href="Entering_an_IP_Address_Range.htm" class="text_and_pg">Entering an IP Address Range (Pg 1).</MadCap:xref></li>
+            <li>Specify an SNMP community -The SNMP 
+	 Read-only community string to be used to interrogate all devices. (InterMapper 
+	 attempts to read SNMP information using the specified community string. It is set to 'public' by default.)</li>
+            <li><b style="font-weight: bold;">Stay within <i>NN </i>hops 
+ of starting device</b> -             <span style="font-weight: normal;">Stops autodiscovery 
+ after InterMapper has searched the specified number of hops from the starting 
+ device.</span></li>
+            <li><b style="font-weight: bold;">Scan for devices on 
+ all networks</b> -             <span style="font-weight: normal;">Specify which kinds 
+ of devices should be automatically added to the map. Click to check this 
+ box, or click  <b><i style="font-weight: bold;">Edit Filters...</i></b><MadCap:keyword term="Network Scanning window" /> 
+ to open the Network Scanning window.</span></li>
+            <li>Click <b style="font-style: italic;">Automatically layout </b>to let InterMapper layout the map automatically.</li>
+            <li>Click <b style="font-style: italic;">Start Discovery</b> to initiate a scan of the specified host.</li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Network Filter Dialog" />The Network Filter Dialog</h2>
+        <p class="floatright">
+            <img src="../Resources/Images/Autodiscover-EditFilters.png" />
+        </p>
+        <p>
+            <MadCap:keyword term="Add Device" />Check the filters you want to use to add devices to the map:</p>
+        <ul>
+            <li><b style="font-weight: bold;">Active</b> - InterMapper 
+ performs a complete IP address scan for each network. A device is added 
+ for each IP address that responds. </li>
+            <li><b>Named</b> - Each IP address in the subnet is looked up in the DNS. 
+	 If a corresponding name is present, the device is added to the map. </li>
+            <li><b style="font-weight: bold;">SNMP</b>
+                <MadCap:keyword term="SNMP GetRequest" /> - InterMapper 
+ sends an SNMP GetRequest to each address in the range. Any device that 
+ responds is added to the map and uses the SNMP Basic Traffic probe. If the device does not respond to SNMP, the probe is set to Ping/Echo.</li>
+            <li><b style="font-weight: bold;">HTTP</b> - If the device responds to an HTTP request, an HTTP probe is added to the device (along with SNMP Basic Traffic or Ping/Echo probe), and the device becomes a <a href="probegroups.htm">probe group</a>.</li>
+        </ul>
+        <h2 class="pagebreakbefore">
+            <MadCap:keyword term="Autodiscovery:During" />What Happens During Autodiscovery?</h2>
+        <p>
+            <MadCap:keyword term="Subnets" />During autodiscovery, InterMapper attempts to discover all devices on a network, based on the IP address and SNMP string provided. It does this by querying the router and ARP tables. Then, using any scan filters specified in the Network Scanning window, it scans all attached subnets, mapping all devices it finds, 
+	until it reaches the hop count specified in the <b style="font-style: italic;"><MadCap:keyword term="Discovery Options" />Discovery Options</b>&#160;section of the Automatic Device Discovery window. It then performs the following processes concurrently and iteratively 
+	until the specified limits are reached:</p>
+        <ul>
+            <li>If InterMapper discovers an SNMP-speaking router, 
+ it attempts to discover what interfaces the router has, and what other 
+ routers are connected to those interfaces. InterMapper then queries each 
+ of the discovered routers for their connected networks, and begins autodiscovery 
+ on each network.</li>
+            <li>For each network or subnet discovered, InterMapper 
+ pings every address on that subnet to find more active or named devices.</li>
+            <li>When InterMapper finds a device, it uses several 
+ techniques to characterize it. For example, it sends SNMP queries (with 
+ the specified SNMP community strings) to determine 
+ what kind of device is present.</li>
+        </ul>
+        <blockquote>
+            <p><b style="font-weight: bold;">Warning:</b> In autodiscovery mode, InterMapper 
+ may ping or query every device address on a subnet. If your network has 
+ an intrusion detection system, autodiscovery may trigger your intrusion 
+ alarms. Be sure to check with the network manager before using this feature. 
+ </p>
+            <p><span style="font-weight: bold;">Note: </span>
+                <MadCap:keyword term="Addresses" />
+                <MadCap:keyword term="Class" />It may take a long time 
+ to do autodiscovery on a large subnet (a Class A or B subnet). InterMapper 
+ limits its autodiscovery queries to two per second so that it doesn't 
+ overload any networks and thus it takes about 32,000 seconds (a shade 
+ under 10 hours) to scan that class B subnet (with 65,535 addresses) completely. 
+ </p>
+            <p>To create your maps more quickly, you can type or paste one or more 
+ host <a href="../10-Troubleshooting/dns.html">DNS names<MadCap:xref href="../10-Troubleshooting/dns.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>,             <a href="../10-Troubleshooting/ipaddressing.html">IP 
+ addresses<MadCap:xref href="../10-Troubleshooting/ipaddressing.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>,<MadCap:annotation MadCap:createDate="2016-05-26T11:51:17.3677330-04:00" MadCap:creator="BobM" MadCap:initials="BM" MadCap:comment="Need to check the dialog to make sure it is named correctly, and that this statement is actually true." MadCap:editor="BobM" MadCap:editDate="2016-05-26T11:51:53.3151188-04:00"> IP address ranges,</MadCap:annotation> or             <a href="../10-Troubleshooting/About_WINS_Names.htm">WINS 
+ names<MadCap:xref href="../10-Troubleshooting/About_WINS_Names.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> into the Add Devices... window (Insert menu). (WINS names must 
+ be preceded by "\\".) InterMapper immediately adds them to the 
+ map and connects them to the proper network.</p>
+            <p>You can also import a list of devices from a text file. For more information, 
+	 see <a href="04-01-Import-Export/Importing_Data_Into_Maps.htm">Importing 
+	 Data Into Maps<MadCap:xref href="04-01-Import-Export/Importing_Data_Into_Maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> .</p>
+        </blockquote>
+        <p class="pagebreakbefore">Below is a typical map after autodiscovery 
+ has finished.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/images/autodiscovery.png" style="border-style: none;border-style: none;" border="0" />
+            <br />
+            <MadCap:keyword term="Autodiscovered" /><i>Autodiscovered devices and networks. 
+ Routers </i>
+            <br style="font-style: italic;" /><i>are interconnected by links to networks. </i>
+        </p>
+    </body>
+</html>

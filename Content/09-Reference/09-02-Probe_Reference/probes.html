@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:check_list="Ran Smart Index" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="4386" MadCap:lastWidth="636" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Troubleshooting Probes</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2"><a name="top"></a>
+            <MadCap:keyword term="Transmit bytes/second" />
+            <MadCap:keyword term="Troubleshooting" />
+            <MadCap:keyword term="Troubleshooting:Network" />
+            <MadCap:keyword term="Network" />
+            <MadCap:keyword term="Network:Troubleshooting" />
+            <MadCap:keyword term="Server Probes" />Troubleshooting Network and Server Probes</h1>
+        <ul>
+            <li><a href="#Q23">How do I change the protocol that 
+ a device is being polled with?<MadCap:xref href="#Q23" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li>
+                <MadCap:keyword term="MIB" />
+                <MadCap:keyword term="Running:InterMapper" /><a href="#polledvars">What MIB variables does InterMapper 
+ poll?<MadCap:xref href="#polledvars" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Byte/Second:compute" />
+                <MadCap:keyword term="Compute" /><a href="#traffic">How Does InterMapper Compute Traffic 
+ Statistics?<MadCap:xref href="#traffic" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Link" />
+                <MadCap:keyword term="Utilization" />
+                <MadCap:keyword term="Interface:Utilization" /><a href="#util">How Does InterMapper Compute Utilization 
+ for a Link?<MadCap:xref href="#util" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li><a href="#errors">How Does InterMapper Compute Errors 
+ for a Link?<MadCap:xref href="#errors" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li>
+                <MadCap:keyword term="OSX" />
+                <MadCap:keyword term="DHCP" />
+                <MadCap:keyword term="Get" />
+                <MadCap:keyword term="Get:DHCP" /><a href="#dhcp">Why can't I get a DHCP probe on OSX 
+ to work?<MadCap:xref href="#dhcp" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li>
+                <MadCap:keyword term="OK" /><a href="#Q31">If I look at the traffic on a link, 
+ wait five seconds, and look again, the traffic rates are the same. Shouldn't 
+ these numbers be updated?<MadCap:xref href="#Q31" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li><a href="#Q36">How does InterMapper compute byte 
+ and packet rates?<MadCap:xref href="#Q36" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+            <li><a href="#Q37">How does InterMapper compute time 
+ intervals?<MadCap:xref href="#Q37" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+        </ul>
+        <p><a name="Q23"></a>
+        </p>
+        <h2>How do I change the protocol that InterMapper polls with?</h2>
+        <ol>
+            <li>Click to select the device you want to change.</li>
+            <li>
+                <MadCap:keyword term="Monitor menu" />From the Monitor menu, choose <b><MadCap:keyword term="Info window" />Info Window</b></li>
+            <li>
+                <MadCap:keyword term="Probe Type" />Choose a new probe type from the <b><i>Probe Type</i></b> 
+ dropdown menu. If parameters are required, a parameters window appears for 
+ the selected probe type.</li>
+            <li>Enter parameters if necessary, and click <b><i>OK</i></b>. 
+ The device is polled using the new probe type.</li>
+        </ol>
+        <p>
+            <MadCap:keyword term="Received Discards/Minute:see" />
+            <MadCap:keyword term="Device Status window" />For more information, see <a href="../../07-MonitoringNetwork/statuswindow.html">Status Windows</a><MadCap:xref href="../../07-MonitoringNetwork/statuswindow.html"></MadCap:xref>.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="polledvars"></a>
+        </p>
+        <h2>What MIB variables does InterMapper poll?</h2>
+        <p>Anytime InterMapper displays traffic for a link, (using the <a href="ProbeReference/Basic.htm#Basic_SNMP_Traffic">SNMP Traffic 
+ Probe<MadCap:xref href="ProbeReference/Basic.htm#Basic_SNMP_Traffic" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>, for example) it polls the following variables:</p>
+        <h3>SNMPv1&#160;</h3>
+        <p>When you set the <b style="font-style: italic;">SNMP&#160;Version</b> to SNMPv1, the following variables are queried:</p>
+        <table>
+            <tr>
+                <th>MIB Variable</th>
+                <th>
+                    <MadCap:keyword term="OID" />OID</th>
+                <th>SNMP<br />Version</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInOctets" />ifInOctets</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.10</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInUcastPkts" />ifInUcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.11</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInNUcastPkts" />ifInNUcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.12</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutOctets" />ifOutOctets</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.16</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutUcastPkts" />ifOutUcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.17</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutNUcastPkts" />ifOutNUcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.18</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+        </table>
+        <p>InterMapper examines these two variables to decide whether an interface is 
+ up or down:</p>
+        <table>
+            <tr>
+                <th>MIB Variable</th>
+                <th>OID</th>
+                <th>SNMP<br />Version</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfAdminStatus" />ifAdminStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.7</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOperStatus" />ifOperStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.8</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+        </table>
+        <p class="pagebreakbefore">InterMapper examines these variables to detect error conditions:</p>
+        <table>
+            <tr>
+                <th>MIB Variable</th>
+                <th>OID</th>
+                <th>SNMP<br />Version</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInDiscards" />ifInDiscards</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.13</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInErrors" />ifInErrors</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.14</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutDiscards" />ifOutDiscards</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.19</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutErrors" />ifOutErrors</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.20</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+        </table>
+        <h3>SNMPv2c</h3>
+        <p>When you set the <b style="font-style: italic;">SNMP&#160;Version</b> to SNMPv2c, the following variables are queried:</p>
+        <p>This variable set is used on an initial scan of the device.</p>
+        <table>
+            <tr>
+                <th>MIB Variable</th>
+                <th>OID</th>
+                <th>SNMP<br />Version</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfDescr" />ifDescr</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.2</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfType" />ifType</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.3</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfMTU" />ifMTU</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.4</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfSpeed" />ifSpeed</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.5</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfPhysAddress" />ifPhysAddress</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.6</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfAdminStatus" />ifAdminStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.7</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOperStatus" />ifOperStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.8</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfName" />ifName</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.1</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfHighSpeed" />ifHighSpeed</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.15</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfPromiscuousMode" />ifPromiscuousMode</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.16</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfConnectorPresent" />ifConnectorPresent</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.17</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfAlias" />ifAlias</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.18</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+        </table>
+        <p>This variable set is polled to display statistics for the device's operation.</p>
+        <table>
+            <tr>
+                <th>MIB Variable</th>
+                <th>OID</th>
+                <th>SNMP<br />Version</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;">ifAdminStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.7</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;">ifOperStatus</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.8</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfLastChange" />ifLastChange</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.9</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInUcastPkts" /><MadCap:keyword term="Pkts" /><MadCap:keyword term="NUcastPkts" />ifInUcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.11</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInErrors" />ifInErrors</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.14</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInDiscards" />ifInDiscards</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.13</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutUcastPkts" />ifOutUcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.17</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutErrors" />ifOutErrors</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.20</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutDiscards" />ifOutDiscards</b>
+                </td>
+                <td>1.3.6.1.2.1.2.2.1.19</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="SysUpTime" />sysUpTime</b>
+                </td>
+                <td>1.3.6.1.2.1.1.3</td>
+                <td style="text-align: right;" align="right">SNMPv1</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="Octets" /><MadCap:keyword term="IfHCInOctets" />ifHCInOctets</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.6</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfHCOutOctets" />ifHCOutOctets</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.10</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInMulticastPkts" /><MadCap:keyword term="MulticastPkts" />ifInMulticastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.2</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfInBroadcastPkts" />ifInBroadcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.3</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutMulticastPkts" />ifOutMulticastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.4</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;" align="right"><b style="font-weight: bold;"><MadCap:keyword term="IfOutBroadcastPkts" />ifOutBroadcastPkts</b>
+                </td>
+                <td>1.3.6.1.2.1.31.1.1.1.5</td>
+                <td style="text-align: right;" align="right">SNMPv2c</td>
+            </tr>
+        </table>
+        <p><b style="font-weight: bold;">Note:</b>
+            <MadCap:keyword term="SNMPv1" />
+            <MadCap:keyword term="BroadcastPkts MIB" />
+            <MadCap:keyword term="MIB-II 32" />
+            <MadCap:keyword term="HCOctets" /> In the SNMPv2c , the input and 
+ output MulticastPkts and BroadcastPkts MIB variables replace NUcastPkts variables 
+ of the SNMPv1 probe, which are deprecated. HCOctets replace the regular Octets 
+ counters. Pkts and errors still use the MIB-II 32 bit counters.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="traffic"></a>How Does InterMapper Compute Traffic Statistics?</h2>
+        <p>InterMapper uses <span class="code"><MadCap:keyword term="IfInOctets" />ifInOctets</span> and <span class="code"><MadCap:keyword term="IfOutOctets" />ifOutOctets</span><MadCap:keyword term="Bytes/second" /> to compute the Receive and Transmit 
+ bytes/second values, respectively. </p>
+        <p>
+            <MadCap:keyword term="Transmit packets/second" />The Receive and Transmit packets/second numbers are computed using the 
+ sum of the (<span class="code"><MadCap:keyword term="IfInUcastPkts" />ifInUcastPkts</span> + <span class="code"><MadCap:keyword term="IfInNUcastPkts" />ifInNUcastPkts</span>) and (<span class="code"><MadCap:keyword term="IfOutUcastPkts" />ifOutUcastPkts</span> 
+ +           <span class="code"><MadCap:keyword term="IfOutNUcastPkts" />ifOutNUcastPkts</span>) respectively.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="util"></a><a name="xy"></a>
+        </p>
+        <h2>How Does InterMapper Compute Utilization for a Link?</h2>
+        <p>
+            <MadCap:keyword term="SNMP MIB" />InterMapper queries a device at specified intervals, and requests a 
+ number of SNMP MIB variables. To compute utilization, InterMapper does 
+ the following: </p>
+        <ol>
+            <li>It queries <span class="code">ifInOctets</span> 
+ (and <span class="code">ifOutOctets</span>) and the <span class="code"><MadCap:keyword term="SysUpTime" />sysUpTime</span> and <span class="code"><MadCap:keyword term="IfSpeed" />ifSpeed</span> 
+ variables. </li>
+            <li>It subtracts the octet counts from successive samples, 
+ and divides by the difference in the <span class="code">sysUpTime</span><MadCap:keyword term="Byte/Second" /><MadCap:keyword term="Compute:byte/second" /> 
+ samples to compute a byte/second rate. </li>
+            <li>It divides the result by the <span class="code">ifSpeed</span><MadCap:keyword term="Capacity/bandwidth" /><MadCap:keyword term="Percent" /> 
+ variable to compute a percentage of the link's capacity/bandwidth. (If 
+ the user has overridden the <span class="code">ifSpeed</span> variable, 
+ InterMapper uses the user-entered value.)</li>
+            <li>
+                <MadCap:keyword term="Baseband" />
+                <MadCap:keyword term="Ethernet" />If a network is using a shared baseband link (such 
+ as Ethernet, wireless, etc.) InterMapper compares the sum of the transmitted 
+ and received bytes/second against the link speed to get the utilization. 
+ <br /><MadCap:keyword term="ATM" />If it's a full-duplex link (such as a frame relay, T-1 or T3, ATM, 
+ etc.) then InterMapper compares the higher of the transmitted or received 
+ data rate against the link speed.</li>
+        </ol>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="errors"></a>
+        </p>
+        <h2>How Does InterMapper Compute Errors for a Link?</h2>
+        <p><b style="font-weight: bold;">Q:</b> A customer writes, </p>
+        <blockquote>
+            <p>
+                <MadCap:keyword term="Percent Err" />
+                <MadCap:keyword term="Received Discards/Minute" />
+                <MadCap:keyword term="ATM:ATM AAL5" />
+                <MadCap:keyword term="Utilization:Interface" />
+                <MadCap:keyword term="Interface" />
+                <MadCap:keyword term="Graphing:Percent Err" />"I see the Received Discards/Minute and Percent Err values for 
+ an ATM AAL5 interface are non-zero and I would like to know which variables 
+ were used, and what calculation was used to arrive at these numbers.</p>
+            <p>
+                <MadCap:keyword term="Showing" />
+                <MadCap:keyword term="Percent Err:graphing" />
+                <MadCap:keyword term="Cisco" />
+                <MadCap:keyword term="Graphing" />"We are also graphing the Percent Err: value. This figure is showing 
+ errors and my Cisco support folks wanted to know which MIB variables go 
+ into the calculation of this percentage and how they are combined to create 
+ this number."</p>
+        </blockquote>
+        <p><b style="font-weight: bold;">A:</b> The Percent Err values were computed 
+ as follows:</p>
+        <p><i style="font-style: italic;"><MadCap:keyword term="PERCENT ERROR" />The one-way percent errors under the 
+ Receive section </i>are computed by totalling <span class="code"><MadCap:keyword term="IfInDiscards" /><MadCap:keyword term="IfInErrors" />{ ifInUcastPkts, ifInNUcastPkts, ifInErrors, ifInDiscards }</span> as follows:</p><pre class="code"><MadCap:keyword term="TotalErrors" /><MadCap:keyword term="TotalPkts" />PERCENT ERROR = totalErrors / totalPkts;
+        </pre>
+        <p>where:</p><pre class="code"><MadCap:keyword term="DDis" /><MadCap:keyword term="DErrs" />totalErrors = dErrs + dDis and<br /><MadCap:keyword term="DNUcast" /><MadCap:keyword term="DUcast" />totalPkts = dUcast + dNUcast + totalErrors
+        </pre>
+        <p>and:</p><pre class="code"><MadCap:keyword term="IfPrevStats.inUcastPkts" /><MadCap:keyword term="IfCurrStats.inUcastPkts" />dUcast = ifCurrStats.inUcastPkts - ifPrevStats.inUcastPkts<br /><MadCap:keyword term="IfPrevStats.inNUcastPkts" /><MadCap:keyword term="IfCurrStats.inNUcastPkts" />dNUcast = ifCurrStats.inNUcastPkts - ifPrevStats.inNUcastPkts<br /><MadCap:keyword term="IfCurrStats.inErrors" /><MadCap:keyword term="IfPrevStats.inErrors" />dErrs = ifCurrStats.inErrors - ifPrevStats.inErrors<br /><MadCap:keyword term="IfCurrStats.inDiscards" /><MadCap:keyword term="IfPrevStats.inDiscards" />dDis = ifCurrStats.inDiscards - ifPrevStats.inDiscards
+        </pre>
+        <p><b style="font-weight: bold;">Note:</b> Either of '<span class="code">dErrs</span>' 
+ or '<span class="code">dDis</span><MadCap:keyword term="Ignore Interface Discards" /><MadCap:keyword term="IgnoreInterface Errors" />' may be forced to zero if you 
+ have "IgnoreInterface Errors" or "Ignore Interface Discards" 
+ checked.<MadCap:keyword term="IfOutErrors" /><MadCap:keyword term="IfOutDiscards" /></p>
+        <p><i style="font-style: italic;">The one-way percent errors for outgoing 
+ traffic </i>are similarly computed from the <br /><span class="code">{ ifOutUcastPkts, ifOutNUcastPkts, ifOutErrors, ifOutDiscards }</span> <br />statistics.</p>
+        <p><i>The two-way Percent error number </i>(just below Utilization on the Interface 
+ information menu) is the probability given both one-way error percentages 
+ that a packet will be lost making the round-trip across the link and back. 
+ If the probability of successful transmission is T and the probability of 
+ successful receipt is R (and assuming the act of transmission and receive 
+ are relatively independent), then the probability of a successful round-trip 
+ is T * R. The probability of error is (1 - T*R).</p>
+        <p>T and R are computed from the complement of the one-way percent errors 
+ above.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="dhcp"></a>Why can't I get a DHCP probe on OSX to work?</h2>
+        <p>
+            <MadCap:keyword term="Mac OS" />
+            <MadCap:keyword term="Running" />
+            <MadCap:keyword term="PPP" />When running InterMapper on Mac OS X, you need to disable DHCP and PPP 
+ and assign a manually assigned static address to the computer running 
+ InterMapper. </p>
+        <p><b style="font-weight: bold;">To disable DHCP and PPP for all interfaces:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Network:Open" />
+                <MadCap:keyword term="System Preferences" />Open the Network settings in the System Preferences... 
+ application.</li>
+            <li>
+                <MadCap:keyword term="Popup" />Choose "Network Port Configurations" from 
+ the Show: menu. </li>
+            <li>Disable any ports that have been configured to use 
+ DHCP or PPP, even if nothing is plugged into them and they aren't currently 
+ being used. </li>
+            <li>
+                <MadCap:keyword term="UDP" />
+                <MadCap:keyword term="Terminal application" />
+                <MadCap:keyword term="Configd" />If DHCP or PPP is enabled on any interface of your 
+ machine, the process "configd" will open UDP port 68, and prevent 
+ InterMapper from using it. You can use the Terminal application to test 
+ if configd has port 68 open. Type '<span class="code"><MadCap:keyword term="Grep bootpc" /><MadCap:keyword term="sudo lsof" />sudo lsof  -i | grep bootpc</span>' and press return. If configd is listed, you still 
+ have DHCP running. </li>
+            <li>
+                <MadCap:keyword term="DHCP:DHCP-Discover" />
+                <MadCap:keyword term="DHCP:DHCP-Inform" />
+                <MadCap:keyword term="DHCP:DHCP Message Type" />
+                <MadCap:keyword term="DHCP:DHCP/Bootp" />If InterMapper still marks the device as down after 
+ making these changes, you may need to use a DHCP Message Type of "DHCP-Discover" 
+ instead of the default "DHCP-Inform". This setting can be toggled 
+ in the DHCP/Bootp probe parameters dialog. </li>
+        </ol>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="Q31"></a>If I look at the traffic on a link, wait five seconds, and look again, 
+ the traffic rates are the same. Shouldn't these numbers be updated?</h2>
+        <p>The traffic statistics are samples: the numbers do not change until 
+ after InterMapper probes the device again.</p>
+        <p><a name="Q36"></a>
+        </p>
+        <h2>How does InterMapper compute byte and packet rates?</h2>
+        <p>SNMP only supplies counts of bytes, packets, or errors, etc. that have 
+ passed through or occurred in an interface. These counts increment "forever" 
+ (or until the counter rolls over to zero like a car's odometer).</p>
+        <p>During each poll, InterMapper collects the total traffic and computes 
+ the difference with the total traffic from the previous poll. It then 
+ divides by the amount of time that has passed to compute the rate (per 
+ second or per minute).</p>
+        <p><b style="font-weight: bold;">Technical note:</b> Even when a counter 
+ rolls over (e.g., from 999 to 000), InterMapper will compute the traffic 
+ rates accurately. Let's say the two successive samples are 995 and 003. 
+ InterMapper subtracts the previous count (995) from the new count (003), 
+ assumes that the "003" is actually "1003", and gets 
+ the proper difference of 8. Although the counters in the SNMP MIB variable 
+ are binary numbers, the same arithmetic principles hold. Thus InterMapper 
+ can compute these rates accurately.</p>
+        <p><a name="Q37"></a>
+        </p>
+        <h2>How does InterMapper compute time intervals?</h2>
+        <p>To compute the elapsed time accurately, InterMapper uses the <span class="code">sysUpTime</span><MadCap:keyword term="Timestamp" /> variable of the device as a timestamp 
+ to calculate the time that has elapsed between subsequent two polls. The 
+ time elapsed should roughly correspond to the poll interval; however, 
+ it is possible for polls to be delayed occasionally so using the change 
+ in <span class="code">sysUpTime</span> to measure the elapsed 
+ time is more accurate.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+    </body>
+</html>

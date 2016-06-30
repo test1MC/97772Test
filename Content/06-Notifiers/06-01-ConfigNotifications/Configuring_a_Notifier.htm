@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="5" MadCap:lastHeight="1974" MadCap:lastWidth="607" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Configuring a Notifier</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2" MadCap:conditions="Primary.print">Configuring Notifiers</h1>
+        <h1 class="L2" MadCap:conditions="Primary.online">Configuring A Notifier</h1>
+        <p>
+            <MadCap:keyword term="Weekend Pager;Tests;Showing" />
+            <MadCap:keyword term="Remove:Notifier" />
+            <MadCap:keyword term="Configuring" />
+            <MadCap:keyword term="Configuring:Notifier" />
+            <MadCap:keyword term="Notifier" />
+            <MadCap:keyword term="Notifier:Configuring" />A notifier has four attributes: </p>
+        <ul>
+            <li>A <i><MadCap:keyword term="Name" />notifier name</i>.</li>
+            <li>The <i>type </i>of notification to send</li>
+            <li>A <i>schedule</i> of hours during which the notification 
+	 should be sent</li>
+            <li>A set of <i>parameters</i><MadCap:keyword term="E-mail" /> determined by the notification type. This is 
+	 the information required to allow the notification to be sent. For example, 
+	 an E-mail notifier requires a valid E-mail address.</li>
+        </ul>
+        <p><b style="font-weight: bold;"><a name="configurenotifier"></a>To configure 
+	a notifier:</b>
+        </p>
+        <ol>
+            <li>Enter a notifier <i>name</i> in the            <b style="font-style: italic;">Name</b> box.</li>
+            <li>In the <b style="font-style: italic;"><MadCap:keyword term="Notifier Type" />Notifier Type</b> dropdown menu, choose a 
+	 notifier type.</li>
+            <li>
+                <MadCap:keyword term="Configuration" />In the Configuration panel, enter configuration information 
+	 for the selected notifier type. </li>
+            <li>In the <b style="font-style: italic;"><MadCap:keyword term="Scheduled Hours" />Scheduled Hours </b>panel, choose the hours 
+	 during which the notifier is active.</li>
+            <li>Click <b style="font-style: italic;"><MadCap:keyword term="Test Notifier" />Test Notifier Configuration</b> to send a test notification.<br /><b>Note:</b> <b style="font-style: italic;">The Test Notifier Configuration</b> button checks to make sure that the notifier is configured correctly and that a notification is placed in the queue. The notification can fail to be delivered, even when the notifier is configured correctly.</li>
+            <li>
+                <MadCap:keyword term="Showing:Configure Notifier window" />
+                <MadCap:keyword term="Configure Notifier" />
+                <MadCap:keyword term="Configure Notifier:Configure Notifier window" />Close the Configure Notifier window.</li>
+        </ol>
+        <p style="font-style: italic;text-align: center;">
+            <img src="../../Resources/Images/window-ConfigNotifier-email-591.png" style="width: 579px;height: 323px;" />
+            <br />The Configure Notifier window.</p>
+        <ul>
+            <li>Use the left side of the window to choose the <i>type</i> 
+	  of notification, and to set the notifier parameters. </li>
+            <li>Use the right side of the window edit the <i>schedule</i> 
+	  during which the notification can be sent.</li>
+        </ul>
+        <p>When you select the type of notifier from the <b style="font-style: italic;">Notifier Type</b> 
+	dropdown menu, the left pane changes to show the parameters required for the 
+	selected notifier type. </p>
+        <h3><a name="removenotifier"></a>
+            <MadCap:keyword term="Notifier:Removing" />Removing a Notifier</h3>
+        <p>
+            <MadCap:keyword term="Remove" />
+            <MadCap:keyword term="Notifier List" />
+            <MadCap:keyword term="Notifier List window" />You can remove a notifier from the Notifier List window.</p>
+        <p><b style="font-weight: bold;">To remove a notifier:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Edit menu" />From the Edit menu, choose <b style="font-style: italic;"><MadCap:keyword term="Server Settings" />Server Settings...</b><MadCap:keyword term="Server Settings window" /> 
+	  The Server Settings window appears, with a list of settings in the left 
+	 pane.</li>
+            <li>
+                <MadCap:keyword term="Server Configuration" />From the Server Configuration section of the settings list, choose 
+	  <b style="font-style: italic;">Notifier List</b>. The Notifier List window appears.</li>
+            <li>Click to select the notifier you want to remove.</li>
+            <li>Click <b style="font-style: italic;">Remove... </b>A confirmation dialog appears.</li>
+            <li>Click <b style="font-style: italic;">Yes</b>. The selected notifier disappears 
+	 from the Notifier List. </li>
+        </ol>
+        <h2>
+            <MadCap:keyword term="Configure Notifier:Configure Notifier Window Reference" />Configure Notifier Window Reference</h2>
+        <h3>Name</h3>
+        <p>Enter a name in the Name box. The name can be any can be any descriptive 
+	text string. </p>
+        <p><i style="font-style: italic;">Tip: </i>If the notifier is active only at 
+	certain times of the day or week, you may want to include a description of 
+	the time period as well. For example, you could assign names like "Weekend 
+	Pager" and "Second Shift Pager" to notifiers that had those 
+	time schedules.</p>
+        <h3>Notifier Type</h3>
+        <p>From the Configure Notifier window's <b style="font-style: italic;">Notifier Type</b> dropdown menu, 
+	choose a notifier type. For more information, see            <a href="../NotifierOverview.htm#notifiertypes">Notifier 
+	Types<MadCap:xref href="../NotifierOverview.htm#notifiertypes" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> at the top of this topic.</p>
+        <h3>Scheduled Hours</h3>
+        <p>Select a range of hours during which this notification should be sent. </p>
+        <ul>
+            <li>Active hours are shown in gray.</li>
+            <li>Inactive hours are shown in white.</li>
+        </ul>
+        <p><b style="font-weight: bold;">To set a range of hours:</b>
+        </p>
+        <ul>
+            <li>Click and drag across a range of hours.</li>
+            <li>Click and drag across all blocks to invert the selection.</li>
+        </ul>
+        <p><b style="font-weight: bold;">To add or remove hours from the schedule:</b>
+        </p>
+        <ul>
+            <li>Click an individual cell to make it active or inactive. 
+	</li>
+        </ul>
+        <p><b style="font-weight: bold;">To activate or deactivate all hours in the 
+	schedule:</b>
+        </p>
+        <ul>
+            <li>Double-click the <b style="font-style: italic;"><MadCap:keyword term="Active Hours" />Active Hours </b>legend to activate 
+	 all hours in the schedule.</li>
+            <li>Double-click the <b style="font-style: italic;"><MadCap:keyword term="Inactive Hours" />Inactive Hours</b> legend to 
+	 de-activate all hours in the schedule.</li>
+        </ul>
+        <p class="pagebreakbefore"><b>To edit the message sent with the notification:</b>
+        </p>
+        <ul>
+            <li>Click <b style="font-style: italic;"><MadCap:keyword term="Edit Message" />Edit Message...</b> The            <a href="../NotifierOverview.htm">E-mail 
+	 Notification page<MadCap:xref href="../NotifierOverview.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> shows the editing interface.<br /><br /><b>Note:</b> You can also use InterMapper variables and Javascript to insert information dynamically into a notifier message or subject. For more information, see <a href="../../05-Arranging_Your_Map/Dynamic_Label_Text.htm">Dynamic Label &amp; Alert Text<MadCap:xref href="../../05-Arranging_Your_Map/Dynamic_Label_Text.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</li>
+        </ul>
+        <h3><a name="testnotifier"></a>Test Notifier</h3>
+        <ul>
+            <li>In the Configure Notifier window, click <b style="font-style: italic;">Test Notifier</b>. The notification is sent immediately, with the state defined as "Test."</li>
+        </ul>
+        <p>Once you have created notifiers,  you may attach them to all devices 
+	(the default notifier is used for all new devices) or to one or more devices.</p>
+    </body>
+</html>

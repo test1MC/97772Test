@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:lastBlockDepth="4" MadCap:lastHeight="4218" MadCap:lastWidth="901" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Dynamic Label and Alert Text</h1>
+        <p>When you edit a device label, notifier title, or notifier message, you can use a number of techniques to control the resulting text dynamically.</p>
+        <h2>Showing Parameter or Variable values in a Device Label</h2>
+        <p>When editing a device label, you can show probe parameters, probe variables, and device
+    export attributes in the label. </p>
+        <ul>
+            <li><b>Probe parameters</b> - any field in the selected probe's Set Probe pane, specified in the <a href="http://static.helpsystems.com/intermapper/help/devguide/index.html?#02-CustomProbes/parameters.html" target="_blank">&lt;parameters&gt; section</a> of the probe.</li>
+            <li><b>Probe variables</b> - variables defined in the probe. In SNMP probes, specified in the <a href="http://static.helpsystems.com/intermapper/help/devguide/index.html?#02-CustomProbes/snmp-device-variables.htm" target="_blank">&lt;snmp-device-variables&gt; section</a> of the probe.</li>
+            <li><b>Device attributes</b> - any <a href="../09-Reference/09-05-Advanced_Importing/device_attributes.htm">attribute of a device<MadCap:xref href="../09-Reference/09-05-Advanced_Importing/device_attributes.htm" class="RelLinkPageNumber"> (Pg 1)</MadCap:xref></a> exported using <a href="../04-Creating_Maps/04-01-Import-Export/Exporting_Data_From_Maps.htm">the <b style="font-style: italic;">Data File...</b> command <MadCap:xref href="../04-Creating_Maps/04-01-Import-Export/Exporting_Data_From_Maps.htm" class="RelLinkPageNumber">(Pg 1)</MadCap:xref></a> (available from the File menu's Export submenu.)</li>
+        </ul>
+        <p>The syntax is:</p><pre class="code">${param:&lt;name of parameter, variable, or attribute&gt;}</pre>
+        <p>For example, to show the connect time in a device label corresponding to a TCP probe, your
+    label might look like this:</p><pre class="code">&lt;Smart Name&gt;<br />Time to establish connection: ${param:_connect} msec.</pre>
+        <p>Notice, there is no space after the param: and the name of the variable. (The underscore is
+    part of the variable name. Most names do not have the underscore. ) Any variable that can be
+    shown in the 
+    <span class="code">&lt;snmp-device-display&gt;, &lt;script-output&gt;</span>, or <span class="code">&lt;command-display&gt;</span> section of
+    the probe can be used in a label using this syntax. 
+    You can show a parameter of the Basic OID probe just as well:</p><pre class="code">Getting data from: ${param:Object ID}</pre>
+        <p>You can show device export fields like this:</p><pre class="code">Belongs to map: ${param:MapName}</pre>
+        <h2>Using JavaScript in a Device Label or Notifier</h2>
+        <p>You can also use JavaScript in a device label or notifier. Use this to collect information,     process it programatically, and include the results in the label or notifier. The syntax
+    in a label looks like this:</p><pre class="code">&lt;? write( "Hello World" + "\n"); ?&gt;</pre>
+        <p>The markers &lt;? and ?&gt; indicate the beginning and end of the JavaScript. </p>
+        <h3>Variables and Scope in JavaScript</h3>
+        <p><b>Important:</b> JavaScript in labels and notifiers runs in the global scope within InterMapper. If you declare a variable within the global scope, rather than within a function, the variable is accessible for reading and writing by JavaScript running in any other device label within InterMapper. This may produce unexpected results if you attempt to run the same script in multiple devices.</p>
+        <p>JavaScript functions are supported, and you can store values within devices and notifiers; these are remembered between polls. These techniques are recommended when you need to protect a variable from being overwritten. Setting variables in devices is described in <a href="#SelfSet">Remembering Values from One Poll to the Next<MadCap:xref href="#SelfSet" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</p>
+        <h3>Example: Simple Scripted Label</h3>
+        <p>Here is a
+    little more complex, although silly, JavaScript label:</p><pre class="code">&lt;Smart Name&gt;<br />&lt;?<br /> for (var i=1; i&lt;=3; i++) {<br />&#160;&#160;&#160;writeln( "Hello World #" + i);<br />&#160;&#160;}<br />?&gt;</pre>
+        <p>The displayed label for the above would be something like this:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/images/LabelExample1.png" style="width: 357px;height: 141px;" />
+        </p>
+        <h3>The <span class="code">write </span>and <span class="code">writeln </span>functions</h3>
+        <p>Two functions are used to write output to the label:</p>
+        <ul>
+            <li>The function 
+    <span class="code">write</span> sends its output to the label without a line break.</li>
+            <li>The function 
+    <span class="code">writeln</span> sends its output to the label, and appends line break at the end, so you do not need to explicitly append the 
+    <span class="code">"\n"</span> in your JavaScript code. </li>
+        </ul>
+        <h3>Accessing Probe Parameters</h3>
+        <p>Use JavaScript to access probe parameters using the following syntax:</p><pre class="code">&lt;? writeln( "Getting data from: " + self.get( "Object ID")); ?&gt;</pre>
+        <p>The <span class="code">self</span> object refers to the device whose label you are setting. The <span class="code">self </span>object is always available when     using 
+    JavaScript to generate a label. Use the same syntax to get access to a probe variable
+    as well:</p><pre class="code">&lt;?<br />&#160;&#160;var connTime = self.get( "_connect");<br />&#160;&#160;writeln( "Time to establish connection: " + connTime);<br />?&gt;</pre>
+        <h3>JavaScript Error Handling</h3>
+        <p>If you misspell the name of your variable, (by using "_conect" in the previous example) the label looks like this:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/images/LabelExample2.png" style="width: 555px;height: 37px;" />
+        </p>
+        <p>If you look in the debug log, you see the following message:</p><pre class="code">12:15:46 JS&gt; [Device: map 'Exporting Fields', device 'nitro.dartware.com.', probe<br />'SNMP Traffic']:BAD ARG: There is no variable called '_conect'. It should be the
+    name of a probe variable without '$' or curly braces.</pre>
+        <p>The
+    error message tells you the map, device, and probe in which the error occurred, and details about
+    what caused the problem. </p>
+        <p>A JavaScript syntax error results in a label like this:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/images/LabelExample3.png" style="width: 305px;height: 36px;" />
+        </p>
+        <p class="s1"><span class="p">The debug log contains the exception message, but give details about the syntax
+    problem.</span>
+        </p>
+        <h3>Execution Time Limit</h3>
+        <p>The execution time of a script is limited to between 50 and 100 msec. This is a prevents the script from monopolizing the CPU. This is more than adequate time to produce a complex label or notifier output. </p>
+        <p>Here is a way to demonstrate the timeout:</p><pre class="code">&lt;? <br />for (var i = 0; i &lt; 1000000; i++) {<br />&#160;&#160;if(i%10000 == 0) {<br />&#160;&#160;&#160;&#160;&#160;writeln( "testing the timeout " + i); <br />&#160;&#160;}<br />}<br />?&gt;</pre>
+        <p class="pagebreakbefore">The label would look something like this:</p>
+        <p style="font-style: italic;text-align: center;">
+            <img src="../Resources/images/timeoutexample.png" />
+        </p>
+        <p>Three ticks is approximately 50 msec.</p>
+        <h3>Remembering Values from One Poll to the Next<a name="SelfSet"></a></h3>
+        <p>Sometimes it is useful to retain the value of a variable from execution of the JavaScript to the next. </p>
+        <p>There are two different techniques you can use to achieve this:        </p>
+        <ul>
+            <li><b>JavaScript Global Variables</b> - Any JavaScript variable declared at global scope is retained from one execution of JavaScript to the next. The variable is visible regardless of which device is running the script. The variable is also visible regardless whether the JavaScript is running to generate label text or a notifier's text. Keep this in mind when using the same script for more than one device - you may find yourself overwriting a global variable unexpectedly.</li>
+            <li><b>Device JavaScript Variables</b> - A piece of data can be stored in a device. An advantage of these variables over global variables is that each device can have the same named variable but the value will be different for each device. You use self.get(...) and self.set(...) to read and write this data. The name of the variable must be different than any probe parameter or probe variable. </li>
+        </ul>
+        <h3>Example: Storing a Value With a Device</h3>
+        <p>To read the value stored in the device's variable “MyInformation” into myinfo:</p><pre class="code">var myinfo = self.get( "MyInformation" );</pre>
+        <p>To write the value of myinfo out to the device's variable “MyInformation”:</p><pre class="code">storedinfo = self.set( "MyInformation", myinfo );</pre>
+        <p>The function self.set(...) actually returns the value that is being stored. If the value cannot be saved, (for instance, if you try to save to an existing probe parameter or probe variable) the returned value is the actual value of the parameter or variable, not the one you tried to save.</p>
+        <h3 class="pagebreakbefore">Example:&#160;An Incrementing Counter</h3>
+        <p>Here is a way to implement a counter that increments each time the label is drawn. Note that the first time the script runs, the counter variable does not yet exist.</p>
+        <p>This script below gets the value of “Count”, displays it, increments it, and saves it. The first time the script runs, self.get() returns the string “BAD ARG, see debug log”. Since JavaScript cannot turn this value into a number, you can use the JavaScript isNaN() function to determine that n is NaN (Not a Number), and thus has not been initialized. </p><pre class="code">&lt;? <br />&#160;&#160;var n = Number( self.get( "Count")); <br />&#160;&#160;if (isNaN(n)) n = 0;<br />&#160;&#160;writeln( "Count is " + n);<br />&#160;&#160;n++;<br />&#160;&#160;self.set("Count", n);<br />?&gt;</pre>
+        <p>A similar technique would also work for JavaScript global variables as well.</p>
+        <h3>Accessing Device Attributes</h3>
+        <p>You can also use JavaScript to access device attributes. The syntax is different than for
+    accessing probe parameters and variables. It still uses the 
+    <span class="code">self</span> object, but the attribute names are simply properties of the <span class="code">self</span> object. The syntax looks like this:</p><pre class="code">&lt;?<br />&#160;var rtt = self.RoundTripTime;&#160;&#160;<br />&#160;writeln( "Round-trip time is \n" + rtt + " msec");<br />?&gt;</pre>
+        <p>The above JavaScript reads the last round-trip time into 
+    <span class="code">rtt</span>, and displays it:</p>
+        <p style="text-align: center;">
+            <img src="../Resources/images/roundtripexample.png" />
+        </p>
+        <p>If you misspell a device attribute, the error shows up as a JavaScript syntax error because
+    the misspelling is not JavaScript data, but actual language syntax. You would see “JS
+    EXCEPTION, see debug log” in 
+    the label, and a detailed explanation in the debug log. 
+    </p>
+        <p>Any device attribute can be used in a label. For a list of device attributes, see <a href="../09-Reference/09-05-Advanced_Importing/device_attributes.htm">Device Attributes<MadCap:xref href="../09-Reference/09-05-Advanced_Importing/device_attributes.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</p>
+        <h3>Accessing Interface Attributes</h3>
+        <p>Devices connect to networks through interfaces. Each device has a property called interfaces. In JavaScript, this property appears as an array of Interface objects. The example below lists all down interfaces:</p><pre class="code">&lt;? <br />var downInterfaces = 0;<br />for (var i =0; i &lt; self.interfaces.length; i++) {<br />&#160;&#160;var ifc = self.interfaces[i];<br />&#160;&#160;if ((ifc.Enabled == "TRUE") &amp;&amp; (ifc.Status == "down")) {<br />&#160;&#160;&#160;&#160;downInterfaces++;<br />&#160;&#160;&#160;&#160;write( ifc.Index + ". ");<br />&#160;&#160;&#160;&#160;write(ifc.Alias.length &gt; 0 ? ifc.Alias : ifc.Name );<br />&#160;&#160;&#160;&#160;writeln( " : " + ifc.Status);<br />&#160;&#160;}<br />}<br />writeln();<br />writeln(downInterfaces + "/" + self.interfaces.length + " interfaces down");<br />?&gt;<br /></pre>
+        <p>Any interface attribute can be used in a label. For a list of interface attributes, see <a href="../09-Reference/09-05-Advanced_Importing/interface_attributes.htm">Interface Attributes<MadCap:xref href="../09-Reference/09-05-Advanced_Importing/interface_attributes.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</p>
+        <p>&#160;</p>
+    </body>
+</html>

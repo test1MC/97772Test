@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlossary>
+  <GlossaryEntry>
+    <Terms>
+      <Term>benchmark</Term>
+    </Terms>
+    <Definition>A surveyor's mark on a permanent object of predetermined position and elevation used as a reference point. Source: WordNet ® 2.0, © 2003 Princeton University</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>CSR</Term>
+    </Terms>
+    <Definition>Certificate Signing Request</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>InterMapper Console</Term>
+    </Terms>
+    <Definition>Every InterMapper server ships with a copy of InterMapper Console. This is a copy of the InterMapper Remote application that can connect only to the InterMapper server that runs on the machine as InterMapper Console.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>JPEG</Term>
+    </Terms>
+    <Definition>Joint Photographers Experts Group</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>MIB Variable</Term>
+    </Terms>
+    <Definition>MIB: (Management Information Base). A MIB defines all the settings and operational statistics that a device can report using SNMP. Among other things, a MIB defines these attributes: the exact technical definition for these statistics (the "MIB variables"), a text name for each variable, and a unique Object Identifier (OID) that a program (such as InterMapper) could use to retrieve them.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>notification</Term>
+    </Terms>
+    <Definition>The action performed by a notifier, as viewed by the notifier target, or recipient, of the action.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>notifier</Term>
+    </Terms>
+    <Definition>A little "robot" that watches the state of one or more devices, and performs a specified action when the device changes to a state identified as requiring action in the notifier's parameters.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>notifier parameters</Term>
+    </Terms>
+    <Definition>The specific information for the notifier, dependent on the Notifier type.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>notifier schedule</Term>
+    </Terms>
+    <Definition>The hours during which notifications are sent for that notifier.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>notifier target</Term>
+    </Terms>
+    <Definition>The recipient of a notification.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>PNG</Term>
+    </Terms>
+    <Definition>Portable Network Graphics</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>SNMP</Term>
+    </Terms>
+    <Definition>Simple Network Management Protocol - an application-layer protocol which allows an application (like InterMapper) to query other network devices (such as a router, switch, server, etc.) to get information about the device, or to send control commands to the device.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry>
+    <Terms>
+      <Term>NetFlow Exporter</Term>
+    </Terms>
+    <Definition
+      Link="">NetFlow Exporter: A hardware device, such as a router, switch, or dedicated probe,  
+or a software application that exports NetFlow records for use in traffic analysis.</Definition>
+  </GlossaryEntry>
+</CatapultGlossary>

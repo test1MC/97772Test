@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="779" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Creating A Report</h1>
+        <p>Use the Reports Server web UI to create, save, load, link, or print a report.</p>
+        <p>You can open the InterMapper Reports window from an InterMapper map.</p>
+        <h2>Opening the Reports Window</h2>
+        <p>To open the InterMapper Reports window:</p>
+        <ol>
+            <li>Select a device in an InterMapper map window.</li>
+            <li>Right-click the device and from the Context menu, choose <b style="font-style: italic;">Reports</b>. The InterMapper Reports window appears in a new browser window as shown below. </li>
+        </ol>
+        <p style="text-align: center;">
+            <img src="../Resources/images/Reports-FromShowMenu-558px.png" />
+            <br /><i>InterMapper Reports window in View mode</i>
+        </p>
+        <p>Two other ways you can also open the Reports window:</p>
+        <ul>
+            <li> Use this URL:<br /><br />&#160;&#160;&#160;&#160;https://[InterMapper Server address]:8182/~imreports/<br /><br /></li>
+            <li>From the Server Settings window, view the Reports Server pane, and click Configure, log in to the InterMapper DataCenter, and click <b style="font-style: italic;">View Reports</b> in the InterMapper Reports box.</li>
+        </ul>
+        <h2 class="pagebreakbefore">Creating a New Report<a name="createreport"></a></h2>
+        <p>There are several ways to create a report:</p>
+        <ul>
+            <li><b>From the Map Window</b> - open the Reports window after selecting one or more devices or interfaces.</li>
+            <li><b>From a template</b> - a number of pre-configured templates are available.</li>
+            <li><b>From scratch</b> - using an empty template. Select your own devices or interfaces, the data you want to show from each, any calculations you want to apply, a report period and interval, and the way in which the data is shown.</li>
+        </ul>
+        <p class="floatright">
+            <img src="../Resources/images/Reports-FileMenu.png" />
+        </p>
+        <p><b>To create a new report from a template:</b>
+        </p>
+        <ol>
+            <li>If you haven't stored any reports, you can start with a template.</li>
+            <li>From the Report window's File menu (shown at right,) choose <b style="font-style: italic;">New</b>. The Templates list appears, as shown below.</li>
+            <li>Click to choose a template from the left side of the list. A set of parameters for that template appears on the right. You can also click <b style="font-style: italic;">Saved Reports</b> to view a list of reports that have already been saved.</li>
+            <li>Choose from the template's available parameters.</li>
+            <li>Click Create Report. The report loads with the selected parameters.</li>
+        </ol>
+        <p>&#160;</p>
+        <p style="text-align: center;">
+            <img src="../Resources/images/Reports-ReportTplts-80pct.png" />
+            <br /><i>The Templates List</i>
+        </p>
+        <h3>Report types</h3>
+        <p>Report templates fall into two general categories:</p>
+        <table style="width: 100%;">
+            <col style="width: 53px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../Resources/images/Reports-graphtype.png" />
+                    </td>
+                    <td style="vertical-align: top;">
+                        <p><b>Graph</b> - Can be used with datasets that contain only numeric data. Three display options are available in a Graph report:</p>
+                        <ul>
+                            <li><b>Area</b> - a line chart with the area below the line filled.</li>
+                            <li><b>Line</b> - a line chart with a dot at each data point.</li>
+                            <li><b>Bar</b> - a bar chart.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../Resources/images/Reports-tabletype.png" />
+                    </td>
+                    <td style="vertical-align: top;"><b>Table</b> - a tabular report, containing columns and rows.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../Resources/images/Reports-EditButton.png" class="floatright" />
+        </p>
+        <p><b>To create a new report from the Empty Report template:</b>
+        </p>
+        <ol>
+            <li>If you choose the Empty Report template, you can create a report from scratch. You can also recall an existing report to use as a starting point.</li>
+            <li>Click <b style="font-style: italic;">Edit</b>, located just below the File and Export menus.  The Reports window changes to Edit mode. (The <b style="font-style: italic;">Edit</b> button toggles the report in and out of Edit mode.)</li>
+        </ol>
+        <h2>Editing a Report</h2>
+        <p>The image below shows the controls you can use to fine-tune your report definition.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/Reports-EditMode-558px.png" />
+            <br /><i>InterMapper Reports window in Edit mode</i>
+        </p>
+        <p>Once in Edit mode, you need to answer some or all of these questions (in the areas shown above), depending on your requirements for this report:</p>
+        <ul>
+            <li><b>Which devices?</b> Select the devices you want to include in the report. Select from the available <b style="font-style: italic;">Servers</b>, <b style="font-style: italic;">Maps</b> and <b style="font-style: italic;">Devices</b>. If network interface data available for any of the selected devices, select one or more Interfaces.</li>
+            <li><b>Which data?</b> Choose from available Datasets. A number of datasets, including <i>Details</i> and <i>Event History</i>, are standard for all devices, other datasets are based on data available from your device selection. <br /><br /><b>Note:</b> Currently, only one dataset can be included in a report.<br /><br /></li>
+            <li><b>Calculations?</b> If you have selected a Dataset other than Details and Event History, such as Response Time, you can choose from some basic calculation options. Choose <b style="font-style: italic;">Min</b>, <b style="font-style: italic;">Avg</b>, or <b style="font-style: italic;">Max</b> to specify how the results are displayed.<br /> <br /><b style="font-style: italic;">Min</b> shows the only lowest values for the dataset. <br /><b style="font-style: italic;">Avg</b> averages the results (most commonly used). <br /><b style="font-style: italic;">Max</b> shows only the highest values in the dataset. <br /><br />The Group checkbox allows devices in your selection to be grouped as one dataset in the results. </li>
+            <li><b>Period of time?</b> Choose a start date or date range. (Not active when Detail dataset is selected.) For other datasets, common date selections are available. When specifying a date range, the calendar indicates whether data is available from the selected date range (grayed for no data, black for data)</li>
+            <li><b>Interval?</b> Specifies data interval, which controls the density of the data over time. <br /><br /><b>Note:</b> Event History and Details datasets do not use Interval.<br /><br /></li>
+            <li><b>Report Type?</b> Choose how the dataset results are displayed. By default, a Tabular report (list) is shown. When the selected dataset contains numeric values, you can also choose Area, Line or Bar chart. For Event History and Details, only a tabular view is available.</li>
+        </ul>
+        <h2>Additional Report-editing Features</h2>
+        <p>Use a number of other controls to customize your report further:</p>
+        <ul>
+            <li>Click the <i style="font-weight: bold;">title</i> to edit it.</li>
+            <li>For tabular reports, <b style="font-style: italic;">click a column heading</b> to sort by that column; click again to reverse the sort. The sort order is saved with the report.</li>
+            <li>To change the order of tabular report columns, <b style="font-style: italic;">drag a column heading</b> to move the column to the right or left.</li>
+            <li>To save the report, click <b style="font-style: italic;">Save</b> from the Report window's File menu, give the report a name, and click <b style="font-style: italic;">Save Report</b>.</li>
+        </ul>
+        <h2>Opening a Saved Report</h2>
+        <p>You can save any number of reports, then open, view or print them at a later time. For more information, see <a href="ManagingReports.htm">Managing and Printing Your Reports<MadCap:xref href="ManagingReports.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

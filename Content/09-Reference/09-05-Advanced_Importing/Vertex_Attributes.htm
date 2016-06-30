@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="873" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Vertex Attributes</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Vertex" />
+            <MadCap:keyword term="Vertex Attributes" />Vertex Attributes</h1>
+        <p>
+            <MadCap:keyword term="Vertex:Use" />Use the <span class="code">vertices</span> data type to control the appearance of devices in your map, such as the device's color, label, shape, or font. </p>
+        <p>Use these attributes with the following table specification in line 1:</p><pre class="code">table=vertices</pre>
+        <ul style="list-style: disc;" type="disc">
+            <li>Fields marked with an asterisk (*) are required.</li>
+            <li>Fields marked with an plus(+) can be updated during import.</li>
+        </ul>
+        <table class="fieldtable">
+            <tr>
+                <th>Field Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="fieldname">MapName</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Name of the map file containing the vertex.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Id</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>INDEX<br /><b>Description: </b><br />A unique, persistent identifier for this vertex instance. The id will be unique across all maps on a single InterMapper server.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Name</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The name of the vertex. The name is the first non-empty line in a device or network's label on a map.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Color <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Color (valid names: white, black, red, orange, yellow, blue, green, brown)<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">FontName <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Font name, eg. Bodoni MT<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">FontSize <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Font size in points.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">FontStyle <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Font style (bold, italic, plain)<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Label</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Vertex label.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">LabelPosition <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Label position. Valid values are topleft, top, topright, left, center, right, bottomleft, bottom, bottomright<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">LabelTemplate <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Vertex label template.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">LabelVisible <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the vertex label is visible (only used when the device is represented by an icon)<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">MapId</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The unique Id of the map file containing the vertex.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Origin <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The origin determines whether the vertex coordinates are relative to the center or one of the sides of the vertex. Valid values: center, top, left, right, botom, topleft, topright, bottomright, bottomleft.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Shape <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Vertex shape (rect, oval, wire, cloud, text, or icon name).<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">VantagePoint <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if the vertex is a vantage point of the graph<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">XCoordinate <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Horizontal map coordinate, the positive direction is to the right.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">YCoordinate <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Vertical map coordinate, the positive direction is to the bottom.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">VertexId</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />The Vertex Id of the vertex. Corresponds to the device with a matching VertexID in the devices table.<br /></td>
+            </tr>
+        </table>
+    </body>
+</html>

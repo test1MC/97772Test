@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="2648" MadCap:lastWidth="622" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link rel="StyleSheet" href="../../default.css" /><title>Notification using an Analogue Modem</title>
+    </head>
+    <body>
+        <h1 class="L2pagebreakbefore">
+            <MadCap:keyword term="Pager Settings window;Showing;Adding" />
+            <MadCap:keyword term="Configuring">
+            </MadCap:keyword>
+            <MadCap:keyword term="Configuring:Pager Notifier" />
+            <MadCap:keyword term="Pager Notifier" />
+            <MadCap:keyword term="Pager Notifier:Configuring" />
+            <MadCap:keyword term="Analogue Modem" />Configuring a Pager Notifier to use an Analogue Modem</h1>
+        <p><i>InterMapper </i>
+            <MadCap:keyword term="TAP" />
+            <MadCap:keyword term="Telelocator Alphanumeric Protocol" />
+            <MadCap:keyword term="Service" /> uses TAP, the Telelocator Alphanumeric Protocol, with an 
+ internal or external analogue modem to connect to a page service, and to deliver 
+ a notification.
+</p>
+        <p><b><MadCap:keyword term="Log File:Paging" /><MadCap:keyword term="Paging" />To use the built-in support for paging via analogue modems:</b>
+        </p>
+        <ol>
+            <li><a href="../Working_With_Notifiers.htm#createnotifier">Create a new notifier<MadCap:xref href="../Working_With_Notifiers.htm#createnotifier" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. 
+  </li>
+            <li>From the <b><i><MadCap:keyword term="Notifier Type" />Notifier Type</i></b> dropdown menu, select          <i>Alpha-numeric 
+ Pager (Dial-up)</i><MadCap:keyword term="Showing:Configure Notifier window" /><MadCap:keyword term="Configure Notifier:Configure Notifier window" /><MadCap:keyword term="Paging Subscribers:shows" /><MadCap:keyword term="Paging Services:shows" /><MadCap:keyword term="Alpha-numeric Pager" />. The example below 
+ shows the Configure Notifier window with the Alpha-numeric Pager (Dial-up) 
+ type. 
+  </li>
+            <li>From the <b><i><MadCap:keyword term="Subscriber" />Subscriber</i></b> dropdown menu, choose a subscriber, or choose          <b><i><MadCap:keyword term="Edit List" />Edit List...</i></b><MadCap:keyword term="Showing:Paging Services" /><MadCap:keyword term="Paging Services" /> to 
+ add or edit paging services or subscribers. 
+    </li>
+            <li>Click <b><i><MadCap:keyword term="Edit Message" />Edit Message...</i></b> to edit the message that is sent to 
+	 the pager. (See warning below)
+	</li>
+            <li>In the <i><b><MadCap:keyword term="Notifier Schedule" />Notifier Schedule </b></i>panel, choose the hours during 
+	 which the page will be sent. 
+	</li>
+            <li>When finished, click <b><i><MadCap:keyword term="OK" />OK</i></b>.</li>
+        </ol>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/window-ConfigNotifier-Pager.png" style="width: 548px;height: 318px;" />
+            <br /><i><MadCap:keyword term="Subscriber menu" />A notification that uses the built-in modem paging facilities. 
+ The page will be sent to the person specified by the Subscriber menu.</i>
+        </p>
+        <p><b>Warning:</b>
+            <MadCap:keyword term="Id" /> Many paging services limit the length of a message. Sending 
+	a longer message can cause multiple pages per event, and can considerably 
+	increase your pager bill.</p>
+        <h2>Setting up Paging Services and Subscribers</h2>
+        <p>Before you can use the paging options, you need to:</p>
+        <ul>
+            <li>Set up one or more paging services. 
+  </li>
+            <li>
+                <MadCap:keyword term="Showing:Paging Subscribers" />
+                <MadCap:keyword term="Paging Subscribers" />Set up one or more subscribers for that service.</li>
+        </ul>
+        <p>The window above assumes that you have already configured InterMapper for your 
+ pager service.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/window-ConfigNotifier-Pager-modemsettings.png" />
+            <br /><i>Entering information about a service</i>
+        </p>
+        <p><b>To add or edit paging services:</b>
+        </p>
+        <ol>
+            <li>Choose <b><i>Edit List...</i></b> from the          <i><b>Subscriber </b></i><MadCap:keyword term="Paging Settings window" />drop-down 
+	 menu. The Paging Settings window appears. 
+	</li>
+            <li>Click the <i><b>Paging Services </b></i>tab. A list of paging services 
+	 appears, if any are defined. 
+	</li>
+            <li>Click a service to edit, or click <b><i>Add</i></b>. The information for 
+	 the paging service appears. 
+	</li>
+            <li>
+                <MadCap:keyword term="Name" />
+                <MadCap:keyword term="Enter dialup" />Enter dialup information in the boxes provided. Use the information about 
+	 your paging service to enter the service name, telephone number, and password, 
+	 the port to which your modem is attached, and the modem configuration. 
+	</li>
+            <li>In the <b><i><MadCap:keyword term="Bits" />Bits</i></b> dropdown menu, choose values appropriate to your 
+	 modem. Open the menu repeatedly to set the data bits, stop bits, and parity. 
+	 By default, the values are set to 7 data bits, 1 stop bit, and Even parity. 
+	</li>
+            <li>In the <b style="font-style: italic;">Retries</b> box, set the number of times you would like the page to be sent if it fails. The default is 2.</li>
+            <li>In the <b style="font-style: italic;">Retry Interval</b> box, 
+set the number of seconds to wait between retries. The default is 10 seconds.</li>
+            <li>When finished, click <b><i>Done</i></b>.</li>
+        </ol>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/window-ConfigNotifier-Pager-subscribers.png" />
+            <br /><i>Entering information about a subscriber</i>
+        </p>
+        <p><b>To add or edit paging subscribers:</b>
+        </p>
+        <ol>
+            <li>Choose <b><i>Edit List...</i></b> from the          <i><b>Subscriber </b></i>drop-down 
+	 menu. The Paging Settings window appears. 
+	</li>
+            <li>Click the <i><b>Paging Subscribers </b></i>tab. A list of paging subscribers 
+	 appears, if any are defined. 
+	</li>
+            <li>Click a service to edit, or click <b><i>Add</i></b>. The information for 
+	 the paging service appears. 
+	</li>
+            <li>In the <b><i>Name</i></b> box, enter the name of the person you want to 
+	 receive the page.
+	</li>
+            <li>From the <b><i>Service</i></b> dropdown menu, choose the user's Paging Service. 
+	 If the user's paging service doesn't appear, you need to create it as described 
+	 above. 
+	</li>
+            <li>In the <b><i><MadCap:keyword term="Pager ID" />Pager ID</i></b> box, enter the person's pager ID. (This 
+	 may be different from the Service phone number that you entered when creating 
+	 the user's Paging Service definition above.) 
+	</li>
+            <li>When finished, click <b><i>Done</i></b>.</li>
+        </ol>
+        <h3 class="pagebreakbefore">
+            <MadCap:keyword term="Log File" />
+            <MadCap:keyword term="Paging:Log File" />Paging Log File</h3>
+        <p>
+           The paging log file is a special file which will receive logging of all paging 
+ traffic and messages, including the details of the modem commands and text written 
+ and read. The information in this log may help you or InterMapper Technical Support 
+ to troubleshoot paging if it is not working correctly. </p>
+        <p>
+            <MadCap:keyword term="Paging&lt;date&gt;.txt" />To start logging this traffic, use the Log Files server settings panel to create 
+ a log file named Paging (The log file name will be "Paging&lt;date&gt;.txt") 
+ Logging will continue until the log file is removed through the Log Files panel.</p>
+        <h3>
+            <MadCap:keyword term="Modem Compatibility" />Modem Compatibility</h3>
+        <h4>
+            <MadCap:keyword term="OSX" />
+            <MadCap:keyword term="Mac OSX" />With Mac OSX</h4>
+        <p>
+            <MadCap:keyword term="USB" />
+            <MadCap:keyword term="KeySpan Twin Serial" />
+            <MadCap:keyword term="Modem Page Settings dialog" />
+            <MadCap:keyword term="MultiTech MT5634ZBA-USB" />InterMapper has been tested with Mac OSX using various built-in modems, an 
+ external USB modem (MultiTech MT5634ZBA-USB), and an older external modem connected 
+ via a KeySpan Twin Serial adapter (using KeySpan's current OSX driver) on a 
+ beige G3. With the KeySpan serial adapter, InterMapper lists both serial ports 
+ in the Modem Page Settings dialog and you are responsible for choosing the correct 
+ one.</p>
+        <h4>
+            <MadCap:keyword term="Windows" />
+            <MadCap:keyword term="Unix" />With Windows and Unix</h4>
+        <p>
+            <MadCap:keyword term="V.34" />A number of modems have been tested with InterMapper. While we cannot guarantee 
+ that a particular modem works, we believe that most modems that support V.34 
+ or a later specification will work well.</p>
+    </body>
+</html>

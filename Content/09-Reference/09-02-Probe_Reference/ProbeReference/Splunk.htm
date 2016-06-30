@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link rel="StyleSheet" href="../../../default.css" /><title>Splunk Probes</title>
+    </head>
+    <body>
+        <!-- file updated Thu, 17 Mar 2016 15:34:34 +0000 -->
+        <h1 class="L2">Splunk</h1>
+        <ul>
+            <li><a href="Splunk.htm#Splunk_Layer_2_Output">Splunk &gt; Layer 2 Output<MadCap:xref href="Splunk.htm#Splunk_Layer_2_Output" target="" title="" alt="" MadCap:conditions="Primary.print"></MadCap:xref></a>
+            </li>
+        </ul>
+        <blockquote>
+            <p><a href="Probe_Index.htm">To Probe Index<MadCap:xref href="Probe_Index.htm"></MadCap:xref></a>
+            </p>
+        </blockquote>
+        <h2>Splunk &gt; Layer 2 Output<a name="Splunk_Layer_2_Output"></a></h2>
+        <blockquote>
+            <h3>Layer 2 Output</h3>
+            <p>This probe scans InterMapper's Layer 2 database for information collected from switch devices, and writes it into a CSV file. The InterMapper App for Splunk (<a href="http://www.intermapper.com/products/Splunk-App/">http://www.intermapper.com/products/Splunk-App/</a>) then retrieves this data for its display.</p>
+            <p>If the process fails for any reason, the device is set to <b>Warning</b>.</p>
+            <p>Default poll interval is 10 minutes. You should decrease this (Set Info-&gt;Set Poll interval...) only if your Layer 2 discovery runs more frequently.</p>
+            <p><b>Note:</b> You should create only one device that uses this probe on an InterMapper server. Having multiple instances consumes server resources with no benefit.</p>
+            <p><b>Parameters</b>
+            </p>
+            <p>None.</p>
+            <p class="probeinfo">Filename: <span class="code">com.dartware.layer2tocsv.txt</span><br />
+Version:  <span class="code">1.5</span></p>
+            <p><a href="Splunk.htm">Back to Top</a>
+            </p>
+        </blockquote>
+    </body>
+</html>

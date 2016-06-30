@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="2781" MadCap:lastWidth="842" MadCap:fileTags="status_tags.No Changes">
+    <head><title>SSL Certificates</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Certificate Authority:Certificate Signing Requests;Apache Mod-SSL httpd.conf file;Server Probes - Proprietary;InterMapper Remote" />
+            <MadCap:keyword term="SSL">
+            </MadCap:keyword>
+            <MadCap:keyword term="SSL Certificates" />
+            <MadCap:keyword term="Certificate" />SSL Certificates</h1>
+        <p>InterMapper's web and remote servers can employ a certificate to encrypt 
+	the data going between the server and clients. This assures that the client 
+	has connected to the actual server, and not another server acting as an 
+	impostor. </p>
+        <p>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="OK" />
+            <MadCap:keyword term="Browse" />
+            <MadCap:keyword term="Encrypted" />InterMapper ships with a certificate signed by Help/Systems Inc. This will work; 
+	the data is encrypted. But it's not using strong encryption (that is, it's 
+	easily broken) and web browsers using HTTPS connections will give a warning 
+	that there is a problem with the certificate, and that the data might be intercepted 
+	in transit. </p>
+        <p>
+            <MadCap:keyword term="Create" />
+            <MadCap:keyword term="CSR:create" />To get stronger encryption and verification that the server is authentic, 
+	you can create and install your own SSL certificate. This is a three-step 
+	process:<br /></p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Send:CSR" />
+                <MadCap:keyword term="Generate:CSR" />
+                <MadCap:keyword term="Copy:CSR" />
+                <MadCap:keyword term="Create:CSR" />
+                <MadCap:keyword term="Create:Certificate Signing Request" />
+                <MadCap:keyword term="CSR" />
+                <MadCap:keyword term="Pending.csr:Certificate Signing Request" />Create a Certificate Signing Request (CSR). The CSR contains 
+	 all the information needed to identify the computer. InterMapper has a built-in 
+	 function for collecting this information and building the certificate.</li>
+            <li>Sign the CSR. Signing is a process where an authority verifies 
+	 the information in the certificate.</li>
+            <li>
+                <MadCap:keyword term="Uploading:Signed Certificate" />
+                <MadCap:keyword term="Signed Certificate" />Upload the signed certificate into InterMapper to make it operational.</li>
+        </ol>
+        <p>
+            <MadCap:keyword term="Send" />
+            <MadCap:keyword term="CSR:send" />
+            <MadCap:keyword term="Certificate Authority" />In either case, you must first create a Certificate Signing Request 
+ (CSR), which is a file that you can create using InterMapper. You then 
+ sign the CSR yourself, or send it to a commercial Certificate Authority 
+ to sign.</p>
+        <p>
+            <MadCap:keyword term="Server Configuration" />
+            <MadCap:keyword term="Server Settings window" />
+            <MadCap:keyword term="Server Settings" />Use the SSL Certificate panel, available from the Server Configuration section 
+ of the Server Settings window to create a Certificate Signing Request, 
+ and to upload a signed certificate to the InterMapper server.</p>
+        <p>The remainder of this topic describes the three separate steps in detail.</p>
+        <p class="pagebreakbefore" style="font-style: italic;">The SSL Certificate Panel</p>
+        <p>
+            <img src="../../Resources/Images/serversettings-SSLCertificate2.png" style="border-width: 2px;border-style: solid;border-color: #a9a9a9;width: 464px;height: 449px;" />
+        </p>
+        <h2>Step 1: Create a Certificate Signing Request</h2>
+        <ol>
+            <li>
+                <MadCap:keyword term="Edit menu" />From the Edit menu, choose <i><b>Server Settings...</b></i> 
+			The Server Settings window appears.</li>
+            <li>In the Server Configuration section, click <b><i>SSL 
+			Certificate</i></b>. The SSL Certificate panel appears.</li>
+            <li>Click <b>Create new CSR...</b> The Certificate Signing 
+			Request window appears, as shown below.</li>
+            <li>Enter the required information as described below, 
+			and click <b><i>OK</i></b><MadCap:keyword term="Generate" /><MadCap:keyword term="Generate:1,024-bit" /><MadCap:keyword term="Copy" /><MadCap:keyword term="Save" /><MadCap:keyword term="CSR:copy" /><MadCap:keyword term="CSR:generate" /><MadCap:keyword term="Private Key" />. A 1,024-bit private key is generated for 
+			your computer, and the information is then used to create the Certificate 
+			Signing Request. The key and a copy of the CSR are saved in the        <i>InterMapper 
+			Settings:Certificates</i><MadCap:keyword term="Save File dialog" /> folder, and a standard Save File dialog 
+			appears.<br /><br /><MadCap:keyword term="FullyQualifiedDomainName.csr" />You are being asked to save a copy of the CSR (with a filename of 
+			the FullyQualifiedDomainName.csr) on your disk. We recommend you save 
+			this on the desktop so it's easy to find when you create a signed 
+			certificate. After you have requested a signed certificate, you can 
+			discard this file.</li>
+            <li>Click <b><i>Save</i></b>. The new certificate is saved 
+			in the specified location.</li>
+        </ol>
+        <h2>Enter the following information for your 
+ Certificate Signing Request: </h2>
+        <p class="floatright">
+            <img src="../../Resources/Images/serversettings-CreateCSR-590.PNG" />
+            <br /><i style="font-style: italic;">The Certificate Signing Request <br />window.<MadCap:keyword term="Certificate Signing Request window" /><MadCap:keyword term="Certificate Authority:Certificate Signing Request window" /></i>
+        </p>
+        <ul>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Common Name" />Common Name</b>
+                <br />Enter your <i>full</i><MadCap:keyword term="DNS" /> DNS name or IP address of your server. If possible, 
+			it should include your domain name.</li>
+            <li><b style="font-weight: bold;">Organization</b>
+                <br />Enter the name of your organization.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Organizational Unit" />Organizational Unit</b>
+                <br />If applicable, enter the name of an organizational unit within your 
+ organization, such as a department or division name.</li>
+            <li><b style="font-weight: bold;">Country</b>
+                <br />Enter a two-letter abbreviation for your country</li>
+            <li><b><MadCap:keyword term="Province" />State or Province</b>
+                <br />Enter a state or province name or abbreviation</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Locality" />City or Locality</b>
+                <br />Enter a descriptive location of the server.</li>
+            <li><b style="font-weight: bold;">Make new private key</b>
+                <br />The first time you generate a CSR, this box is dimmed. On subsequent 
+ uses, select this check box to create a new private key. Leave it unchecked 
+ to use the same private key.</li>
+            <li><b>Key Size</b>
+                <br />Choose 1024 or 2048 bits.</li>
+            <li><b>Digest Type</b>
+                <br />Choose SHA1 or SHA2. SHA1 is the default value.</li>
+            <li><b>Digest Size</b>
+                <br />If you choose SHA2, choose 256 or 512 bits.</li>
+        </ul>
+        <p>When you click the OK button, InterMapper generates a private key for your computer, then use the information entered above 
+ to create the Certificate Signing Request. InterMapper will save following 
+ files in the <i><MadCap:keyword term="InterMapper Settings" />InterMapper Settings:Certificates</i> folder:</p>
+        <ul>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="SSLCertificateKeyFile" />SSLCertificateKeyFile</b> 
+ contains your private key </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Pending.csr" />Pending.csr</b> the 
+ Certificate Signing Request (CSR) file </li>
+        </ul>
+        <p>You will also be asked to save another copy of the CSR (with a filename 
+ of the <i>FullyQualifiedDomainName</i>.csr) on your disk. We recommend 
+ you save this on the desktop so it's easy to find when you are ready to 
+ create a signed certificate. You may discard this file after you have 
+ requested a signed certificate. </p>
+        <h2>Step 2: Sign the Certificate</h2>
+        <p>
+            <MadCap:keyword term="CSR:CSR file" />Once you have a CSR file, you must have it signed. There are two ways 
+		 to do<br />this:</p>
+        <ol>
+            <li>
+                <MadCap:keyword term="OpenSSL" /> You can use the OpenSSL software (available from <a href="http://www.openssl.org">http://www.openssl.org</a>) 
+			or<br /><MadCap:keyword term="Windows CA" />use the Windows CA to sign this CSR. This will create a self-signed 
+			certificate<br />that you can easily use within your own organization.</li>
+            <li> You can send the CSR to any of several commercial certificate authorities,<br /><MadCap:keyword term="InstantSSL" />such as InstantSSL (<a href="http://www.instantssl.com">http://www.instantssl.com</a><MadCap:keyword term="Verisign" />), 
+			Verisign<br />(<a href="http://www.verisign.com/products/site/index.html">http://www.verisign.com/products/site/index.html</a><MadCap:keyword term="Thawte" />), 
+			or Thawte<br />(<a href="http://www.thawte.com">http://www.thawte.com</a>). These 
+			companies return a signed certificate that is globally-recognizable as authentic.</li>
+        </ol>
+        <h2>
+            <MadCap:keyword term="Uploading" />
+            <MadCap:keyword term="Signed Certificate:Uploading" />Step 3: Uploading the Signed Certificate</h2>
+        <p>After the certificate has been signed, you can upload it using <i><b>Upload 
+		 new<br />Certificate...</b></i> Either copy and paste the text of the certificate 
+		 into this window, or click        <i><b>Browse...</b></i><br />and locate the certificate file on your hard drive.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/serversettings-UploadCSR.png" />
+        </p>
+        <p>At the conclusion of this, the InterMapper Settings:Certificates folder 
+		 contains<br />files named:</p>
+        <ul>
+            <li><b>SSLCertificateKeyFile</b> contains your private key, created 
+			above.<br /></li>
+            <li><b><MadCap:keyword term="SSLCertificateFile" />SSLCertificateFile</b>
+                <MadCap:keyword term="Pem" /> contains your signed certificate (the 
+			file from Verisign, InstantSSL, or OpenSSL.) Be sure to remove any 
+			suffix (such as ".pem") from the file name.<br /></li>
+            <li><b><MadCap:keyword term="SSLCACertificateFile" />SSLCACertificateFile</b> contains the public certificate chain 
+			of the signing CA's (in order). <br /></li>
+        </ul>
+        <p>
+            <MadCap:keyword term="SSL/TLS" />Stop the affected server from the Server Settings window, and then 
+		 start it again. These certificates are then used for HTTPS and InterMapper 
+		 Remote client connections if the SSL/TLS boxes are checked in the respective 
+		 server settings.</p>
+        <h2 class="pagebreakbefore">Using an externally generated CSR and Private Key</h2>
+        <p>If you use a different application from InterMapper to create your Certificate 
+ Signing Request (CSR), InterMapper will not have access to the private 
+ key used to create the CSR. To upload your certificate with the private 
+ key, create one text file containing the signed certificate, the private 
+ key, and the CA's public certificate chain (if included), and use the 
+ "Upload new certificate..." button to upload this combined file. 
+ </p>
+        <h2><a name="notes"></a>Technical Notes</h2>
+        <p>The design for this scheme is based on the SSL section of the Apache 
+ Mod-SSL httpd.conf file.</p>
+        <ol>
+            <li>For InstantSSL, the SSLCACertificateFile is the same as 
+	 the ca-bundle file, described in <a href="http://www.instantssl.com/ssl-certificate-support/cert_installation/">http://www.instantssl.com/ssl-certificate-support/cert_installation/</a><br /></li>
+            <li>If there is no SSLCertificateKeyFile, InterMapper will look 
+	 for the private key in SSLCertificateFile. <br /></li>
+            <li>InterMapper will always load the additional CA certificates, 
+	 if they exist, from SSLCertificateFile first, then it will check SSLCACertificateFile 
+	 if it exists. <br /></li>
+            <li>You can set up the configuration so 
+	 one file, named SSLCertificateFile, contains everything. The file must contain a key, certification, and trust chain in that order, or the certificate is not imported properly.<br /></li>
+            <li>
+                <MadCap:keyword term="CR's" />
+                <MadCap:keyword term="CR's:LF's" />
+                <MadCap:keyword term="LF's" />
+                <MadCap:keyword term="LF's:CR's" />
+                <MadCap:keyword term="CR-LF" />InterMapper will convert CR's to LF's in the file data before 
+	 loading it. There's no need to worry about CR-LF translation issues. </li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

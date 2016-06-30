@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="424" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Remote Server</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="InterMapper RemoteAccess application;Adding" />
+            <MadCap:keyword term="Remote Server">
+            </MadCap:keyword>
+            <MadCap:keyword term="Access:Remote Server" />
+            <MadCap:keyword term="Stop:Remote Server" />The Remote Server</h1>
+        <p>
+            <MadCap:keyword term="Remote Server:access" />
+            <MadCap:keyword term="InterMapper's Remote Server" />
+            <MadCap:keyword term="InterMapper RemoteAccess" />
+            <MadCap:keyword term="Access" />
+            <MadCap:keyword term="Running" />
+            <MadCap:keyword term="Running:InterMapper" />InterMapper's Remote Server allows a user to configure and edit maps on an 
+	InterMapper installation from a remote computer. To allow these changes, the 
+	Remote Server accepts connections from the InterMapper or InterMapper RemoteAccess 
+	application, running on a different computer. For more information about InterMapper 
+	RemoteAccess, see the <a href="http://www.helpsystems.com/intermapper/intermapper-remoteaccess">InterMapper 
+	Remote</a><MadCap:keyword term="Web" /> web site.</p>
+        <p>
+            <MadCap:keyword term="Addresses" />
+            <MadCap:keyword term="Localhost" />
+            <MadCap:keyword term="Non-localhost" />InterMapper always listens for remote connections on its localhost interface, 
+ 127.0.0.1. This allows a user to run a copy of the InterMapper RemoteAccess 
+ application on the machine that is running InterMapper. For security, 
+ InterMapper refuses all Remote Server connections from non-localhost addresses 
+ by default to prevent unauthorized configuration. </p>
+        <p>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="Firewall's list:IP" />
+            <MadCap:keyword term="Username" />You can configure InterMapper to accept connections from remote computers, 
+	giving varying degrees of access by IP address or by username and password.</p>
+        <p>
+            <MadCap:keyword term="Server Configuration" />
+            <MadCap:keyword term="Remote Server:stop" />
+            <MadCap:keyword term="Server Settings window" />
+            <MadCap:keyword term="Server Settings" />
+            <MadCap:keyword term="Telnet" />
+            <MadCap:keyword term="Stop" />Unlike the Telnet and Web servers, you cannot start or stop the Remote 
+ Server. You configure the Remote Server using the Remote Server settings panel
+ of the Server Configuration section, found in the Server Settings window.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/serversettings-remoteserver.png" />
+        </p>
+        <p><b style="font-weight: bold;">To configure the Remote Server:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Edit menu" />From the Edit menu, choose <b><i>Server Settings...</i></b> 
+ The Server Settings window appears.</li>
+            <li>In the Server Configuration section, click <b><i>Remote 
+ Server</i></b>. The Remote Server panel appears.</li>
+        </ol>
+        <ul>
+            <li>
+                <MadCap:keyword term="Enter" />
+                <MadCap:keyword term="Enter:TCP" />
+                <MadCap:keyword term="TCP" />
+                <MadCap:keyword term="TCP:Enter" />Enter a TCP port number, or use the default value.</li>
+            <li>To configure access to the Remote Server, click the Plus icon<MadCap:keyword term="Addresses:Remote Server firewall" /><MadCap:keyword term="Remote Server firewall" /> 
+ to add addresses to the Remote Server firewall. </li>
+            <li>To remove an entry, click the entry, then click the Minus icon.</li>
+            <li>To edit an entry, click then entry, then click the Pencil tool.</li>
+            <li>To see a list of clients connected to the server, click <b style="font-style: italic;">Show Connected Clients</b>. (See below)</li>
+            <li>If you want entries from this server to be sent to 
+ a different log file, choose a log file from the <b><i><MadCap:keyword term="Send" />Send log file entries 
+ to</i></b> dropdown menu. For more information on log files, see <a href="../08-02-Server_Prefs/logging.html">Log Files<MadCap:xref href="../08-02-Server_Prefs/logging.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+        </ul>
+        <p><b style="font-weight: bold;">Note:</b> The Server Settings window is 
+ available only to users who have administrator privileges.</p>
+        <h2>Showing Connected Clients</h2>
+        <p>Click Show Connected Clients to view a list of InterMapper clients connected to the server. The Remote Clients window appears, showing the connected user's name, IP address, time of login and type of license.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/dlg-settings-RemClients.png" />
+        </p>
+        <h2>Additional Information</h2>
+        <p>For more information on configuring your Remote Server, see <a href="accesscontrol.html">Server 
+ Access Control<MadCap:xref href="accesscontrol.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="IP:firewall's list" /><MadCap:keyword term="Firewall's list" />. It describes how to set your Remote Server's port, 
+ discusses encryption and when to use it, and describes how to configure 
+ the built-in firewall's list of IP addresses.</p>
+        <p>
+            <MadCap:keyword term="Firewalls" />For more information on configuring your built-in servers' firewalls, 
+ see <a href="firewall.html">Configuring a Firewall<MadCap:xref href="firewall.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <p>For more information on users and groups, see <a href="08-03-01-Users/users.html">Users 
+ and Groups<MadCap:xref href="08-03-01-Users/users.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. It describes how to set up users and groups, and how you 
+ specify who may use the Remote Server. It also discusses administrator 
+ access to the Remote Server.</p>
+        <p>For more information on setting permissions for a particular map, see 
+ <a href="mapaccess.html">Controlling Access to a Map<MadCap:xref href="mapaccess.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. It describes 
+ how to set up unique access controls (by username) for an individual map.</p>
+    </body>
+</html>

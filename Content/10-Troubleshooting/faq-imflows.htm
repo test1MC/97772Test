@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="671" MadCap:lastWidth="648" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">InterMapper Flows FAQs</h1>
+        <p class="dt">When the InterMapper Flows server is restarting and reloading the sessions, the Flows Window displays the number of records loaded so far vs. the total number of sessions. Sometimes the first number is larger than the second. What's going on?</p>
+        <p class="dd">The NetSAW server estimates the number of flows it will load into its cache, based on the flowrate that's learned from the actual records in the DB.  Since this estimate is never perfect,  you'll sometimes notice that the actual number of records exceeds the estimated records.  Other times it'll fall short and finish early.</p>
+        <p class="dt">Is there any additional information available for troubleshooting or debugging a problem with InterMapper Flows?</p>
+        <p class="dd"> InterMapper can provide some debug information via the Telnet server. To do this, turn on the Telnet server in the InterMapper Settings. Then telnet to the InterMapper server and use the "flows" command to list the exporters that InterMapper knows about. Use the "ext" command to check that InterMapper has its own connection to the IMFlows server.</p>
+        <p class="dd">You can copy/paste the output of these two commands into a bug report (Help -&gt; Report a Bug...).</p>
+        <p class="dd">In the directory in which InterMapper Flows is installed, (see the Readme file in the installation package for a file location) there is a log file named "ns2flows.log". The server logs significant information in this file. If you feel the file is getting too large, you can delete it safely.</p>
+        <p class="dt">Does InterMapper Flows work on LAN links? On WAN Links?</p>
+        <p class="dd">Yes, InterMapper Flows will work on any link where there's an "exporter" (the router/switch) to keep track of the traffic statistics. Many kinds of Cisco equipment can export flow records that summarizes the data flowing through that device.</p>
+        <p class="dt">How much bandwidth will NetFlow consume? How frequent is the traffic flow?</p>
+        <p class="dd">A quick answer is "not much". According to Cisco reference documents, NetFlow consumes 5 to 10 percent of your network bandwidth, depending on your configuration. In Help/Systems' experience, it is often much less. The switch/router summarizes the flow information, and typically will send an update about the flows it has seen every 60 or 120 seconds (this is configurable). </p>
+        <p class="dd">It is easy to set up your Cisco gear to send flow records, so you can see the effect on the traffic. You can find a brief document that describes the commands at:</p>
+        <p class="dd"><a href="http://dartware.com/support/tech_notes/imflows/netflowconfig.html">http://dartware.com/support/tech_notes/imflows/netflowconfig.html</a>
+        </p>
+        <p class="dt">Does IM Flow act as collector at each location so that the central server can pull the data from each collector and correlate the same?</p>
+        <p class="dd">No. In our first release, all the flow records must be sent to one InterMapper Flows machine (the "collector"). You can have multiple exporters sending flow records to the single collector, though.</p>
+    </body>
+</html>

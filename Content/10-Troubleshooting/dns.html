@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="853" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>About DNS</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2"><a name="top"></a>
+            <MadCap:keyword term="Changes">
+            </MadCap:keyword>
+            <MadCap:keyword term="DNS" />
+            <MadCap:keyword term="Monitor:DNS" />
+            <MadCap:keyword term="Changes:DNS" />
+            <MadCap:keyword term="About DNS" />About DNS</h1>
+        <ul>
+            <li>
+                <MadCap:keyword term="Addresses:Resolve" />
+                <MadCap:keyword term="Resolve" />
+                <MadCap:keyword term="InterMapper OSX" /><a href="#whichdns">What 
+ resolver does InterMapper OSX use for its DNS?<MadCap:xref href="#whichdns" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#noname">InterMapper sometimes won't show 
+ a device's DNS name...<MadCap:xref href="#noname" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Enter:FQDN" />
+                <MadCap:keyword term="FQDN" /><a href="#fqdn">What is a FQDN?<MadCap:xref href="#fqdn" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+        </ul><a name="whichdns"></a>
+        <h2>What resolver does InterMapper OSX use for its DNS? </h2>
+        <p>InterMapper uses two different DNS resolvers. When you add a device 
+ using the <i><b><MadCap:keyword term="Add Device" />Add Device... </b></i><MadCap:keyword term="DNS:monitoring" /><MadCap:keyword term="DNS:DNS Check" /><MadCap:keyword term="DNS:DNS Monitor Preferences" /><MadCap:keyword term="DNS:DNS Monitor prefs" /><MadCap:keyword term="Set" /><MadCap:keyword term="Addresses" /><MadCap:keyword term="UDP" /><MadCap:keyword term="Monitor" /><MadCap:keyword term="Fully-qualified" /><MadCap:keyword term="Resolve:address" /><MadCap:keyword term="OSX Network" /><MadCap:keyword term="TTL" />command, InterMapper uses the system's 
+ resolver, configured in the OSX Network settings panel. 
+ When you use the "DNS Check" feature
+ , InterMapper does its own DNS operations, 
+ via UDP packets, to the domain name servers listed in the
+ DNS Monitor Preferences panel. InterMapper's built-in domain name resolver 
+ assumes that the domain name is fully-qualified. The interval for verifying the domain name is determined by 
+ the TTL in each DNS response (with the minimum interval specified in
+ the DNS Monitor preferences panel). </p>
+        <p>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="Edit menu:From" />
+            <MadCap:keyword term="Behaviour" />When you discover devices, InterMapper initially looks up the FQDN name 
+ from the IP address (address --&gt; name), then it settles down to monitoring 
+ the domain name (name --&gt; address). InterMapper's built-in DNS resolver 
+ doesn't handle partially-qualified or invalid domain names; they fail to resolve.  </p>
+        <h2>InterMapper sometimes won't show a device's DNS name...<a name="noname"></a></h2>
+        <p>
+            <MadCap:keyword term="Edit menu" />
+            <MadCap:keyword term="Set Info submenu" />From the Edit menu, you can choose the Set Info submenu, then choose 
+ <b><i><MadCap:keyword term="Set Address" />Set Address... </i></b><MadCap:keyword term="DNS:change" />to change the DNS option for each affected 
+ device from<b><i>Resolve name to address</i></b> to    <b><i>Resolve address 
+ to name</i></b>. With this setting InterMapper always resolves the address 
+ to a name, and you don't see errors with names that aren't fully-qualified 
+ domain names.</p>
+        <h2>What <i>is</i> a FQDN?<a name="fqdn"></a></h2>
+        <p>
+            <MadCap:keyword term="Fully-Qualified Domain Name" />This is an acronym for a "Fully-Qualified Domain Name." Within 
+ an organization, it's convenient to refer to a computer by the first part 
+ of its name, knowing that "everyone" will know that the remainder 
+ is the same as the other computers in the organization. Thus, you may 
+ speak of "sneezy" and "dopey", knowing that they're 
+ really two computers at "seven-dwarves.org".</p>
+        <p>
+            <MadCap:keyword term="Enter" />
+            <MadCap:keyword term="FQDN:enter" />
+            <MadCap:keyword term="FQDN:require" />
+            <MadCap:keyword term="Partially-qualified" />To identify a computer uniquely, you need the FQDN, such as "sneezy.seven-dwarves.org." Most user 
+ software can add a "search domain" to a partially-qualified 
+ domain name, adding the missing part of the FQDN. Some DNS servers 
+ require the FQDN to work properly with InterMapper. It's always best to enter the full domain name.</p>
+        <p><b style="font-weight: bold;">Tip:</b> Even though you enter a FQDN 
+ when specifying a computer, you can use the    <i><MadCap:keyword term="Smart Name" /><MadCap:keyword term="Short" />Short, Smart Name</i> when    <a href="../09-Reference/09-01-Command-Menu-Reference/format.html#labels">constructing 
+ a label for a device<MadCap:xref href="../09-Reference/09-01-Command-Menu-Reference/format.html#labels" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <p><b style="font-weight: bold;">Tip:</b> Technically, a FQDN requires 
+ a "." at the end. Just as the search domain is tacked onto the 
+ end of a partial domain name, most user software adds the trailing "."</p>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="5" MadCap:lastHeight="838" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Access Control Examples</title>
+        <link rel="StyleSheet" href="../../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">Access Control Examples<MadCap:keyword term="Adding" /><MadCap:keyword term="Access"></MadCap:keyword><MadCap:keyword term="Access Control Examples" /></h1>
+        <p>Here are some typical access control configurations that might be used 
+ in different settings:</p>
+        <dl>
+            <p style="font-weight: bold;">
+                <MadCap:keyword term="ALLOW" />
+                <MadCap:keyword term="Automatic-login:Allow" />Allow connections from anywhere (no authentication)</p>
+            <ol>
+                <li>
+                    <MadCap:keyword term="Server Settings window" />From the Server Settings window, click a server (<b><MadCap:keyword term="Remote Server" /><MadCap:keyword term="Remote" /></b>Remote Server, Web Server, or Telnet Server)<MadCap:keyword term="Firewall" /><MadCap:keyword term="Adding:firewall" />. 
+		A list of firewall entries appears in the right pane.</li>
+                <li>
+                    <MadCap:keyword term="Firewall:Add" />Add a firewall definition and set it to "Allow 
+ *.*.*.*." </li>
+                <li>From the <MadCap:keyword term="User" /><a href="users.html">Users panel<MadCap:xref href="users.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="Create" /><MadCap:keyword term="Create:Guest" /><MadCap:keyword term="Automatic Login" /><MadCap:keyword term="Login" /><MadCap:keyword term="Guest" /><MadCap:keyword term="Guest:create" />, create a Guest account 
+		with an Automatic Login address of "*.*.*.*". <br /><b><br />Note 1: </b><MadCap:keyword term="Map" />This is a very open setting. Be sure that you actually 
+ intend to allow anyone to connect. This configuration might be reasonable 
+ if InterMapper were running behind a firewall, and thus not visible outside 
+ your organization.<br /><br /><b>Note 2:</b> The IP wildcard example above works with 32-bit IPv4 address. InterMapper now supports 128-bit IPv6 addresses. Wildcard characters are not currently supported for IPv6 addresses.<br /></li>
+            </ol>
+        </dl>
+        <dl>
+            <p style="font-weight: bold;">Allow connections from anywhere, but with authentication</p>
+            <ol>
+                <li>
+                    <MadCap:keyword term="Password" />Define your user names and passwords as described in <a href="users.html">Users 
+		and Groups<MadCap:xref href="users.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. </li>
+                <li>From the Server Settings window, click <b>Remote Server</b>. 
+		A list of firewall entries appears in the right pane.</li>
+                <li>Add a firewall definition and set it to "Allow *.*.*.*."<br /><br /><MadCap:keyword term="Username/password" /><MadCap:keyword term="Username/password:provide" />Anyone that connects is required to provide a username/password.</li>
+            </ol>
+        </dl>
+        <dl>
+            <p style="font-weight: bold;">
+                <MadCap:keyword term="Web" />Allow web connections to see all maps</p>
+            <ol>
+                <li>Define a group named <b><MadCap:keyword term="FullWebAccess" />FullWebAccess</b>.</li>
+                <li>Add users to that group. <br /><br />The users in the group can view all web pages, and can acknowledge down devices.</li>
+            </ol>
+        </dl>
+        <dl>
+            <p><b style="font-weight: bold;"><a name="autologin"></a><MadCap:keyword term="IP:Enter" /><MadCap:keyword term="Enter" />Allow people 
+	 from known addresses to connect without entering a password</b>
+            </p>
+            <p class="dd">
+                <MadCap:keyword term="Automatic-login:called" />This is called an <i><MadCap:keyword term="ALLOW:automatic-login" /><MadCap:keyword term="Automatic-login" />automatic-login</i> user. </p>
+            <ol>
+                <li>Create a new user with the desired name.</li>
+                <li>Leave the <i><b>Password </b></i>box empty. </li>
+                <li>
+                    <MadCap:keyword term="IP" />
+                    <MadCap:keyword term="Enter:IP" />
+                    <MadCap:keyword term="IP Address" />Enter the desired IP address in the <i><b>Automatic Login 
+		</b></i>box.<br /><br />All connections from that IP address or range are automatically connected, 
+		and are assigned the specified user name.</li>
+            </ol>
+        </dl>
+        <dl>
+            <p style="font-weight: bold;">Allow a non-administrator user to see the log files
+</p>
+            <ol>
+                <li>Define a group named <MadCap:keyword term="FullLogAccess" />FullLogAccess.</li>
+                <li>Add users to that group. <br /><br />The users in the group can view all the log files.&#160;</li>
+            </ol>
+            <p style="font-weight: bold;">Allow an automatic-login user name to connect from elsewhere by 
+	 entering a password</p>
+            <ul>
+                <li>Create an <MadCap:keyword term="automatic-login user" /><a href="#autologin">automatic-login 
+		user <MadCap:xref href="#autologin" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> as described above, but enter a password. <br /><br />When connecting from an IP address <i>within</i> the range specified for 
+		automatic login, the user is automatically connected and assigned the 
+		specified user name. <br /><br />When connecting from an IP address <i>outside</i> the range specified 
+		for automatic login, the user is prompted for a user name and password.</li>
+            </ul>
+            <p style="font-weight: bold;">
+                <MadCap:keyword term="DENY" />Deny all connections from certain addresses or sites</p>
+            <p class="dd">You can prohibit connections from certain sites. </p>
+            <ol>
+                <li>From the Server Settings window, click <b>Remote Server</b>. 
+		A list of firewall entries appears in the right pane.</li>
+                <li>Click <b><i>Add...</i></b><MadCap:keyword term="Firewall Definition dialog" /> The Firewall Definition dialog 
+		appears.</li>
+                <li>In the <i><b>IP Address</b></i> box, enter an IP address 
+		or         <a href="../firewall.html#addressranges">IP address range<MadCap:xref href="../firewall.html#addressranges" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+                <li>From the <b><i>Access</i></b> dropdown menu, choose         <i><b>Deny</b></i>.<i><b></b></i></li>
+                <li>Click <b><i><MadCap:keyword term="OK" />OK</i></b>.<br /><br />All connections from the specified IP address or range are denied.</li>
+            </ol>
+            <p style="font-weight: bold;">Give a single user access to a specific map</p>
+            <ol>
+                <li>From the Users tab, <a href="../firewall.html">create a new 
+		user<MadCap:xref href="../firewall.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. </li>
+                <li>From the Maps tab, set the user's permissions for the 
+		Web and Remote servers. <br /><br />These permissions are tested only if the user fails to match the global 
+		IP address test and/or username and password</li>
+            </ol>
+        </dl>
+    </body>
+</html>

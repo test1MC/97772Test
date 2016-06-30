@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="875" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Selecting Source Data</h1>
+        <p>When creating a report, you first need to choose the devices or interfaces for which data is included in the report.</p>
+        <p>Use the data source selection bar to select the devices or interfaces for your report.</p>
+        <p>
+            <img src="../Resources/images/IMRS-SelectDevice-controls.png" style="width: 553px;height: 28px;" />
+        </p>
+        <p><b>To select data sources:</b>
+        </p>
+        <ul>
+            <li>Click anywhere in the source selection bar shown above. A selection tree appears, as shown below.</li>
+        </ul>
+        <p>
+            <img src="../Resources/images/IMRS-SelectDevices-85pct.png" />
+        </p>
+        <ul>
+            <li>Select or clear the check boxes for the devices or interfaces whose source data you want to include in the report.</li>
+            <li>Select the <b style="font-style: italic;">Show deleted devices &amp; interfaces</b> check box to include devices or interfaces that have been deleted. </li>
+            <li>Click the <b style="font-style: italic;">Select All</b> or <b style="font-style: italic;">Unselect All</b> to select or unselect all devices or interfaces in a column.</li>
+            <li>When finished selecting, click the source selection bar. The selection tree disappears, and the selected data appears.<br /><br /><b>Note:</b> If you select a large amount of data over a large time range, it may take a few moments or longer for the data to appear. This depends on a number of variables - the speed of reports server CPU, the amount of data, the time units selected.</li>
+        </ul>
+        <h2>Selecting a Dataset</h2>
+        <p>To create graphs, you need to select a dataset that contains numeric values. The datasets available depend on which devices are selected, the probes used to monitor those devices, what datasets are recorded through those probes, and whether those datasets are being exported to the Reports Server database.</p>
+        <p>A dataset is available when retention policy for the selected device is not set to <b style="font-style: italic;">None</b> and one of the following is true:</p>
+        <ul>
+            <li>For devices, response time or short-term packet loss are always stored.</li>
+            <li>For interfaces, incoming or outgoing bytes/second are always stored.</li>
+            <li>If the dataset is specified in the probe to be 'autorecord' .</li>
+            <li>If  a chart was created from the dataset by clicking it in the Status window or dragging it from the Status window to an existing chart.</li>
+        </ul>
+        <p class="floatright">
+            <img src="../Resources/Images/Reports-SelectDataSet.png" />
+        </p>
+        <p><b>To select a dataset:</b>
+        </p>
+        <ul>
+            <li>From the Dataset dropdown menu, near the right of the device selection controls, choose a dataset. Assuming you are still in Table view, a list of values appears.</li>
+        </ul>
+        <h2>Selecting Data Grouping</h2>
+        <p>
+            <img src="../Resources/images/IMRS-MinAvgMaxGrp.png" />
+        </p>
+        <h3>Grouping by time</h3>
+        <p>In most cases, the selected time scale causes each data point to represent a group of raw samples. Use the data grouping buttons to specify how you want the group of samples represented by a graph data point to be displayed.</p>
+        <p><b>To select data grouping for each time period:</b>
+        </p>
+        <ul>
+            <li>Click <b style="font-style: italic;">Min</b> to display the minimum value from the group of samples during a data point's time period.</li>
+            <li>Click <b style="font-style: italic;">Avg</b> to take the average value from the group of samples during a data point's time period.</li>
+            <li>Click <b style="font-style: italic;">Max</b> to display the maximum value from the group of samples during a data point's time period.</li>
+        </ul>
+        <h3 class="pagebreakbefore">Grouping by device or interface</h3>
+        <p>When multiple devices or interfaces are selected, each device or interface's dataset appears as a line or bar on the graph. The Group check box allows you to group the datasets from multiple devices or interfaces into a single dataset that shows the minimum, average or maximum value for all devices in the group over the selected time period.</p>
+        <p>To view devices or interfaces as one dataset:</p>
+        <ul>
+            <li>Select the <b style="font-style: italic;">Group</b> check box.</li>
+        </ul>
+        <h2>Selecting Columns (Table view)</h2>
+        <p class="floatright">
+            <img src="../Resources/images/IMRS-SelectColumns.png" />
+        </p>
+        <p>In Table view, regardless of the selected dataset, use the <b style="font-style: italic;">Columns</b> selector to choose the columns to show in the report.</p>
+        <h2>Using the Page Controls</h2>
+        <p>
+            <img src="../Resources/images/IMRS-PageControls.png" class="floatright" />
+        </p>
+        <p>Use the page controls to choose the page of data you want to view.</p>
+        <ul>
+            <li>Click the left and right arrow buttons to move to the start or end of the report or to move to the previous or next page.</li>
+            <li>Type in a page number to move to that page.</li>
+            <li>Use the dropdown selector to specify the number of results are shown on a page.</li>
+        </ul>
+        <h2>Selecting a Data Range</h2>
+        <p>
+            <img src="../Resources/images/IMRS-SelectDataRange.png" />
+        </p>
+        <p>You can limit the amount of data from the dataset that is displayed in the report. In selecting a data range, you select data over a time range, and control the density of that data over the specified range. You do this using the <b style="font-style: italic;">Show Data From</b> controls at the bottom of the window. Select a range of data by date, and specify the units to use (hours, days, weeks, months, etc.). Learn more about data range selection options in Data Range Options, below.</p>
+        <h2>Data Range Options</h2>
+        <table style="margin-left: 0; margin-right: auto;">
+            <col style="width: 192px;" />
+            <col style="width: 366px;" />
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p style="font-weight: bold;">Previous</p>
+                        <p>Select a data in a range of time previous to today.</p>
+                    </td>
+                    <td style="text-align: right;">
+                        <img src="../Resources/images/IMRS-Time-Previous.png" style="width: 315px;height: 145px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p style="font-weight: bold;">...to Date</p>
+                        <p>Select all data from beginning of the most recent day, week, month, or year.</p>
+                        <p>The time units vary with your selection.</p>
+                    </td>
+                    <td style="text-align: right;">
+                        <img src="../Resources/images/IMRS-Time-ToDate.png" style="width: 316px;height: 146px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p style="font-weight: bold;">Specific date</p>
+                        <p>Select data for a specific date.</p>
+                    </td>
+                    <td style="text-align: right;">
+                        <img src="../Resources/images/IMRS-Time-SpecDate.png" style="width: 316px;height: 151px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p style="font-weight: bold;">All dates before</p>
+                        <p>Select all data before the specified date.</p>
+                    </td>
+                    <td style="text-align: right;">
+                        <img src="../Resources/images/IMRS-Time-DatesBefore.png" style="width: 317px;height: 151px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p style="font-weight: bold;">All dates after</p>
+                        <p>Select all data after the specified date.</p>
+                    </td>
+                    <td style="text-align: right;">
+                        <img src="../Resources/images/IMRS-Time-DatesAfter.png" style="width: 312px;height: 145px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p style="font-weight: bold;">Date Range</p>
+                        <p style="font-weight: normal;">Select data from the specified range of dates.</p>
+                    </td>
+                    <td>
+                        <img src="../Resources/images/IMRS-Time-DateRange.png" style="width: 364px;height: 117px;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Specifying Time Units</h2>
+        <p>
+            <img src="../Resources/images/IMRS-DataUnits.png" class="floatright" />
+        </p>
+        <p>In addition to selecting a range of data over time, you can specify the units used to display the data.</p>
+        <p>Of course, the data units selected affect the time it takes to display the report. (Displaying data every 5 minutes over a year, for example, represents a large amount of data.)</p>
+    </body>
+</html>

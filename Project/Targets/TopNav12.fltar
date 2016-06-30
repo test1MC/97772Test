@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  Skin="/Project/Skins/HTML5responsive.flskn"
+  ConditionTagExpression="include[Primary.online] exclude[Primary.CurrentInfo or Primary.NewInfo or Primary.Omit or Primary.print or Primary.review or Primary.Splunk or Primary.test] "
+  MasterToc="/Project/TOCs/Primary.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/styles.css"
+  MasterPage="/Content/Resources/MasterPages/TopicMaster.flmsp"
+  Medium="print"
+  UseLocalBuildSettings="false">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

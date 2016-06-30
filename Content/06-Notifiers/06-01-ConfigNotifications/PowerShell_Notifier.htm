@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:lastBlockDepth="6" MadCap:lastHeight="2764" MadCap:lastWidth="573" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1>PowerShell Notifier</h1>
+        <p>Use the Powershell notifier to execute a PowerShell script when a device meets specified conditions.</p>
+        <p><b>Note:</b> Before you can run a PowerShell Notifier, you must <a href="../../07-MonitoringNetwork/Configuring_PowerShell_For_InterMapper.htm">configure PowerShell to work with InterMapper<MadCap:xref href="../../07-MonitoringNetwork/Configuring_PowerShell_For_InterMapper.htm">(Pg 1)</MadCap:xref></a> on the local machine and any target machines you want to access with PowerShell. Use PowerShell probes to test the connectivity.</p>
+        <p style="font-weight: bold;">To configure a PowerShell notifier:</p>
+        <ol>
+            <li>Enter a notifier <b style="font-style: italic;">Name</b>.</li>
+            <li>From the Notifier Type dropdown menu, choose <b style="font-style: italic;">PowerShell</b>. The PowerShell Notifier configuration window appears as shown below.</li>
+            <li>Choose whether you want to execute the script on the local machine (localhost) or a remote machine.</li>
+            <li>In the <b style="font-style: italic;">PowerShell arguments</b> box, enter the arguments you want to use define how the PowerShell process executes. See below for more information.</li>
+            <li>In the <b style="font-style: italic;">PowerShell command text</b> box, enter the command you want to execute. See below for more information.</li>
+        </ol>
+        <h2>PowerShell Notifier Settings</h2>
+        <ul>
+            <li><b>Execution</b> - Choose how the script or command is executed:<br /><b>Local</b> - the PowerShell command text is executed on the local machine.<br /><b>Alerting Device</b> - Powershell uses the selected <b style="font-style: italic;">Authentication</b> method to connect to the machine that triggered the alert, and executes the specified command text. <br /><b>Other Device</b> - Powershell  uses the selected <b style="font-style: italic;">Authentication</b> method to connect to the machine specified in the <b style="font-style: italic;">ComputerName</b> box, and executes the specified command text. <br /></li>
+            <li><b>User</b> - For <b style="font-style: italic;">Local</b> execution, leave this blank unless you want to pass credentials to your script, (for example, to use Get-WmiObject). For <b style="font-style: italic;">Remote</b> execution, use the credentials of a valid administrator on the remote computer. For networks that do not use a domain controller, a notifier must be created for each unique administrator.<br /></li>
+            <li><b>Password</b> - enter the password associated with the supplied user name.</li>
+            <li><b>PowerShell Arguments</b> - enter the arguments to be passed to the PowerShell command. These are command line arguments used when launching PowerShell; they control how PowerShell executes, and are not sent to your PowerShell script.</li>
+            <li><b>PowerShell Command Text</b> - enter the text of the command to be executed. These are the commands that PowerShell runs when the notifier is triggered.</li>
+        </ul>
+        <p><b>Notes:</b> <![CDATA[ ]]></p>
+        <ul>
+            <li>The <b style="font-style: italic;">PowerShell Command Text</b> box is limited to 255 characters. Typically it is used to execute an existing script in a file. </li>
+            <li>Parameters to the command are passed through STDIN, and thus are not bound by the character limit. If you encounter the limit, you can use message variables as arguments, including sending the entire contents of the notifier message as an argument ("${MESSAGE}"). If you choose to use one of these variables, be sure to enclose it in quotes, in case it contains whitespace.</li>
+            <li>Relative paths to PowerShell scripts must be relative to the InterMapper Settings\Tools folder. </li>
+            <li>You can create additional folders hierarchy within the Tools folder if you find it useful. </li>
+            <li>In the Command Text box, the path to the Tools folder is "<span class="code">./yourscript.ps1</span>". PowerShell also accepts a backslash, but it must be escaped:  ".\\yourscript.ps1."</li>
+            <li>Signed scripts must be run from the InterMapper Settings\Tools folder or in a folder it contains.</li>
+        </ul>
+        <h2>Available Variables</h2>
+        <p>You can use many InterMapper variables, including ${address}, ${User}, ${Password*}, as well as any of the other information available to Command-Line notifiers.</p>
+        <h2>Choosing an Execution Method</h2>
+        <p>Three methods of execution are available. Each one determines how the script will be executed, and what device it is executed on.</p>
+        <ul>
+            <li><b>Local</b> - the PowerShell command text is executed on the local machine.</li>
+            <li><b>Alerting Device</b> - Powershell uses the selected <b style="font-style: italic;">Authentication</b> method to connect to the machine that triggered the alert, and executes the specified command text. </li>
+            <li><b>Other Device</b> - Powershell  uses the selected <b style="font-style: italic;">Authentication</b> method to connect to the machine specified in the <b style="font-style: italic;">ComputerName</b> box, and executes the specified command text. </li>
+        </ul>
+        <h3>Default Command Text</h3>
+        <p>When you choose an execution method, the <b style="font-style: italic;">PowerShell command text</b> box is preloaded an appropriate command. </p>
+        <p>Here are the defaults for each execution method:</p>
+        <ul>
+            <li style="font-weight: bold;">Local</li>
+        </ul><pre class="code">./MyPowerShellNotifier.ps1 "${MESSAGE}"</pre>
+        <ul>
+            <li style="font-weight: bold;">Alerting Device</li>
+        </ul><pre class="code">Invoke-Command -FilePath ./MyPowerShellNotifier.ps1 -ArgumentList "${MESSAGE}"</pre>
+        <ul>
+            <li style="font-weight: bold;">Other Device</li>
+        </ul><pre class="code">Invoke-Command -FilePath ./MyPowerShellNotifier.ps1 -ArgumentList "${MESSAGE}"</pre>
+        <p>Change the name of the <b style="font-style: italic;">.ps1</b> script and change or add parameters as needed.</p>
+        <h3>Execution: Local Device</h3>
+        <p>The specified command text is executed on the local machine.</p>
+        <p>
+            <img src="../../Resources/Images/config-Powershell-Local-351x292.png" />
+        </p>
+        <h3>Execution: Alerting Device </h3>
+        <p>The specified command text is executed on the machine that triggered the alert.</p>
+        <p>
+            <img src="../../Resources/Images/config-Powershell-AlertingDevice-351x292png.png" />
+        </p>
+        <h3>Execution: Other Device</h3>
+        <p>The specified command text is executed on the machine specified in the <b style="font-style: italic;">ComputerName</b> box. </p>
+        <p>
+            <img src="../../Resources/Images/config-Powershell-OtherDevice-351x292.png" />
+        </p>
+    </body>
+</html>

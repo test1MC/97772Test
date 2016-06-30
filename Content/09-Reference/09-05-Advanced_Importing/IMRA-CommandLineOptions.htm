@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="5" MadCap:lastHeight="2019" MadCap:lastWidth="887.4001" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Command-line Options for InterMapper RemoteAccess</title>
+        <link rel="StyleSheet" href="../Resources/default.css" />
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">
+            <MadCap:keyword term="Command Line Interface" />Command-line Options for RemoteAccess</h1>
+        <h2 class="L2" MadCap:conditions="Primary.print">Command-line Options for RemoteAccess</h2>
+        <p>
+            <MadCap:keyword term="InterMapper Server:testing" />
+            <MadCap:keyword term="InterMapper Remote" />You can call InterMapper RemoteAccess from a command line, and control a significant 
+ number of functions. This can be useful for automating the updating of 
+ maps, or for various testing purposes.</p>
+        <p>
+            <MadCap:keyword term="PORT" />
+            <MadCap:keyword term="Cmd-line" />InterMapper RemoteAccess currently supports the following command-line arguments:</p>
+        <table style="border-spacing: 0;width: 90.607%;margin-left:0;border-spacing: 0px;" cellspacing="0" width="90.607%">
+            <col style="width: 189px;" />
+            <col style="width: 61.403%;" />
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;border-left-style: none;border-top-style: none;">
+                    <p><span style="font-weight: bold;">Argument</span>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-top-style: none;border-right-style: none;">
+                    <p><span style="font-weight: bold;">Description</span>
+                    </p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="HOST" />-host --host &lt;HOST&gt;</p>
+                </td>
+                <td style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>connect to the specified HOST</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;border-left-style: none;">
+                    <p>-port --port &lt;PORT&gt;</p>
+                </td>
+                <td style="padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;">
+                    <p>
+                        <MadCap:keyword term="Defaults" />
+                        <MadCap:keyword term="Defaults:8181" />
+                        <MadCap:keyword term="PORT on HOST" />connect to the specified PORT on HOST (defaults to 8181)</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-left-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="MAP_NAME" />-map --map &lt;MAP_NAME&gt;</p>
+                </td>
+                <td style="padding-right: 10px;padding-left: 10px;border-bottom-style: none;border-right-style: none;">
+                    <p>load the specified map(s) from HOST (separate map names with ":")</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="Import" />&#160;-import 
+ --import &lt;FILE_NAME&gt;</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="Stdin" />import the specified file (use - for stdin)</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">-importmap --importmap &lt;FILE_NAME&gt;</td>
+                <td class="p" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p width="61.403%">import the specified map.</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="Export" />
+                        <MadCap:keyword term="EXPORT-SPEC" />-export --export &lt;EXPORT-SPEC&gt;</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="Stdout" />export the specified data to stdout.<br /><br style="font-weight: bold;" /><b>Note:</b> Data for all maps is exported.</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">-exportmap --exportmap &lt;MAP_ID&gt; </td>
+                <td class="p" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p width="61.403%">export the specified map</p>
+                    <p width="61.403%"><b>Note:</b> The easiest way to get the map ID is to look in the Maps folder in the InterMapper Settings folder. Each map name has a prefix that begins with "g". The text between the "g" and the hyphen ("-") is the Map ID.</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="FILE_NAME" />-f --file &lt;FILE_NAME&gt;</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>open the specified shortcut file</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="DEBUG_CONFIG_FILE" />-d --debug &lt;DEBUG_CONFIG_FILE&gt;</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>use the specified configuration file to configure debugging output</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="D&lt;name" />-D&lt;name&gt;=&lt;value&gt; </p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>set a system property</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="USER" />-user --user &lt;USER&gt;</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>log in as USER</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="PASSWORD" />-pass --pass &lt;PASSWORD&gt;</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>log in as USER with PASSWORD</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>-ignore-cert-check</p>
+                </td>
+                <td class="p" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>accept all server SSL certificates without prompting</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">-agree-to-license</td>
+                <td style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>accept the End User License Agreement</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>-version --version</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>print product version</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="Env" />-env --env</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>print out system properties</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">-test --test [TIMEOUT]</td>
+                <td style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>test the connection - automatically quit after TIMEOUT seconds</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>-h -? --help</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>print this help message</p>
+                </td>
+            </tr>
+            <tr valign="top" MadCap:conditions="Primary.Omit">
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-left-style: none;border-right-style: none;border-bottom-style: none;">
+                    <p>
+                        <MadCap:keyword term="MAX_CHARS" />
+                        <MadCap:keyword term="Dmax" />-dmax --dmax &lt;MAX_CHARS&gt;</p>
+                </td>
+                <td colspan="1" rowspan="1" style="padding-right: 10px;padding-left: 10px;border-right-style: none;border-bottom-style: none;">
+                    <p>set the maximum number of characters in the debug window</p>
+                </td>
+            </tr>
+        </table>
+        <h2 class="pagebreakbefore">Windows Users</h2>
+        <p>The syntax for Windows users is essentially the same as the Linux/Unix examples below, except that the command line requires the full Windows path to InterMapper's Java installation (rather than any other installations of Java that might exist on the machine.) The following example sets the working directory to the .jar file, then invokes java with the .jar file:</p><pre class="code" xml:space="preserve">
+cd "[jar file location]"
+"C:\Program Files\InterMapper\java\bin\java" -jar \[jar file name].jar </pre>
+        <p>Remember to use this approach for all of the examples below, replacing <span class="code">java </span>with the full path to the InterMapper Java installation.</p>
+        <h2 class="pagebreakbefore">Examples for Import commands</h2>
+        <p>To import to a specified server, IM Remote is invoked as follows:<MadCap:keyword term="IM-Remote.jar" /><MadCap:keyword term="Big.dartware.com" /><MadCap:keyword term="Admin" /><MadCap:keyword term="Adminpw" />&#160;<MadCap:keyword term="Newdata.tab" /></p><pre class="code" xml:space="preserve">java  -jar &lt;jar-file&gt; --host &lt;intermapper-server&gt; [--user &lt;username&gt; --pass &lt;password&gt;] --import &lt;import-file&gt;&#160;</pre>
+        <p>The example below reads imported data from newdata.tab.</p><pre class="code" xml:space="preserve">
+java  -jar intermapper_remoteaccess.jar --host big.dartware.com --user admin --pass adminpw --import newdata.tab</pre>
+        <p>The example below reads imported data from <i>stdin</i>.</p><pre class="code" xml:space="preserve">java  -jar intermapper_remoteaccess.jar --host big.dartware.com --user admin --pass adminpw --import -</pre>
+        <p>The stdin form of the --import option allows Unix users to create self-contained 
+ executable files that import stuff:<MadCap:keyword term="Usr/bin/java" />&#160;<MadCap:keyword term="Unix" /></p><pre class="code" xml:space="preserve">#!/usr/bin/java 
+ -jar intermapper_remoteaccess.jar --host big.dartware.com --import -<br />#import blah blah 
+ blah<br />blah blah 
+ blah<br />blah blah 
+ blah</pre>
+        <p>
+            <MadCap:keyword term="InterMapper Server" />One use for this would be to automate testing of InterMapper Server.</p>
+        <h2>Examples for Export commands</h2>
+        <p>To export from a specified server, IM Remote is invoked as follows:</p><pre class="code" xml:space="preserve">java  -jar &lt;jar-file&gt; --host &lt;intermapper-server&gt; [--user &lt;username&gt; --pass &lt;password&gt;] \
+  --export "format=&lt;output-type&gt;&#160;table=&lt;table-name&gt; fields=&lt;field-list&gt;</pre>
+        <p>The example below writes exported data to <i>stdout</i>.</p><pre class="code" xml:space="preserve">java -jar intermapper_remoteaccess.jar --host big.dartware.com --user admin --pass adminpw --export  "format=tab table=devices fields=*"</pre>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" class="" MadCap:lastBlockDepth="6" MadCap:lastHeight="4808" MadCap:lastWidth="594" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Setting Error and Traffic Thresholds</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Device Thresholds window;Set:Error Thresholds" />
+            <MadCap:keyword term="Set" />
+            <MadCap:keyword term="Set:Thresholds" />
+            <MadCap:keyword term="Default:Default Device Thresholds:Setting" />
+            <MadCap:keyword term="Default:Default Thresholds:Setting" />
+            <MadCap:keyword term="Default:Default Traffic Thresholds:Setting" />
+            <MadCap:keyword term="Error" />
+            <MadCap:keyword term="Error:Setting" />
+            <MadCap:keyword term="Traffic Thresholds" />
+            <MadCap:keyword term="Thresholds" />
+            <MadCap:keyword term="Thresholds:Setting" />Setting Thresholds</h1>
+        <p>
+            <MadCap:keyword term="Map" />
+            <MadCap:keyword term="Round-Trip Time" />You can set a number of thresholds in InterMapper:</p>
+        <ul>
+            <li><b>Devices</b> - set thresholds for lost packets, interface errors, and short-term packet loss.</li>
+            <li><b>Interfaces</b> - set thresholds for interface errors, link utilization, and interface discards.</li>
+        </ul>
+        <p>You can set thresholds as follows:</p>
+        <ul>
+            <li><b>Individual thresholds</b> for devices and interfaces</li>
+            <li><b>Server Defaults </b> for device and interface thresholds</li>
+            <li><b>Map Defaults </b> for device and interface thresholds</li>
+        </ul>
+        <h2>Device Thresholds</h2>
+        <p> <MadCap:keyword term="Set:Default Thresholds" /><MadCap:keyword term="Default:Default Thresholds" /></p>
+        <p>
+            <MadCap:keyword term="Set Thresholds" />For devices, you can set thresholds for:</p>
+        <ul>
+            <li><b>Number of lost packets</b> - specify a number of lost packets between 
+	 1 and 10 required to set a device to a down state.</li>
+            <li><b>Interface errors</b>
+                <MadCap:keyword term="Errors-per-minute" /> - specify the number of interface errors-per-minute 
+	 required to set a device to warning, alarm or critical state.</li>
+            <li><b>Short-term packet loss</b> - specify a number of packets out of the 
+	 last 100 required to set a device to warning, alarm, or critical state. 
+	 This metric is applicable only to packet-based probes. This statistic can 
+	 be viewed from the device's status window.</li>
+            <li><b>Response Time</b> - specify a response time in milliseconds required 
+	 to set a device to warning, alarm, or critical state. This statistic can be
+	 viewed from the device's status window.</li>
+        </ul>
+        <h2>Interface Thresholds</h2>
+        <p>For interfaces, you can set Warning, Alarm, and Critical thresholds for:</p>
+        <ul>
+            <li><b>Errors</b> - <b style="font-style: italic;">Rx Errors (Received)</b> per minute, <b style="font-style: italic;">Tx Errors (Transmitted)</b> per minute, and <b style="font-style: italic;">Total Errors (Rx +&#160;Tx)</b> per minute.</li>
+            <li><b>Link Utilization</b> - <b style="font-style: italic;">Rx Utilization (Received)</b> percentage, <b style="font-style: italic;">Tx Utilization  (Transmitted)</b> percentage, and <b style="font-style: italic;">Total Utilization  (Rx +&#160;Tx)</b> percentage.</li>
+            <li><b>Discards</b> - <b style="font-style: italic;">Rx Discards (Received)</b> per minute, <b style="font-style: italic;">Tx Discards (Transmitted)</b> per minute, and <b style="font-style: italic;">Total Discards (Rx +&#160;Tx)</b> per minute.</li>
+        </ul>
+        <p>As stated above, these statistics can be seen in the device's status window.</p>
+        <h2 class="pagebreakbefore">Setting Thresholds for Individual Devices</h2>
+        <p>Use the Monitor menu or the device's context menu to set thresholds for a device.</p>
+        <p>To set thresholds for a device:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" />the device and choose <b style="font-style: italic;">Info Window...</b> or click to select the device, then choose <b style="font-style: italic;">Info Window...</b> from the Monitor menu. The device's Info window appears.</li>
+            <li>In <MadCap:annotation MadCap:createDate="2016-02-05T17:47:16.1247129-05:00" MadCap:creator="BobM" MadCap:initials="BM" MadCap:comment="There may be additional threshold pages available." MadCap:editor="BobM" MadCap:editDate="2016-02-05T17:47:46.7945819-05:00">the</MadCap:annotation> left pane, click <b style="font-style: italic;">Thresholds</b>. The Thresholds panel appears in the right pane.</li>
+            <li>Clear the <b style="font-style: italic;">Use Map Defaults</b> check box.</li>
+            <li>Set the thresholds as needed and click <b style="font-style: italic;">OK</b>. New thresholds are used to determine the device's status starting with the next poll.</li>
+        </ol>
+        <h2>Setting Thresholds for Individual links</h2>
+        <p>There are several ways to set thresholds for interface links:</p>
+        <ul>
+            <li>Set thresholds for each link separately, using the interface link's context menu.</li>
+            <li>Set thresholds for all of the device's links at once, using the device's context menu.</li>
+            <li>Set thresholds for some, but not all, of the device's links using the Interfaces window. In this case, use the Interfaces window to select the interfaces whose links you want to set, then use the context menu to set them all at once.</li>
+        </ul>
+        <h3>Set Thresholds for a Link</h3>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" />the link and choose <b style="font-style: italic;">Interfaces &gt; [the threshold set you want to set]</b> from the context menu. The link's selected Threshold window appears.</li>
+            <li>Set the thresholds as needed and click <b style="font-style: italic;">OK</b>. New thresholds are used to determine the link's status starting with the next poll.</li>
+        </ol>
+        <h3>Set Thresholds for All of a Device's Links</h3>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" />the device and choose <b style="font-style: italic;">Interfaces &gt; [the threshold set you want to set]</b> from the context menu <br />or <br />Click to select the device, and choose <b style="font-style: italic;">Interfaces &gt; [the threshold set you want to set]</b> from the Monitor menu.  The selected device's Interface Threshold window appears.</li>
+            <li>Set the thresholds as needed and click <b style="font-style: italic;">OK</b>. New thresholds are used to determine the status of all the device's links starting with the next poll.</li>
+        </ol>
+        <h3>Set Thresholds for Some of a Device's Links</h3>
+        <p>You can set thresholds for some (but not all) of a device's links. You can also use this method to set thresholds for an individual link.</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" />the device and choose <b style="font-style: italic;">Interfaces &gt; Window...</b> from the context menu.  The selected device's Interfaces window appears.</li>
+            <li>Click to select the first interface you want to set. The interface line is selected.</li>
+            <li>Shift-click (for contiguous lines) or Control-click (for non-contiguous lines) to select additional interfaces you want to set.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" />the the selected interfaces and choose <b style="font-style: italic;">Interfaces &gt; [the threshold set you want to set]</b> from the context menu. The Thresholds window appears, showing the values that are common among the links. Any values that are not the same show <span class="code">&lt;mixed&gt;</span>.</li>
+            <li>Set the thresholds as needed and click <b style="font-style: italic;">OK</b>. New thresholds are used to determine the status of the selected links starting with the next poll.</li>
+        </ol>
+        <h3>Viewing and Resolving Conflicts in Threshold Settings</h3>
+        <p>You can set thresholds for several links at once. If you have already set thresholds for one of the links, then select multiple links and open the thresholds window, the conflicting are shown as <b style="font-style: italic;">&lt;&lt;mixed&gt;&gt;</b> as shown:</p>
+        <p style="text-align: center;font-style: italic;">
+            <img src="../Resources/Images/LinkThresholds-mixed.png" />
+            <br />Thresholds window showing mixed values</p>
+        <p style="font-style: normal;text-align: left;">The image above shows that the <b style="font-style: italic;">Tx Utilization</b> threshold for one or more of the selected interfaces is different from the others. You can resolve the issue by making the settings the same for the selected interfaces. Hover your mouse over the conflicting value to see the value of the parent device's threshold setting.</p>
+        <h2>Sending Alerts Based On Link Status</h2>
+        <p>Use the same techniques as above to attach notifiers to links, sending alerts based on the status of one, some, or all links on a device.</p>
+        <h3>Attaching a Notifier to a link</h3>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" />the link and choose <b style="font-style: italic;">Interfaces &gt; Notifiers window</b> from the context menu. The link's Notifiers window appears, showing a list of notifiers, with check boxes for each of the link's status levels. If any notifiers are attached to the link, check boxes are selected.</li>
+            <li>Click status level check boxes to indicate which notifiers should be run. When finished, closed the window. Alerts are sent as specified when link thresholds reach the status associated with a notifier's checked box.</li>
+        </ol>
+        <h3 class="nopagebreakbefore">Attach a notifier to some or all links on a device</h3>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" />the device and choose <b style="font-style: italic;">Interface &gt; Window...</b> from the device's context menu. The device's Interfaces window appears.</li>
+            <li>Select the interfaces for the links you want to attach notifiers to. Press Ctrl-A (or Cmd-A) to select all. Click a line, then Shift-click or Ctrl-click as described above to select additional interfaces. Then <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" /> and choose <b style="font-style: italic;">Notifiers Window</b> from the context menu.</li>
+            <li>If notifiers are attached to any of the device's links, status check boxes are filled for certain status levels.</li>
+            <li>Click status level check boxes to indicate which notifiers should be run. When finished, closed the window. Alerts are sent as specified when thresholds reach the status associated with a notifier's checked box.</li>
+        </ol>
+        <h2>Setting Default Thresholds </h2>
+        <p>Set default thresholds for a server or a map. Default thresholds set for a server are applied by default. You can override those settings, and use default thresholds for a map instead. You can also override those thresholds for an individual device or interface.</p>
+        <p>
+            <MadCap:keyword term="Edit menu" />
+            <MadCap:keyword term="Edit" />You can set default device and traffic thresholds for a map. Use the Map 
+	Settings window, available from the Edit menu, to set default thresholds.</p>
+        <h3 class="clearboth">
+            <MadCap:keyword term="Set:Default Device Thresholds" />
+            <MadCap:keyword term="Default:Default Device Thresholds" />Setting Default Device Thresholds</h3>
+        <p>
+            <MadCap:keyword term="Map Settings Window" />
+            <MadCap:keyword term="Map Settings" />
+            <MadCap:keyword term="Thresholds&gt;Device" />Use the <b style="font-style: italic;">Device Thresholds</b> section of the Map Settings window to set default 
+	device thresholds for a map so that errors for all devices are reported at 
+	the same levels.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/NewSnippet.flsnp" />
+        <div>
+            <img src="../Resources/Images/MapSettings-Device.png" border="0" style="width: 575px;height: 246px;" />
+        </div>
+        <p><b>To set the default device thresholds for a map:</b>
+        </p>
+        <ol>
+            <li> In an editable map, choose <b style="font-style: italic;">Map Settings</b> from the Edit menu. 
+	The Map Settings window appears.</li>
+            <li> In the left pane, click <b style="font-style: italic;">Device</b>. The default 
+	thresholds for the map appear in the right pane.</li>
+            <li> Enter the settings you want to change, and click <b style="font-style: italic;">OK</b>. The 
+	map uses the new threshold settings.</li>
+        </ol>
+        <h3>Setting Default Interface Thresholds</h3>
+        <p>For devices that have multiple interfaces, such as switches and routers, you can also set thresholds for individual interfaces.</p>
+        <p>
+            <MadCap:keyword term="Thresholds&gt;Traffic" />
+            <MadCap:keyword term="Specific Device" />Use the <b style="font-style: italic;">Traffic</b> section of the Map Settings window to set traffic 
+	thresholds for a map. You cannot set traffic thresholds for a specific device.</p>
+        <p>You can set default interface thresholds for the server, or for an individual map.</p>
+        <ul>
+            <li>To set defaults for the server, choose <b style="font-style: italic;">Interface Thresholds</b> in the Server Settings window.</li>
+            <li>To set defaults for the map, choose <b style="font-style: italic;">Interface Thresholds</b> in the Map Settings window.</li>
+        </ul>
+        <p>You can set any of the following thresholds:</p>
+        <ul>
+            <li><b>Error thresholds</b> - set thresholds for Rx Errors (Received), Tx Errors (Transmitted), and Total Errors (Rx + Tx).</li>
+            <li><b>Utilization thresholds</b> -  set thresholds for Rx Utilization  (Received), Tx Utilization (Transmitted), and Total Utilization (Rx + Tx).</li>
+            <li><b>Discard thresholds</b> -  set thresholds for Rx Discards (Received), Tx Discards (Transmitted), and Total Discards (Rx + Tx).</li>
+        </ul>
+        <h2>Setting Thresholds for a Specific Device</h2>
+        <p>You can set device thresholds for a specific device, with different values 
+	than the default map settings. You cannot set traffic thresholds for a specific 
+	network or link.&#160;You do this from the Info window.</p>
+        <p><b>Note:</b> When setting thresholds for a probe group, you can set the thresholds only for an individual probe, or use the Map's default settings. For more information, see <a href="#probegroups">Setting Thresholds for Probe Groups<MadCap:xref href="#probegroups" /></a> below.</p>
+        <p style="color: #ff0000;font-weight: bold;" MadCap:conditions="Primary.Omit">REPLACE IMAGE</p>
+        <p>
+            <img src="../Resources/Images/Thresholds-device.png" style="width: 578px;height: 285px;" />
+        </p>
+        <p><b>Note:</b>
+            <MadCap:keyword term="TCP" />
+            <MadCap:keyword term="Only SNMP" />
+            <MadCap:keyword term="Ping/UDP-based" /> Only SNMP probes have thresholds for all three parameters (response 
+	time, packet loss and interface errors); a ping/UDP-based probe monitors only response time and packet loss, and a TCP probe monitors only response 
+	time.<br /></p>
+        <p><b>To set the device thresholds for a specific device:</b>
+        </p>
+        <p class="floatright">&#160;</p>
+        <ol>
+            <li>With the map in Edit mode, right-click a device and choose <b style="font-style: italic;">Info window</b>, or choose <b style="font-style: italic;">Info window</b> from the Monitor menu. The Info window appears.</li>
+            <li>
+                <MadCap:keyword term="Monitor menu" />In the left pane of the Info window, click <b>Thresholds.</b> The Thresholds 
+	 pane appears.</li>
+            <li>Clear the <b style="font-style: italic;">Use Map Defaults</b> check box.</li>
+            <li>If you want to suppress alerts for the device when it goes down, select the <b style="font-style: italic;">Ignore Outages</b> check box.<br /><br /><b>Note:</b> The <b style="font-style: italic;">Ignore Outages</b> check box suppresses alerts only with respect to outages, not to other state changes, thresholds, or to any alerts triggers by probes attached to the device. This is useful if a device such as a laptop or mobile device goes up or down (or leaves the network completely) as part of its normal operation.<br /><br /></li>
+            <li>Enter new values in the boxes you want to change, and click <b style="font-style: italic;">OK</b> or <b style="font-style: italic;">Apply</b>. 
+	 The selected device uses the new values.</li>
+        </ol>
+        <h2>Setting Thresholds for Probe Groups <a name="probegroups"></a></h2>
+        <p>When setting thresholds for a probe group, you can set the thresholds only for an individual probe, or use the Map's default settings. </p>
+        <p>To set thresholds for a probe group:</p>
+        <ol>
+            <li>Double-click a probe group. The Info window for the probe group appears.</li>
+            <li>In the left pane of the Info window, click <b style="font-style: italic;">Probes</b>. A list of probes in the probe group appears.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" /> the probe for which you want to set thresholds, and choose <b style="font-style: italic;">Info Window</b>. The Info window for the selected probe appears.</li>
+            <li>In the left pane, click <b style="font-style: italic;">Thresholds</b>. The threshold settings for the selected probe appear.</li>
+            <li>Clear the <b style="font-style: italic;">Use Map Defaults</b> box, then set the thresholds as needed and click <b style="font-style: italic;">OK</b>. The thresholds for the selected probe are set.</li>
+            <li>Continue setting thresholds for each probe as needed, then click <b style="font-style: italic;">OK</b>&#160;in the probe group's Info window.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

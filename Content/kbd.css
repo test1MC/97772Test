@@ -1,0 +1,52 @@
+/*<meta />*/
+
+.key,
+.key1
+{
+	padding-top: 3pt;
+	padding-bottom: 3pt;
+	padding-left: 4pt;
+	padding-right: 4pt;
+	white-space: nowrap;
+	color: #666;
+	height: 1em;
+	font-weight: bold;
+	background-color: #eee;
+	border-style: solid;
+	border-width-top: 2pt;
+	border-width-right: 4pt;
+	border-width-bottom: 5pt;
+	border-width-left: 3pt;
+	border-right-color: #aaa;
+	border-bottom-color: #888;
+	border-left-color: #bbb;
+	border-top-color: #ccc;
+}
+
+/*
+	padding-top: pt;
+	padding-bottom: 5pt;
+	*/
+
+.key1
+{
+	height: .5em;
+	padding-left: 8pt;
+	padding-right: 8pt;
+	margin-bottom: -.5em;
+	border-right-color: #aaa;
+	border-bottom-color: #888;
+	border-left-color: #bbb;
+	border-top-color: #ccc;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: Arial,Sans-Serif;
+	font-family: Courier New;
+	font-family: Verdana;
+	
+}
+
+.key1text
+{
+	height: 2.5em;
+}

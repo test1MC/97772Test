@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="825" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>About Packet-Based Probes</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="About Packet-Based Probes" />About Packet-Based Probes</h1>
+        <h2>
+            <MadCap:keyword term="Packet-based Test Procedure" />Packet-based Test Procedure</h2>
+        <p> Whenever InterMapper tests a packet-based device, it uses the following procedure:
+</p>
+        <ol>
+            <li>
+                <MadCap:keyword term="DNS" />
+                <MadCap:keyword term="SNMP" /> InterMapper sends the appropriate probe packet (ping, SNMP get-request, 
+ DNS query, etc.) 
+  </li>
+            <li>
+                <MadCap:keyword term="TimeOut" /> InterMapper waits the timeout interval specified for the particular device. 
+  </li>
+            <li> If a response arrives, InterMapper examines its contents and sets the device 
+ status based on that response 
+  </li>
+            <li> However, if no response arrives, InterMapper sends another probe packet 
+  </li>
+            <li> The above procedure is repeated until a response arrives or the specified 
+ number of probes has been sent 
+  </li>
+            <li>
+                <MadCap:keyword term="Down" /> If no response has arrived after the final timeout, InterMapper sets the 
+ device status to Down. 
+  </li>
+            <li> In any event, the device is scheduled to be tested again at a time set 
+ by the map's (or the device's) poll interval. 
+</li>
+        </ol>
+        <p>
+            <MadCap:keyword term="Settable" /> The default timeout is three seconds, with a default probe count of three 
+ seconds. Consequently, InterMapper will take nine seconds to declare a device 
+ is down (three probes, waiting three seconds each). Both the timeout and the 
+ number of probes can be set for each device. 
+</p>
+        <p> This often gives rise to 21 second or 51 second outages. What's happening 
+ here is that the device fails to respond to one set of probes (for example, 
+ after nine seconds), but responds immediately at the next poll 30 or 60 seconds 
+ later. This gives an outage duration to be (30-9=21) seconds or (60-9=51) seconds. 
+</p>
+        <h2>Shared Polling in Ping/Echo and SNMP Probes</h2>
+        <p>You may have created different maps that poll the same device. For Ping/Echo and SNMP probes (built-in or custom), InterMapper polls a device only once if it is considered to be the same device, and shares the response among all the maps that poll that device. </p>
+        <p>This happens automatically, and there are no user-controllable parameters.</p>
+        <p>In order for two mapped devices to be considered the same and share the results of a single probe, the following characteristics of the mapped device must be identical:</p>
+        <ul>
+            <li>Probe Type
+</li>
+            <li>Address
+</li>
+            <li>Port
+</li>
+            <li>Poll Interval
+</li>
+            <li>Timeout
+</li>
+            <li>Max tries
+</li>
+            <li>Display Unnumbered Interfaces, Ignore
+Discards, Ignore Errors, Allow Periodic Reprobe</li>
+            <li>SNMP&#160;Version and read-only community string
+</li>
+            <li>Number, name, and value of probe parameters
+</li>
+            <li>SNMPv3 authentication information</li>
+        </ul>
+        <p>For SNMP probes, the following flags in the probe file must be identical. (this is nearly always the case, as it is implied by the probe type, but is still checked explicitly):</p>
+        <ul>
+            <li>MINIMAL
+</li>
+            <li>NOLINKS
+</li>
+            <li>LINKCRITICAL
+</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

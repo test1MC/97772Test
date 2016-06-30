@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:id="Troubleshooting_InterMapper_Remote" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" class="" MadCap:lastBlockDepth="2" MadCap:lastHeight="401" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Troubleshooting InterMapper RemoteAccess</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="WINDOWS/Profiles/user/IMRemote;Settings/user/IMRemote;Userhome/Library/Preferences/InterMapper Remote;InterMapper's Remote Server" />
+            <MadCap:keyword term="InterMapper RemoteAccess">
+            </MadCap:keyword>
+            <MadCap:keyword term="InterMapper RemoteAccess:Troubleshooting" />
+            <MadCap:keyword term="Troubleshooting" />
+            <MadCap:keyword term="Troubleshooting:InterMapper RemoteAccess" />
+            <MadCap:keyword term="Remote" />Troubleshooting InterMapper RemoteAccess</h1>
+        <h2>Where do I find debugging information for InterMapper RemoteAccess</h2>
+        <h3 class="Heading3">Unix Systems (including MacOS X) </h3>
+        <p>Sending a SIGQUIT message to InterMapper RemoteAccess will result in a full thread dump. If you launched InterMapper RemoteAccess via the command line (e.g., java -jar &lt;InterMapper RemoteAccess&gt;), Ctrl-\ to stdin will also work. </p>
+        <p>To send a SIGQUIT message, type the following in a terminal window (pid is the process id for InterMapper RemoteAccess): </p><pre class="code">kill -QUIT pid </pre>
+        <p>The thread dump will be sent to stderr. On MacOS X, this is always the Console, unless you are running from the Terminal. </p>
+        <h3 class="Heading3">Windows Systems </h3>
+        <p>If you have launched InterMapper RemoteAccess from the command line (e.g., java -jar &lt;InterMapper RemoteAccess&gt;) press Ctrl-Break in the Command Prompt to force the stack trace. </p>
+        <p>The stack trace always goes to stderr. </p>
+        <p>On Windows, this is the equivalent of /dev/null unless you are running from a Command Prompt or have redirected stdout/stderr to a file via the Debug Window's Redirect System Output... menu item.</p>
+        <p>
+        </p>
+    </body>
+</html>

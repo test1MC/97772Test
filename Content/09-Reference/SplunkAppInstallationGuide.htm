@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="841" MadCap:lastWidth="576" MadCap:conditions="Primary.Splunk,Primary.online,Primary.print" MadCap:fileTags="status_tags.No Changes">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Using InterMapper With Splunk</h1>
+        <p>InterMapper works with Splunk by sending syslog entries in a specific format when an InterMapper device changes state. An add-on application in Splunk allows you to analyze and view various events through an InterMapper-specific dashboard.</p>
+        <p>Use the information below to connect InterMapper to Splunk.</p>
+        <h2>System Requirements</h2>
+        <p>To use Splunk with InterMapper, you need:
+        </p>
+        <ul>
+            <li>A local or remote installation of Splunk Enterprise.</li>
+            <li> The InterMapper web server must be running.</li>
+            <li>The Splunk machine must have access to the InterMapper server.</li>
+            <li>A syslog notifier that sends information to Splunk must be attached to all devices you want to track with Splunk.</li>
+        </ul>
+        <h2>Installation Overview</h2>
+        <p>In order to use Splunk and InterMapper together, you need to do the following:</p>
+        <ol>
+            <li>Prepare InterMapper. This includes enabling the Web server, adding a syslog notifier for Splunk, and setting the syslog message for compatibility with Splunk. </li>
+            <li>Set up InterMapper to send syslog notifications to Splunk.</li>
+            <li>Install the InterMapper App for Splunk.<br /></li>
+        </ol>
+        <h2>
+		&#160;Preparing InterMapper for use with Splunk</h2>
+        <p>Before you can use Splunk with InterMapper, you have to set up InterMapper to allow Splunk to access it. The steps are as follows:</p>
+        <h3>Step 1: Enable the Web server</h3>
+        <p>Before you can use Splunk, you need to enable the InterMapper web server.</p>
+        <p style="font-weight: bold;">To enable the web server:</p>
+        <ol>
+            <li>From the Edit menu, choose <b style="font-style: italic;">Server Settings...</b> The Server Settings window appears.</li>
+            <li>In the left pane of the Server Settings window, click <b style="font-style: italic;">Web Server</b>. The Web Server configuration panel appears.</li>
+            <li>In the Web Server configuration panel, click <b style="font-style: italic;">Start</b>.<br /><b>Note:</b> You can choose to run the web server on a different port, but will need to enter that port in the Splunk application when you set it up.</li>
+            <li>Add an access control list entry to allow web server access by the Splunk host machine. Access is based on IP address.</li>
+            <li>Add one or more access control list entries to allow web server access by any users of the Splunk application. Access is based on IP address or address range.</li>
+        </ol>
+        <h3>Step 2: Add a Splunk user</h3>
+        <p>You need to add a user account to InterMapper that Splunk can use to log in to the InterMapper server.</p>
+        <p style="font-weight: bold;">To add a user:</p>
+        <ol>
+            <li>In the left pane of the Server Settings window, click <b style="font-style: italic;">Users</b>. The Users panel appears.</li>
+            <li>Click the <b style="font-size: 16pt;">+</b> button and choose <b style="font-style: italic;">Add User...</b> The User Information 
+		dialog appears.</li>
+            <li>In the <b style="font-style: italic;">Name</b> box, enter a user name for the Splunk Server.</li>
+            <li>In the <b style="font-style: italic;">Automatic Login</b> text box, enter the IP address of the Splunk server.</li>
+            <li>Click <b style="font-style: italic;">OK</b>. The Splunk Server user appears in the user list.</li>
+            <li>Drag the Splunk Server user to the Administrators group. The Splunk Server user requires elevated privileges to export details about InterMapper maps.</li>
+        </ol>
+        <h3>Step 3: Add a syslog notifier for Splunk</h3>
+        <p>Splunk acts as a syslog server. You need to create a syslog notifier that InterMapper can use to send syslog entries to Splunk.</p>
+        <p style="font-weight: bold;">To create a syslog notifier:</p>
+        <ol>
+            <li>From the Server Settings window, click <b style="font-style: italic;">Notifier List</b>. The list of existing notifiers appears.</li>
+            <li>Click the <b style="font-size: 16pt;">+</b> button. The Configure Notifier window appears.</li>
+            <li>Give the notifier a name, such as "SplunkLog".</li>
+            <li>From the Notifier Type dropdown menu, choose <b style="font-style: italic;">Syslog</b>.</li>
+            <li>Enter the Splunk server's IP address in the <b style="font-style: italic;">Send syslog message to</b> box.</li>
+            <li>Click Edit Message, then edit the syslog message as follows:</li>
+        </ol><pre class="code" xml:space="preserve">timestamp="&lt;Timestamp&gt;"  map_name="&lt;Document Name&gt;"  notification_level="&lt;Event&gt;"  device_host="&lt;Device Name&gt;"  device_ip="&lt;Device Address&gt;"  probe_type="&lt;Probe Type&gt;"  probe_message="&lt;Device Condition&gt;"</pre>
+        <p class="indent"><b>Note:</b> The message above must be on one line.</p>
+        <p>This format allows Splunk to extract syslog data and make it available in Splunk.</p>
+        <h3>Step 4: Attach the notifier to all devices</h3>
+        <p>Once you have created the Splunk notifier, you need to attach it to all devices in InterMapper.</p>
+        <p style="font-weight: bold;">To attach a notifier to all devices:</p>
+        <ol>
+            <li>From InterMapper's Window menu, choose <b style="font-style: italic;">Device List</b>. The Device List window appears, showing a list of devices.</li>
+            <li>Click the <b style="font-style: italic;">Notifier View</b> button near the left end of the window's toolbar. A set of checkboxes appears for each device.</li>
+            <li>From the dropdown menu just to the right of the View selection buttons, choose the Splunk syslog notifier you just created.</li>
+            <li>For each state you want to record in Splunk, hold <b style="font-style: italic;">Alt</b> and click a check box in the column for that state. All check boxes are selected.</li>
+            <li>Recommended settings for Delay, Repeat time, and Count:<br /><br />Delay = none<br />Repeat time = 5 minutes<br />Count = infinite<br /><br />Hold <b style="font-style: italic;">Alt</b>, click the dropdown menu for each column, then release the <b style="font-style: italic;">Alt</b> key and choose the value from the dropdown menu. It is set for each device in the list.</li>
+        </ol>
+        <p><b>Notes:</b> <![CDATA[ ]]></p>
+        <ul>
+            <li>Set your Splunk notifier to be attached to new devices by default from the <b style="font-style: italic;">Default Notifiers</b> panel of the Map Settings window.</li>
+            <li>To send data to Splunk for only a single map, you can view devices in the map's Notifier View and attach only the devices in that map to the Splunk notifier.</li>
+        </ul>
+        <h3>Step 5: To send Layer 2 information</h3>
+        <p>To send Layer 2 information to Splunk you must do the following:</p>
+        <ul>
+            <li>Set up InterMapper to collect Layer 2 information. See the InterMapper User Guide for more information.</li>
+            <li>Add a device to any InterMapper map, and apply the Splunk &gt; Layer 2 Output probe to it. Otherwise, use the information below to locate and upload the probe.<br /><br /><b>Note:</b> <i>One and only one</i> device using this probe should exist on an InterMapper server. Running multiple instances of this probe uses InterMapper server resources unneccessarily, with no benefit to the InterMapper App for Splunk.</li>
+        </ul>
+        <p>The probe is located in the Splunk install directory (<span class="code">%SPUNK_HOME%</span>) at:</p>
+        <p> <span class="code">  %SPLUNK_HOME%\etc\apps\InterMapper\default</span></p>
+        <p>Probe file name: <span class="code">com.dartware.layer2</span></p>
+        <p>The probe sends switch port data in CSV format to Splunk; the data is then interpreted and indexed in Splunk.</p>
+        <h3>Step 6: Get Notifications Into Splunk</h3>
+        <p>Assuming a clear network route between InterMapper and Splunk, and that you are running Splunk as <span class="code">root</span>, indexing of syslog data by Splunk begins nearly immediately.</p>
+        <p style="font-weight: bold;">To verify that Splunk is receiving InterMapper data:</p>
+        <ul>
+            <li>Do a search in Splunk on <span class="code">sourcetype=intermapper</span>.</li>
+        </ul>
+        <h3>Step 7: Installing the InterMapper App for Splunk</h3>
+        <p>The InterMapper App for Splunk automatically configures Splunk to receive and interpret syslog data from InterMapper. </p>
+        <p>In order for Splunk to present collected data in an InterMapper-specific way, you need to install the InterMapper App for Splunk.</p>
+        <p style="font-weight: bold;">To install the InterMapper App for Splunk:</p>
+        <ol>
+            <li>From Splunk's <b style="font-style: italic;">Apps</b> menu (in the Web UI), choose <b style="font-style: italic;">Find More Apps...</b> The Browse More Apps page appears.</li>
+            <li>Enter "InterMapper" in the search box, and click the Search button or press <b style="font-style: italic;">Enter</b>. The InterMapper App for Splunk appears.</li>
+            <li>Click the <b style="font-style: italic;">Read More</b> link. The description page for the InterMapper App for Splunk appears.</li>
+            <li>Click <b style="font-style: italic;">Download</b>, log into your Splunk account, and save the file in a location accessible to your browser.</li>
+            <li>From the Web UI or your Splunk installation, choose <b style="font-style: italic;">Manage Apps...</b> from the Apps menu. The Apps Manager page appears, showing all currently installed Splunk Apps.</li>
+            <li>Click <b style="font-style: italic;">Install App from File</b>. The Upload an App page appears.</li>
+            <li>In the File box, click <b style="font-style: italic;">Browse</b>, and navigate to the App file you downloaded.&#160;</li>
+            <li>If you have installed a previous version, click to select <b style="font-style: italic;">Upgrade App</b>.</li>
+            <li>Click <b style="font-style: italic;">Upload</b>. The app is installed. You will be asked to restart your Splunk server.</li>
+            <li>Click <b style="font-style: italic;">OK</b>&#160;to restart your Splunk server.</li>
+            <li>From the Apps menu, choose <b style="font-style: italic;">InterMapper</b>. A configuration notice appears. </li>
+            <li>Follow the links to the Configuration page.</li>
+            <li>Enter the IP address and port of the InterMapper web server in the form "[address]:[port]", and the name of a default map, and click <b style="font-style: italic;">Save</b>.</li>
+            <li>After a few moments, the InterMapper page appears with the default map.</li>
+        </ol>
+    </body>
+</html>

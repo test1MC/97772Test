@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:lastBlockDepth="4" MadCap:lastHeight="1232" MadCap:lastWidth="622" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">Sending SMS/Text Alerts to a Cell Phone </h1>
+        <p>InterMapper can send SMS or text message alerts to a cell phone, mobile phone, or wireless phone. These notifications will be sent using an analogue modem to dial a TAP paging terminal at your wireless provider. </p>
+        <p><b>Note:</b> The methods described below depend on an analogue modem dialing a TAP service or a cell phone. You can also use a cell modem to send SMS&#160;message directly to another cell phone. For more information, see <a href="smsnotifier.htm">Configuring an SMS Notifier<MadCap:xref href="smsnotifier.htm"> (Pg 1)</MadCap:xref></a>. This may be preferable at this point.</p>
+        <p>There are several methods for sending alerts to a mobile phone.</p>
+        <h2>TAP - the Telelocator Alphanumeric Protocol</h2>
+        <p>InterMapper can send SMS or Text Messages using TAP, the Telelocator Alphanumeric Protocol, with an internal or external analogue modem. It will connect to a paging service and deliver a notification or alert to your cell phone</p>
+        <h2>Using TAP to Send a Message</h2>
+        <p>If your paging service provides a TAP paging terminal that forwards pages as SMS or text messages to your wireless phone, you can follow the instructions below to configure InterMapper to send alerts to your phone. </p>
+        <ol>
+            <li>Add a new Notifier. To do this, click <strong><em>Add</em></strong> in the Server Settings&gt;Notifiers List window. The Configure Notifier window appears.</li>
+            <li>From the <strong><em>Notifier Type</em></strong> drop-down list, choose <strong><em>Alpha-numeric Pager (Dialup)</em></strong>.</li>
+            <li>Click <strong><em>Edit Subscriber List</em></strong>.</li>
+            <li>Add a new paging service. To do this, click <strong><em>Add</em></strong> button in the Paging Services tab. Enter the name of the service, the phone number to dial (including any numbers you may need to access an outside line), and a password, if required. Use the default values for <strong><em>data bits</em></strong>, <strong><em>stop bits</em></strong>, <strong><em>parity</em></strong> and <strong><em>speed</em></strong>  unless your paging service has provided you with different values. </li>
+            <li>Add a new subscriber. To do this, click <strong><em>Add</em></strong> button in the Paging Subscribers tab. Enter the <strong><em>subscriber name</em></strong>, then select the paging service you created in step 4 from the drop-down list. Enter the subscriber's cell phone number in the <strong><em>Pager ID</em></strong> field.</li>
+            <li>When you have finished adding the new paging service and subscriber, click <strong><em>OK</em></strong> to return to the Configure Notifier window.</li>
+            <li>Click <strong><em>Edit Message</em></strong> if you want to change the data included with the text message. Edit the message, then click <strong><em>OK</em></strong> when finished.</li>
+            <li>Edit the notifier schedule, if required.</li>
+            <li>Click <strong><em>Test Notifier</em></strong> to confirm that the message can be sent and received.</li>
+            <li>When finished, click <strong><em>OK</em></strong>.</li>
+        </ol>
+        <p><strong>Note:</strong> This procedure has been tested using Verizon's TAP access to their SMS/Text Message system. The access number is 866-823-0501. Other cell providers may offer a gateway to their text/SMS message service. </p>
+        <h2 class="pagebreakbefore">Sending a Message if TAP is Not Available</h2>
+        <p>If your cell phone provider does not provide a TAP interface for text messages, you can use an e-mail-based service to deliver the message. You should contact your cell phone provider for details on sending alerts and notifications via e-mail.
+<strong>Note:</strong> Remember that sending an alert through e-mail fails if your connection to the Internet is down. See below for a low-tech workaround.</p>
+        <h2><a name="workaround"></a>Workaround for When Your Internet Connection Is Down</h2>
+        <p>If your Internet connection is down, but your cell phone provider doesn't offer access to their text/SMS message system via an analogue modem, you can still get notified about problems. Simply create a new Alpha-numeric Pager (Dialup) notifier and enter the cell
+phone number as the paging service number. It dials the phone directly. There won't be any voice or text/SMS message, but the CallerID will let the recipient know that it's InterMapper calling.</p>
+        <h2>Troubleshooting SMS/Text Alerts</h2>
+        <p>If you encounter any problems, InterMapper can create a log file that shows the details of the paging mechanism. This is useful to review or send to tech support. To do this:</p>
+        <ul>
+            <li>Open the Server Settings&gt;Log Files window and click <strong><em>Add</em></strong> to create a new log file. Name the log file 'paging' and click <strong><em>OK</em></strong>.</li>
+            <li>Test your notifier again from the Configure Notifier window. The paging.txt file contains detailed logging for the test notification. You can find the paging.txt file in the InterMapper Settings&gt;InterMapper Logs folder on the server. If the information contained in the paging log isn't helpful to you, please send the file with a description of the problem to <a href="mailto:support@intermapper.com">support@intermapper.com</a>.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="7" MadCap:lastHeight="516" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Users and Groups</title>
+        <link rel="StyleSheet" href="../../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Remove button;Group Information dialog" />
+            <MadCap:keyword term="Group" />
+            <MadCap:keyword term="Remove:Users" />
+            <MadCap:keyword term="User" />
+            <MadCap:keyword term="Managing:Users" />Users and Groups</h1>
+        <p>
+            <MadCap:keyword term="Server Settings window" />
+            <MadCap:keyword term="Users Panel" />Use the Users panel of the Server Settings window to <a href="#users">add 
+ <MadCap:xref href="#users" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>and                <MadCap:keyword term="Edit" /><a href="#editing">edit <MadCap:xref href="#editing" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>users and                <a href="#groups">groups<MadCap:xref href="#groups" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, 
+ to                <a href="#addremove">assign users to groups<MadCap:xref href="#addremove" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="Access" /><MadCap:keyword term="Telnet:access" />, and to assign privileges 
+ and access to maps.</p>
+        <p><b style="font-weight: bold;">Note:</b> The Server Settings window is 
+ available only to users who have administration privileges.</p>
+        <h2><a name="userstab"></a>The Users Panel</h2>
+        <p>Use the Users panel to maintain the list of users and groups allowed 
+ to access the various servers.</p>
+        <ul>
+            <li>To add a user, click <b><i><MadCap:keyword term="Create:New User" /><MadCap:keyword term="New User" />New User...</i></b>. </li>
+            <li>To add a group, click <b><i><MadCap:keyword term="New Group" />New Group...</i></b></li>
+            <li>
+                <MadCap:keyword term="Remove" />To remove a user or group, click to select the user 
+ or group, then click <b><i>Remove</i></b>. </li>
+            <li>To edit a user or group's information, click to select 
+ the user or group, then click <b><i>Edit...</i></b></li>
+            <li>To use the <a href="../authserver.htm">InterMapper Authentication serve</a>r, select the <b style="font-style: italic;">Use IM <MadCap:keyword term="Auth" />Auth Server</b> <MadCap:keyword term="Authentication Server" />check box. Click <b style="font-style: italic;">Configure...</b> to open the <a href="../../../09-Reference/09-06-Data_Collection/datacenter.htm">InterMapper DataCenter</a> to set up the IMAuth Server.</li>
+            <li>To use an Authentication Server on another computer, click Use <b style="font-style: italic;">Remote Auth Server...</b></li>
+            <li>Choose a <b style="font-style: italic;">Default group for externally authenticated users</b> from the dropdown menu.</li>
+        </ul>
+        <p class="pagebreakbefore">The example below shows a typical user and group configuration in the 
+ Users panel of the Server Settings window. </p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/Settings-UserGroups.png" />
+            <br /><i style="font-style: italic;">Setting up Users and Groups</i>
+        </p>
+        <h2>What are Users and Groups?</h2>
+        <ul>
+            <li><b style="font-weight: bold;">User</b>
+                <br />
+                <MadCap:keyword term="IP" />
+                <MadCap:keyword term="Enter:IP" />
+                <MadCap:keyword term="Name" />
+                <MadCap:keyword term="Password" />An individual identified by a user name and password, or identified 
+			automatically from a clients' IP address or range. </li>
+            <li><b style="font-weight: bold;">Group</b>
+                <br />A collection of users. A group can be given permissions to access 
+			certain servers or maps, and may be given different levels of access 
+			for a server or map.</li>
+        </ul>
+        <h2 class="pagebreakbefore"><a name="users"></a>
+            <MadCap:keyword term="New User:Creating" />Creating a New User</h2>
+        <p>
+            <MadCap:keyword term="Create" />To create a new user:</p>
+        <ol>
+            <li>Click the <b style="font-size: 16pt;">+</b><MadCap:keyword term="Edit:User Information" /><MadCap:keyword term="User Information" /> button and choose <b style="font-style: italic;">Add User...</b> The User Information 
+ dialog appears, as shown in the two examples below. </li>
+            <li>
+                <MadCap:keyword term="IP:Enter" />
+                <MadCap:keyword term="Enter" />Enter the name and password for the new user in the 
+ <b><i>Name</i></b> and              <b><i>Password</i></b> text boxes. <br />or<br />Omit the password and enter an IP address range in the <b><i><MadCap:keyword term="Login" />Automatic 
+ Login</i></b> text box.<br />or <br />Select the<b style="font-style: italic;"> Use External Authentication</b> check box, and enter the username used by the external authentication server. No password is necessary; authentication is performed by the external authentication server.<br><br /></br></li>
+        </ol>
+        <h2><a name="autologin"></a>
+            <MadCap:keyword term="Automatic Login" />
+            <MadCap:keyword term="Matches:Automatic Login" />How Automatic Login Works</h2>
+        <ul>
+            <li>
+                <MadCap:keyword term="Automatic Login:matches" />
+                <MadCap:keyword term="Matches" />If a connection arrives from an address that matches the 
+	 Automatic Login address, the person is automatically logged in as the specified 
+	 user. </li>
+            <li>
+                <MadCap:keyword term="Automatic-login" />If you supply both the password and automatic-login address, 
+	 the person is logged in automatically from the specified address, but must 
+	 supply a password when connecting from other addresses. </li>
+            <li>Automatic-login addresses should be unique between users; 
+	 the resulting Login name is not guaranteed if two automatic-login addresses 
+	 are the same.</li>
+            <li>For more information see <a href="../accesscontrol.html">Controlling 
+	 Access To Your Server<MadCap:xref href="../accesscontrol.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+        </ul>
+        <div style="text-align: center;">
+            <img src="../../../Resources/Images/dlg-CreateUser.png" />&#160;<img src="../../../Resources/Images/dlg-EditUser.png" /><br /><i>Creating a new user</i><br /></div>
+        <p>
+            <br />These two examples show two different users. 'Fred Flintstone' must log in with a name 
+ and password, and 'Tom Terrific' is automatically identified when 
+ connecting from IP address 192.168.*.*.</p>
+        <h2 class="pagebreakbefore"><a name="editing"></a>
+            <MadCap:keyword term="User Information:Editing" />Editing User Information</h2>
+        <p><b style="font-weight: bold;">To edit the information about a user:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="User list" />In the user list, click to select the user you want 
+ to edit. </li>
+            <li>Click <b><i>Edit...</i></b><MadCap:keyword term="User Information dialog" /> or double-click the user 
+ entry. The User Information dialog appears, containing information for 
+ the selected user.</li>
+        </ol>
+        <h2><a name="groups"></a>
+            <MadCap:keyword term="User:Managing" />
+            <MadCap:keyword term="Managing" />Managing Users and Groups</h2>
+        <p style="text-align: left;">A group is a collection of users, all of whom have the same set of permissions. 
+ </p>
+        <p class="floatright">
+            <img src="../../../Resources/Images/serversettings-CreateGroup.png" />
+            <br /><i style="font-style: italic;">New group window. Enter the name <br />of the 
+			new group in this window.</i>
+        </p>
+        <p><b style="font-weight: bold;">To create a new group:</b>
+        </p>
+        <ol>
+            <li>Click the <b style="font-size: 16pt;">+</b><MadCap:keyword term="Edit:User Information" /><MadCap:keyword term="User Information" /> button and choose <b style="font-style: italic;">Add Group...</b>  The Group Information 
+	 dialog appears, as shown above. </li>
+            <li>Enter the name of the new group. </li>
+            <li>Click<b><i><MadCap:keyword term="OK" /> OK</i></b>. The new group appears in 
+ the User list.</li>
+        </ol>
+        <h3><a name="addremove"></a>
+            <MadCap:keyword term="User:Removing" />
+            <MadCap:keyword term="Removing Group Members" />Adding and Removing Group Members</h3>
+        <p><b style="font-weight: bold;">To view the users in a group:</b>
+        </p>
+        <p>Click the plus sign (+) to the left of the group to expand it. </p>
+        <p><b style="font-weight: bold;">To add a user to a group:</b>
+        </p>
+        <p>Click and drag the user's entry to the group entry. The user appears 
+ in the list of users for that group.</p>
+        <p><b style="font-weight: bold;">To remove a user from a group:</b>
+        </p>
+        <ol>
+            <li>Expand the group list to view the users in the group. 
+ </li>
+            <li>Click the entry for the user you want to remove, 
+ and click the <b>Remove</b> button. A confirmation dialog appears. </li>
+            <li>Click <b><i>OK</i></b>. The user is removed from 
+ the group.</li>
+        </ol>
+        <p><b style="font-weight: bold;">Note:</b> When you remove a user from 
+ a group, the user definition is removed only from the group, not from 
+ the user list. To remove a user completely from the list and all groups, 
+ see                <a href="#deleteusersgroups">Removing Users and Groups <MadCap:xref href="#deleteusersgroups" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>below.</p>
+        <h3 class="pagebreakbefore"><a name="deleteusersgroups"></a>Removing Users and Groups</h3>
+        <p><b style="font-weight: bold;">To delete a user or group completely:</b>
+        </p>
+        <ol>
+            <li>Click to select the user you want to remove. </li>
+            <li>Click the <b><i>Remove</i></b> button. A confirmation 
+ dialog appears. </li>
+            <li>Click <b><i>OK</i></b> to confirm. The user or group 
+ entry is removed from the list.</li>
+        </ol>
+        <p><b style="font-weight: bold;">Note:</b> The                <b><MadCap:keyword term="Administrator" />Administrators</b> group 
+ is a special group that is always present, and cannot be removed.<b><br />Note:</b> The                <b><MadCap:keyword term="FullWebAccess" />FullWebAccess</b> group is a special group you define. 
+ If present, its members can view all web pages, and can acknowledge devices through the web server.<br /><b>Note:</b> The                <b><MadCap:keyword term="FullLogAccess" />FullLogAccess</b> group is a special group you define. 
+ If present, its members can view all log files.<b><br />Note: </b>The                <b><MadCap:keyword term="Access:Telnet" /><MadCap:keyword term="Telnet" /><MadCap:keyword term="FullTelnetAccess" />FullTelnetAccess</b> group is a special group you define. 
+ If present, its members have full access to the Telnet server. </p>
+        <h3>Configuring the InterMapper Authentication Server</h3>
+        <table style="margin-left: 0;margin-right: auto;">
+            <col style="width: 205px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p>Click the <b style="font-style: italic;">Use Remote Auth Server...</b> button to connect to an InterMapper Authentication Server installed on a different machine from InterMapper. For more information, see <a href="../authserver.htm">Authentication Server<MadCap:xref href="../authserver.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+                        <p><b>Note:</b> If the InterMapper Authentication Server is installed on the same machine as InterMapper, you need only check the <b style="font-style: italic;">Use IM Auth Server</b> check box. The default server and port are used, and there is no need to enter a name or password.</p>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <img src="../../../Resources/images/dlg-IMAuthServerSettings.png" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Importing Users and Groups</h3>
+        <p>Use the Import button to upload a file containing data for users and groups. For information on importing data, see <a href="../../../04-Creating_Maps/04-01-Import-Export/Importing_Data_Into_Maps.htm">Importing Data<MadCap:xref href="../../../04-Creating_Maps/04-01-Import-Export/Importing_Data_Into_Maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. For information on the User/Group data structure, see <a href="../../../09-Reference/09-05-Advanced_Importing/User_Attributes.htm">User Attributes<MadCap:xref href="../../../09-Reference/09-05-Advanced_Importing/User_Attributes.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+    </body>
+</html>

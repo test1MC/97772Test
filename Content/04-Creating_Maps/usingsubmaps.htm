@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:id="Using_Sub-maps" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="864" MadCap:lastWidth="600" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Creating Sub-maps</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Select Map Status;Addresses;Showing;Adding;Specifying;Map List window" />
+            <MadCap:keyword term="Create:Sub-maps">
+            </MadCap:keyword>
+            <MadCap:keyword term="Sub-maps" />
+            <MadCap:keyword term="Sub-maps:Creating" />Creating Sub-maps</h1>
+        <p>
+            <MadCap:keyword term="Create" />
+            <MadCap:keyword term="Addresses:InterMapper" />Another way to hide detail is to create a top-level map that gives an overview 
+	of many individual maps. Each icon on the top-level map shows the status of 
+	another map (a "sub-map"). The color of the icon indicates the most 
+	serious condition (the "worst thing") on its sub-map. These sub-maps 
+	can be on the local computer, or could even be on another InterMapper server. 
+  </p>
+        <p>
+            <MadCap:keyword term="Showing:Chicago" />
+            The example below shows the Atlanta map that opens when you double-click the Atlanta icon on the National map. Notice that on the National map, the Atlanta icon is "down". The Atlanta map shows that the LDAP server is the reason.</p>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/SubmapExample1.png" />
+        </p>
+        <p style="text-align: center;">&#160;</p>
+        <h2 class="pagebreakbefore"><b style="font-weight: bold;">Creating a Sub-Map</b>
+        </h2>
+        <p>
+            <MadCap:keyword term="Probe Type" />
+            <MadCap:keyword term="Probe Type:Map Status" />
+            <MadCap:keyword term="Device" />
+            <MadCap:keyword term="Map Status" />
+            <MadCap:keyword term="Map Status:Probe Type" />
+            <MadCap:keyword term="Submap:add" />
+            <MadCap:keyword term="Map Status Probe" />Use the Map Status probe to create an icon that represents a sub-map. 
+ To do this, you add a device with the address of the InterMapper server 
+ on which the map is running, (127.0.0.1 if it's on the local computer) 
+ with a Probe Type of <i><b>Map Status</b></i>. </p>
+        <p>The color of the icon for a map item using a Map Status probe indicates 
+ the most serious condition (the "worst thing") on sub-map. </p>
+        <p>&#160;</p>
+        <p><b style="font-weight: bold;">To add a sub-map item to a map: </b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Adding:submap" />
+                <MadCap:keyword term="Submap" />
+                <MadCap:keyword term="Set Probe window" />The easiest way to add a submap is to drag the desired map from the Map 
+	 List window to the map. In certain special cases, the Set Probe window appears, with the Map Status 
+	 Probe selected. </li>
+            <li>Click <b><i><MadCap:keyword term="OK" />OK</i></b> to accept the default settings. A new device is 
+	 added, using the current map and user account information. 
+	  
+	</li>
+        </ol>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/SetProbe-MapStatus.png" style="width: 579px;height: 483px;" />
+            <br /><i style="font-style: italic;">The Map Status probe configuration window.</i>
+        </p>
+        <p class="pagebreakbefore"><b style="font-weight: bold;">To add a sub-map manually:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Insert menu" />From the Insert menu, choose <b>Device...</b></li>
+            <li>
+                <MadCap:keyword term="Enter" />
+                <MadCap:keyword term="User Name:Enter" />Enter the <a href="../10-Troubleshooting/ipaddressing.html">IP 
+ address<MadCap:xref href="../10-Troubleshooting/ipaddressing.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>,          <a href="../10-Troubleshooting/dns.html">DNS name<MadCap:xref href="../10-Troubleshooting/dns.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, or          <a href="../10-Troubleshooting/About_WINS_Names.htm">WINS name<MadCap:xref href="../10-Troubleshooting/About_WINS_Names.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> 
+ (preceded by "\\") of the InterMapper server that contains the 
+ sub-map. Sub-maps may be running on the local InterMapper server (use 
+ the address          <i>127.0.0.1</i>), or enter the address of InterMapper running 
+ at a customer site, at a branch office, or at an international office. 
+ </li>
+            <li>
+                <MadCap:keyword term="PORT:Specify" />Specify the <b><MadCap:keyword term="Specifying:Port" /><MadCap:keyword term="PORT" />Port</b> to connect to (default is 
+ 8181). </li>
+            <li>Select <b>Map Status</b> from the Basic category.  </li>
+            <li>Enter the <b><MadCap:keyword term="Map Name" /><MadCap:keyword term="Enter:Map Name" />Map Name</b> to be monitored. <br /><br /><b>Note:</b> if your map is nested in a sub-folder, you must enter the full path to the map. For example, "/MySubFolder/MyMap.map". If you add the submap by dragging it into the map from the Map List window, the path is entered automatically.<br /></li>
+            <li>Enter the <b><MadCap:keyword term="Enter:User Name" /><MadCap:keyword term="User Name" />User Name</b> and          <b><MadCap:keyword term="Password" />Password</b> of 
+ an account on that server. This account must have read-access to the map. 
+ </li>
+            <li>Click <b>OK.</b> The new icon appears on the 
+ map, and its color reflects the state of everything on the sub-map. 
+ </li>
+        </ol>
+        <p><b style="font-weight: bold;">To view the sub-map</b> (to "drill 
+ down" into it) </p>
+        <ul>
+            <li>Double-click the sub-map's icon. The map opens, and 
+ you can see and modify (if you have been granted permission) the settings 
+ on the sub-map. </li>
+        </ul>
+        <h2>Best Practices When Using Sub-maps</h2>
+        <p>Try to follow these best practices when setting up a map 
+status probe:</p>
+        <ul>
+            <li>Use a username with minimum amount of privilege (read-only). Never 
+set up a map status probe using a username that has administrative privileges.</li>
+            <li>Use only one username per server for map status probes. InterMapper has a limit of 2 
+user logins per connection. If map status probes monitoring maps on a server are 
+configured using more than one username, you may need to explicitly logout 
+from the map status probe login before you can access a map status probe 
+that uses a different username. <br /><br />For example, let's assume you have access to 
+map status probes on server S, and that we have MapB and MapC on server S that 
+you don't have access to. When you double click a map status probe for MapB, 
+the InterMapper client will log you in as user B (you are logged in twice on 
+server S). You will not be able to open MapC before you log off the connection 
+to MapB. This restriction is only for one server, if you are using map status 
+probes to monitor maps on multiple InterMapper servers, you can use a different username for each server.</li>
+        </ul>
+    </body>
+</html>

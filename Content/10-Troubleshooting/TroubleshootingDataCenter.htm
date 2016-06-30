@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">Troubleshooting InterMapper DataCenter</h1>
+        <ul>
+            <li><a href="#differentURL">I get an error message: "This InterMapper Server already appears to be associated with the InterMapper
+Database. Existing UUID is associated with a different URL".<MadCap:xref href="#differentURL" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+        </ul>
+        <h2><a name="differentURL"></a>I get an error message: "This InterMapper Server already appears to be associated with the InterMapper
+Database. Existing UUID is associated with a different URL"</h2>
+        <p>Because multiple InterMapper installations can report to a single InterMapper
+Database, when InterMapper registers with InterMapper Database, it supplies a
+UUID to uniquely identify it. The InterMapper Database makes note of the URL and
+other characteristics of the server and associates them with the UUID. If InterMapper Database receives the same UUID from a different URL, it generates the error above.
+This may happen, for instance, if you copy your server settings from one copy of
+InterMapper to another, or move InterMapper to a new host or IP address. Your choices are to:</p>
+        <ul>
+            <li><b>Cancel</b> - Stop the registration of the server</li>
+            <li><b>Force</b> - Force the UUID to be associated with the new URL. </li>
+            <li><b>Regenerate</b> - Have InterMapper generate a new UUID.</li>
+        </ul>
+        <p>If you are certain that the installation of InterMapper which has generated this
+error is the same installation that was associated with the UUID previously, or
+if you know it should replace it, you can choose "Force".</p>
+        <p>If this is a different installation of InterMapper, choose "Regenerate".</p>
+        <p><b>Note:</b> <i>It is important to pay attention to this error;</i> map ids, device ids, etc., are
+only unique within a given server; if you associate a completely different
+installation of InterMapper with an existing UUID, the information about maps,
+etc. on the old server will be replaced or updated by information from the new
+server. When that occurs, datapoints from completely different datasets may be associated as if they were from one dataset.</p>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="846" MadCap:lastWidth="598" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">The Connections Pane</h1>
+        <h2 class="L2" MadCap:conditions="Primary.print">Understanding and Using the  Connections Pane</h2>
+        <p>The Layer 2 Connections pane lists all switches, the switches they are connected to, and the ports through which they are connected. This information is derived from the switch's forwarding tables, as well as information available through Cisco Delivery Protocol (CDP), Link Layer Delivery Protocol (LLDP), and Spanning Tree Protocol (STP).</p>
+        <p style="text-align: center;">
+            <img src="../Resources/images/L2-ConnectionsPane.png" style="width: 598px;height: 123px;" />
+            <br /><i>The Connections Pane</i>
+        </p>
+        <h2>Connections Pane Columns</h2>
+        <ul>
+            <li><b>Switch and Port</b> - each row shows two switches and two ports. These switches are known to be connected by the specified ports.</li>
+            <li><b>VLAN</b> - The VLAN(s) that are present on the connection between the switches.</li>
+        </ul>
+        <p class="floatright">
+            <img src="../Resources/images/Layer2icons/bi_connection.png" />
+            <br />
+            <img src="../Resources/images/Layer2icons/one_way_left.png" />
+            <br />
+            <img src="../Resources/images/Layer2icons/one_way_right.png" />
+        </p>
+        <ul>
+            <li><b>Fdb</b> - (Forwarding database)<br /> A <b style="font-style: italic;">two-headed arrow</b> means that both switches’ forwarding databases have entries for each other. <br />A <b style="font-style: italic;">single-headed arrow</b> points toward the switch that is in the other switch's Fdb; there is no corresponding entry in the reverse direction.</li>
+        </ul>
+        <p class="floatright">
+            <img src="../Resources/images/Layer2icons/bi_connection.png" />
+            <br />
+            <img src="../Resources/images/Layer2icons/one_way_left.png" />
+            <br />
+            <img src="../Resources/images/Layer2icons/one_way_right.png" />
+        </p>
+        <ul>
+            <li><b>CDP</b> and <b>LLDP</b> - (Cisco Discovery Protocol and Link Layer Discovery Protocol) <br />A <b style="font-style: italic;">two-headed arrow</b> indicates that both switches hear the other’s protocol advertisements. <br />A <b style="font-style: italic;">single-headed arrow</b> points to the switch that receives the protocol advertisements from the other. <br /><b>Note:</b> Some CDP/LLDP-aware switches may turn off advertisements on certain ports. This affects the arrows.</li>
+        </ul>
+        <p class="floatright">
+            <img src="../Resources/images/Layer2icons/one_way_left.png" />
+            <br />
+            <img src="../Resources/images/Layer2icons/one_way_right.png" />
+            <br />
+            <br />
+            <img src="../Resources/images/Layer2icons/bi_connection.png" />
+        </p>
+        <ul>
+            <li><b>STP</b> - (Spanning Tree Protocol) <br />A <b style="font-style: italic;">single-headed arrow</b> points away from the root of the spanning tree. <br />A <b style="font-style: italic;">two-headed arrow</b> indicates that the path for some spanning trees (such as certain VLANs) goes one way, while the path for other spanning trees goes the other way. If there are loops between these two switches, the port closest to the root may be in a blocking state.</li>
+        </ul>
+        <h2>Using the Connections Pane</h2>
+        <ul>
+            <li>Click a column heading to sort by that column. Click again to reverse the sort.</li>
+            <li>Click the sprocket icon at the right end of the column heading bar to choose the columns that appear in the list.</li>
+        </ul>
+        <p class="pagebreakafter">&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:id="CH1-Tutorial\starting.html" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:check_list="Ran Smart Index" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="1164" MadCap:lastWidth="968" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Starting Your Map</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">Starting Your Map</h1>
+        <h1 MadCap:conditions="Primary.print">Creating Maps</h1>
+        <h2 MadCap:conditions="Primary.print">Starting Your Map</h2>
+        <p>
+            <MadCap:keyword term="Subnet 192.168.1.0;Includes;Specifying" />
+            <MadCap:keyword term="Map" />
+            <MadCap:keyword term="Start" />
+            <MadCap:keyword term="Start:Your Map" />When you launch <i>InterMapper</i><MadCap:keyword term="IP" />, a Map List window appears. It contains several demo maps, which show 
+examples of network maps, and contains brief descriptions of the elements 
+ appearing on the maps. Double-click a map to open it.</p>
+        <p>
+            <MadCap:keyword term="Create" />
+            <MadCap:keyword term="Auto-Discover" />After you have explored the demo maps, you are ready to use the Auto-discover 
+ function to create your first map.</p>
+        <h2>
+            <MadCap:keyword term="Create:New Map" />
+            <MadCap:keyword term="New Map" />
+            <MadCap:keyword term="New Map:Creating" />Creating a New Map</h2>
+        <p>To create a new map, choose <b style="font-style: italic;">New Map...</b><MadCap:keyword term="New Map Constructor window" /><MadCap:keyword term="File Menu" /> from the File Menu. 
+ The New Map Constructor window appears:</p>
+        <p>
+            <img src="../Resources/Images/Dlg-NewMapConstructor.png" border="0" />
+        </p>
+        <p>Enter a map name, and click <b style="font-style: italic;">Next &gt;</b>.The second page of the New Map Constructor appears.</p>
+        <p>
+            <img src="../Resources/Images/Dlg-Autodiscovery.png" />
+        </p>
+        <ul>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Autodiscovery" />Autodiscovery</b>
+                <MadCap:keyword term="DNS" />
+                <MadCap:keyword term="SNMP" />
+                <MadCap:keyword term="SNMP:including" />
+                <MadCap:keyword term="Includes:SNMP" />
+                <MadCap:keyword term="ICMP" />
+                <MadCap:keyword term="NBP" /> - InterMapper's 
+	 Auto-discover function automatically scans your network, looking for network 
+	 devices to add to your map. It uses several heuristic techniques (including 
+	 SNMP probes, ICMP echo packets, and DNS and NBP queries) to 
+	 discover all the devices that are present. It then places those devices 
+	 on a map. 
+            </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Manual Entry" />Manual Entry</b> - Type or paste 
+	a list of host names or IP addresses for the devices you want to add to the 
+	map.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Import" />Import a file</b>
+                <MadCap:keyword term="XML" />
+                <MadCap:keyword term="CSV" /> - Specify 
+	a tab-delimited, CSV, or XML import file. For more information, see            <MadCap:keyword term="Import:Data" /><MadCap:keyword term="Data" /><MadCap:keyword term="Data:Importing" /><a href="04-01-Import-Export/Importing_Data_Into_Maps.htm">Importing 
+	Data Into Maps<MadCap:xref href="04-01-Import-Export/Importing_Data_Into_Maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+        </ul>
+        <p>For information on using the Auto-discover function, see <a href="Using_Auto-discover.htm">Using 
+ Auto-discover<MadCap:xref href="Using_Auto-discover.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. </p>
+        <h2>Importing Data into a Map</h2>
+        <p>You can also create a map by importing data in a text file. For more 
+ information, see <a href="04-01-Import-Export/Importing_Data_Into_Maps.htm">Importing 
+ Data Into Maps<MadCap:xref href="04-01-Import-Export/Importing_Data_Into_Maps.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <h2>
+            <MadCap:keyword term="Label" />
+            <MadCap:keyword term="InterMapper Labels" />InterMapper Labels</h2>
+        <p><i style="font-style: italic;">InterMapper</i>
+            <MadCap:keyword term="Subnet" /> places a label on each 
+ device it finds. By default, it uses the device's full DNS 
+ name. Networks are labeled with both an IP address and the number of 
+ bits in the subnet mask (indicating the network range). For example, the network labeled <span class="code">192.168.1.0/24</span> 
+ indicates that the IP devices are in subnet <span class="code">192.168.1.0</span>, 
+ with a subnet mask of 24 bits (<span class="code">255.255.255.0</span>). 
+ </p>
+        <p><b style="font-weight: bold;">Note:</b> You can change the label that appears 
+	for each device using the            <b style="font-style: italic;">Label...</b> command, available from the            <a href="../09-Reference/09-01-Command-Menu-Reference/format.html">Format menu<MadCap:xref href="../09-Reference/09-01-Command-Menu-Reference/format.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+    </body>
+</html>

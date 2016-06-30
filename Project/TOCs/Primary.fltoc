@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="User Guide Cover"
+    Link="/Content/UserGuideCover.htm"
+    StartChapter="true"
+    PageLayout="/Content/Resources/PageLayouts/HSFrontMatter.flpgl"
+    PageType="title"
+    PageNumber="1"
+    PageNumberReset="reset"
+    StartSection="false"
+    conditions="Primary.print"
+    PageNumberFormat="decimal" />
+  <TocEntry
+    Title="Table of Contents"
+    Link="/Content/Table of Contents.htm"
+    conditions="Primary.print"
+    StartSection="false"
+    StartChapter="true"
+    PageLayout="/Content/Resources/PageLayouts/HSFrontMatter.flpgl"
+    PageType="first"
+    PageNumber="1"
+    PageNumberReset="continue"
+    ReplaceMergeNode="false"
+    FrameName=""
+    PageNumberFormat="decimal" />
+  <TocEntry
+    Title="About InterMapper"
+    StartChapter="true"
+    StartSection="false"
+    PageNumber="1"
+    PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+    PageType="first"
+    PageNumberReset="continue"
+    Link="/Content/welcome.html"
+    PageNumberFormat="decimal"
+    ChapterNumberReset="reset"
+    ChapterNumber="1"
+    ChapterNumberFormat="decimal"
+    VolumeNumberReset="same"
+    SectionNumberReset="continue"
+    conditions="Primary.print,Primary.online">
+    <TocEntry
+      Title="What's New in This Version?"
+      Link="/Content/01-About_InterMapper/WhatsNew.htm"
+      StartSection="false"
+      StartChapter="false"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Software License Agreement"
+      Link="/Content/01-About_InterMapper/Software_License.html"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Trademark, Copyright and License"
+      Link="/Content/01-About_InterMapper/trademark-copyright-license.htm"
+      conditions="Primary.online" />
+    <TocEntry
+      Title="Lesser GNU Public License"
+      Link="/Content/01-About_InterMapper/GNUlicense.htm"
+      conditions="Primary.online" />
+    <TocEntry
+      Title="Section 508 Compatibility"
+      Link="/Content/01-About_InterMapper/Section508.htm"
+      conditions="Primary.online,Primary.print" />
+  </TocEntry>
+  <TocEntry
+    Title="Quick Start"
+    StartChapter="true"
+    PageNumber="1"
+    PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+    PageType="first"
+    PageNumberReset="continue"
+    StartSection="false"
+    Link="/Content/02-Getting_Started/install.html"
+    conditions="Primary.online,Primary.print">
+    <TocEntry
+      Title="Installing and Launching InterMapper"
+      Link="/Content/02-Getting_Started/install.html"
+      conditions="Primary.online"
+      StartSection="false"
+      StartChapter="false"
+      ReplaceMergeNode="false" />
+    <TocEntry
+      Title="Registering Your Software"
+      Link="/Content/02-Getting_Started/register.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="InterMapper Control Center"
+      Link="/Content/02-Getting_Started/InterMapper_Control_Center.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Automatic Notifications of Updates"
+      Link="/Content/02-Getting_Started/gettingupdates.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="System Requirements"
+      Link="http://www.helpsystems.com/intermapper/system-requirements"
+      FrameName="_blank"
+      ReplaceMergeNode="false" />
+    <TocEntry
+      Title="Installing InterMapper Flows"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/installFlows.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Quick Tour"
+      Link="/Content/02-Getting_Started/QuickTour.htm"
+      conditions="Primary.online,Primary.print" />
+  </TocEntry>
+  <TocEntry
+    Title="Using InterMapper"
+    StartChapter="true"
+    PageNumber="1"
+    PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+    PageType="first"
+    PageNumberReset="continue"
+    StartSection="false"
+    Link="/Content/03-Using_InterMapper/using-overview.html"
+    conditions="Primary.online,Primary.print">
+    <TocEntry
+      Title="Overview"
+      Link="/Content/03-Using_InterMapper/using-overview.html"
+      conditions="Primary.online" />
+    <TocEntry
+      Title="Try out the Demo Maps"
+      Link="/Content/02-Getting_Started/Play_With_the_Demo.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="The Map Window"
+      Link="/Content/03-Using_InterMapper/The_Map_Window.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="The Map List Window"
+      Link="/Content/03-Using_InterMapper/MapListWindow.html"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="The Device List Window"
+      Link="/Content/03-Using_InterMapper/devicelistwindow.htm"
+      conditions="Primary.online,Primary.print">
+      <TocEntry
+        Title="The Layer 2 View"
+        Link="/Content/07-MonitoringNetwork/Layer2window.htm"
+        conditions="Primary.online,Primary.print" />
+    </TocEntry>
+    <TocEntry
+      Title="InterMapper User Preferences"
+      Link="/Content/03-Using_InterMapper/InterMapper_User_Preferences.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Creating Maps"
+      StartChapter="true"
+      PageNumber="1"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumberReset="continue"
+      StartSection="false"
+      VolumeNumberReset="same"
+      SectionNumberReset="continue"
+      ChapterNumberReset="continue">
+      <TocEntry
+        Title="Starting Your Map"
+        Link="/Content/04-Creating_Maps/starting.html"
+        StartChapter="false"
+        VolumeNumberReset="same"
+        SectionNumberReset="continue"
+        ChapterNumberReset="continue"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Using Auto-Discover"
+        Link="/Content/04-Creating_Maps/Using_Auto-discover.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Entering an IP Address Range"
+        Link="/Content/04-Creating_Maps/Entering_an_IP_Address_Range.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Adding Devices Manually"
+        Link="/Content/04-Creating_Maps/adding.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Select Probe Window"
+        Link="/Content/04-Creating_Maps/Select_Probe_Window.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Adding Networks"
+        Link="/Content/04-Creating_Maps/addnets.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Scanning A Network"
+        Link="/Content/04-Creating_Maps/Scanning_A_Network.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Creating Sub-maps"
+        Link="/Content/04-Creating_Maps/usingsubmaps.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Creating Probe Groups"
+        Link="/Content/04-Creating_Maps/probegroups.htm"
+        StartSection="false"
+        StartChapter="false"
+        ComputeToc="false"
+        ReplaceMergeNode="false"
+        FrameName=""
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Using Helper Applications"
+        Link="/Content/03-Using_InterMapper/helperapps.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Using Double-Click Actions"
+        Link="/Content/03-Using_InterMapper/Using_Double-Click_Actions.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Saving Your Map"
+        Link="/Content/04-Creating_Maps/Saving_Your_Map.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Map Settings Window"
+        Link="/Content/04-Creating_Maps/mapsettings.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Quick Reference - Editing Your Map"
+        Link="/Content/04-Creating_Maps/Quick_Reference_-_Editing_Your_Map.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Configuring PowerShell For InterMapper"
+        Link="/Content/07-MonitoringNetwork/Configuring_PowerShell_For_InterMapper.htm"
+        conditions="Primary.online,Primary.print" />
+    </TocEntry>
+    <TocEntry
+      Title="Arranging Your Map"
+      StartChapter="true"
+      PageNumber="1"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumberReset="continue"
+      StartSection="false">
+      <TocEntry
+        Title="Overview"
+        Link="/Content/05-Arranging_Your_Map/arranging.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Icons and Images on Maps"
+        Link="/Content/05-Arranging_Your_Map/Icons_On_Maps.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Background Images"
+        Link="/Content/05-Arranging_Your_Map/backgroundimages.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Editing Labels"
+        Link="/Content/05-Arranging_Your_Map/labels.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Dynamic Label &amp; Alert Text"
+        Link="/Content/05-Arranging_Your_Map/Dynamic_Label_Text.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Using the Arrange Commands"
+        Link="/Content/05-Arranging_Your_Map/Using_the_Arrange_Commands.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Arranging Tips"
+        Link="/Content/05-Arranging_Your_Map/Arranging_Tips.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Switches and Hubs"
+        Link="/Content/04-Creating_Maps/switches.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Copying Subnet Ovals"
+        Link="/Content/05-Arranging_Your_Map/Copying_Network_Ovals.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Unmanaged Switches and Hubs"
+        Link="/Content/05-Arranging_Your_Map/UnmanagedHubs.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Hiding and Un-hiding Detail"
+        Link="/Content/05-Arranging_Your_Map/Hiding_and_Unhiding_Detail.htm"
+        conditions="Primary.online,Primary.print" />
+    </TocEntry>
+    <TocEntry
+      Title="Notifiers/Alerts"
+      StartChapter="true"
+      PageNumber="1"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumberReset="continue"
+      StartSection="false">
+      <TocEntry
+        Title="Overview"
+        Link="/Content/06-Notifiers/NotifierOverview.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Working With Notifiers"
+        Link="/Content/06-Notifiers/Working_With_Notifiers.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Attaching a Notifier"
+        Link="/Content/06-Notifiers/Attaching_A_Notifier.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Using Vantage Points"
+        Link="/Content/06-Notifiers/dependencies.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Configuring Notifiers">
+        <TocEntry
+          Title="Configuring a Notifier"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/Configuring_a_Notifier.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Sound"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/audible.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="E-Mail"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/email.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Group Notifier"
+          Link="/Content/06-Notifiers/Using_Group_Notifiers.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Page via Modem"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/pagemodem.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Alert via Cell Phone"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/AlertViaCellPhone.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Numeric Pagers"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/pagenumeric.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Page via Network (SNPP)"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/pagesnpp.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="SMS Notifiers"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/smsnotifier.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Command-line Notifiers"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/commandline.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Command-line example"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/clexample.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Interfaces &amp; Notifiers"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/Interfaces_and_Notifiers.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="WinPopup"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/WinPopup.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Syslog"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/Syslog.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="SNMP Traps"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/traps.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Automate Notifier"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/Automate_Notifier.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="PowerShell Notifier"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/PowerShell_Notifier.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="The Dartware MIB"
+          Link="/Content/06-Notifiers/06-01-ConfigNotifications/dartwaremib.html"
+          conditions="Primary.online,Primary.print" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Monitoring Your Network"
+      StartChapter="true"
+      PageNumber="1"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumberReset="continue"
+      StartSection="false">
+      <TocEntry
+        Title="Monitoring Your Network"
+        Link="/Content/07-MonitoringNetwork/Monitoring_Your_Network.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Understanding The Map"
+        Link="/Content/07-MonitoringNetwork/understanding.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Status Windows"
+        Link="/Content/07-MonitoringNetwork/statuswindow.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="The Info Window"
+        Link="/Content/07-MonitoringNetwork/Info_Windows.htm">
+        <TocEntry
+          Title="The Info Window"
+          Link="/Content/07-MonitoringNetwork/Info_Windows.htm"
+          conditions="Primary.online" />
+        <TocEntry
+          Title="Device Info Window"
+          Link="/Content/07-MonitoringNetwork/Device_Info_Window.htm" />
+        <TocEntry
+          Title="Network Info Window"
+          Link="/Content/07-MonitoringNetwork/Network_Info_Window.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Interfaces Window"
+        Link="/Content/07-MonitoringNetwork/Interfaces_Window.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="The_New_Devices_Map"
+        Link="/Content/07-MonitoringNetwork/The_New_Devices_Map.htm" />
+      <TocEntry
+        Title="Using_The_New_Devices_Map"
+        Link="/Content/07-MonitoringNetwork/Using_The_New_Devices_Map.htm" />
+      <TocEntry
+        Title="About Packet Loss"
+        Link="/Content/07-MonitoringNetwork/About_Packet_Loss.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Acknowledging Device &amp; Link Problems"
+        Link="/Content/07-MonitoringNetwork/Acknowledging_Device_Problems.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Outage Alarms on Interfaces"
+        Link="/Content/07-MonitoringNetwork/Outage_Alarms_on_Interfaces.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Device and Interface Thresholds"
+        Link="/Content/07-MonitoringNetwork/SettingErrorAndTrafficThresholds.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Setting Traffic Indicators"
+        Link="/Content/07-MonitoringNetwork/Setting_Traffic_Indicators.htm" />
+      <TocEntry
+        Title="Sending Feedback"
+        Link="/Content/07-MonitoringNetwork/Sending_Feedback.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Charts">
+        <TocEntry
+          Title="Creating Charts"
+          Link="/Content/07-MonitoringNetwork/07-01-Strip_Charts/stripcharts.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Using Charts"
+          Link="/Content/07-MonitoringNetwork/07-01-Strip_Charts/usingstripcharts.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Chart Menus"
+          Link="/Content/07-MonitoringNetwork/07-01-Strip_Charts/chartmenus.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Chart Options"
+          Link="/Content/07-MonitoringNetwork/07-01-Strip_Charts/chartoptions.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Chart Log Files"
+          Link="/Content/07-MonitoringNetwork/07-01-Strip_Charts/chartlogs.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Purging Chart Data"
+          conditions="Primary.online,Primary.print"
+          Link="/Content/07-MonitoringNetwork/07-01-Strip_Charts/Purging_Chart_Data.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Log Windows"
+        PageNumber="1"
+        PageNumberReset="continue"
+        StartSection="false"
+        BreakType="none"
+        ReplaceMergeNode="false">
+        <TocEntry
+          Title="Overview"
+          Link="/Content/07-MonitoringNetwork/07-02-Log_Windows/infologoverview.html"
+          StartChapter="false"
+          PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+          PageType="first"
+          PageNumber="1"
+          PageNumberReset="continue"
+          StartSection="false"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Event Log"
+          Link="/Content/07-MonitoringNetwork/07-02-Log_Windows/events.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Event Log Messages"
+          Link="/Content/07-MonitoringNetwork/07-02-Log_Windows/logmessages.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Outages Log"
+          Link="/Content/07-MonitoringNetwork/07-02-Log_Windows/outagelog.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Debug Logs"
+          Link="/Content/07-MonitoringNetwork/07-02-Log_Windows/debug.html"
+          conditions="Primary.online,Primary.print" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Server Settings"
+      StartChapter="true"
+      PageNumber="1"
+      PageType="first"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageNumberReset="continue"
+      StartSection="false">
+      <TocEntry
+        Title="Window Overview"
+        Link="/Content/08-Server_Settings/serversettingsoverview.htm"
+        StartChapter="true"
+        PageType="first"
+        StartSection="Unchecked"
+        PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+        PageNumber="1"
+        PageNumberReset="continue"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Server Information Panels"
+        StartChapter="false"
+        PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+        PageType="first"
+        PageNumber="1"
+        PageNumberReset="continue"
+        StartSection="false">
+        <TocEntry
+          Title="Overview"
+          Link="/Content/08-Server_Settings/08-01-Server_Info/serverinfo.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Registering Your Software"
+          Link="/Content/02-Getting_Started/register.htm"
+          conditions="Primary.online" />
+      </TocEntry>
+      <TocEntry
+        Title="Server Preference Panels"
+        StartChapter="false"
+        PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+        PageType="first"
+        PageNumber="1"
+        PageNumberReset="continue"
+        StartSection="false">
+        <TocEntry
+          Title="Overview"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/serverpreferences.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="SNMP Preferences"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/snmpcomm.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Log Files"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/logging.html"
+          conditions="Primary.online,Primary.print"
+          StartSection="false"
+          StartChapter="false" />
+        <TocEntry
+          Title="DNS/WINS Settings"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/dnsprefs.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="E-Mail Prefs"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/emailprefs.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Default Map Colors"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/colors.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Device and Network Defaults"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/devnet.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Default Device Thresholds"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/devicethresholds-default.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Default Interface Thresholds"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/Server_Interface_Thresholds.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Chart Defaults"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/chart.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Retention Policies"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/Retention_Policies.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="NT Services"
+          Link="/Content/08-Server_Settings/08-02-Server_Prefs/NT_Services.htm"
+          conditions="Primary.online,Primary.print" />
+      </TocEntry>
+      <TocEntry
+        Title="Server Configuration Panels"
+        StartChapter="false"
+        PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+        PageType="first"
+        PageNumber="1"
+        PageNumberReset="continue"
+        StartSection="false">
+        <TocEntry
+          Title="Overview"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/serverconfigoverview.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Configuring a Firewall"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/firewall.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Controlling Access"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/accesscontrol.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Remote Server"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/remoteserver.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Reports Server"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/IMReportsServer.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Web Server"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/Web_Server.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Telnet Server"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/Telnet_Server.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="AutoMate"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/Automate.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Layer 2 Features"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/layer2features.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Enabled Maps"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/enabledmaps.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Users">
+          <TocEntry
+            Title="Users and Groups"
+            Link="/Content/08-Server_Settings/08-03-Server_Config/08-03-01-Users/users.html"
+            conditions="Primary.online,Primary.print" />
+          <TocEntry
+            Title="Access Control Examples"
+            Link="/Content/08-Server_Settings/08-03-Server_Config/08-03-01-Users/examples.html"
+            conditions="Primary.online,Primary.print" />
+        </TocEntry>
+        <TocEntry
+          Title="Map Access"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/mapaccess.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Map Backup"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/MapBackup.htm" />
+        <TocEntry
+          Title="Notifier List"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/notifierlist.html"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="SSL Certificate"
+          Link="/Content/08-Server_Settings/08-03-Server_Config/certificates.html"
+          conditions="Primary.online,Primary.print" />
+      </TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Using InterMapper Flows"
+    Link="/Content/03-Using_InterMapper/03-01-Flows/FlowsOverview.htm"
+    StartChapter="true"
+    PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+    PageNumber="1"
+    PageNumberReset="continue"
+    StartSection="false"
+    PageType="first"
+    conditions="Primary.print,Primary.online">
+    <TocEntry
+      Title="InterMapper Flows Overview"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/FlowsOverview.htm"
+      conditions="Primary.online" />
+    <TocEntry
+      Title="The Flows Window"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/FlowsWindow.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Top Hosts Tab"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/TopHostsTab.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Top Ports Tab"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/TopPortsTab.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Top VLANs"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/TopVLANs.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Top Sessions Tab"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/TopSessionsTab.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Supported Exporters"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/SupportedExporters.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Flows Settings"
+      Link="/Content/03-Using_InterMapper/03-01-Flows/Flows_Settings.htm"
+      conditions="Primary.print,Primary.online" />
+  </TocEntry>
+  <TocEntry
+    Title="Using Layer 2 Features"
+    conditions="Primary.online,Primary.print"
+    Link="/Content/07-MonitoringNetwork/Layer_2_Overview.htm"
+    StartChapter="true"
+    PageNumber="1"
+    PageNumberReset="continue"
+    StartSection="false">
+    <TocEntry
+      Title="Layer 2 Overview"
+      Link="/Content/07-MonitoringNetwork/Layer_2_Overview.htm"
+      conditions="Primary.online" />
+    <TocEntry
+      Title="Layer 2 View"
+      Link="/Content/07-MonitoringNetwork/Layer2window.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Filter Pane"
+      Link="/Content/07-MonitoringNetwork/Filter_Pane.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Endpoints Pane"
+      Link="/Content/07-MonitoringNetwork/Endpoints_Pane.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Connections Pane"
+      Link="/Content/07-MonitoringNetwork/Connections_Pane.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Layer 2 Flags"
+      Link="/Content/07-MonitoringNetwork/Layer_2_Flags.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Mapping With Layer 2"
+      Link="/Content/07-MonitoringNetwork/MappingWithLayer2.htm"
+      conditions="Primary.online,Primary.print" />
+  </TocEntry>
+  <TocEntry
+    Title="Using InterMapper Reports"
+    Link="/Content/11-ReportsServer/ReportsServerOverview.htm"
+    StartChapter="true"
+    PageNumber="1"
+    PageNumberReset="continue"
+    StartSection="false"
+    conditions="Primary.online,Primary.print">
+    <TocEntry
+      Title="Overview"
+      Link="/Content/11-ReportsServer/ReportsServerOverview.htm"
+      conditions="Primary.online" />
+    <TocEntry
+      Title="Creating A Report"
+      Link="/Content/11-ReportsServer/CreatingAReport.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Selecting Source Data"
+      Link="/Content/11-ReportsServer/Selecting_Source_Data.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Creating &amp; Using Data Filters"
+      Link="/Content/11-ReportsServer/DataFilters.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Choosing a Report Style"
+      Link="/Content/11-ReportsServer/ReportStyles.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Managing &amp; Printing Your Reports"
+      Link="/Content/11-ReportsServer/ManagingReports.htm"
+      conditions="Primary.online,Primary.print" />
+  </TocEntry>
+  <TocEntry
+    Title="Using InterMapper RemoteAccess"
+    Link="/Content/03-Using_InterMapper/RemoteAccess.htm"
+    StartChapter="true"
+    PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+    PageNumber="1"
+    PageNumberReset="continue"
+    StartSection="false"
+    PageType="first"
+    conditions="Primary.online,Primary.print"></TocEntry>
+  <TocEntry
+    Title="Reference"
+    conditions="Primary.print,Primary.online"
+    StartChapter="false"
+    PageType="first"
+    PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+    PageNumber="1"
+    PageNumberReset="continue"
+    StartSection="false">
+    <TocEntry
+      Title="Command/Menu Reference"
+      StartChapter="true"
+      PageNumber="1"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageNumberReset="continue"
+      StartSection="false"
+      PageType="first"
+      VolumeNumberReset="same"
+      SectionNumberReset="continue"
+      ChapterNumberReset="continue"
+      Link="/Content/09-Reference/09-01-Command-Menu-Reference/reference.html"
+      ComputeToc="false"
+      ReplaceMergeNode="false">
+      <TocEntry
+        Title="Command and Menu Reference Overview"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/reference.html"
+        conditions="Primary.online"
+        StartSection="false"
+        StartChapter="false" />
+      <TocEntry
+        Title="File Menu"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/file.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Edit Menu"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/edit.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="View Menu"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/View_Menu.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Monitor Menu"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/Monitor_Menu.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Insert Menu"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/Insert_Menu.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Format  Menu"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/format.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Window Menu"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/windows.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Help Menu"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/help.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="InterMapper Menus"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/InterMapperMenus.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Context Menus"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/Context_Menus.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Keyboard Shortcuts"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/shortcuts.htm"
+        conditions="Primary.online,Primary.print"></TocEntry>
+      <TocEntry
+        Title="Keyboard Navigation"
+        Link="/Content/09-Reference/09-01-Command-Menu-Reference/kbd_navigation.htm"
+        conditions="Primary.online,Primary.print" />
+    </TocEntry>
+    <TocEntry
+      Title="Probe Reference"
+      StartChapter="true"
+      PageNumber="1"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumberReset="continue"
+      StartSection="false"
+      VolumeNumberReset="same"
+      SectionNumberReset="continue"
+      ChapterNumberReset="continue"
+      ComputeToc="false"
+      ReplaceMergeNode="false"
+      Link="/Content/09-Reference/09-02-Probe_Reference/probereference.html"
+      conditions="Primary.online,Primary.print">
+      <TocEntry
+        Title="Overview"
+        Link="/Content/09-Reference/09-02-Probe_Reference/probereference.html"
+        conditions="Primary.online"></TocEntry>
+      <TocEntry
+        Title="Built-in Probe Details"
+        Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Probe_Index.htm"
+        conditions="Primary.online,Primary.print">
+        <TocEntry
+          Title="Probe Reference Index"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Probe_Index.htm"
+          conditions="Primary.online"
+          StartSection="false" />
+        <TocEntry
+          Title="Basic Probes"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Basic.htm"
+          conditions="Primary.online,Primary.print"
+          StartSection="false" />
+        <TocEntry
+          Title="SNMP Probes"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/SNMP.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Miscellaneous Probes"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Miscellaneous.htm"
+          conditions="Primary.online,Primary.print"></TocEntry>
+        <TocEntry
+          Title="Network Device Probes"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Network_Devices.htm"
+          conditions="Primary.online,Primary.print"></TocEntry>
+        <TocEntry
+          Title="PowerShell Probes"
+          ReplaceMergeNode="false"
+          conditions="Primary.online,Primary.print"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/PowerShell.htm" />
+        <TocEntry
+          Title="Probe Groups"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Probe_Groups.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Server Probes - Proprietary"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Servers_Proprietary.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Server Probes - Standard"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Servers_Standard.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="WMI Probes"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/WMI.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Wireless Probes"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Wireless.htm"
+          conditions="Primary.online,Primary.print"></TocEntry>
+        <TocEntry
+          Title="Experimental Probes"
+          conditions="Primary.online,Primary.print"
+          Link="/Content/09-Reference/09-02-Probe_Reference/ProbeReference/Experimental.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="About Packet-Based Probes"
+        Link="/Content/09-Reference/09-02-Probe_Reference/About_Packet-Based_Probes.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="About SNMP Versions"
+        Link="/Content/09-Reference/09-02-Probe_Reference/about_snmp_versions.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Command-Line Probes"
+        Link="/Content/09-Reference/09-02-Probe_Reference/Command-Line_Probes.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Windows NT Services Probe"
+        Link="/Content/09-Reference/09-02-Probe_Reference/NT_Probe.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Cisco IP SLA Probe"
+        Link="/Content/09-Reference/09-02-Probe_Reference/Cisco_IP_SLA_Probe.htm"
+        conditions="Primary.online,Primary.print"></TocEntry>
+      <TocEntry
+        Title="Big Brother Probe"
+        Link="/Content/09-Reference/09-02-Probe_Reference/bigbrotherprobes.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Troubleshooting Network and Server Probes"
+        Link="/Content/09-Reference/09-02-Probe_Reference/probes.html"
+        conditions="Primary.online,Primary.print" />
+    </TocEntry>
+    <TocEntry
+      Title="Using InterMapper DataCenter"
+      Link="/Content/09-Reference/09-06-Data_Collection/datacenter.htm"
+      StartChapter="true"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumber="1"
+      PageNumberReset="continue"
+      StartSection="false">
+      <TocEntry
+        Title="Configuring InterMapper DataCenter"
+        conditions="Primary.online"
+        Link="/Content/09-Reference/09-06-Data_Collection/datacenter.htm" />
+      <TocEntry
+        Title="Using an Existing Database"
+        Link="/Content/09-Reference/09-06-Data_Collection/UsingIMDatabase.htm"
+        conditions="Primary.online,Primary.print"></TocEntry>
+      <TocEntry
+        Title="About Retention Policies"
+        Link="/Content/09-Reference/09-06-Data_Collection/AboutRetentionPolicies.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Logging Preferences"
+        Link="/Content/09-Reference/09-06-Data_Collection/LoggingPrefs.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Disk Usage"
+        Link="/Content/09-Reference/09-06-Data_Collection/DBDiskUsage.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Automatic Backups"
+        Link="/Content/09-Reference/09-06-Data_Collection/DBBackups.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Maintenance Tasks"
+        Link="/Content/09-Reference/09-06-Data_Collection/MaintenanceTasks.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Authentication Server"
+        Link="/Content/08-Server_Settings/08-03-Server_Config/authserver.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Using the Data Retention Policy Editor"
+        conditions="Primary.Omit" />
+      <TocEntry
+        Title="Data Collecting and Reporting"
+        Link="/Content/09-Reference/09-06-Data_Collection/DataCollectionOverview.htm"
+        conditions="Primary.online,Primary.print" />
+    </TocEntry>
+    <TocEntry
+      Title="Files and Folders"
+      StartChapter="true"
+      PageNumber="1"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumberReset="continue"
+      Link="/Content/09-Reference/09-03-Files_and_Folders/filesfolders.html">
+      <TocEntry
+        Title="Files and Folders"
+        Link="/Content/09-Reference/09-03-Files_and_Folders/filesfolders.html"
+        conditions="Primary.online" />
+      <TocEntry
+        Title="Making Backups"
+        Link="/Content/09-Reference/09-03-Files_and_Folders/backups.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="InterMapper Settings"
+        Link="/Content/09-Reference/09-03-Files_and_Folders/settings.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="InterMapper DataCenter"
+        Link="/Content/09-Reference/09-03-Files_and_Folders/InterMapper_DataCenter.htm"
+        conditions="Primary.online,Primary.print" />
+    </TocEntry>
+    <TocEntry
+      Title="Advanced Data Import/Export"
+      StartChapter="true"
+      PageNumber="1"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumberReset="continue">
+      <TocEntry
+        Title="Importing and Exporting Data"
+        StartChapter="false"
+        PageNumber="1"
+        StartSection="false"
+        PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+        PageNumberReset="continue"
+        Link="/Content/04-Creating_Maps/04-01-Import-Export/Exporting_Data_From_Maps.htm">
+        <TocEntry
+          Title="Exporting Data"
+          Link="/Content/04-Creating_Maps/04-01-Import-Export/Exporting_Data_From_Maps.htm"
+          conditions="Primary.online"
+          StartSection="false"
+          StartChapter="false" />
+        <TocEntry
+          Title="Importing Data"
+          Link="/Content/04-Creating_Maps/04-01-Import-Export/Importing_Data_Into_Maps.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Creating An Import File"
+          Link="/Content/04-Creating_Maps/04-01-Import-Export/Creating_An_Import_File.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Using Geographic Coordinates"
+          Link="/Content/04-Creating_Maps/04-01-Import-Export/Using_Geographic_Coordinates.htm"
+          conditions="Primary.online,Primary.print" />
+        <TocEntry
+          Title="Exporting Information to Google Earth"
+          Link="/Content/04-Creating_Maps/04-01-Import-Export/googleearth.htm"
+          conditions="Primary.online,Primary.print" />
+      </TocEntry>
+      <TocEntry
+        Title="The Directive Line"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/the_directive_line.htm"
+        StartChapter="true"
+        PageType="first"
+        PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+        PageNumber="1"
+        PageNumberReset="continue"
+        StartSection="false"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Device Attributes"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/device_attributes.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Vertex Attributes"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/Vertex_Attributes.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Interface Attributes"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/interface_attributes.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Map Attributes"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/map_attributes.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Notifier Attributes"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/notifierattributes.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Notifier Rules Attributes"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/notifierrules.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="User Attributes"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/User_Attributes.htm"
+        conditions="Primary.online,Primary.print"></TocEntry>
+      <TocEntry
+        Title="Retention Policy Attributes"
+        conditions="Primary.online,Primary.print"
+        ReplaceMergeNode="false"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/Retention_Policy_Attributes.htm" />
+      <TocEntry
+        Title="About D-Sets"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/about_dsets.htm"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="The ImProbe URL"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/the_improbe_url.htm"
+        conditions="Primary.online,Primary.print"></TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Web Server Reference"
+      StartChapter="true"
+      PageNumber="1"
+      StartSection="false"
+      PageType="first"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageNumberReset="continue"
+      Link="/Content/09-Reference/09-04-Web_Server/Using_the_Web_Server.htm">
+      <TocEntry
+        Title="Using the Web Server"
+        Link="/Content/09-Reference/09-04-Web_Server/Using_the_Web_Server.htm"
+        StartChapter="false"
+        PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+        PageType="first"
+        PageNumber="1"
+        PageNumberReset="continue"
+        StartSection="false"
+        conditions="Primary.online" />
+      <TocEntry
+        Title="Home Page"
+        Link="/Content/09-Reference/09-04-Web_Server/maps.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Error and Full Pages"
+        Link="/Content/09-Reference/09-04-Web_Server/errfull.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="Outages Page"
+        Link="/Content/09-Reference/09-04-Web_Server/outages.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="The Device List Web Page"
+        Link="/Content/09-Reference/09-04-Web_Server/devicelist.html"
+        conditions="Primary.online,Primary.print" />
+      <TocEntry
+        Title="The Map List Web Page"
+        Link="/Content/09-Reference/09-04-Web_Server/maplist.html"
+        conditions="Primary.Omit" />
+      <TocEntry
+        Title="The Charts Web Page"
+        Link="/Content/09-Reference/09-04-Web_Server/charts.html"
+        conditions="Primary.online,Primary.print" />
+    </TocEntry>
+    <TocEntry
+      Title="Telnet Server Command Reference"
+      Link="/Content/09-Reference/Telnet_Server_Reference.htm"
+      StartChapter="true"
+      PageNumber="1"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumberReset="continue"
+      StartSection="false"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Command-line Options"
+      StartChapter="true"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      PageType="first"
+      PageNumber="1"
+      PageNumberReset="continue"
+      StartSection="false">
+      <TocEntry
+        Title="Command-line Options for InterMapper"
+        Link="/Content/09-Reference/Command-line_Options_for_InterMapper.htm"
+        conditions="Primary.online,Primary.print"
+        StartChapter="false"
+        PageNumber="1"
+        PageNumberReset="continue"
+        StartSection="false"></TocEntry>
+      <TocEntry
+        Title="Command-line Options for RemoteAccess"
+        Link="/Content/09-Reference/09-05-Advanced_Importing/IMRA-CommandLineOptions.htm"
+        conditions="Primary.online,Primary.print"
+        StartSection="false"
+        StartChapter="false" />
+    </TocEntry>
+    <TocEntry
+      Title="Installing the Splunk Application"
+      Link="/Content/09-Reference/SplunkAppInstallationGuide.htm"
+      conditions="Primary.Splunk,Primary.online,Primary.print" />
+  </TocEntry>
+  <TocEntry
+    Title="FAQs"
+    StartChapter="true"
+    PageNumber="1"
+    PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+    PageType="first"
+    PageNumberReset="continue"
+    StartSection="false">
+    <TocEntry
+      Title="Troubleshooting InterMapper"
+      Link="/Content/10-Troubleshooting/troubleshooting.html"
+      StartChapter="true"
+      PageType="first"
+      PageNumber="1"
+      PageNumberReset="continue"
+      StartSection="false"
+      PageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Troubleshooting InterMapper RemoteAccess"
+      Link="/Content/10-Troubleshooting/Troubleshooting_InterMapper_Remote.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="Troubleshooting InterMapper DataCenter"
+      Link="/Content/10-Troubleshooting/TroubleshootingDataCenter.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="About IP"
+      Link="/Content/10-Troubleshooting/ipaddressing.html"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="About IPv6"
+      Link="/Content/10-Troubleshooting/IPv6_intro.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="About DNS"
+      Link="/Content/10-Troubleshooting/dns.html"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="About SNMP"
+      Link="/Content/10-Troubleshooting/snmpfaq.html"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="About WINS Names"
+      Link="/Content/10-Troubleshooting/About_WINS_Names.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="InterMapper FAQs"
+      Link="/Content/10-Troubleshooting/InterMapper_FAQs.htm"
+      conditions="Primary.online,Primary.print" />
+    <TocEntry
+      Title="InterMapper Flows FAQs"
+      Link="/Content/10-Troubleshooting/faq-imflows.htm"
+      conditions="Primary.online,Primary.print"></TocEntry>
+    <TocEntry
+      Title="Cross-platform Operation"
+      Link="/Content/10-Troubleshooting/crossplatform.htm"
+      conditions="Primary.online,Primary.print" />
+  </TocEntry>
+  <TocEntry
+    Title="Index"
+    Link="/Content/Index.htm"
+    conditions="Primary.print"
+    StartChapter="true"
+    PageNumber="1"
+    PageLayout="/Content/Resources/PageLayouts/HSIndex.flpgl"
+    PageType="first"
+    PageNumberReset="continue"
+    StartSection="false"></TocEntry>
+  <TocEntry
+    Title="To Do"
+    Link="/Content/Review/To_Do.htm"
+    conditions="Primary.Omit" />
+</CatapultToc>

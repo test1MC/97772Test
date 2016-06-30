@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="5" MadCap:lastHeight="4298" MadCap:lastWidth="1703.8" MadCap:fileTags="status_tags.No Changes">
+    <head><title>About SNMP</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2"><a name="top"></a>
+            <MadCap:keyword term="TcpConnState OID;IfNumber MIB;Enterprise Numbers RFC;Device?InterMapper;Downloading:Enterprise Numbers RFC;Strings;Cisco:CiscoEnvMonTemperatureStatusValue:ciscoEnvMonVoltageStatusValue;Cisco:Cisco Environment Monitoring MIB;Specifying">
+            </MadCap:keyword>
+            <MadCap:keyword term="SNMP" />
+            <MadCap:keyword term="Disable:SNMP" />
+            <MadCap:keyword term="SNMP Information" />SNMP Information</h1>
+        <ul>
+            <li><a href="#snmp">What is SNMP?<MadCap:xref href="#snmp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Community" />
+                <MadCap:keyword term="Community:string" />
+                <MadCap:keyword term="Strings:COMMUNITY" /><a href="#rocs">What is the 'Read-only Community 
+ String'?<MadCap:xref href="#rocs" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#cantsnmp">Why can't I get SNMP information 
+ from a device?<MadCap:xref href="#cantsnmp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="MIB" />
+                <MadCap:keyword term="OID:part" /><a href="#oidformat">How can InterMapper query a 
+ particular MIB variable?<MadCap:xref href="#oidformat" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#tableix">Do all tables have an index?<MadCap:xref href="#tableix" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#snmprefs">Where can I read more information 
+ about SNMP?<MadCap:xref href="#snmprefs" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Enter" />
+                <MadCap:keyword term="OID:enter" />
+                <MadCap:keyword term="SNMP Read-only:enter" /><a href="#unkenterprise">How do I interpret an unknown 
+ enterprise number?<MadCap:xref href="#unkenterprise" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#scanall">Is there a way to scan a network 
+ for all SNMP devices?<MadCap:xref href="#scanall" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li MadCap:conditions="Primary.Omit"><a href="#snmpbugs">InterMapper doesn't show my xxxx 
+ device properly...<MadCap:xref href="#snmpbugs" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+        </ul>
+        <p><a name="snmp"></a>
+        </p>
+        <h2>What is SNMP?</h2>
+        <p>
+            <MadCap:keyword term="Simple Network Management Protocol" />
+            <MadCap:keyword term="Internet" />SNMP stands for the Simple Network Management Protocol. At its heart, 
+ SNMP is a set of rules that allows a computer to get statistics from another 
+ computer across the Internet.</p>
+        <p>
+            <MadCap:keyword term="IP" />Computers keep track of various statistics that measure what they're 
+ doing. For example, routers can keep track of the number of bytes, packets, 
+ and errors that were transmitted and received on each interface (port). 
+ Web servers might keep a tally of the number of hits they have received. 
+ Other kinds of equipment have configuration information that's available 
+ through SNMP.</p>
+        <p>Each of these pieces of information (packet statistics, page hits, configuration) 
+ is kept in a database described by a <i><MadCap:keyword term="Management Information Base" />Management Information Base</i> 
+ (a            <i>MIB</i> in SNMP parlance.) There are a many different MIBs, describing 
+ many different aspects of a computer's operation.</p>
+        <p>The various values that can be retrieved from a MIB are called <i>MIB 
+ variables</i>. These variables are defined in the MIB for a device. Each 
+ MIB variable is named by an            <i><MadCap:keyword term="OBJECT IDENTIFIER" />Object Identifier</i><MadCap:keyword term="Specifying:OID" /><MadCap:keyword term="Enter:OID" /><MadCap:keyword term="OID" /> (OID), which usually 
+ has a name in the form of numbers separated by periods ("."), 
+ like this: 1.3.6.1.xxxx.x.x.x.x...</p>
+        <p>
+            <MadCap:keyword term="OID:ifNumber" />
+            <MadCap:keyword term="MIB-II" />For example, the MIB-II (pronounced, "MIB two") has a variable 
+ that indicates the number of interfaces (ports) in a router. It's called 
+ the "ifNumber", and its OID is 1.3.6.1.2.1.2.1.0</p>
+        <p>
+            <MadCap:keyword term="SNMP Watcher" />
+            <MadCap:keyword term="SNMP Get-Request" />
+            <MadCap:keyword term="IfNumber OID" />InterMapper can query a device for the MIB variables and display the results. 
+ When a device receives a SNMP Get-Request for this ifNumber OID, it responds 
+ with the count of interfaces.</p>
+        <p><b style="font-weight: bold;">Note:</b> The trailing ".0" 
+ in the example above is technically part of the OID. Although you will 
+ often see OIDs written without it, InterMapper requires that it be present 
+ wherever you enter an OID.</p>
+        <p><a name="rocs"></a>
+        </p>
+        <h2>
+            <MadCap:keyword term="Read-only Community String" />What is the 'Read-only Community String'?</h2>
+        <p>
+            <MadCap:keyword term="Enter:SNMP Read-only" />
+            <MadCap:keyword term="SNMP Read-only" />
+            <MadCap:keyword term="SNMP Read-only Community" />
+            <MadCap:keyword term="SNMP Read-Only Community String" />The SNMP Read-Only Community String is like a password. It is sent along 
+ with each SNMP Get-Request and allows (or denies) access to device. Most 
+ network vendors ship their equipment with a default password of "public". 
+ (This is the so-called "default public community string".) Many 
+ network administrators will change the community string to keep intruders 
+ from getting information about the network setup. This is a good idea. 
+ Even if it's only read-access, SNMP can divulge a lot of information about 
+ the network that could be used to compromise it.</p>
+        <p>
+            <MadCap:keyword term="OID:specified" />
+            <MadCap:keyword term="SNMP MIB" />
+            <MadCap:keyword term="SNMP Set-Request" />If there's a "read-only community string", you might expect 
+ that there is a"Write community string". You'd be correct. There 
+ is also a SNMP Set-Request, which is a command to set certain SNMP MIB 
+ variables (e.g., certain OIDs) to a specified value. These writes are 
+ protected by the write community string (which should <i>never</i><MadCap:keyword term="Finding:SNMP-speaking" /><MadCap:keyword term="SNMP-speaking" /> be 
+ set to 'public'!). Many SNMP-speaking devices also have IP address filters 
+ that ignore requests (read and write) unless the source address is on 
+ an access list.</p>
+        <p>
+            <MadCap:keyword term="SNMP Trap" />
+            <MadCap:keyword term="Link-up/down" />There's also a SNMP Trap, which is an unsolicited message from a device 
+ to an SNMP console (for example, InterMapper) that the device is in an 
+ interesting state. Traps might indicate power-up or link-up/down conditions 
+ temperatures exceeding certain thresholds, high traffic, etc. Traps provide 
+ an immediate notification for an event that might otherwise be discovered 
+ only during occasional polling.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="cantsnmp"></a>
+        </p>
+        <h2>Why can't I get SNMP information from a device?</h2>InterMapper requires that SNMP be available and configured to display traffic 
+ information. The most common cause of not being able to see traffic is 
+ that you haven't entered the SNMP Read-only community string. (This is 
+ like a password that controls whether another computer can retrieve SNMP 
+ information.) 
+
+<p>In order of simplest to most complex, here is a list of reasons that 
+ InterMapper might not get SNMP information from a device:</p><ul><li><b style="font-weight: bold;"><MadCap:keyword term="Wrong DNS name/IP" />Wrong DNS name/IP address</b> 
+ - (not likely, but we have to mention it) </li><li><b style="font-weight: bold;">No connectivity</b> 
+ - Can you ping the device from InterMapper? </li><li><b style="font-weight: bold;">No SNMP agent on the 
+ device</b> - Many devices or computers have optional SNMP capabilities 
+ that must be installed separately. </li><li><b style="font-weight: bold;"><MadCap:keyword term="SNMP:disable" /><MadCap:keyword term="Disable" />Is the SNMP agent disabled?</b> 
+ - Many devices allow you to disable the SNMP capability totally, or from 
+ certain ports. </li><li><b style="font-weight: bold;"><MadCap:keyword term="Net-snmp" /><MadCap:keyword term="UCD-snmp" />If the SNMP agent is 
+ based on net-snmp or UCD-snmp package</b><MadCap:keyword term="Scanning:subnet" /><MadCap:keyword term="Subnet" /> - be sure that the configuration 
+ file specifically lists InterMapper's IP address/subnet as an allowed 
+ client </li><li><b style="font-weight: bold;">In a custom probe, 
+ have you specified the OID properly?</b> - (See the            <a href="#oidformat">OID 
+ Format FAQ<MadCap:xref href="#oidformat" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> for details.) </li><li><b style="font-weight: bold;"><MadCap:keyword term="Wrong Community" />Wrong Community string</b> 
+ - (have you tried 'public' ?) </li><li><b style="font-weight: bold;">Access lists: does 
+ the equipment only allow SNMP access from certain addresses? </b></li><li><b style="font-weight: bold;"><MadCap:keyword term="Firewall" /><MadCap:keyword term="Mac" /><MadCap:keyword term="Firewalls" />Firewalls: does a firewall 
+ block the SNMP port between your Mac and the equipment?</b></li><li><b style="font-weight: bold;">Bugs in the SNMP agent 
+ on the equipment</b><MadCap:keyword term="SNMP Get-Next-Requests" /><MadCap:keyword term="Get-Next-Requests" /> - InterMapper uses SNMP Get-Next-Requests in several 
+ places. We've seen certain equipment that fails when queried this way. 
+ </li></ul><p>If you're sure that you've checked all these things and you still can't 
+ get SNMP information, please get back to us at <a href="mailto:support@intermapper.com">support@intermapper.com</a>. 
+ We may have some tricks up our sleeves. (Or we may wind up learning something!)</p><p MadCap:conditions="Primary.online"><a href="#top">Back to top</a></p><p><a name="oidformat"></a></p><h2>How can InterMapper query a particular MIB variable?</h2><p>There are two kinds of MIB variables: scalar values and table entries. 
+ </p><ul><li><b style="font-weight: bold;">Scalars </b>have a 
+ single value, such as the interface number shown above. For example, the <span class="code">ifNumber</span> MIB variable of a router is 
+ a single number that represents the total number of its interfaces (ports). 
+ </li><li><b style="font-weight: bold;">Table values</b><MadCap:keyword term="TCP" />, on 
+ the other hand, provide the same pieces of information for different items, 
+ such as the traffic for each of a router's ports, or information about 
+ each of the TCP connections in a device.</li></ul><p>InterMapper can read and display both scalar variables and table variables 
+ in its custom SNMP probes.</p><p>Scalar values must have a ".0" suffix in their OIDs. For example, 
+ the OID for <span class="code">ifNumber</span> in MIB-II is often 
+ written as "1.3.6.1.2.1.2.1". In custom probe files, it should 
+ be represented as "1.3.6.1.2.1.2.1.0". (This ".0" 
+ is technically part of the OID - it's convenient not to write it, though.)</p><p>Table variables are generally suffixed with the index of the row. (This 
+ isn't always true: see the note below). For example, the Cisco Environment 
+ Monitoring MIB defines two variables for the input air temperature and 
+ input voltage as the first rows in each of these tables:</p><pre class="code">ciscoEnvMonTemperatureStatusValue 1.3.6.1.4.1.9.9.13.1.3.1.3
+ciscoEnvMonVoltageStatusValue 1.3.6.1.4.1.9.9.13.1.2.1.3
+</pre><p>If you add a suffix ".1" to each of these, you'll get the 
+ value of the first row; add ".2" to as a suffix, you'll get 
+ the second row, etc.</p><h2><a name="tableix"></a>Do all tables have an index?</h2><p>As noted above, some tables don't have a separate index column. These 
+ rows are named (their OIDs are specified by) data in the row. For example, 
+ the OID for <span class="code"><MadCap:keyword term="OID:tcpConnState" />tcpConnState</span> row, the status 
+ of a particular TCP connection is "1.3.6.1.2.1.6.13.1.1". Its 
+ index is the source and destination IP address and port (all four values) 
+ which are appended to the <span class="code">tcpConnState</span> 
+ OID. Thus, the full OID for the state of a TCP connection from 9.8.7.6 
+ port 543 to 123.45.67.89 port 8765 would be:</p><pre class="code">1.3.6.1.2.1.6.13.1.1.9.8.7.6.543.123.45.67.89.8765</pre><p MadCap:conditions="Primary.online"><a href="#top">Back to top</a></p><h2 class="pagebreakbefore"><a name="snmprefs"></a>Where can I read more information about SNMP?</h2><p>Here's a great site to start learning about MIBs and all the cool things 
+ you can do with them:</p><blockquote><p><a href="http://www.snmpworld.com/">http://www.snmpworld.com/</a></p></blockquote><p>Another is:</p><blockquote><p><a href="http://netman.cit.buffalo.edu/">http://netman.cit.buffalo.edu/</a></p></blockquote><p>A periodic newsletter, <i><MadCap:keyword term="The Simple Times" />The Simple Times</i>, is online at:</p><blockquote><p><a href="http://www.simple-times.org/">http://www.simple-times.org/</a></p></blockquote><p>A great site pointing to various snmp products:</p><blockquote><p><a href="http://www.simpleweb.org/">http://www.simpleweb.org/</a></p></blockquote><p MadCap:conditions="Primary.online"><a href="#top">Back to top</a></p><p><a name="unkenterprise"></a></p><h2>How do I interpret an unknown enterprise number?</h2><p><b style="font-weight: bold;">Q:</b> My error log file shows the following 
+ lines:</p><pre class="code"><MadCap:keyword term="IfIndex" /><MadCap:keyword term="Citrix" /><MadCap:keyword term="LinkUp" />14/02 15:13:07 &#160;TRAP &#160;CITRIX1:: &#160;coldStart14/02 15:13:07 &#160;TRAP &#160;CITRIX1:: &#160;linkUp, ifIndex = 114/02 15:13:07 &#160;TRAP &#160;CITRIX1:: &#160;linkUp, ifIndex = 1677721914/02 15:14:07 &#160;TRAP &#160;CITRIX1:: &#160;1.3.6.1.4.1.3845.3.1.1 (8) &#160;{ &lt;no variables&gt; }
+</pre><p><MadCap:keyword term="SNMP ID" />Can you tell me what that SNMP ID is? (1.3.6.1.4.1.3845.3.1.1 (8))</p><p><b style="font-weight: bold;">A:</b><MadCap:keyword term="Downloading" /><MadCap:keyword term="Enterprise Numbers RFC:downloading" /> The "1.3.6.1.4.1..." 
+ prefix of the OID indicates that the trap is from a private enterprise 
+ MIB. You can find out what enterprise by downloading the Enterprise Numbers 
+ RFC from:</p><p><a href="http://www.iana.org/assignments/enterprise-numbers">http://www.iana.org/assignments/enterprise-numbers</a></p><p>Reading through the file indicates this:</p><pre class="code">3845 &#160;Citrix Systems &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Keith Turnbull &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;keitht@citrix.com
+</pre><p>You should contact the Citrix company (or read their MIB) to find out the 
+ exact interpretation of the trap's OID. 
+
+</p><p MadCap:conditions="Primary.online"><a href="#top">Back to top</a></p><p><a name="scanall"></a></p><h2>Is there a way to scan a network for all SNMP devices?</h2><p><MadCap:keyword term="Finding" /><MadCap:keyword term="Scanning" /><MadCap:keyword term="Subnet:scanning" /><MadCap:keyword term="SNMP-speaking:finding" />InterMapper will do a very good job of finding SNMP-speaking devices 
+ if you know the devices' SNMP Read-only Community string. Detailed instructions 
+ for scanning a subnet are available from the network scanning page. Be 
+ sure to set the default SNMP Read-only Community String as shown in the 
+ <a href="../08-Server_Settings/08-02-Server_Prefs/snmpcomm.html">SNMP 
+ Preferences.<MadCap:xref href="../08-Server_Settings/08-02-Server_Prefs/snmpcomm.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></p><p>InterMapper may not be able to find a device for <a href="#cantsnmp">any 
+ of these reasons.<MadCap:xref href="#cantsnmp" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></p><p MadCap:conditions="Primary.Omit"><a href="#top">Back to top</a></p><a name="snmpbugs"></a><h2 MadCap:conditions="Primary.Omit">InterMapper doesn't show my xxxx device properly...</h2><p MadCap:conditions="Primary.Omit"><MadCap:keyword term="SNMP implementations" />Customers have sent us comments that InterMapper won't show certain 
+ kinds of equipment properly. We have investigated, and found a bug in 
+ the SNMP implementations of certain vendors. To determine if your equipment 
+ is susceptible to this bug, you may follow this procedure.</p><p MadCap:conditions="Primary.Omit"><MadCap:keyword term="Snmpgetnext" />InterMapper uses Get-Next-Requests to retrieve data. To be more efficient, 
+ it sends several OIDs in each query. When we use the net-snmp "snmpgetnext" 
+ to retrieve single variables, the results come back properly. When we 
+ queue up multiple OIDs in a request, they come back wrong, in the same 
+ manner as SNMP Watcher. </p><p MadCap:conditions="Primary.Omit">First, download net-snmp from <a href="http://net-snmp.sourceforge.net">http://net-snmp.sourceforge.net</a><MadCap:keyword term="Windows" /><MadCap:keyword term="Unix" /><MadCap:keyword term="Install net-snmp" />. 
+ net-snmp is a highly-reliable, open-source snmp query tool and agent for 
+ Unix and Windows. Install net-snmp as described in its documentation.</p><p MadCap:conditions="Primary.Omit">Then use net-snmp's command-line tools to send Get-Next-Request queries 
+ to the device in question. For example:</p><pre class="code" MadCap:conditions="Primary.Omit"><MadCap:keyword term="IpAdEntifIndex" /><MadCap:keyword term="IpAdEntAddr" /># request ipAdEntAddr first, then ipAdEntifIndex<br />[richb@jig<MadCap:keyword term="IpAddress" /> ~]# snmpgetnext IPADDRESS COMMUNITY 
+ ipAdEntAddr ipAdEntifIndex<br />ip.ipAddrTable.ipAddrEntry.ipAdEntAddr.127.0.0.1 = IpAddress: 127.0.0.1<br /><MadCap:keyword term="INTEGER" /><MadCap:keyword term="Wrong Type" />ip.ipAddrTable.ipAddrEntry.ipAdEntIfIndex.127.0.0.1 = Wrong Type (should 
+ be INTEGER): IpAddress: 127.0.0.1 </pre><pre class="code" MadCap:conditions="Primary.Omit"># other order: ipAdEntifIndex, then 
+ ipAdEntAddr<br />[richb@jig ~]# snmpgetnext IPADDRESS COMMUNITY 
+ ipAdEntifIndex ipAdEntAddr<br />ip.ipAddrTable.ipAddrEntry.ipAdEntIfIndex.127.0.0.1 = 1<br />ip.ipAddrTable.ipAddrEntry.ipAdEntAddr.127.0.0.1 = Wrong Type (should be 
+ IpAddress): 1 </pre><p MadCap:conditions="Primary.Omit"><MadCap:keyword term="IfIndex preceeds" />In the examples above, snmpgetnext requests two variables from the device 
+ at IPADDRESS, using the SNMP Read-only community string of COMMUNITY (you 
+ should substitute your values as needed). In the first case, the entity's 
+ address comes before the ifIndex in the query. Note that both responses 
+ have the value 127.0.0.1 (the latter is incorrect). In the second example, 
+ the ifIndex precedes the entity's address, and the result is "1" 
+ (again, the latter is incorrect).</p><p MadCap:conditions="Primary.Omit">If you see results like this, you should contact the vendor of your 
+ equipment to explain this problem and ask if a new release of firmware 
+ has fixed it.</p><p MadCap:conditions="Primary.online"><a href="#top">Back to top</a></p></body>
+</html>

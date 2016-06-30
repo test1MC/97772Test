@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Name="online"
+    BackgroundColor="#00ffff" />
+  <ConditionTag
+    Name="print"
+    BackgroundColor="#ffff00" />
+  <ConditionTag
+    Name="test"
+    BackgroundColor="#ff0000" />
+  <ConditionTag
+    Name="review"
+    BackgroundColor="#00ff00" />
+  <ConditionTag
+    BackgroundColor="LightBlue"
+    Name="NewInfo"
+    Comment="For Alpha/Beta info" />
+  <ConditionTag
+    BackgroundColor="#0000ff"
+    Name="CurrentInfo"
+    Comment="Exclude from Alpha/Beta" />
+  <ConditionTag
+    BackgroundColor="#008000"
+    Name="Omit" />
+  <ConditionTag
+    BackgroundColor="#ffa500"
+    Name="Splunk"
+    Comment="" />
+</CatapultConditionTagSet>

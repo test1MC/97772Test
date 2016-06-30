@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:id="Cross-platform_FAQs" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="1883" MadCap:lastWidth="545" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Cross-platform FAQs</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2"><a name="top"></a>
+            <MadCap:keyword term="InterMapper service/daemon;Library/Application Support/InterMapper Settings/Custom Icons;Pre-Mac OS;Classic/MacOS 8-9;NT Services" />
+            <MadCap:keyword term="OS" />
+            <MadCap:keyword term="Cross-platform Questions" />Cross-platform Questions</h1>
+        <p>
+            <MadCap:keyword term="Implementations" />These questions relate to the differences between the implementations 
+ on various platforms.</p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Windows">
+                </MadCap:keyword>
+                <MadCap:keyword term="Linux" />
+                <MadCap:keyword term="Start:daemon" />
+                <MadCap:keyword term="Stop:daemon" />
+                <MadCap:keyword term="Unix" />
+                <MadCap:keyword term="Unix:Unix/Linux" />
+                <MadCap:keyword term="Traditional:service/daemon" />
+                <MadCap:keyword term="Service" />
+                <MadCap:keyword term="Daemon" />
+                <MadCap:keyword term="Service/daemon" />
+                <MadCap:keyword term="Windows/Unix/Linux" /><a href="#traditionaltodaemon">How can I move from 
+ Traditional to the service/daemon version on Windows/Unix/Linux?<MadCap:xref href="#traditionaltodaemon" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#stoppolling">How can I keep InterMapper 
+ from polling for a while?<MadCap:xref href="#stoppolling" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Stop" />
+                <MadCap:keyword term="Daemon:stop" /><a href="#stopserver">How can I stop the InterMapper 
+ server?<MadCap:xref href="#stopserver" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#uninstall">How can I remove the InterMapper 
+ server completely?<MadCap:xref href="#uninstall" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+        </ul>
+        <h2><a name="traditionaltodaemon"></a> How can I move from Traditional to the 
+	service/daemon version on Windows/Unix/Linux? </h2>
+        <p>
+            <MadCap:keyword term="Upgrade" />The recommended way to upgrade to InterMapper on another platform is 
+ to follow these steps: </p>
+        <ol>
+            <li>Set up InterMapper on the other platform, configuring 
+ the preferences anew as well as your notification settings. </li>
+            <li>
+                <MadCap:keyword term="InterMapper Settings" />
+                <MadCap:keyword term="InterMapper Settings/Maps" />Copy your map files to the "InterMapper Settings/Maps 
+ (Disabled)" folder on the new platform. (If you wish, you can also 
+ use InterMapper RemoteAccess to "import" them onto the new server.) 
+ </li>
+            <li>
+                <MadCap:keyword term="Server Settings window" />
+                <MadCap:keyword term="Server Settings window:open" />
+                <MadCap:keyword term="Server Settings" />
+                <MadCap:keyword term="Server Settings:Open" />On the new platform, open the Server Settings window 
+ and "enable" the maps that you want to run. </li>
+            <li>Go through your maps and re-attach notifications 
+ to devices; these connections were lost in the transfer. </li>
+        </ol>
+        <p>It is also possible to copy your InterMapper Settings folder and maps 
+ directly from one platform to another. This will preserve the attached 
+ notifiers for devices in your maps, but the procedure is slightly more 
+ complicated: </p>
+        <p>
+            <MadCap:keyword term="Start" />
+            <MadCap:keyword term="Daemon:start" />
+            <MadCap:keyword term="InterMapper Prefs" />
+            <MadCap:keyword term="InterMapper on Mac OS" />If you are running InterMapper "traditional" on a pre-Mac 
+ OS X system (ie 
+ Mac OS 9.2 or earlier), you will need to convert your preferences file 
+ ("InterMapper Prefs"). The easiest way to do this is to run 
+ InterMapper on Mac OS X -- start up the program and quit it -- InterMapper 
+ will fix up the file so it is cross-platform. </p>
+        <p>If you have any icon files in your "Custom Icons" folder, 
+ you will need to convert these to "data-fork" based resource 
+ files. You can use the <a href="#QX4">Custom Icon Conversion Script<MadCap:xref href="#QX4" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> 
+ on a MacOS X computer to convert the file format. If that's not convenient, 
+ then send a note to      <a href="mailto:support@intermapper.com">support@intermapper.com</a>. 
+ We will do the conversion and return the new file to you. </p>
+        <p>You must double-check your modem pager settings on the new platform; 
+ the location of the modem device stored in the preferences file will be 
+ completely different. </p>
+        <p>All of the other files should transfer without any problems. </p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="QX4"></a> How can I use custom icons from my Mac Classic installation 
+	on OSX? </h2>
+        <p>There is a droplet that converts resource-based icons (used by the Classic/MacOS 
+ 8-9 versions) to a "data-fork" version that works on OS X. You 
+ can retrieve the droplet from: <a href="http://www.intermapper.com/binaries/Convert_Custom_Icon_File.sit">http://www.intermapper.com/binaries/Convert_Custom_Icon_File.sit</a></p>
+        <p>Drag your icon files onto this droplet program, and they will be converted 
+ to a form usable by the MacOS X version of InterMapper. Drag the resulting 
+ files to the <i>/Library/Application Support/InterMapper Settings/Custom 
+ Icons</i> folder. </p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="stoppolling"></a> How can I stop the InterMapper server from polling 
+	for a while? </h2>
+        <p>The easiest way to stop InterMapper's polling for a while is to disable 
+ all the maps. To do this: </p>
+        <ol>
+            <li>Open the <b>Server Settings...</b> window </li>
+            <li>Click the <b><MadCap:keyword term="Enabled Maps" />Enabled Maps</b> tab. </li>
+            <li>Uncheck all the maps. They will no longer be polled 
+ or tested. </li>
+        </ol>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="stopserver"></a> How can I stop the InterMapper server? How can I 
+	restart it? </h2>
+        <p>
+            <MadCap:keyword term="Traditional:Traditional InterMapper on MacOS" />
+            <MadCap:keyword term="InterMapper on MacOS" />When using the Traditional InterMapper on MacOS X, simply quit the application. 
+	That will stop the polling. If you're using one of the server-based InterMapper 
+	versions (on OSX, Windows, or Unix/Linux), you'll need to stop the InterMapper 
+	service/daemon separately from InterMapper or InterMapper RemoteAccess. </p>
+        <p>
+            <MadCap:keyword term="Windows NT/2000/XP" />On Windows installations, use InterMapper Control Center to start, stop, or restart 
+ the InterMapper service. </p>
+        <p>
+            <MadCap:keyword term="Unix:Unix/Linux/MacOSX" />On all Unix/Linux/MacOSX installations, InterMapper installs a script 
+ to control the server daemon. The script should be invoked with one of 
+ these commands: </p>
+        <ul>
+            <li><b style="font-weight: bold;">start</b> - start the 
+ daemon</li>
+            <li><b style="font-weight: bold;">stop</b> - stop the 
+ daemon</li>
+            <li><b style="font-weight: bold;">restart </b>- stop 
+ and restart the daemon</li>
+            <li><b style="font-weight: bold;">status</b> - check 
+ the status of the daemon</li>
+        </ul>
+        <p>This script will be installed in different directories, depending on 
+ the operating system. </p>
+        <ul>
+            <li><b style="font-weight: bold;">MacOS X:</b> /Library/StartupItems/InterMapperServer/InterMapperServer      <i>command</i></li>
+            <li><b style="font-weight: bold;">Most versions of Linux:</b> 
+ /etc/init.d/intermapperd      <i>command</i></li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="FreeBSD" />FreeBSD:</b> /usr/local/etc/rc.d/intermapperd.sh      <i>command</i></li>
+            <li MadCap:conditions="Primary.Omit"><b style="font-weight: bold;"><MadCap:keyword term="Solaris" />Solaris:</b> /etc/init.d/intermapperd      <i>command</i></li>
+        </ul>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="uninstall"></a>
+            <MadCap:keyword term="Uninstall" /> How can I uninstall the InterMapper server? </h2>
+        <p>
+            <MadCap:keyword term="Uninstaller" />Each server-based version of InterMapper comes with its own uninstaller. 
+ Find the original distribution file (or retrieve the current version) 
+ and use its uninstall feature. </p>
+    </body>
+</html>

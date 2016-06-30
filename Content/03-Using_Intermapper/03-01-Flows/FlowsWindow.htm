@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2706" MadCap:lastWidth="767" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">The Flows Window</h1>
+        <p class="floatright">
+            <img src="../../Resources/images/imfbadge-wtext.png">
+            </img>
+        </p>
+        <p>Use the Flows window to view and analyze traffic at a very detailed level. InterMapper Flows acts as a NetFlow/sFlow collector; the Flows window provides a view of Flows data collected from supported hardware and software exporters.</p>
+        <p><b>To open the Flows window:</b>
+        </p>
+        <ul>
+            <li>To see network traffic data from any device, <b style="font-style: italic;">Right-click </b>or <b style="font-style: italic;">ctrl-click </b>a device that shows an exporter badge and choose <b style="font-style: italic;">Flows Window</b>. <br /><b>Note:</b> The Exporter badge appears for any device that is set up to be a Flows exporters. For more information, see&#160;<a href="Flows_Settings.htm#exporttab">Flows Settings - Exporters Tab<MadCap:xref href="Flows_Settings.htm#exporttab" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+            <li>To see the traffic through an exporter's interface,  <b style="font-style: italic;">Right-click </b>or <b style="font-style: italic;">ctrl-click </b>a link and choose <b style="font-style: italic;">Flows Window</b> from the <b style="font-style: italic;">Show In</b> submenu.</li>
+        </ul>
+        <h2 class="pagebreakbefore">Understanding the Flows window</h2>
+        <p style="text-align: left;">Use the Flows window to view Flows data in a number of ways.</p>
+        <p style="text-align: left;">
+            <img src="../../Resources/images/IMFlowsWindow-Legend5-s.png">
+            </img>
+        </p>
+        <p>When you first open the Flows window, the Hosts tab is selected.</p>
+        <ul>
+            <li><a href="#FilterTools"><b>1: Filter tools</b><MadCap:xref href="#FilterTools" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> - select the subset of Flows data you want to view.</li>
+            <li><a href="Flows_Settings.htm"><b>2: InterMapper Flows Settings</b><MadCap:xref href="Flows_Settings.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> - view and edit InterMapper Flows settings.</li>
+            <li><a href="#TimeRangeSelection"><b>3: Time Range Selection tools</b><MadCap:xref href="#TimeRangeSelection" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> - select and navigate Flows data over a specified period.</li>
+            <li><a href="#TimeRangeSelection"><b>4: Refresh button</b><MadCap:xref href="#TimeRangeSelection" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> - click to refresh the current view of Flows data.</li>
+            <li><b>5: Set Graph Scale</b> - choose a scale to use for viewing data in the Stack Chart.</li>
+            <li><b>6: Stack Chart</b> - view current Host, Port, or VLAN data in a stacked area chart.</li>
+            <li><b>7: Hosts, Ports, or VLANs pie chart</b> - view current Host, Port, or VLAN data as a percentage of total data flow in a pie chart.</li>
+            <li><b>8: Hosts, Ports, or VLANs list table</b> - view details about a specific host, port, or VLAN.</li>
+            <li><b>9: Page Selection tabs</b> - Click a tab to choose a Flows window page. (see below.)</li>
+        </ul>
+        <p class="pagebreakbefore">Click a tab to choose one of these Flows window pages:</p>
+        <ul>
+            <li><b><a href="TopHostsTab.htm">Top Hosts tab<MadCap:xref href="TopHostsTab.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - view a list of top talkers, listeners, or both, with stack and pie charts showing the relative activity of each.</li>
+            <li><b><a href="TopPortsTab.htm">Top Ports tab<MadCap:xref href="TopPortsTab.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - view a list of ports with the highest activity, with stack and pie charts showing the relative activity of each.</li>
+            <li><b><a href="TopVLANs.htm">Top VLANs tab</a></b> - view a list of VLANs with the highest activity, with stack and pie charts showing the relative activity of each.</li>
+            <li><b><a href="TopSessionsTab.htm">Top Sessions tab<MadCap:xref href="TopSessionsTab.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></b> - view a list of sessions, with start and end IP addresses and the start and end time of each session.</li>
+        </ul>
+        <h3>Flow Type Icons</h3>
+        <p>When collecting data from both NetFlow and sFlow exporters, you can tell at a glance what kind of exporter the data is coming from.</p>
+        <table style="caption-side: top;border-spacing: 5px 2px;margin-left: 0;margin-right: auto;">
+            <col style="width: 46px;">
+            </col>
+            <col style="width: 94px;">
+            </col>
+            <col style="width: 340px;">
+            </col>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/nf1.png" />
+                        <img src="../../Resources/images/nf5.png" />
+                        <br />
+                        <img src="../../Resources/images/nf7.png" />
+                        <img src="../../Resources/images/nf9.png" />
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">NetFlow Data</td>
+                    <td style="vertical-align: top;">This icon is shown when viewing data from a NetFlow exporter. Depending on the version, the icon shows a 1, 5, 7, or 9.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/sflow.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">sFlow Data</td>
+                    <td style="vertical-align: top;">This icon is shown when viewing data from an sFlow exporter.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/nf5.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">J-Flow,<br />CFlow</td>
+                    <td style="vertical-align: top;">These exporters implement a Flows format that is identical to NetFlow v5, so they appear as NetFlow v5 in the Flows window.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="pagebreakbefore"><a name="FilterTools"></a>Filter Tools</h3>
+        <p>Use the filter tools to view a subset of the data, selecting from available exporters, talkers, listeners, ports or sessions collected by InterMapper Flows.</p>
+        <table style="caption-side: top;width: 6.5in;border-spacing: 5px 2px;margin-left: 0;margin-right: auto;">
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imf-filtertoolbar-prevnext.PNG">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Previous/<br />Next view</td>
+                    <td>Click the left arrow to view the current tab with a previous set of filters. If you have clicked a previous set of filters, click the right arrow to view the current tab with the next set of filters in the view history.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/Images/FlowsFilters-exporter.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Exporter</td>
+                    <td>Choose a different exporter from the dropdown menu to view traffic from that exporter. You can also choose a specific interface on an exporter from the dropdown menu.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/Images/FlowsFilters-host.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Host</td>
+                    <td>Enter an IP address or subnet (x.x.x.x/#) to view traffic from that host or subnet or choose from the dropdown menu. Enter an exclamation point (!) to exclude the specified host.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/Images/FlowsFilters-port.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Port</td>
+                    <td>Enter a port from the dropdown menu to view traffic from that port or choose from the dropdown menu. Enter an exclamation point (!) to exclude the specified port.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/Images/FlowsFilters-vlan.png" />
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">VLAN</td>
+                    <td>Enter a VLAN number in the box to show Flows activity for only that VLAN. Enter an exclamation point (!) to exclude the specified VLAN.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imf-filtertoolbar-talklisten.PNG">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Talkers/<br />Both/<br />Listeners</td>
+                    <td>Click the left arrow to view Top Listeners (receivers) only, the right arrow to view Top Talkers (senders) only, and the button with both arrows to view Top Hosts by the total traffic sent and received by each host.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">&#160;</td>
+                    <td style="vertical-align: top;font-weight: bold;">Context Menu</td>
+                    <td>
+                        <p>Right-click or Ctrl-click an area of host activity in the Stack chart, Pie chart, or list and choose from the context menu. The menu changes depending on which area of the window you right-click.</p>
+                        <p>Get more detail in the <a href="TopHostsTab.htm">Top Hosts<MadCap:xref href="TopHostsTab.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, <a href="TopPortsTab.htm">Top Ports<MadCap:xref href="TopPortsTab.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>, or <a href="TopSessionsTab.htm">Top Sessions<MadCap:xref href="TopSessionsTab.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> tab.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/Images/Flows-NegateFilter.png" />
+                    </td>
+                    <td style="font-weight: bold;vertical-align: top;">Exclude Host/Port/VLAN</td>
+                    <td style="vertical-align: top;">
+                        <p>Enter an exclamation point (!) to negate a filter, or right-click (Ctrl-click) a host, port or VLAN in the pie chart or graph and choose <i style="font-weight: bold;">Exclude</i>.</p>
+                        <p>Negated filters are shown with green border.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="pagebreakbefore"><a name="TimeRangeSelection"></a>Time Range Selection</h3>
+        <p>Use the time range selection controls to view and select a range of time for which you want to view.</p>
+        <p>
+            <img src="../../Resources/images/imf-timerange-fields.PNG">
+            </img>
+        </p>
+        <p><b>To select a time range:</b>
+        </p>
+        <ul>
+            <li>Select by dragging across an area of the stack chart.</li>
+            <li>For precise control, enter times in the Showing data from Start and End time fields.</li>
+            <li>Click the calendar icon to set a Start or End date.</li>
+            <li>Use the dropdown menu to choose a preset time range. When you change this value, the current End time is preserved.</li>
+            <li>Use the time navigation controls shown below to jump back or forward by the amount shown in the time range dropdown menu or jump to now.</li>
+        </ul>
+        <table style="caption-side: top;border-spacing: 5px 2px;margin-left: 0;margin-right: auto;">
+            <col style="width: 23px;">
+            </col>
+            <col style="width: 82px;">
+            </col>
+            <col>
+            </col>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imf-timerange-nav-prev.PNG">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Back in Time</td>
+                    <td>Click the left arrow to view the previous page of data. The amount of data shown is determined by the current setting of the time range dropdown menu.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imf-timerange-nav-next.PNG">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Forward in Time</td>
+                    <td>Click the right arrow to view the next page of data. The amount of data shown is determined by the current setting of the time range dropdown menu.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imf-timerange-nav-now.PNG">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Forward to Now</td>
+                    <td>Click the Now button to view the latest data. The amount of data shown is determined by the current setting of the time range dropdown menu.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imf-timerange-zoom.PNG">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Zoom Out</td>
+                    <td>Click the Zoom Out button to reset the time range to the most recent setting in the Time Range dropdown menu.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imf-timerange-refresh.PNG">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Refresh </td>
+                    <td>Click the Refresh button to view the most recent data, based on the setting of the time range dropdown menu.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imflows-autorefreshbtn.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Auto-refresh Interval</td>
+                    <td style="vertical-align: top;">Choose a refresh interval from the Auto-refresh dropdown menu.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">&#160;</td>
+                    <td style="vertical-align: top;font-weight: bold;">Time until refresh</td>
+                    <td style="vertical-align: top;">The time to the right of the Auto-refresh Interval button indicates the time until the next refresh of the window.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br>
+            </br>
+        </p>
+        <h3 class="pagebreakbefore">Reports and Settings</h3>
+        <table style="caption-side: top;border-spacing: 5px 2px;margin-left: 0;margin-right: auto;">
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">&#160;</td>
+                    <td style="vertical-align: top;font-weight: bold;">Save... </td>
+                    <td style="vertical-align: top;">Choose this command from the File menu to save a PDF report to disk. A standard file dialog appears. The report contains the Top Hosts, Top Ports, and Top Sessions tabs.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">&#160;</td>
+                    <td style="vertical-align: top;font-weight: bold;">Print... </td>
+                    <td style="vertical-align: top;">Choose this command from the File menu to print a report using the current time range and filter settings. A standard print dialog appears.</td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img src="../../Resources/images/imf-filtertoolbar-settings-dlg.PNG">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;font-weight: bold;">Open Settings Dialog</td>
+                    <td style="vertical-align: top;">Click this button to open the InterMapper Flows Settings dialog. For more information, see the <a href="Flows_Settings.htm">InterMapper Flows Settings<MadCap:xref href="Flows_Settings.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> topic.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

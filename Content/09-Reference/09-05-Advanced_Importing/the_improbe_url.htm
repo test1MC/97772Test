@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="6" MadCap:lastHeight="1541" MadCap:lastWidth="1008" MadCap:fileTags="status_tags.No Changes">
+    <head><title>The ImProbe URL</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Pw  improbe;Changes;Server Probes - Proprietary;Addresses;Includes" />
+            <MadCap:keyword term="URL">
+            </MadCap:keyword>
+            <MadCap:keyword term="Includes:IMProbe" />
+            <MadCap:keyword term="IMProbe" />
+            <MadCap:keyword term="Import:URL" />
+            <MadCap:keyword term="IM" />
+            <MadCap:keyword term="The ImProbe URL" />
+            <MadCap:keyword term="IMProbe URL" />
+            <MadCap:keyword term="IMProbe URL Specification" />The IMProbe URL Specification</h1>
+        <p>
+            <MadCap:keyword term="Import" />InterMapper defines a URL format for specifying all the parameters for 
+	 a probe in a single string. This makes it straightforward to import information 
+	 about a probe into InterMapper from a text file.</p>
+        <p>
+            <MadCap:keyword term="URL:importing" />
+            <MadCap:keyword term="IMProbe:include" />
+            <MadCap:keyword term="Probes" />
+            <MadCap:keyword term="Username:change" />
+            <MadCap:keyword term="IMProbe URL:contains" />
+            <MadCap:keyword term="IMProbe URL:use" />
+            <MadCap:keyword term="URL-encoded" />When you export data from InterMapper, you can include the IMProbe field 
+	 in the export file. The IMProbe field contains the IMProbe URL, which in 
+	 turn contains all configuration information for a probe in URL-encoded format. 
+	 You can use the IMProbe URL to change the parameters of probes editing the 
+	 parameters of the URL, and then importing the URL into the map. </p>
+        <p>
+            <MadCap:keyword term="Username" />
+            <MadCap:keyword term="Changes:username" />
+            <MadCap:keyword term="Replacing:username" />For example, you could change the username and password for all of your 
+	 HTTP probes in all maps at once by:</p>
+        <ol>
+            <li>
+                <MadCap:keyword term="MapName" />
+                <MadCap:keyword term="Includes:MapName" />
+                <MadCap:keyword term="Id" />Exporting the data, including the MapName, Address, and Id, and IMProbe 
+		fields for all maps.</li>
+            <li>
+                <MadCap:keyword term="Username:replacing" />
+                <MadCap:keyword term="Replacing" />Finding and replacing the username and password parameters in each URL.</li>
+            <li>Re-importing the text file.</li>
+        </ol>
+        <p>The URL format specifies the information necessary to define a probe using 
+	 the <span class="code">IMProbe</span> scheme: </p><pre class="code">URL: 'improbe://'[community'@']address[':'port]'/'probe['?'parameters]</pre>
+        <p><span style="font-weight: bold;">Note:</span><span> 'improbe://' is case-sensitive, 
+	 and must be lower-case.</span>
+        </p>
+        <p>The minimal information required for an <span class="code">IMProbe</span><MadCap:keyword term="Authentication" /> URL is the 
+	 Address information, Probe type, and Authentication information.</p>
+        <ul>
+            <li> Address information 
+		<ul><li><MadCap:keyword term="DNS" />DNS name</li><li><MadCap:keyword term="IP" />IP address</li><li>port number (optional)</li></ul></li>
+            <li> Probe type 
+		<ul><li>canonical probe name</li><li>probe-specific parameters (optional)</li></ul></li>
+            <li> Authentication information 
+		<ul><li><MadCap:keyword term="SNMP" />SNMP community name (optional)</li></ul></li>
+        </ul>
+        <p>The <span class="code">probe</span> may be a canonical InterMapper probe name specified 
+	 in full, ie.          <span class="code"><MadCap:keyword term="RADIUS" /><MadCap:keyword term="Com.dartware.radius" />com.dartware.radius</span>,          <span class="code"><MadCap:keyword term="Com.dartware.http.redirect" />com.dartware.http.redirect</span>, 
+	 or a unique probe suffix may be specified, ie.          <span class="code">radius</span>,          <span class="code">http.redirect</span>.</p>
+        <p>The <span class="code">parameters</span><MadCap:keyword term="Get" /> are the parameters for the probe, encoded as 
+	 for a GET request. To make it simpler to create IMProbe URL's manually, 
+	 the matching of parameter names is simplified. Before matching parameter 
+	 names, the parameter names are converted to lower-case, and any spaces and 
+	 underscores are removed. For a parameter named          <span class="code"><MadCap:keyword term="Shared Secret" />Shared Secret</span>, 
+	 this means that IMProbe parameters          <span class="code"><MadCap:keyword term="Shared Secret:Shared%20secret" />shared%20secret</span>,          <span class="code"><MadCap:keyword term="Shared Secret:Sharedsecret" />sharedsecret</span> 
+	  and          <span class="code"><MadCap:keyword term="Shared Secret:Shared_secret" />shared_secret</span> will match and provide values.</p>
+        <p>If the <span class="code">parameters</span> section contains a parameter name that is 
+	 not defined for the probe, the parameter is ignored. If a probe parameter 
+	 is left out of the IMProbe URL, it is set to its default value from the 
+	 probe file.</p>
+        <h2>Examples</h2>
+        <p>
+            <MadCap:keyword term="Ping" />
+            <MadCap:keyword term="Netopia.example.com" />Both of the IMProbe URLs below specify that the host netopia.example.com 
+	 should be tested with the built-in Ping probe: </p><pre class="code">improbe://netopia.example.com/com.dartware.ping
+improbe://netopia.example.com/ping
+</pre>
+        <p>
+            <MadCap:keyword term="Pw" />Both these URLs test a RADIUS server at netopia.example.com, with a shared 
+	 secret of 'secret', a user name of 'im', and a password of 'pw'. The "Shared Secret" parameter can be written multiple ways:</p><pre class="code"><MadCap:keyword term="Im&amp;password" /><MadCap:keyword term="Secret&amp;username" /><MadCap:keyword term="Secret&amp;user_name" />improbe://netopia.example.com/com.dartware.radius?shared_secret=secret&amp;user_name=im&amp;password=pw
+improbe://netopia.example.com/radius?sharedsecret=secret&amp;username=im&amp;password=pw
+</pre>
+        <p>The URLs below specifies the SNMP probe, testing a device 
+	 at <span class="code">192.168.1.1</span>, using the community string of '<span class="code">public</span>'. The second URL a test against port 1611 instead of the default port 
+	 161 used in the first URL: </p><pre class="code">improbe://public@192.168.1.1/com.dartware.snmp
+improbe://public@192.168.1.1:1611/snmp
+</pre>
+        <h2>
+            <MadCap:keyword term="Special Characters" />
+            <MadCap:keyword term="Special Characters:Encoding" />
+            <MadCap:keyword term="Encoding" />
+            <MadCap:keyword term="Encoding:Special Characters" />Encoding Special Characters</h2>
+        <p>The IMProbe URL format uses the <span class="code"><MadCap:keyword term="Common Internet Scheme Syntax" />Common Internet Scheme Syntax</span><MadCap:keyword term="RFC:RFC 1738" /> 
+	  as specified in section 3.1 of RFC 1738 (now deprecated) and in compliance with current RFC 3986. The following characters are illegal 
+	 and must be encoded with %hh: </p><pre class="code">00-1F, 7F, 80-FF
+</pre>
+        <p>The following characters are also considered unsafe and should be encoded 
+	 with %hh: </p><pre class="code">&lt; &gt; " # %
+</pre>
+        <p>
+            <MadCap:keyword term="Unencoded" />The following characters are reserved for special purposes and should not 
+	 appear unencoded except when used as delimiters in the URL: </p><pre class="code" style="margin-bottom: 0">; &#160;/ &#160;&#160;? &#160;: &#160;&#160;@ &#160;&#160;= &#160;&#160;&amp;
+</pre>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="878" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">The Filter Pane</h1>
+        <h2 class="L2" MadCap:conditions="Primary.print">The Filter Pane</h2>
+        <p MadCap:conditions="Primary.print" class="floatright">
+            <img src="../Resources/images/L2-FilterPane.png" />
+        </p>
+        <p>Use the Filter pane to limit the endpoints you want to view in the Endpoints pane. Choose a combination of switch, VLAN and NIC Manufacturer to select the devices you want to view.</p>
+        <p>The <b>Switches</b> section lists each switch by name, and shows the number of endpoints attached to that switch.</p>
+        <p>The <b>VLANs</b> section lists all VLANs and the number of endpoints on each.</p>
+        <p>The <b>NIC Manufacturers</b> section lists all unique NIC Manufacturers connected to devices.</p>
+        <p>The right column of the Filter Pane shows a count of endpoints present for each of the criteria. See <a href="#endpointcounts">Understanding Endpoint Counts<MadCap:xref href="#endpointcounts" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> for more information.</p>
+        <p>Use these methods to control the filter criteria:</p>
+        <ul>
+            <li>By default, all check boxes are selected. </li>
+            <li>Select or clear check boxes to get the combination of switch, VLAN, and NIC Manufacturer that matches the devices you want to view.</li>
+            <li>Double-click a check box to select it and clear all other check boxes in the section.</li>
+            <li>Expand the Switch tree to view and select switch ports.</li>
+            <li>Right-click a switch and choose <b style="font-style: italic;">Remove switch from&#160;Layer 2 database</b> to prevent the switch from being polled for Layer 2 information. This is equivalent to the <b>Poll this address for Layer 2 information</b> check box, available in the <a href="../09-Reference/09-01-Command-Menu-Reference/Monitor_Menu.htm#setbehavior">Set Behavior window</a>.</li>
+            <li>Expand the VLANs tree to view and select VLANs.</li>
+            <li>Expand the NIC Manufacturer tree to view and select NIC models from those available.</li>
+            <li>Select or clear the <b style="font-style: italic;">Show all ports</b> box to show or hide the ports to which in the Endpoints pane to which nothing is connected.</li>
+            <li>Use the Filter Control (see below) for additional control of the set of rows that are displayed in the Endpoints pane.</li>
+            <li>The Filter box provides significant addtional filtering capability. Enter a hostname or address in the <b style="font-style: italic;">Filter box</b> to limit the devices shown in the Endpoints pane. See <a href="#filterbox">Using the Filter Box<MadCap:xref href="#filterbox" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> below for many more options.</li>
+        </ul>
+        <ul>
+            <li>Certain flags appear next to entries. See <a href="Layer_2_Flags.htm">Understanding Layer 2 Flags<MadCap:xref href="Layer_2_Flags.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</li>
+            <li>A switch that appears in grey and in parentheses indicates that the switch was previously detected, but is no longer on a Layer 2-enabled map.</li>
+        </ul>
+        <h3>Understanding Endpoint Counts<a name="endpointcounts"></a></h3>
+        <p>The right column of the Filter pane shows the number of Endpoint devices (specifically, the number of distinct MAC addresses) for each of the filter criteria. </p>
+        <ul>
+            <li>An SNMP-enabled managed switch or hub appears as zero endpoints, since it is not considered an endpoint. </li>
+            <li>A single endpoint (host, workstation, server, router, etc.) will show as one endpoint. </li>
+            <li>If an unmanaged hub or switch is present, or if the switch is not present on a Layer 2-enabled map, the endpoint count reflects the number of endpoints detected “out that port”. In some cases, this may be a very large number of endpoints.</li>
+        </ul>
+        <p>The number of endpoints indicated in the Filters panel often exceeds the number of entries in the Endpoints pane. This discrepancy occurs because the Endpoints panel often displays multiple entries for the same MAC address. Multiple entries appear in the following cases:</p>
+        <p>
+            <img src="../Resources/images/Layer2icons/house.png" class="floatright" />
+        </p>
+        <ul>
+            <li><b>Multi-homed devices</b> - devices with multiple IP addresses that use a single MAC address. The flag at right appears.</li>
+        </ul>
+        <p class="floatright">
+            <img src="../Resources/images/Layer2icons/one_way_left.png" />
+            <br />
+            <br />
+            <img src="../Resources/images/Layer2icons/one_way_right.png" />
+        </p>
+        <ul>
+            <li><b>Interior devices</b> - devices attached to an unmanaged switch or hub that is placed between two managed switches. InterMapper’s Layer 2 algorithm cannot show the correct switch port (because it’s unmanaged), so it indicates the device as an "interior" device – between two managed switches. Interior devices are indicated with left or right arrows as shown at right.</li>
+        </ul>
+        <p>When you select the <b style="font-style: italic;">Show All Ports</b> box, the Endpoints pane also shows:</p>
+        <ul>
+            <li>All ports, whether a device is connected or not</li>
+            <li>Ports that are connected to other switches. (Normally these are hidden because switches are not considered endpoints.)</li>
+            <li>Fuzzy devices (any device whose connection point cannot be completely determined.)</li>
+        </ul>
+        <p>For more information, see <a href="Layer_2_Flags.htm">Understanding Layer 2 Flags<MadCap:xref href="Layer_2_Flags.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</p>
+        <h3 class="pagebreakbefore">Using the Filter Box<a name="filterbox"></a></h3>
+        <p>Use the Filter box, located at the top of the Device Filter pane, to limit the devices you see in the Endpoints pane.</p>
+        <ul>
+            <li>Enter a host name or address to view only devices connected to that domain or address.</li>
+            <li>From the Filter dropdown menu, select or clear <b style="font-style: italic;">Endpoints Only</b> to include or exclude entries for ports with switches, unknown devices, and devices identified as "fuzzy" (see <a href="Layer_2_Flags.htm#fuzzy">Understanding Fuzzy Devices<MadCap:xref href="Layer_2_Flags.htm#fuzzy" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.)</li>
+            <li>In the Map or List view, select a device, then choose <b style="font-style: italic;">in Layer 2</b> from the <b style="font-style: italic;">Show</b> submenu, available from the Monitor menu and the context menu, to view that device's connections in the Layer 2 View.</li>
+            <li>If the value is in double-quotes, list all endpoints where the value is part of the NIC Manufacturer. (e.g. "App" will match "Apple", "Appliance", etc.)</li>
+            <li>If the value is an IPv4 CIDR block, list all endpoints with IP addresses in that CIDR block. (For example, enter "192.168.1.1/24")</li>
+            <li>If the value is decimal digits separated by periods, or just digits, treat it as an IPv4 address. There are three forms: 
+			<ol style="list-style:lower-alpha;"><li><b style="font-style: italic;">192.168</b> matches any IP address that begins with 192.168 </li><li> <b style="font-style: italic;">.1</b> matches any IP address that ends with .1 </li><li><b style="font-style: italic;">10</b> matches any IP address that begins with 10. (no period necessary).</li></ol></li>
+            <li>If the value is hexadecimal and separated by dashes, treat it as a MAC address. Search for endpoints with the MAC address or MAC address substring. (e.g. "00-00-0c", "00-00-d7-00-10-ab")</li>
+            <li>If the value starts with an alphabetical character, resolve the host name to an IPv4 address and filter on that IP address.</li>
+            <li>If the value starts with '#', process the specified debug command (e.g. "#help")</li>
+        </ul>
+    </body>
+</html>

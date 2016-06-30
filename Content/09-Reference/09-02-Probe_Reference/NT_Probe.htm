@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:lastBlockDepth="6" MadCap:lastHeight="3284" MadCap:lastWidth="519" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Windows NT Services Probe</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Tools-&gt;Folder Options;Windows OS;Matches;Prompts" />
+            <MadCap:keyword term="Windows">
+            </MadCap:keyword>
+            <MadCap:keyword term="Monitor" />
+            <MadCap:keyword term="Monitor:NT Services" />
+            <MadCap:keyword term="Running:Windows NT" />
+            <MadCap:keyword term="NT" />
+            <MadCap:keyword term="Windows NT" />
+            <MadCap:keyword term="NT Services Probe" />
+            <MadCap:keyword term="NT Services" />
+            <MadCap:keyword term="NT Services:Monitoring" />
+            <MadCap:keyword term="Windows NT Services Probe" />
+            <MadCap:keyword term="Execute:NT Services" />Monitoring NT Services with the Windows NT Services Probe</h1>
+        <p>
+            <MadCap:keyword term="IP:use" />
+            <MadCap:keyword term="Stop:InterMapper" />
+            <MadCap:keyword term="Running" />
+            <MadCap:keyword term="Running:InterMapper" />
+            <MadCap:keyword term="Windows NT:running" />
+            <MadCap:keyword term="Windows XP:running" />
+            <MadCap:keyword term="Host" />
+            <MadCap:keyword term="Host:InterMapper" />
+            <MadCap:keyword term="XP Home:running" />InterMapper can monitor and send notifications for NT 
+ Services running on another computer. InterMapper uses the Service Control 
+ Manager facilities of the underlying Windows host to communicate with 
+ a remote computer to track the state of its services.</p>
+        <p><i style="font-style: italic;">Note:</i>
+            <MadCap:keyword term="Macintosh" />
+            <MadCap:keyword term="Unix:Unix/Linux" />
+            <MadCap:keyword term="XP" /> This NT Services monitoring 
+ is only available if the InterMapper server is running on a Windows XP, or 2003 computer. You cannot use this facility if you're using 
+ a Macintosh or Unix/Linux computer to host the InterMapper server. </p>
+        <p class="floatright" style="text-align: center;">
+            <img src="../../Resources/Images/config-prefs-NT-WMI.png" />
+            <br /><i>NT Services Preferences Panel</i>
+        </p>
+        <p>The <b>NT Services</b> configuration window displays the full list of 
+ services that are running on a remote host. You can check off one or many 
+ services to monitor; InterMapper will then give an alert if any of them 
+ fails. The parameters to the probe are: </p>
+        <ul>
+            <li>A list of <b>NT services</b> on the target machine. 
+ This list has red and green marks to indicate whether the service is currently 
+ running. Checking the box for the service will cause InterMapper to send 
+ an alert if that service ever stops running.</li>
+            <li>The <b><MadCap:keyword term="Username" /><MadCap:keyword term="User" /><MadCap:keyword term="Matches:username" />Username</b> and      <b><MadCap:keyword term="Password" />Password</b><MadCap:keyword term="Log On" /> required 
+ to log onto the target machine.</li>
+        </ul>
+        <h2><a name="Authentication"></a>Authentication for NT Services Probe</h2>
+        <p>
+            <MadCap:keyword term="Service Control Manager" />
+            <MadCap:keyword term="Service Control Manager:opens" />
+            <MadCap:keyword term="NT Services:open" />
+            <MadCap:keyword term="SCM" />The NT Services probe opens the Service Control Manager (SCM) on the 
+ target machine; hence, some authentication is required before this can 
+ happen. There are several ways to do this.</p>
+        <ol>
+            <li><b style="font-weight: bold;">Using built-in username and password:</b>
+                <MadCap:keyword term="OK" />
+                <MadCap:keyword term="NT Services:choose" /> 
+ InterMapper has the built-in ability to solicit from you a username and 
+ password for authentication. When you choose the NT Services probe, it 
+ will prompt you for a username and password before attempting to connect 
+ to the target machine. If you have not used one of the methods below, 
+ fill in a username and password at that point and click OK. This will 
+ be all you need to do for authentication; the username and password will 
+ be saved. 
+	
+	<p><b style="font-weight: bold;">Note:</b><MadCap:keyword term="Administrator" /> For this to work, 
+ InterMapper must be running as an administrator, as only administrators 
+ are empowered to make the required network connections. You can do this 
+ in one of two ways: </p><ul><li><MadCap:keyword term="Properties" /><MadCap:keyword term="Browse" /><MadCap:keyword term="LocalSystem" /><MadCap:keyword term="Confirm Password" />The first way is by adjusting the account under 
+ which InterMapper is run. InterMapper is normally installed under the 
+ LocalSystem account, which does not have administrator privileges. To 
+ change the account under which it runs, follow this procedure: Go into 
+ the SCM and stop the InterMapper service if it is running. Right-click 
+ and choose "Properties". Choose the "Log On" tab. 
+ Under "Log On As...", click the radio button next to "This 
+ account:", and click "Browse..." to list the accounts; 
+ choose an account with administrator privileges. Fill in the password 
+ for the account in "Password:" and "Confirm Password:". 
+ Click "OK".</li><li><MadCap:keyword term="Administrator:Administrator's username" /><MadCap:keyword term="NT Services item" /><MadCap:keyword term="Server Settings list" />The second way is to let InterMapper be an administrator when it 
+ needs to be by supplying it with an administrator's username and password, 
+ so that it can elevate its privileges when it needs to. You can do this 
+ using the NT Services item in the Server Settings list. 
+		
+		<b style="font-weight: bold;">Note:</b><MadCap:keyword term="Local Security Policy" /><MadCap:keyword term="Logon" /> In either scheme, the 
+ administrator you supply must have been given the "Logon as a service" 
+ right in the local security policy of the machine you are monitoring. <br /><br /></li></ul></li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="NET USE" />The NET USE command:</b> Another way 
+ to authenticate is to use the NET USE command to create a connection between 
+ the host machine and the target. For instance, to monitor the services 
+ on a host at 192.168.1.140, enter the following: 
+	
+	<p><MadCap:keyword term="IP" />&#160;&#160;NET USE \\192.168.1.140\ipc$ /USER:Administrator</p><p><MadCap:keyword term="Username:prompted" />You will be prompted for the password, and the connection will be 
+ made. (If you have done this, when prompted for a username and password 
+ for NT Services by InterMapper, you can leave them blank and click OK.)</p><p><b style="font-weight: bold;">Note:</b><MadCap:keyword term="DNS" /><MadCap:keyword term="DNS:see" /> You must use the IP address 
+ and not the network name for the machine. That is important, as the Windows 
+ OS will not see the DNS name or the domain name as being the same as 192.168.1.140 
+ when checking the connections, and will not recognize that there is a 
+ connection when InterMapper tries to query the services by IP address, 
+ returning an "access denied" error instead. </p></li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="User:Synchronizing" /><MadCap:keyword term="Synchronizing" /><MadCap:keyword term="Synchronizing:Users" />Synchronizing Users:</b> A third way 
+ to authenticate is to make sure that the user and password under which 
+ the InterMapper service is running exists on the target machine as well. 
+ 
+	
+	<p>When InterMapper is first installed, it is installed running under 
+ the user "LocalSystem", as most services are. It is necessary 
+ to create a new user on your machine; let's name it <i>InterMapper</i> 
+ and give it a password. Make sure it is a member of Administrators. (If 
+ you already have a username and password that exist on all machines that 
+ are to be targeted by the NT Services probe as well as the InterMapper 
+ host and which has Administrator permissions everywhere, you can skip 
+ the previous step and substitute it for      <i>InterMapper</i> in the following.)</p><p>Go into the SCM and stop the InterMapper service if it is running. 
+ Right-click and choose "Properties". Choose the "Log On" 
+ tab. Under "Log On As...", click the radio button next to "This 
+ account:", and click "Browse..." to list the accounts; 
+ choose <i>InterMapper</i>. Fill in the password for the account in "Password:" 
+ and "Confirm Password:". Click "OK".</p><p>On the target machine, create a new user, also named <i>InterMapper</i>, 
+ with the same password, and also a member of Administrators.</p><p><MadCap:keyword term="Start InterMapper" />Start InterMapper from the SCM on the original machine. You should 
+ now be able to use NT Services probes. (When prompted for a username and 
+ password for NT Services by InterMapper, you can leave them blank and 
+ click OK.)</p></li>
+        </ol>
+        <h2 class="pagebreakbefore">A Note on Error Messages</h2>
+        <p>InterMapper may encounter authentication errors when attempting to connect. 
+ Here is a list of the messages and ways you might work around them:</p>
+        <ul>
+            <li><b style="font-weight: bold;">Error attempting 
+ to elevate privileges.</b>
+                <MadCap:keyword term="NT Services:execute" />
+                <MadCap:keyword term="Windows Server 2003" />
+                <MadCap:keyword term="Server Settings dialog" />
+                <MadCap:keyword term="Execute" /> InterMapper is not running as an administrator, 
+ and thus needs to elevate its privileges in order to be able to execute 
+ the NT Services probe. It could not do so. Make sure a correct username 
+ and password for the InterMapper host machine have been supplied in the 
+ NT Services panel of the Server Settings dialog. Make sure the user given 
+ has the right to log on as a service in your Local Security Policy. If 
+ host machine is Windows Server 2003 or newer, make sure the user has the 
+ right to impersonate another user.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Windows Networking" />Could not establish 
+ Windows Networking connection to probe target.</b> When a username and 
+ password have been supplied for the target machine, InterMapper attempts 
+ to use them to create a connection between the host and the probe target. 
+ This attempt failed for some reason. Will be followed by more specific 
+ error information. See below.</li>
+            <li><b style="font-weight: bold;">Could not open SCM 
+ on probe target.</b> InterMapper could not open the Service Control Manager 
+ on the target machine. Will be followed by more specific error information. 
+ See below. </li>
+        </ul>
+        <p>The following errors might be appended to the messages above:</p>
+        <ul>
+            <li><b style="font-weight: bold;">Access is denied.</b>
+                <MadCap:keyword term="Simple Networking" /> 
+ Make sure InterMapper is running as an administrator, or that an administrator 
+ username and password have been provided in the NT Services panel in the 
+ Server Settings dialog. Make sure a valid administrator username and password 
+ have been supplied for the probe target. If the probe target is running 
+ Windows XP, make sure that "Simple Networking" is turned off.</li>
+            <li><b style="font-weight: bold;">The network name 
+ cannot be found.</b> and      <b>The network path was not found.</b> The device 
+ you have specified does not appear to exist on the network. If you are 
+ sure that it does, make sure it is a Windows machine with File and Print 
+ Sharing turned on, and that any firewall has exceptions for File and Print 
+ Sharing.</li>
+            <li><b style="font-weight: bold;">An extended error 
+ has occurred.</b>
+                <MadCap:keyword term="Network-specific" /> A network-specific error has occurred. It should be 
+ followed by more information about the nature of the error. You may need 
+ to consult your network administrator.</li>
+            <li><b style="font-weight: bold;">The specified network 
+ password is incorrect.</b>
+                <MadCap:keyword term="Username:match" /> The password you supplied doesn't match the 
+ username.</li>
+            <li><b style="font-weight: bold;">No network provider 
+ accepted the given network path.</b> and      <b>The network is not present 
+ or not started.</b> No network is present, or a component of the network 
+ has not been started. Consult your network administrator.</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="RPC" />The RPC server is 
+ unavailable.</b>
+                <MadCap:keyword term="Print Sharing" /> Make sure that probe target is a Windows machine with 
+ File and Print Sharing turned on, and that any firewall has exceptions 
+ for File and Print Sharing. </li>
+        </ul>
+    </body>
+</html>

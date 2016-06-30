@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  InsertMOTW="true"
+  ConditionTagExpression="include[Primary.Splunk] exclude[Primary.CurrentInfo or Primary.NewInfo or Primary.Omit or Primary.online or Primary.print or Primary.review or Primary.test] "
+  OutputFolder="P:\Doc Projects\HelpSystems\Flare-InterMapper\InterMapperDocs\InterMapperUserGuide"
+  DisableAutoSync="true"
+  conditions="Primary.Splunk"
+  DefaultUrl="/Content/09-Reference/SplunkAppInstallationGuide.htm"
+  MasterToc="/Project/TOCs/Primary.fltoc">
+  <PrintedOutput
+    CollapseMargins="true" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/LatestBuild-splunk.fldes" />
+  </Destinations>
+</CatapultTarget>

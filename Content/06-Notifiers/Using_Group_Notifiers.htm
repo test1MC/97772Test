@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="4" MadCap:lastHeight="759" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Using Group Notifiers</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Notifier Type dropdown menu;Transition:particular device state sends multiple notifiers;Using Group Notifiers InterMapper;Group notifiers together so;Transition;Event" />
+            <MadCap:keyword term="Set:Notifiers">
+            </MadCap:keyword>
+            <MadCap:keyword term="Group" />Using Group Notifiers</h1>InterMapper can group notifiers together so that a transition to a particular 
+ device state sends multiple notifiers, even of different types, for that event. 
+  <p> To create a Group notifier, select <b>Group</b> from the        <b>Notifier 
+	Type</b><MadCap:keyword term="Set" /><MadCap:keyword term="Currently-defined" /><MadCap:keyword term="Currently-defined:set" /> dropdown menu. A set of currently-defined notifiers appears, with a 
+	check box next to each. To create the group notifier, check the appropriate 
+	boxes in the list. 
+  </p><p>&#160; 
+  </p><table><tr><td><img src="../Resources/Images/window-ConfigNotifier-group.png" style="width: 548px;height: 317px;" /></td></tr></table><h2>How it works</h2><p> When the Group notifier is invoked, InterMapper first checks the time schedule. 
+	If the time is applicable, InterMapper invokes each of the checked notifiers. 
+	They in turn check their schedules, and send the notification if desired.
+  </p><p><b>Notes:</b></p><ul><li>It is normal for a group notifier's schedule to be 24 x 7, 
+	so that the underlying notifiers will govern when they are sent.
+  </li><li><b></b>When attaching a group notifier to a device, leave its component 
+	notifiers' boxes unchecked. Otherwise, duplicate notifications are sent (once 
+	for the group and again for the component). </li></ul><p></p></body>
+</html>

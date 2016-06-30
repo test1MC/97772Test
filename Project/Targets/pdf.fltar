@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  DefaultUrl="/Content/welcome.html"
+  OutputFile="InterMapper_User_Guide"
+  Type="PDF"
+  MasterToc="/Project/TOCs/Primary.fltoc"
+  GlossaryTermConversion="marked"
+  ConditionTagExpression="include[Primary.print] exclude[Primary.NewInfo or Primary.Omit or Primary.online or Primary.review or Primary.test] "
+  MasterPage="../../Content/Resources/MasterPages/PrintDoc.flmsp"
+  MasterPageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl"
+  MasterStylesheet="/Content/default.css"
+  OutputFolder="P:\Doc Projects\HelpSystems\Flare-InterMapper\InterMapperDocs\InterMapperUserGuide"
+  conditions="Primary.print"
+  DisableAutoSync="true">
+  <Variables>
+    <Variable
+      Name="InterMapper-Primary/CurrentVersion">5.4</Variable>
+  </Variables>
+  <ConditionTags />
+  <Glossaries></Glossaries>
+  <PrintedOutput
+    ExpandingTextConversion="expand"
+    MultiDocWordOutput="False" />
+  <PDF
+    ShowUsedBookmarks="false"
+    DownsampleImages="true"
+    ImageCompression="JPEG"
+    InitialMagnification="FitH"
+    PageLayout="OneColumn"
+    TitleBar="DocumentTitle" />
+  <DocumentProperties
+    Title="InterMapper User Guide"
+    Author="Help/Systems, LLC" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/LatestBuild-pdf.fldes" />
+  </Destinations>
+</CatapultTarget>

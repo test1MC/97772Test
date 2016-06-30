@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultProjectImport AutoSync="true" IncludePattern="*.flvar;*.css;*.flmsp;*.flpgl;*.flskn" LastImport="2016-04-25T11:19:21.9250642-04:00" ExcludePattern="" DeleteUnreferenced="false" IncludeLinkedFiles="true">
+    <Files>
+        <Url Source="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/FlareGlobal.flprj" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/FlareGlobal.flprj" />
+    </Files>
+    <ExcludedFiles>
+        <Url Source="../Targets/HTML5 - Tripane.fltar" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/InterMapperUserGuide/Project/Targets/HTML5 - Tripane.fltar" />
+    </ExcludedFiles>
+    <CollectedSourceFiles>
+        <Url Source="../../../FlareGlobal-FromTplt/Content/Resources/MasterPages/MasterPage.flmsp" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/Content/Resources/MasterPages/MasterPage.flmsp" />
+        <Url Source="../../../FlareGlobal-FromTplt/Content/Resources/PageLayouts/Chapters.flpgl" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/Content/Resources/PageLayouts/Chapters.flpgl" />
+        <Url Source="../../../FlareGlobal-FromTplt/Content/Resources/PageLayouts/FrontMatter.flpgl" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/Content/Resources/PageLayouts/FrontMatter.flpgl" />
+        <Url Source="../../../FlareGlobal-FromTplt/Content/Resources/Stylesheets/styles.css" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/Content/Resources/Stylesheets/styles.css" />
+        <Url Source="../../../FlareGlobal-FromTplt/Project/Skins/HTML5 - Tripane.flskn" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/Project/Skins/HTML5 - Tripane.flskn" />
+        <Url Source="../../../FlareGlobal-FromTplt/Project/VariableSets/General.flvar" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/Project/VariableSets/General.flvar" />
+        <Url Source="../../../FlareGlobal-FromTplt/Project/VariableSets/InterMapper-Primary.flvar" AbsoluteSource="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal-FromTplt/Project/VariableSets/InterMapper-Primary.flvar" />
+    </CollectedSourceFiles>
+    <SkippedSourceFiles />
+    <GeneratedFiles>
+        <Url Source="../../Content/Resources/MasterPages/MasterPage.flmsp" TimeStamp="3/30/2016 3:54:56 PM" />
+        <Url Source="../../Content/Resources/PageLayouts/Chapters.flpgl" TimeStamp="3/30/2016 3:54:56 PM" />
+        <Url Source="../../Content/Resources/PageLayouts/FrontMatter.flpgl" TimeStamp="3/30/2016 3:54:56 PM" />
+        <Url Source="../../Content/Resources/Stylesheets/styles.css" TimeStamp="3/30/2016 3:54:56 PM" />
+        <Url Source="../Skins/HTML5 - Tripane.flskn" TimeStamp="3/30/2016 3:54:56 PM" />
+        <Url Source="../VariableSets/General.flvar" TimeStamp="3/30/2016 3:54:56 PM" />
+        <Url Source="../VariableSets/InterMapper-Primary.flvar" TimeStamp="4/13/2016 9:57:59 AM" />
+    </GeneratedFiles>
+</CatapultProjectImport>

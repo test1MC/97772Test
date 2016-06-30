@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:id="chapter4\logging.html" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:check_list="Ran Smart Index" MadCap:status="In Progress" MadCap:lastBlockDepth="6" MadCap:lastHeight="354" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Log File Preferences</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Debug file;Outages file;InterMapper Logs;Adding" />
+            <MadCap:keyword term="Log File" />
+            <MadCap:keyword term="Logs:Preferences" />
+            <MadCap:keyword term="Set:Preferences" />
+            <MadCap:keyword term="Preferences" />Log File Preferences</h1>
+        <p>
+            <MadCap:keyword term="Event" />InterMapper writes information to log files about various events. Use the 
+	log files to review the events surrounding a particular problem, helping you 
+	to troubleshoot the problem more effectively.</p>
+        <p><b style="font-weight: bold;">To view an existing log file:</b>
+        </p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Windows menu" />
+                <MadCap:keyword term="Windows menu:Logs submenu" />
+                <MadCap:keyword term="Logs" />
+                <MadCap:keyword term="Logs submenu" />Choose the file you want to view from the Logs submenu 
+ of the Windows menu.</li>
+        </ul>
+        <p><b style="font-weight: bold;"><MadCap:keyword term="Edit" />To view and edit the preferences for log 
+ files:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Edit menu" />From the Edit menu, choose <b><i><MadCap:keyword term="Server Settings" /><MadCap:keyword term="Set" /><MadCap:keyword term="Preferences:Setting" /><MadCap:keyword term="Log File Parameters:Setting" />Server Settings... </i></b><MadCap:keyword term="Server Settings window" />The 
+	 Server Settings window appears. </li>
+            <li>Click <b><i>Log Files</i></b>. A list of log files appears in the right panel, showing the current Log File preferences for the selected log file.</li>
+        </ol>
+        <h2><a name="logfileprefs"></a>Setting Preferences for Log Files</h2>
+        <p class="pagebreakafter">
+            <img src="../../Resources/Images/SrvrSettings-LogFileOptions.png" />
+            <br /><i>The Log File preferences pane shows a list of currently defined log files with properties for the selected file.</i>
+        </p>
+        <ul>
+            <LI class="pagebreakbefore"><b style="font-weight: bold;">To see a brief explanation 
+ of the function of a log file,</b> click the log file in the list. The 
+ explanation appears in the lower panel of the Preferences pane. </LI>
+            <li><b style="font-weight: bold;">To add a log file,</b> 
+ click <b style="font-style: italic;">Add New Log</b>. The              <a href="#logfileparameters"> Log File Preferences<MadCap:xref href="#logfileparameters" MadCap:conditions="Primary.print" /></a> for the new log file appear. </li>
+            <li><b style="font-weight: bold;">To edit a log file 
+ definition,</b> click to select a log file definition. The properties for the selected log file appear. The              <a href="#logfileparameters"> Log File Preferences<MadCap:xref href="#logfileparameters" MadCap:conditions="Primary.print" /></a> for the selected log file appear. </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Remove" />To delete a log file,</b> click to select a log file definition, then click <b style="font-style: italic;">Delete this Log</b>. 
+ The log file definition disappears from the list. <br /><br /><b>Note:</b> The Debug Log, Event Log and Outages Log cannot be deleted.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/images/blank.gif" style="width: 1px;height: 1px;border-style: none;margin-left: 10px;margin-right: 10px;" width="1" height="1" border="0" />
+        </p>
+        <h3 class="pagebreakbefore"><i style="font-style: italic;"><MadCap:keyword term="Preferences:Logging" />Log File Preferences</i>
+        </h3>
+        <p>The example above typical log file preferences. It shows 
+ the names of the log files, and their rotation intervals.</p>
+        <p><b style="font-weight: bold;">To add a new log file:</b>
+        </p>
+        <ol>
+            <li>Click 
+ <b style="font-style: italic;">Add New Log</b>. The              <a href="#logfileparameters"> Log File preferences<MadCap:xref href="#logfileparameters" MadCap:conditions="Primary.print" /></a> for the new log file appear. 
+ </li>
+            <li>
+                <MadCap:keyword term="Log File Parameters" />
+                <MadCap:keyword term="Set:Log File Parameters" /><a href="#logfileparameters">Set the log file preferences <![CDATA[
+ ]]><MadCap:xref href="#logfileparameters" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> as described below.</li>
+        </ol>
+        <p><b style="font-weight: bold;">To edit preferences for an existing log 
+ file:</b>
+        </p>
+        <ol>
+            <li>Click to select the log file.  The              <a href="#logfileparameters"> Log File preferences<MadCap:xref href="#logfileparameters" MadCap:conditions="Primary.print" /></a> for the selected log file appear. </li>
+            <li><a href="#logfileparameters">Set the log file preferences<MadCap:xref href="#logfileparameters" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> as described below.</li>
+        </ol>
+        <h2><a name="logfileparameters"></a>Setting Log File Preferences</h2>
+        <p class="pagebreakbefore">
+            <MadCap:keyword term="Log File Name" /><b>Log File Name </b>- Set the filename (actually the prefix) for the log file. You can enter up 
+		 to 14 characters (see <a href="#logfilenaming">Log File Naming and File 
+		 Format <MadCap:xref href="#logfilenaming" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> below.)&#160;<MadCap:keyword term="TXT" />The file is given a .TXT extension, and can be edited with any text 
+		 editor. </p>
+        <p>
+            <MadCap:keyword term="Start New Log File" /><b>Start New Log File</b> - Use these settings to specify how often and at what point in a log cycle 
+		the current log file is closed and a new one is opened. This allows you to break 
+		the log files into convenient sizes and/or time epochs. Choose from these 
+		options:&#160;</p>
+        <ul>
+            <li>Never </li>
+            <li>Once daily </li>
+            <li>Twice daily </li>
+            <li>Once weekly </li>
+            <li>Twice weekly</li>
+        </ul>
+        <p>&#160;<MadCap:keyword term="Days/weeks" /><b>Delete log files after __ days/weeks</b> - Check this box to force InterMapper to delete old log files automatically 
+		 after a certain date.</p>
+        <p><b>Note: </b>Each time InterMapper starts a new log file, it checks 
+		 to see if any log files should be deleted. On platforms where the file 
+		 creation date is available, it is used to determine whether a log file 
+		 should be deleted. If the creation date is not available, the file's 
+		 last modification date is used.</p>
+        <p>
+            <MadCap:keyword term="Syslog" />
+            <MadCap:keyword term="Syslog Server" /><b>Also send messages to syslog server</b>
+            <br />Click this checkbox to specify that all log file entries be sent to 
+		 a syslog server. Set the values for:&#160;</p>
+        <ul>
+            <li><b>IP Address</b>
+                <MadCap:keyword term="IP" />
+                <MadCap:keyword term="DNS" /> - enter an IP address for the syslog 
+			server.</li>
+            <li><b>Facility</b> - choose a value to match your local system conventions.</li>
+            <li><b>Severity</b> - choose a value to match your local system conventions.</li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="Redirect" />
+            <MadCap:keyword term="Redirect:Log Entries" />
+            <MadCap:keyword term="Log Entries" />
+            <MadCap:keyword term="Log Entries:Redirecting" />Redirecting Log Entries</h2>
+        <p>
+            <MadCap:keyword term="Event Log file" />By default, all entries go to the built-in Event Log file. You can redirect 
+	streams of log entries from InterMapper's Remote Server, Web Server, or Telnet server to a particular log file 
+	(and syslog server). This can be useful, for example, for sending all web 
+	access events one file, and all outage events to a different file.</p>
+        <p><b style="font-weight: bold;">To redirect a log entry stream:</b>
+        </p>
+        <ol>
+            <li>Create a new log file definition for the file you 
+ want to receive the log entries, as described above. </li>
+            <li>From the Edit menu, choose <b><i>Server Settings...</i></b> 
+ The Server Settings window appears. </li>
+            <li>
+                <MadCap:keyword term="Server Configuration" />In the left panel of the Server Settings window, 
+	 click to choose the server (Remote, Web, or Telnet) whose log entries you want to send to a different 
+	 log file. The panel for the selected server appears. </li>
+            <li>In the <b><i><MadCap:keyword term="Send Log File Entries" />Send Log File Entries to</i></b> menu, choose the log file you created to receive the log entries. All log file entries for 
+ the selected server are redirected to the new log file.</li>
+        </ol>
+        <h2><a name="logfilenaming"></a>
+            <MadCap:keyword term="File Format" />Log File Naming and File Format</h2>
+        <p>Log files are saved in text format in the <i><MadCap:keyword term="InterMapper Settings" />InterMapper Settings:InterMapper 
+ Logs</i> folder. Each file has a user-defined prefix that describes its 
+ function, and ends with a suffix of              <i>.yyyymmddhhmm.txt</i>, where the 
+ suffix is the (four-digit) year, month, day, hour and minute when the 
+ file was created. The prefix can be up to 14 characters in length.</p>
+        <h2>
+            <MadCap:keyword term="Log File Sources" />Log File Sources</h2>
+        <p>Log information comes from several sources, including:</p>
+        <ul>
+            <li>Up and down entries for the devices being logged 
+ </li>
+            <li>Hits on the built-in web server </li>
+            <li>
+                <MadCap:keyword term="InterMapper RemoteAccess" />
+                <MadCap:keyword term="Telnet" />Connections to the InterMapper RemoteAccess and Telnet server</li>
+            <li>InterMapper's own internal status and error messages</li>
+        </ul>
+        <p>Three built-in log files are always present, and cannot be deleted:</p>
+        <ul>
+            <li>The <b>Event Log</b> file - when you first launch 
+ InterMapper, the Event log file receives all entries from all sources. 
+ You can divert certain streams to other log files. </li>
+            <li>The <b>Outages</b> file - contains entries that describe 
+ the start and end times of outages, as well as their duration. This stream 
+ of entries cannot be redirected to any other log file. </li>
+            <li>The <b>Debug</b> file - displays certain debugging 
+ information, as described in              <a href="../../07-MonitoringNetwork/07-02-Log_Windows/debug.html">The 
+ Debug Window<MadCap:xref href="../../07-MonitoringNetwork/07-02-Log_Windows/debug.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+        </ul>
+    </body>
+</html>

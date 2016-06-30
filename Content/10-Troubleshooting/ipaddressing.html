@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="852" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>About IP</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2"><a name="top"></a>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="IP Address" />
+            <MadCap:keyword term="Addresses" />
+            <MadCap:keyword term="Block:IP" />
+            <MadCap:keyword term="About IP Addresses" />About IP Addresses</h1>
+        <p><b>Note:</b> InterMapper now supports 128-bit IPv6 addresses. Most of the information in this topic is still relevant and accurate. In addition, you can enter an IPv6 address anywhere in InterMapper that you can enter a 32-bit IPv4 address.</p>
+        <ul>
+            <li><a href="#whatsiapdrs">What is an IP address? How 
+ do I get one?<MadCap:xref href="#whatsiapdrs" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="End" />
+                <MadCap:keyword term="Internet" /><a href="#howsend">How do computers send data through 
+ the Internet?<MadCap:xref href="#howsend" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Subnet" />
+                <MadCap:keyword term="Subnet:subnet" />
+                <MadCap:keyword term="Attribute:subnet" /><a href="#whatsasubnet">What is a subnet? Why do  I care?<MadCap:xref href="#whatsasubnet" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Subnet Mask" /><a href="#subnets">What does the "/24" 
+ mean? How does that relate to my subnet mask?<MadCap:xref href="#subnets" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#private">What is a "private IP address 
+ range"?<MadCap:xref href="#private" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+        </ul>
+        <p><a name="whatsiapdrs"></a>
+        </p>
+        <h2>What is an IP address? How do I get one?</h2>
+        <p>
+            <MadCap:keyword term="DNS" />
+            <MadCap:keyword term="Internet Protocol" />
+            <MadCap:keyword term="Domain Name:Domain Name System" />
+            <MadCap:keyword term="Domain Name:Domain Name System:called" />An IP address ("Internet Protocol address") is a number that 
+ represents a single unique computer on the Internet. IP addresses are 
+ similar to telephone numbers, in that each computer (or telephone) must 
+ have its own unique IP address (telephone number.) Like telephones, there's 
+ a directory system - called the Domain Name System, or "DNS" 
+ - that can convert a name such as "www.apple.com" into a corresponding 
+ numeric IP address.</p>
+        <p>32-bit IPv4 Addresses are written as a sequence of four numbers separated by 
+ ".", like this: 208.123.246.35. Each of the four numbers in 
+ the IP address can take the value between 0 and 255.</p>
+        <p>InterMapper now supports 128-bit IPv6 addresses.</p>
+        <p>
+            <MadCap:keyword term="IP:assign" />
+            <MadCap:keyword term="IP:blocks" />
+            <MadCap:keyword term="Block" />
+            <MadCap:keyword term="ISPs" />Every computer on the Internet must have a unique IP address. ISPs purchase 
+ large blocks of consecutive IP addresses, and then allocate smaller ranges 
+ of these addresses to their customers. Thus, a particular company might 
+ be assigned all the 254 IP addresses in the range 208.123.246.1 to 208.123.246.254. 
+ (The addresses ".0" and ".255" are not usually assigned.) 
+ Companies then assign the IP address to individual computers within the 
+ organization.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="howsend"></a>
+        </p>
+        <h2>How do computers send data through the Internet?</h2>
+        <p>
+            <MadCap:keyword term="E-mail" />Computers send information through the Internet by dividing the data 
+ to send into small chunks ("packets") and transmitting them 
+ to the other device. All this happens without your doing anything - the 
+ web browser, e-mail program, etc. all take care of these low level details.</p>
+        <p>When your computer wants to send to another computer, it creates the 
+ packet, then places the other computer's address in the <i>destination 
+ address</i> of the packet, places its own address in the      <i>source address</i> 
+ of the packet, and then sends the packet off, either directly to the destination 
+ computer, or to a nearby router that takes responsibility for routing 
+ the packet.</p>
+        <p>There's an analogy with the post office here. Packets are like envelopes, 
+ with destination addresses and return addresses. Routers are like post 
+ offices: they check the destination address and have the responsibility 
+ for delivering the packet to the final destination computer or to another 
+ router that's closer to the destination.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="whatsasubnet"></a>
+        </p>
+        <h2>What is a subnet? Why do I care?</h2>
+        <p>A <i>subnet</i><MadCap:keyword term="Subnet:attribute" /><MadCap:keyword term="Attribute" /> is a range of IP addresses. The special attribute of 
+ a subnet is that all the computers within the subnet (a "sub-network") 
+ can talk directly to each other, and don't need a router to communicate.</p>
+        <p>As mentioned above, your computer delivers a packet directly to the 
+ destination computer or sends it to the router for ultimate delivery.</p>
+        <p>
+            <MadCap:keyword term="Subnet:uses" />But how does your computer know whether the packet's destination is 
+ within its subnet? The answer is that your computer uses the subnet mask 
+ to determine the members of the subnet.</p>
+        <p>The chart below associates the number of IP addresses in a subnet to 
+ the subnet mask. For example, the subnet mask "255.255.255.0" 
+ represents 254 consecutive IP addresses. If your computer's IP and the 
+ destination computer's IP addresses are in the same subnet address range, 
+ then they can send packets directly to each other. If they're not in the 
+ same range, then they must send their data through a router for delivery.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="subnets"></a>What does the "/24" mean? How does that relate 
+ to my subnet mask?</h2>
+        <p>
+            <MadCap:keyword term="Set" />
+            <MadCap:keyword term="End:32-bit subnet" />
+            <MadCap:keyword term="IP subnet" />
+            <MadCap:keyword term="32-bit subnet" />InterMapper uses a shorthand notation to represent an IP subnet's information. 
+ The number in the "/xx" shorthand stands for the number of bits 
+ (technically, bits set to one) in the subnet mask. The convention is always 
+ to start at the left end of the 32-bit (IPv4)subnet mask. The table below shows 
+ the correspondence between the "/xx" notation and the actual 
+ numeric representation.</p>
+        <table>
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tr>
+                <th style="width: 20px;" width="20px">&#160;</th>
+                <th>Subnet Mask</th>
+                <th># of Addresses</th>
+                <th style="width: 20px;" width="20px">&#160;</th>
+                <th>&#160;</th>
+                <th>Subnet Mask</th>
+                <th># of Addresses</th>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/1</b>
+                </td>
+                <td>128.0.0.0</td>
+                <td>2.1 billion</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/17</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.128.0</td>
+                <td>32,766</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/2</b>
+                </td>
+                <td>192.0.0.0</td>
+                <td>1 billion</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/18</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.192.0</td>
+                <td>16,382</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/3</b>
+                </td>
+                <td>224.0.0.0</td>
+                <td>536 million</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/19</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.224.0</td>
+                <td>8,190</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/4</b>
+                </td>
+                <td>240.0.0.0</td>
+                <td>268 million</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/20</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.240.0</td>
+                <td>4,094</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/5</b>
+                </td>
+                <td>248.0.0.0</td>
+                <td>134 million</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/21</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.248.0</td>
+                <td>2,046</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/6</b>
+                </td>
+                <td>252.0.0.0</td>
+                <td>67 million</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/22</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.252.0</td>
+                <td>1,022</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/7</b>
+                </td>
+                <td>254.0.0.0</td>
+                <td>34 million</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/23</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.254.0</td>
+                <td>510</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/8</b>
+                </td>
+                <td>255.0.0.0</td>
+                <td>17 million <i>(Class A)</i></td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/24</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.255.0</td>
+                <td>254 <i>(Class C)</i></td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/9</b>
+                </td>
+                <td>255.128.0.0</td>
+                <td>8.4 million</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/25</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.255.128</td>
+                <td>126</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;height: 15px;" height="15" align="right" width="20px"><b style="font-weight: bold;">/10</b>
+                </td>
+                <td style="height: 15px;" height="15">255.192.0.0</td>
+                <td style="height: 15px;" height="15">4.2 million</td>
+                <td style="text-align: right;width: 20px;height: 15px;" height="15" align="right" width="20px"><b style="font-weight: bold;">/26</b>
+                </td>
+                <td style="height: 15px;" height="15">&#160;</td>
+                <td style="height: 15px;" height="15">255.255.255.192</td>
+                <td style="height: 15px;" height="15">62</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/11</b>
+                </td>
+                <td>255.224.0.0</td>
+                <td>2.1 million</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/27</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.255.224</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/12</b>
+                </td>
+                <td>255.240.0.0</td>
+                <td>1 million</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/28</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.255.240</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/13</b>
+                </td>
+                <td>255.248.0.0</td>
+                <td>524 thousand</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/29</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.255.248</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/14</b>
+                </td>
+                <td>255.252.0.0</td>
+                <td>262 thousand</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/30</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.255.252</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/15</b>
+                </td>
+                <td>255.254.0.0</td>
+                <td>131 thousand</td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/31</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.255.254</td>
+                <td>
+                    <MadCap:keyword term="RFC" /><a href="http://www.cisco.com/univercd/cc/td/doc/product/software/ios122/122newft/122t/122t2/ft31addr.htm">RFC 
+ 3021</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/16</b>
+                </td>
+                <td>255.255.0.0</td>
+                <td>65,534 <i>(Class B)</i></td>
+                <td style="text-align: right;width: 20px;" align="right" width="20px"><b style="font-weight: bold;">/32</b>
+                </td>
+                <td>&#160;</td>
+                <td>255.255.255.255.</td>
+                <td><i style="font-style: italic;"><MadCap:keyword term="Loopback" />Loopback address</i>
+                </td>
+            </tr>
+        </table>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="private"></a>What is a "private IP address range"?</h2>
+        <p>
+            <MadCap:keyword term="Internet Assigned Numbers Authority" />
+            <MadCap:keyword term="RFC:RFC 1918" />
+            <MadCap:keyword term="IANA" />The Internet Assigned Numbers Authority (IANA) has reserved several 
+ blocks of IP addresses that an organization may assign for its own private 
+ internet. These blocks are defined in RFC 1918 (<a href="http://www.ietf.org/rfc/rfc1918.txt?number=1918">http://www.ietf.org/rfc/r 
+ fc1918.txt?number=1918</a>). </p>
+        <p>From the RFC: </p>
+        <blockquote>
+            <MadCap:keyword term="Private Address Space" />3. Private Address Space 
+
+<p>The Internet Assigned Numbers Authority (IANA) has reserved the following 
+ three blocks of the IP address space for private internets:</p><p>10.0.0.0 - 10.255.255.255 (10/8 prefix)<br />172.16.0.0 - 172.31.255.255 (172.16/12 prefix)<br />192.168.0.0 - 192.168.255.255 (192.168/16 prefix)</p><p><MadCap:keyword term="16-bit" /><MadCap:keyword term="Pre-CIDR" /><MadCap:keyword term="20-bit" /><MadCap:keyword term="24-bit" />We will refer to the first block as "24-bit block", the second 
+ as "20-bit block", and to the third as "16-bit" block. 
+ Note that (in pre-CIDR notation) the first block is nothing but a single 
+ class A network number, while the second block is a set of 16 contiguous 
+ class B network numbers, and third block is a set of 256 contiguous class 
+ C network numbers. </p></blockquote>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+    </body>
+</html>

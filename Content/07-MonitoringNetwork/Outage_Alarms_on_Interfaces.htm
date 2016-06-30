@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:lastBlockDepth="5" MadCap:lastHeight="1420" MadCap:lastWidth="607" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Outage Alarms on Interfaces</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Acknowledgements:Acknowledging" />
+            <MadCap:keyword term="Alarm">
+            </MadCap:keyword>
+            <MadCap:keyword term="Outage Alarms on Interfaces" />Outage Alarms on Interfaces</h1>
+        <p>
+            <MadCap:keyword term="Down" />InterMapper treats an outage on each device interface as a separate alert 
+	event. By default, each time an interface goes down, the affected interface gets a red "X", and alarm 
+	notifications for that interface are triggered. </p>
+        <h2>Choosing Alarm Behavior for Interfaces</h2>
+        <p>Use the the <b style="font-style: italic;">Set devices to Alarm status on down link</b> check box, available from the <a href="../08-Server_Settings/08-02-Server_Prefs/devicethresholds-default.htm">Device Thresholds pane</a> <MadCap:xref href="../08-Server_Settings/08-02-Server_Prefs/devicethresholds-default.htm">(Pg 1)</MadCap:xref> of the Server Settings window to control the behavior of alarms when an interface goes down. </p>
+        <p>You can:</p>
+        <ul>
+            <li>Trigger alarms for individual interfaces</li>
+            <li>Trigger an alarm for the device when any interface goes down.</li>
+        </ul>
+        <h2>Acknowledging Interface Outages</h2>
+        <p>
+            <MadCap:keyword term="ACK" />
+            <MadCap:keyword term="State/color" />You can right-click an affected interface's link, and select "Acknowledge". The 
+	interface link gets a blue "X", and no further notifications 
+	for that interface are sent. InterMapper also writes a line in the Event Log 
+	file for these events. The format of the Event Log entries is: </p><pre class="code">09/30 14:03:32 link DOWN : [1] switch.example.com - 1
+...
+09/30 14:03:49 link ACK : [1] switch.example.com - 1
+</pre>
+        <p>If another interface subsequently goes down, the same process repeats: </p>
+        <ul>
+            <li>The link gets a red "X".</li>
+            <li>
+                <MadCap:keyword term="EventLog file" /> An entry is written to the Event Log file
+</li>
+            <li>Notifications are sent
+</li>
+            <li>You can acknowledge the new interface
+</li>
+        </ul>
+        <p>
+            <MadCap:keyword term="Unacknowledge" />If two interfaces go down at the same time, a set of alarm 
+	notifications is sent for each interface. No further notifications are sent.</p>
+        <p>
+            <MadCap:keyword term="Status window" />Once acknowledged, a link's Status Window show the interface's 
+	status as <b style="font-style: italic;">ACK (down)</b>. </p>
+        <p>
+            <MadCap:keyword term="Interfaces window" />You can acknowledge and unacknowledge multiple interfaces from the device's 
+	Interfaces window. </p>
+        <p>To acknowledge multiple interfaces:</p>
+        <ol>
+            <li>Click to select the device.</li>
+            <li>From the Monitor menu, or from the context menu using <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" />, choose Window... from the Interfaces submenu. The interfaces window appears.</li>
+            <li>Click to select one of the interfaces you want to acknowledge.</li>
+            <li>Shift-click or Ctrl-click to choose more interfaces to acknowledge.</li>
+            <li>
+                <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" /> and choose <b style="font-style: italic;">Acknowledge...</b> from the context menu.</li>
+        </ol>
+        <p>You can <b style="font-style: italic;">Un-acknowledge...</b> one or more links using <MadCap:snippetText src="../Resources/Snippets/RighClick.flsnp" /> in the same way you acknowledge. This replaces 
+	the blue "X" with a red one, and re-enables any repeated notifications for 
+	that device. </p>
+        <p style="text-align: center;font-style: italic;">
+            <img src="../Resources/Images/LinkStates.png" alt="Link States" />
+            <br />Various Link States</p>
+        <p style="font-style: normal;text-align: left;"><b>Note:</b> The red "x" in a circle in the image above shows a link whose status as supplied by the router is <span class="code">ifAdminDown</span>. To see all of the available states for devices and links, see <MadCap:xref href="understanding.html" class="H1_and_page">Understanding the Map (Pg 1)</MadCap:xref>.</p>
+        <h2>Two Approaches for Down Interfaces</h2>
+        <ul>
+            <li><b>Acknowledge the interface</b> as described above. This is good for outages on operational interfaces that are expected to return to service in the near future. </li>
+            <li><b>Hide the interface</b> - If you know that an interface will be down for a long time, you can hide it . This tells InterMapper not to monitor its status and removes it
+from the map to minimize clutter. To show or hide an interface, open
+the device's Interfaces Window and select or clear the check box in the left column. 
+</li>
+        </ul>
+    </body>
+</html>

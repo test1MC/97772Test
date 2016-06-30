@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="870" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">User Attributes</h1>
+        <p>The <span class="code">users</span> data type imports user account information.  </p>
+        <p>Use these attributes with the following table specification in line 1:</p><pre class="code">table=users</pre>
+        <ul style="list-style: disc;" type="disc">
+            <li>Fields marked with an asterisk (*) are required.</li>
+            <li>Fields marked with an plus(+) can be updated during import.<MadCap:keyword term="Auth" /></li>
+        </ul>
+        <table class="fieldtable">
+            <tr>
+                <th>Field Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="fieldname">Id</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>INDEX<br /><b>Description: </b><br />A unique, persistent identifier for this user.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Name <span style="font-weight: normal;">*+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE,CREATE<br /><b>Description: </b><br />Login name of the user.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Password <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE<br /><b>Description: </b><br />If the user is to be validated locally, the user's password.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Guest <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE<br /><b>Description: </b><br />The user's autologin properties.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">External <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE<br /><b>Description: </b><br />Indicates user is to be validated by an auth server.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Groups <span style="font-weight: normal;">+</span></td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-WRITE<br /><b>Attributes: </b>SENSITIVE<br /><b>Description: </b><br />Comma-separated list of groups to which to add user. (Will not remove users from groups not in list.)<br /></td>
+            </tr>
+        </table>
+    </body>
+</html>

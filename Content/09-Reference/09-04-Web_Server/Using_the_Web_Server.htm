@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="827" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Using the Web Server</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="InterMapper Telnet;Customize;Set button;Showing;Web Servers" />
+            <MadCap:keyword term="Web Servers:Using" />
+            <MadCap:keyword term="Using" />
+            <MadCap:keyword term="Using:Web Server" />Using the Web Server </h1>
+        <p>
+            <MadCap:keyword term="Showing:InterMapper" />Each page that InterMapper serves contains the same controls at the 
+ top. The example below shows an InterMapper map as it appears in a web 
+ page.</p>
+        <p><b>Note:</b> To access the web server remotely, (that is, from a different machine connected to the network) you must configure the InterMapper firewall to permit the connection. You must also configure any other firewalls protecting the machine that is running InterMapper to allow traffic to the specified port. For more information, see <a href="../../08-Server_Settings/08-03-Server_Config/Web_Server.htm">The Web Server</a><MadCap:xref href="../../08-Server_Settings/08-03-Server_Config/Web_Server.htm" class="ConceptPageNumber"> (Pg 1)</MadCap:xref> in the Server Settings section.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/WebServer-Map.png" style="width: 564px;height: 478px;" />
+            <br /><i style="font-style: italic;"><MadCap:keyword term="Web Page" /><MadCap:keyword term="InterMapper Web Page" />A typical InterMapper web page. the "Example.com" Chicago map.</i>
+        </p>
+        <p>The InterMapper web page typically has three parts:</p>
+        <ul>
+            <li>The <i>header,</i> which shows the map name or other 
+ title and a navigation bar for going to other pages. This is usually the same for every page. </li>
+            <li>The <i>content</i> of the page, which varies, depending 
+ on which page is selected.</li>
+            <li>The <i>footer</i> of the page, which shows the time 
+ the page was created.</li>
+        </ul>
+        <h2>
+            <MadCap:keyword term="InterMapper Web Page Navigation" />InterMapper Web Page Navigation</h2>
+        <p>
+            <MadCap:keyword term="Showing:InterMapper Web Server menu" />
+            <MadCap:keyword term="InterMapper Web Server menu" />Use the menu at the top of the InterMapper Web Page to access the available 
+ features of the web page. The example above shows a web page for a particular 
+ map. The image below shows the InterMapper Web Server menu, found at the 
+ top of each page.</p>
+        <p>
+            <img src="../../Resources/Images/WebServer-Header.png" style="border-style: none;width: 560px;height: 36px;" border="0" />
+        </p>
+        <p>Click any of the menu items at the top of the page to view the page. 
+ Here is a brief description of each page:</p>
+        <ul>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Map List" />Home Page</b> - Click the InterMapper logo to return to the Home page. View a list of open maps and the charts associated with 
+ those maps. Mouse over a map link to see a preview of a map. Click the link to view the map.</li>
+            <li><b style="font-weight: bold;">Error</b> - View a list of InterMapper errors. </li>
+            <li><b style="font-weight: bold;">Full</b> - View a list of devices and networks associated with all open maps. 
+ </li>
+            <li><b style="font-weight: bold;">Outages</b> - View a list of current outages (devices and networks that are currently down) 
+ and previous outages (devices and networks that failed in the past, but have returned to service).</li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="Device List" />Device List</b> - View a list of devices and networks associated with all open 
+ maps. </li>
+            <li><b style="font-weight: bold;">Statistics</b> - View information about the current version of InterMapper under 
+ which the Web Server is running.</li>
+            <li><b style="font-weight: bold;">Help (menu)</b> - Choose from a menu of options that allow you to get information about the InterMapper Web client and the current version of InterMapper. View and download files in the InterMapper Settings folder, view the User and Developer Guides, and connect to the InterMapper Telnet server.</li>
+        </ul>
+        <h3 MadCap:conditions="">
+            <MadCap:keyword term="Set" />
+            <MadCap:keyword term="Set:Reload" />
+            <MadCap:keyword term="Set:Interval" />
+            <MadCap:keyword term="Reload" />
+            <MadCap:keyword term="Web Page:Reloading" />
+            <MadCap:keyword term="Interval" />
+            <MadCap:keyword term="Interval:Setting" />Setting the Interval for Reloading the Web Page</h3>
+        <p class="floatright" MadCap:conditions="" style="font-style: italic;">
+            <img src="../../Resources/Images/IntervalMenu.png" style="border-style: none;" border="0" />
+            <br />Interval Menu on Computer</p>
+        <p MadCap:conditions="">InterMapper pages can be set to refresh at a specified interval. This 
+ keeps the web page's information up-to-date. </p>
+        <p MadCap:conditions=""><b style="font-weight: bold;">To set the Reload interval:</b>
+        </p>
+        <ul>
+            <li MadCap:conditions="">From the <b>Interval</b> dropdown menu, choose 
+ a reload interval. The web browser 
+ refreshes the page at the specified interval.</li>
+        </ul>
+        <p MadCap:conditions="" style="font-style: italic;">
+            <img src="../../Resources/Images/IntervalMenu-mobile.PNG" style="width: 322px;height: 72px;border: solid 1px #a9a9a9;" />
+            <br />Interval Menu on iPhone</p>
+        <h2>
+            <MadCap:keyword term="Web Page:Customizing" />Customizing Web Pages</h2>
+        <p style="margin-bottom: 0;">
+            <MadCap:keyword term="Developer Guide" />InterMapper's web page appearance is controlled by template files. For more information, see <i>Customizing Web Pages</i> in the <a href="http://intermapper.com/go.php?to=intermapper.devguide" target="_blank">Developer Guide</a>.</p>
+    </body>
+</html>

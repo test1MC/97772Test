@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName">HelpSystems</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber">877-276-6903</Variable>
+  <Variable
+    Name="PythonVersion"
+    Definition="Some text">2.6</Variable>
+  <Variable
+    Name="CurrentVersionMajor"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="6.1">6.1</Variable>
+  <Variable
+    Name="ReleaseMonth"
+    Comment=""
+    Definition="Some text"
+    EvaluatedDefinition="September 2016">September 2016</Variable>
+  <Variable
+    Name="Copyright"
+    Comment=""
+    Definition="Some text"></Variable>
+  <Variable
+    Name="IMBrandName"
+    Comment=""
+    EvaluatedDefinition="Intermapper">Intermapper</Variable>
+  <Variable
+    Name="IMRABrandName"
+    Comment=""
+    EvaluatedDefinition="Remote Access">Remote Access</Variable>
+</CatapultVariableSet>

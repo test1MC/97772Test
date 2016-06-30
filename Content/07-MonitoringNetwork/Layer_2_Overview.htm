@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="43" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">Using the Layer 2 View</h1>
+        <h1 MadCap:conditions="Primary.print">Using the Layer 2 View</h1>
+        <h2 MadCap:conditions="Primary.print" class="L2">Overview</h2>
+        <p>Use the Layer 2 view of the Device List window to view information about your switches and what's connected to them. With the Layer 2 view, you can answer questions like:<br /></p>
+        <ul>
+            <li>What switch port is this computer connected to?</li>
+            <li>What computers are connected to that switch port?</li>
+            <li>How are these two switches connected?</li>
+        </ul>
+        <h2>What Layer 2 Processing Does</h2>
+        <p>InterMapper periodically scans all the switches on maps where Layer 2 is enabled (see the <a href="../04-Creating_Maps/mapsettings.html">Layer 2 Features pane<MadCap:xref href="../04-Creating_Maps/mapsettings.html" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> of the Map Settings window). It collects information regarding which devices are attached to which ports, what other switches are present, and places the resulting information into the Endpoints pane.</p>
+        <p>InterMapper Layer 2 uses device MAC addresses to identify devices. It looks through the forwarding databases of the switches to identify the ports where devices connect. The Layer 2 process also looks through ARP tables and other sources of data to map the MAC addresses to IP addresses, to collect DNS names, VLANs, and other information, locating each device as precisely as it can.</p>
+        <p>When Layer 2 passes the connection information back to the map, automatically showing the connection of each device on the map to the proper port on the switch.</p>
+        <p>In order to use InterMapper's Layer 2 features, you must: </p>
+        <ol>
+            <li>Enable <a href="../08-Server_Settings/08-03-Server_Config/layer2features.htm">Layer 2 features</a> in the Server Settings window.</li>
+            <li>Enable them in  the <a href="../04-Creating_Maps/mapsettings.html#Layer2features">Map Settings window</a> for any map containing switches you want to include during Layer 2 discovery.</li>
+        </ol>
+        <p>To use the Layer 2 connection information to make connections on the map automatically, select <b style="font-style: italic;">Automatically change this map to show Layer 2 connections</b> in the Layer 2 Features pane of the Map Settings window.</p>
+        <p><b>Note:</b> The Layer 2 View is disabled when:</p>
+        <ul>
+            <li>Layer 2 features are not enabled.</li>
+            <li>The user is not an administrator.</li>
+            <li>The user is not a member of the FullLayer2Access group.</li>
+        </ul>
+        <h2 class="L2">Viewing Layer 2 Information</h2>
+        <p>Layer 2 information is shown in a "sub-view" of the global Device List Window, available from the Window menu.</p>
+        <p class="floatright">
+            <img src="../Resources/Images/DeviceListWindow-Layer2iconOnly.png" /> </p>
+        <p><b>To open the Layer 2 view:</b>
+        </p>
+        <ol>
+            <li>From the Window menu, choose Device List. The Device List window opens.</li>
+            <li>In the Device List window, click the Layer 2 view button, as shown at right. The Layer 2 window appears.</li>
+        </ol>
+        <p><b>Alternatively, you can:</b>
+        </p>
+        <ul>
+            <li>Right-click a device on a map and choose <b style="font-style: italic;">Show in Layer 2</b> from the context menu.</li>
+            <li>Select a device on a map and choose <b style="font-style: italic;">Show in Layer 2</b> from the Monitor menu.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="" MadCap:conditions="Primary.online,Primary.print" MadCap:lastBlockDepth="4" MadCap:lastHeight="835" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Packet Loss">
+            </MadCap:keyword>About Packet Loss</h1>
+        <p>InterMapper has the ability to monitor both long-term and short-term packet
+loss. These are useful for detecting problems in your network.<br />Long term Packet Loss is measured from the time InterMapper starts testing a
+device. InterMapper computes this from the total number of pings or SNMP queries
+sent, and the fraction of those that fail to respond. </p>
+        <h2>
+            <MadCap:keyword term="Long-term Packet Loss" />Long-term Packet Loss</h2>
+        <p>The Long-term Packet Loss is displayed in the device's Status Window, along with
+the total number of packets sent and responses received. It is possible to reset
+this value using the <b style="font-style: italic;">Reset</b> link in the device's Status Window.</p>
+        <h2>
+            <MadCap:keyword term="Short-term Packet Loss" />Short-term Packet Loss</h2>
+        <p>InterMapper measures Short-term Packet Loss by counting the number of lost
+packets in the last 100 sent. To do this, each device retains the history of the
+last 100 packets sent/received.</p>
+        <p>The short-term packet loss is displayed in the device's Status Window as a
+percentage of the number of dropped packets in the last 100. This value can be
+reset via  the <b style="font-style: italic;">Reset</b> link in the Status Window(which resets all the device's
+statistics), or by selecting one or more devices and choosing <b style="font-style: italic;">Monitor -&gt; Reset
+Short-term Packet Loss</b>.</p>
+        <h2>Packet Loss Notifiers </h2>
+        <p>InterMapper can send alerts/notifiers when the short term packet loss statistics
+exceed certain thresholds. That is, when short term packet loss exceeds a
+warning, alarm, or critical threshold, the device will turn to the appropriate
+color and InterMapper will send the appropriate alert. These thresholds can be
+set in several places:</p>
+        <ul>
+            <li><b>Server Settings</b> - Device Thresholds apply to all devices on all maps</li>
+            <li><b>Map Settings</b> - Device Thresholds apply to all the devices on a particular map,
+overriding the Server Settings value.</li>
+            <li><b>Individual device</b> -  <b style="font-style: italic;">Set Thresholds...</b> sets the thresholds for that particular
+device, overriding the map-wide or server-wide settings.</li>
+        </ul>
+        <p>To disable alerts/notifications for high packet loss, set the packet loss
+thresholds to 100%. </p>
+        <h2>Ignoring lost packets during outages</h2>
+        <p>When a device goes down, InterMapper stops updating the packet loss history
+(both short and long term) for the duration of the outage. This prevents the
+packet loss statistics from continuing to increase during an outage. (If
+InterMapper continued to count lost packets while a device was down, the
+statistics would incorrectly indicate there was high packet loss when it was
+likely the problem was something else.)</p>
+        <p>In addition, InterMapper ignores the packets lost when determining that a device
+has gone down. For example, the default is that three successive lost packets
+will indicate that the device is down (no longer responding). However, these
+three dropped packets would be shown (incorrectly) as a 3% packet loss.
+Consequently, InterMapper removes those dropped packets from the history, so
+that it shows an accurate accounting. </p>
+        <p>When the device subsequently responds (after the problem has been corrected),
+InterMapper begins counting successful and lost packet responses again.
+</p>
+    </body>
+</html>

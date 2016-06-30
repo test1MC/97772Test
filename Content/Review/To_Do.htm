@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="880" MadCap:lastWidth="576" MadCap:conditions="Primary.Omit" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1>To Do</h1>
+        <p>Fixed for 5.8:</p>
+        <h2>10844 5/21</h2>
+        <p>User Guide: Added a note in</p>
+        <p>Using InterMapper &gt; Monitoring Your Network &gt; Interfaces Window that the menu commands are available, and allow you to apply a setting to all selected devices.</p>
+        <p>Added four entries to the command list in:</p>
+        <p>Reference &gt; Command/Menu Reference &gt; File Menu</p>
+        <h2>10890 5/22 Map Backup</h2>
+        <p>User Guide: Added a section "Backup Types" to:</p>
+        <p>- Using InterMapper &gt; Creating Maps &gt; Saving Your Map</p>
+        <p>- Reference &gt; File menu &gt; Backup...</p>
+        <p>Also added a note to Reference &gt; File menu &gt; Restore... pointing to the info about backup types.</p>
+        <p>I documented these as:</p>
+        <p>- Manual</p>
+        <p>- Automatic</p>
+        <p>- Scheduled</p>
+        <h2>10952 Mapname, mapid in command line</h2>
+        <p>Dev Guide: Added two entries to command line variables table in</p>
+        <p>Creating Your Own Probes &gt; Anatomy of a Probe &gt; Built-in Variables and Macros</p>
+        <p>One for ${mapname} and one for ${mapid}.</p>
+        <h2>10951 Grid Layout enhancements</h2>
+        <p>UserGuide: Replaced the Grid Layout window screenshot in</p>
+        <p>Using InterMapper &gt; Arranging Your Map &gt; Using the Arrange Commands</p>
+        <p>Added a note explaining the None sorting option.</p>
+        <p>Added a Grid entry (there wasn't one) in</p>
+        <p>Reference &gt; Command/Menu Reference &gt; Format Menu in the Arrange Submenu section.</p>
+        <p>Remaining RT bugs:</p>
+        <ul>
+            <li>#121356 - fixed - the_improbe_url.htm - <br />Reference &gt; Advanced Data Import/Export &gt; The IMprobe URL.</li>
+            <li>#110151 - fixed - dartwareprobedata.htm - <br />DevGuide &gt; Creating Your Own Probes &gt; Anatomy of a Probe &gt; The &lt;datasets&gt; section &gt; Auto-recorded Values - this is now auto-generated using the same mechanism as the probe descriptions - it extracts the datasets directly from the probes. It would be good to have Jerry review them.</li>
+            <li>#117180 - This is a Flare issue, and I believe it's been fixed. It seems to behave correctly in IE9. I also tried it in Chrome and Firefox, and it seemed to work the same way everywhere.</li>
+            <li>#117707 - wav files seem to work fine on my Win7/64 machine.</li>
+        </ul>
+        <p>&#160;</p>
+        <h2>&#160;</h2>
+        <h2>Splunk</h2>
+        <p>1. <b>DONE&#160;- changed to "Using InterMapper With Splunk"</b>&#160;- 	Title: I think it should be: Splunk App Installation Guide</p>
+        <p>2.	Step 1:</p>
+        <p>a.	<b>DONE</b> Remove blank line between bullet 3 and Note.</p>
+        <p>b.	<b>REMOVED&#160;BULLET&#160;5 AND&#160;FIRST&#160;BULLET&#160;OF&#160;INTRO</b> - I am not sure bullet 5 is relevant. We want connection between IM and Splunk servers. Also, I don’t understand the end of the first bullet on the initial install guide.</p>
+        <p>3.	<b>DONE</b> Step 3: Bullet 6: the message must be on one line. Maybe you can slide it on 3 lines but add a note to make sure it displays on 1 line in IM</p>
+        <p>4.	<b>DONE</b> Step 4: Maybe you can add note, if the user wants just monitoring devices for a specific map, the same type of setting can be done in map.</p>
+        <p>5.	Step 5: This step needs more information.</p>
+        <p>a.	DONE To see L2 info in Splunk, first IM must be setup for L2. No need to detail how.</p>
+        <p>b.	<b>DONE</b> The probe must be uploaded in IM (no need to say how) and must be applied to a device on the network (most people usually apply it as a probe on the node for the Splunk server)</p>
+        <p>6.	Step 5:</p>
+        <p>a.	<b>DONE</b> Should be Step 6</p>
+        <p>b.<b>DONE - Please check</b>	You should add: Splunk interprets the notifications from the InterMapper server</p>
+        <p>7.	Step 6 (7):</p>
+        <p>a.	Bullet 1 is not clear enough where to go, maybe because I use to go to splunkbase directly.</p>
+        <p>b.	Bullet 6: typo “Upload and App”</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <h2>&#160;</h2>
+        <h2>5.6.5</h2>
+        <p>108134</p>
+        <p>Hide Interface Delete Interface</p>
+        <p>A Probe rediscovery No Yes, interface reappears by default</p>
+        <p>B Data Collection Continues Ceases</p>
+        <p>C Layer 2 Discovery Continues Ceases</p>
+        <p>Issue A Yes No</p>
+        <p>Issue B Yes Yes</p>
+        <p>Issue C No Yes</p>
+        <p>&#160;</p>
+        <p>DONE Dartware #115319 Using InterMapper Flows &gt; The Flows Windows Filter Tools: Exporters cannot be exclude. Remove the line about exclamation point</p>
+        <p>&#160;</p>
+        <h2>5.6.4</h2>
+        <p>#115235 Doc: few correction in Using InterMapper Flows</p>
+        <p>DONE * Using InterMapper Flows &gt; InterMapper Flows Overview The sentence before the 4 bullets looks incomplete. I understand it about the 4 following bullets.</p>
+        <p>DONE * Using InterMapper Flows &gt; The Flows Windows To open the Flows window:</p>
+        <p>DONE - added a note about having to set up a device as an exporter, put in a link. Bullet 1: How don?t know how to show the exporter badge. How do you do that?</p>
+        <p>DONE Bullet 2: you have to choose Show in ? Flows Window. Remove the extra period.</p>
+        <p><b>The link actually goes to the table that contains the refresh button. The heading "Time Range Selection" is a little misleading. Haven't fixed yet</b> Understanding the Flows window: Bullet 4 ? Refresh button: the link is incorrect or should not be there</p>
+        <p>DONE Flow Type Icons: Remove the extra period after ?9?</p>
+        <p>&#160;</p>
+        <p>fixes for 12/18</p>
+        <p>DONE Filter Tools:  VLAN filter is missing</p>
+        <p>DONE To select a time range: Typo ?windowful? twice REPLACED "WINDOWFUL" WITH PAGE. I ASSUME YOU DIDN'T LIKE THE WORD "WINDOWFUL".</p>
+        <p>DONE * Using InterMapper Flows &gt; TopVLANs - Add space between Top and VLANs in the Contents topic list</p>
+        <p>DONE * Using InterMapper Flows &gt; Top Seesion Tab Server bullet: ?The IP address or host name of server the session? Missing word</p>
+        <p>DONE - ADDED PREFS&#160;TAB&#160;TO&#160;LIST,  ADDED&#160;LINKS * Using InterMapper Flows &gt; Flows Settings The Preferences tab is not listed as available tab at the beginning of the topic You should create links as shortcuts</p>
+        <p>DONE To choose exporters: The second bullet about sFlow should be left aligned</p>
+        <p>DONE Database Configuration settings: Typo ?verylarge?</p>
+        <p>DONE Current Database Information bullet: should be left aligned</p>
+        <p>&#160;</p>
+        <h2>&#160;</h2>
+        <h2>Fixed for 5.6.4</h2>
+        <p><b><a href="/Ticket/Display.html?id=100358">100358</a></b> <b><a href="/Ticket/Display.html?id=100358">Doc:  UserGuide - IMDC-5.4.5: settings for email notifications in IMDC check box  undocumented</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=106525">106525</a></b> <b><a href="/Ticket/Display.html?id=106525">Doc:  UserGuide: DNS and probes</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=108786">108786</a></b> <b><a href="/Ticket/Display.html?id=108786">Doc:  UserGuide - What is a Blue X?</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=111026">111026</a></b> <b><a href="/Ticket/Display.html?id=111026">Doc:  Change "Using Auto-Discover" to "Using Auto-Discovery"</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=111114">111114</a></b> <b><a href="/Ticket/Display.html?id=111114">Doc:  UserGuide - Interface window needs few corrections</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=111116">111116</a></b> <b><a href="/Ticket/Display.html?id=111116">Doc:  UserGuide - Left aligned label and description in IM Version &amp; Credits  section</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=113188">113188</a></b> <b><a href="/Ticket/Display.html?id=113188">Doc -  User Guide: The status icon in the window title of the second Helper Apps screen  shot needs to be changed</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=113198">113198</a></b> <b><a href="/Ticket/Display.html?id=113198">Doc -  User Guide: Need to document "Hide Label" for a not a built-in  shape</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=114509">114509</a></b> <b><a href="/Ticket/Display.html?id=114509">Doc:  few label Network variables missing</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=114511">114511</a></b> <b><a href="/Ticket/Display.html?id=114511">Doc:  Back button works correctly only the first time</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=114688">114688</a></b> <b><a href="/Ticket/Display.html?id=114688">Doc:  IM 5.6 UserGuide Page 298 - The Flow Window - Filter Tolls - hint for not  !10.10.3.0/24 missing</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=114924">114924</a></b> <b><a href="/Ticket/Display.html?id=114924">Doc -  User Guide: Few corrections</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=114926">114926</a></b> <b><a href="/Ticket/Display.html?id=114926">Doc -  User Guide: typos in Creating Sub-maps</a></b></p>
+        <p><b><a href="/Ticket/Display.html?id=114947">114947</a></b> <b><a href="/Ticket/Display.html?id=114947">Doc -  User Guide PDF: Page reference show twice</a></b></p>
+        <h2>From JP 11/09</h2>
+        <p>I think you should focus on the ones I logged today:</p>
+        <ul>
+            <li><b>DONE</b> 114283</li>
+            <li><b>DONE</b> 114281</li>
+        </ul>
+        <blockquote>
+            <p>Topic: Reference &gt; Command/Menu Reference &gt; Insert Menu</p>
+            <p><b>DONE</b> Menu Command - Scan Network: The definition is not quite right. We don't specify the starting point. The definition should be reviewed based on what it is in the Scan Network section and in Creating Maps &gt; Using Auto-Discovery</p>
+            <p>Some command menus are missing:<br /><b>DONE</b> Icon<br /><b>DONE</b> Group/Un-Group</p>
+            <p><b>DONE</b> Device: Typo: Replace "... the Add Device(s) window." to "... the Add Devices window."</p>
+            <p><b>DONE</b>&#160;Scan Network: Typo: add space after Note: "Note:It is possible ..."</p>
+            <p><b>DONE</b> Text...: Is "Enter the text to you want to add to your map." correct English?</p>
+        </blockquote>
+        <ul>
+            <li><b>DONE</b>&#160;114278</li>
+        </ul>
+        <blockquote>
+            <p>Label Variable - Device Variables<br />=&gt; 2 variables are missing at the bottom of the list: MAC Address and WINS/NetBIOS Name</p>
+            <p>Label Variable - Network Variables<br />=&gt; Typo: Switch Description "Lost of only switch..."<br />=&gt; Typo: Switch Device-Port "Lost of only switch..."<br />=&gt; typo: "IP Third Octet" should be "IP 3rd Octet" to be consistent with Info window<br />=&gt; the end of the list is messed up from Port List: missing variables and duplicates</p>
+        </blockquote>
+        <ul>
+            <li>114275</li>
+        </ul>
+        <blockquote>
+            <p><b>DONE</b> Using InterMapper &gt; Notifiers/Alerts &gt; Using Notification Dependencies<br />=&gt; Set Vantage Point option in Monitor menu is now under Set Info<br />=&gt; if the user mouse right click on a device or network, it is now under Set Info<br />=&gt; to remove a vantage point, it is under Set Info and the menu option is "Clear Vantage Point" This can also be done in Info Window</p>
+            <p><b>DONE</b> Reference &gt; Command/Menu Reference &gt; Monitor Menu<br />=&gt; Set Vantage Point option is now under Set Info</p>
+            <p><b>DONE - Rewrote to be generic.</b> Using InterMapper &gt; Try out the Demo Maps<br />=&gt; In the last bullet, "Atlanta Router" does not exist on new install. There are new demo maps. Either you adapt to new maps or be more generic because usesr who upgrade from pre 5.6 will see only the old demo maps.</p>
+            <p><b>DONE</b> Reference &gt; Command/Menu Reference &gt; Command and Menu Reference Overview<br />=&gt; No vantage point in Insert menu</p>
+            <p><b>DONE</b> Using InterMapper &gt; Monitoring Your Network &gt; The Info Window &gt; Network Info Window<br />=&gt; General Pane: The bullet about using the network as a vantage point should be moved to the top or at least before Apply/OK bullet</p>
+        </blockquote>
+        <ul>
+            <li><b>DONE</b> 114271</li>
+            <li><b>DONE</b> 114268</li>
+        </ul>
+        <p> and the ones from my initial list</p>
+        <ul>
+            <li>113049</li>
+            <li><b>DONE</b> 111108 Added a new topic, "Mapping with Layer 2"</li>
+            <li>110151 DEV&#160;GUIDE</li>
+            <li>113026 DEV&#160;GUIDE</li>
+        </ul>
+        <p><b>DONE</b>&#160;112896</p>
+        <p>Regarding 112896, you should send the statement of the supported OS to David, Gurdev and myself based on David’s email and the ticket history. I think it is fine to say “OS xyz and later” but I would add a note to say for the most recent OS version, please contact the technical support to get a confirmation.</p>
+        <h2>From JP 10/15/2012</h2>
+        <p>The next minor release (5.6.3) is due on November 21 as follows:</p>
+        <p>November 7                       5.6.3b1, 5.7d4</p>
+        <p>November 14                    5.6.3b2, 5.7d5</p>
+        <p>November 21                    5.6.3, 5.7a1 (Milestone 2: Alpha)</p>
+        <p>I would like to see some corrections in the online help. They are mostly small or cosmetic, but it will clear up your list.</p>
+        <p><b>DONE-needs review</b>&#160;112896  http://download.intermapper.com/docs/UserGuide56/#02-Getting_Started/System_Requirements.htm</p>
+        <p><b>DONE</b> 109356  Doc: UserGuide - Added 'Set Vantage Point' checkbox to Info Window. Updated screenshots with callouts pointing to Vantage Point box, added text in descriptions, and links to the Notification Dependencies topic.</p>
+        <blockquote>
+            <p><b>DONE</b> Using InterMapper Reports &gt; Overview<br />Last sentence: “…right-click a device and choose Reports...” Should say :”right-click a device and choose Show in &gt; Reports...”</p>
+            <p><b>DONE</b> Using InterMapper Reports:<br />5.6 graphic reports displays the legend which can be hidden. (Show Legend checkbox)</p>
+            <p><b>DONE</b> Also, the mouse over the graphic displays the value,…</p>
+            <p><b>DONE</b> Reference &gt; Using InterMapper DataCenter &gt; Disk Usage: This page needs more information.</p>
+            <p>The estimated future disk usage is based from the number of devices, dataset and how the retention policies are configured. Mouse over the graphic displays the expected disk usage.</p>
+            <p>Current row counts are the number of rows in the respective table database, except for datapoints which is an estimation.</p>
+            <p><b>DONE</b> Reference &gt; Using InterMapper DataCenter &gt; Maintenance Tasks: The same graphic as Disk Usage displays. You should say a word and how the user can see the update after maintenance</p>
+        </blockquote>
+        <p><b>DONE</b> 113193  Doc - User Guide: Change "icons" to "Map"</p>
+        <p><b>DONE</b> 113192  Doc - User Guide: Few corrections in Sending Feedback</p>
+        <p><b>DONE</b> 113187  Doc - User Guide: Close button is now "Continue to Map List" in Welcome window</p>
+        <p><b>In Progress - currently at Servers-Propietary/Apache</b> 113049  Doc UserGuide: Update the Probe Reference with updated description</p>
+        <p><b>DONE</b> 112048  Doc: few more AppleTalk references to remove</p>
+        <p>111108  Doc: how to convert L3 map to L2 automatically</p>
+        <p>&#160;</p>
+        <h2>From JP 10/2/2012</h2>
+        <p>The next minor release (5.6.2) is due on October 17 as follows:</p>
+        <p>October 3                            5.6.2b1</p>
+        <p>October 10                          5.6.2b2</p>
+        <p>October 17                          5.6.2, 5.7d3 (Milestone 1)</p>
+        <p>I would like to see the some corrections in the online help:</p>
+        <p><b>DONE</b> 110554  Doc: Sending Feedback needs update</p>
+        <p><b>DONE</b> 110205  Doc: Change "Icon view" to "Map view" </p>
+        <p><b>DONE</b> 109508  DOCS: Update Reports screenshots for 5.6</p>
+        <p>112418  Doc - DevGuide: Few corrections in &lt;snmp-device-variables&gt; Section DevGuide</p>
+        <p>112423  DevGuide webhelp suggestions</p>
+        <p>112422  Doc - DevGuide: add SNMP and TCP probe samples</p>
+        <p><b>DONE</b> 111025  Doc: list of topics that needs new screen shots</p>
+        <p>And IM DevGuide PDF</p>
+        <h2>From JP </h2>
+        <p>109378 looks like you fixed it. If you are done, can you please change the status.</p>
+        <p>111008, 110205: Can you update these two</p>
+        <p>111026, 111021, 110960, 110554 are cosmetic. Can wait to 5.6.1</p>
+        <p>&#160;</p>
+        <h3>111025 this one is big task. Is it something you can start now?</h3>
+        <p>&#160;</p>
+        <p> Quick Start &gt; Installing and Launching InterMapper <b>DONE</b></p>
+        <p>Using InterMapper &gt; Creating Maps &gt; Creating submaps <b>DONE - earlier demo map but doesn't really matter. The icons are right.</b></p>
+        <p>Using InterMapper &gt; Creating Maps &gt; Using Helper Application <b>DONE</b></p>
+        <p>Using InterMapper &gt; Background Images <b>DONE</b></p>
+        <p>Using InterMapper &gt; Monitoring your network &gt; Monitoring your network <b>DONE</b></p>
+        <p>Using InterMapper &gt; Monitoring your network &gt; The info window &gt; The info window <b>DONE&#160;once, redone</b> Checked and reset the size - it looked a little squeezed.</p>
+        <p>Using InterMapper &gt; Monitoring your network &gt; The info window &gt; Device Info window <b>DONE&#160;once, redone</b></p>
+        <p>Using InterMapper &gt; Monitoring your network &gt; The info window &gt; Network info window<b>DONE&#160;once, redone</b></p>
+        <p>Using InterMapper &gt; Monitoring your network &gt; Acknowledging Device Problems <b>DONE</b></p>
+        <p>Using InterMapper &gt; Monitoring your network &gt; Error and Traffic Thresholds <b>DONE</b></p>
+        <p>Using InterMapper &gt; Monitoring your network &gt; Sending Feedback <b>DONE</b></p>
+        <p>Using Layer 2 Features &gt; Layer 2 Overview <b>DONE - only updated a single icon</b></p>
+        <p>Using Layer 2 Features &gt; Layer 2 View - <b>DONE</b></p>
+        <p>Using InterMapper RemoteAccess <b>DONE</b></p>
+        <p>Reference &gt; Command/Menu Reference &gt; Monitor Menu <b>NEED&#160;FLOWS&#160;WINDOW - otherwise done</b></p>
+        <p>Reference &gt; Command/Menu Reference &gt; Insert Menu <b>DONE</b></p>
+        <p>Reference &gt; Command/Menu Reference &gt; Format Menu <b>DONE</b></p>
+        <p>Reference &gt; Command/Menu Reference &gt; Window Menu <b>DONE</b></p>
+        <p>Reference &gt; Probe Reference &gt; Probe Reference Overview <b>DONE</b></p>
+        <p>Reference &gt; Probe Reference &gt; About SNMP Versions <b>DONE</b></p>
+        <p>Reference &gt; Web Server Reference &gt; Using the Web Server <b>DONE</b></p>
+        <p>Reference &gt; Web Server Reference &gt; Map web page <b>DONE</b></p>
+        <h2>Device List window</h2>
+        <p>Need screenshot for Layer 2 view. <b>DONE</b></p>
+        <p>&#160;</p>
+        <h2>IMDC from David Schnur</h2>
+        <p>IMDC has received a couple of visual changes since 5.5 that might require new screenshots.  You can see the full list of changes in the release notes, but the biggest are:</p>
+        <p>- Reports charts look completely different, and we support viewing them on the iPad.</p>
+        <p>- Customer-defined datasets now appear in the Reports datasets drop-down with a 'subtitle' indicating which variable &amp; probe they came from.</p>
+        <p>- The IMDatabase Overview page has been reworked; instead of a bunch of smaller charts it's now just a single estimates chart and a table showing current row counts.</p>
+        <p>- The IMDatabase Maintenance page has received a copy of the estimates chart and had some of its controls rearranged.</p>
+        <p>Visual changes aside, there weren't any real functionality changes, so there should be very few actual documentation tweaks.  The only thing I can think of offhand is that charts now have a check-box to control whether the legend is visible or hidden.</p>
+        <p>There might be additional tweaks during the beta period, so I don't know that you should take screenshots immediately, but I figured I'd give you a heads-up, since it's about 95% final right now.</p>
+    </body>
+</html>

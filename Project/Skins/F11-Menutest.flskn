@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="2"
+  SkinType="Component"
+  Comment="HTML5 Menu skin"
+  ComponentType="Menu"
+  EnableResponsiveOutput="True">
+  <Stylesheet>
+    <Styles>
+      <Style
+        Name="Menu Item">
+        <Properties>
+          <Property
+            Name="FontWeight">bold</Property>
+        </Properties>
+        <Classes>
+          <StyleClass
+            Name="1st Level">
+            <Properties>
+              <Property
+                Name="FontWeight">normal</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="2nd Level">
+            <Properties>
+              <Property
+                Name="FontStyle">italic</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+    </Styles>
+  </Stylesheet>
+  <Strings />
+</CatapultSkin>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="737" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Performing Maintenance Tasks</h1>
+        <p>Use the Maintenance Tasks page to perform these maintenance tasks.</p>
+        <ul>
+            <li><b>Pause Operations</b> - Sometimes it can be useful to pause import, without stopping the database entirely. This allows you to manually re-cluster or re-index tables, or avoid errors when the InterMapper Server goes down for maintenance. Specify the interval for which you want to pause, then click <b style="font-style: italic;">Pause Operations</b>. A Resume Operations button and countdown clock appear. To resume operations at any time, click <b style="font-style: italic;">Resume Operations</b>.</li>
+            <li><b>Data to Delete</b> - Data retention policies are the recommended way to free disk space on a per-dataset basis. You can also delete data or events across all devices, or you can delete data for deleted devices and interfaces. Please be aware that this operation is permanent and cannot be undone. Specify which data you want to delete (raw data, data samples, events, or date from deleted devices), and a time period over which you want to delete them, then click <b style="font-style: italic;">Delete</b>.</li>
+            <li> <b style="font-style: italic;">Apply Retention Policies</b> and <b style="font-style: italic;">Reclaim Disk Space</b>- Retention policies are applied daily, and a maintenance task runs once each week to reclaim unused disk space. You can run both of these tasks manually using these buttons. Both operations can take from a few minutes to a few hours to complete, depending on the size of your database. See <a href="#autotasks">About Automatic Maintenance Tasks</a> below for more information.</li>
+        </ul>
+        <h2><a name="autotasks"></a>About Automatic Maintenance Tasks</h2>
+        <p>Two tasks are run automatically to clear out data that is beyond its retention policy expiration, and to reclaim unused disk space.</p>
+        <ul>
+            <li><b>Daily task</b> - runs at 1AM local time each day. It applies retention policies, then uses the PostgreSQL VACUUM&#160;command to mark free space for re-use by the database. This is a relatively low-impact process, and does not pause database operations. It does not release disk space for reuse by the operating system.</li>
+            <li><b>Weekly task</b> - runs at 1AM local time each Sunday. It uses the PostgreSQL CLUSTER command, and pauses database operations while it runs. This task frees up unused database space, making it available to the operating system.</li>
+        </ul>
+        <p>After you have run one of these tasks, the Disk Usage table shows the freed disk space as available.</p>
+        <p>&#160;</p>
+    </body>
+</html>

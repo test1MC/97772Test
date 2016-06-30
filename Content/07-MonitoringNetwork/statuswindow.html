@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:id="chapter1\popups.html" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="1902" MadCap:lastWidth="620" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link rel="StyleSheet" href="../default.css" /><title>Status Windows</title>
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Server Probes - Proprietary;Customize;Subnet" />
+            <MadCap:keyword term="View" />
+            <MadCap:keyword term="View:Status Windows" />
+            <MadCap:keyword term="Customize:Status Window" />
+            <MadCap:keyword term="Status window" />
+            <MadCap:keyword term="Status window:Viewing" />
+            <MadCap:keyword term="Hide:Status window" />Viewing Status Windows</h1>
+        <p><i>InterMapper</i>
+            <MadCap:keyword term="Device Status window" /> shows detailed 
+status about any item on a map (a device, a network, or a 
+ link) in a Status window, as shown in the Device Status window below.</p>
+        <p>
+            <img src="../Resources/Images/window-status1.png" />
+            <br style="font-style: italic;" />
+        </p>
+        <p><b>To view device, network, or link status:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Monitor" />Make sure your map is in Monitor mode (click the lock at the upper left of map window to lock the map, or press the <b><i>Tab</i></b> key.) 
+  </li>
+            <li>Click and hold a device, network, or link on the map, or right-click the 
+ device, network, or link, then choose <b><i><MadCap:keyword term="Open Status Window" />Status Window</i></b>. The Status window for the 
+ selected device appears. 
+  </li>
+            <li>
+                <MadCap:keyword term="Status window:hide" />
+                <MadCap:keyword term="Hide" />Release the mouse button to hide the Status window.</li>
+        </ol>
+        <p><b>To keep a Status window open:</b>
+        </p>
+        <ol>
+            <li>Make sure your map is in Monitor mode. 
+  </li>
+            <li>Click and hold the device, network, or link on the 
+ map. 
+  </li>
+            <li>Drag to a new location. As you drag, the <img height="19" src="../Resources/images/dragcursor.gif" width="19" /> cursor (Windows) or a transparent window appears. 
+  </li>
+            <li>Release the mouse. You have "torn" the window off; it remains 
+ open, located where you released the mouse.</li>
+        </ol>
+        <h2>
+            <MadCap:keyword term="Status window:Customizing" />Customizing a Status Window</h2>
+        <p>
+            <MadCap:keyword term="SNMP" />
+            <MadCap:keyword term="TCP" />If you are using a custom TCP or SNMP probe, you can override the default 
+ contents of a Status window. For more information, see <i><MadCap:keyword term="Custom Probe" />Custom Probes</i> 
+    and           <i>Customizing Status Windows</i><MadCap:keyword term="Developer Guide" /> in the <a href="http://intermapper.com/go.php?to=intermapper.devguide" target="_blank">Developer Guide</a>.</p>
+        <h3 class="pagebreakbefore"><a name="devicepopup"></a>Device Status Window</h3>
+        <ul>
+            <li>Click and hold the mouse on a device to open its <i>device status</i> window, or right-click the device and choose <b style="font-style: italic;">Status Window</b>. 
+ 
+  </li>
+            <li>Click and drag to tear the window off and leave 
+ it open. 
+ 
+  </li>
+            <li>
+                <MadCap:keyword term="Packet Loss" />
+                <MadCap:keyword term="Packet Loss:reset" />
+                <MadCap:keyword term="Reset" />
+                <MadCap:keyword term="Reset:Packet Loss" />Click the underlined Reset link to set Packet Loss to zero. This also resets 
+ the device's availability measurement. <br /><b>Note:</b><MadCap:keyword term="Edit" /> The map must be in Edit mode to reset the Packet Loss value.</li>
+        </ul>
+        <p>
+            <MadCap:keyword term="IP" />
+            <MadCap:keyword term="SNMP sysUptime" />
+            <MadCap:keyword term="Msec" />The window shows the device name, network address, device status, the probe
+ used to poll it, up-time (i.e., SNMP sysUptime, if available), availability 
+ (the percentage of the time the device was available based on the number 
+ of packets lost while testing), round-trip time (in msec), and spanning 
+ tree status (if available).</p>
+        <p>When the device reports a problem, the reason for the most important error 
+ is shown in red at the bottom of the Status window. </p>
+        <h3><a name="networkpopup"></a>
+            <MadCap:keyword term="Network Status Window" />Network Status Window</h3>
+        <h4>
+            <img src="../Resources/Images/window-networkstatus.png" style="width: 558px;height: 139px;" />
+        </h4>
+        <ul>
+            <li> Click and hold the mouse on a network oval to open its <i>network status</i> 
+      window, or right-click the network and choose <b style="font-style: italic;">Status Window</b>.. 
+    </li>
+            <li>Click and drag to tear the window off and leave it open.</li>
+        </ul>
+        <p>The <i>network status</i> window shows the network's IP address and subnet mask,
+ (if available) and information about the amount of traffic flowing on that network segment. 
+ This data comes from all the SNMP devices attached to that network<br />oval.</p>
+        <ul>
+            <li><b><MadCap:keyword term="Top Tx" />Top Tx</b> - tells which device is transmitting the most data</li>
+            <li><b><MadCap:keyword term="Top Rx" />Top Rx</b> - tells which device is receiving the most data</li>
+            <li><b><MadCap:keyword term="Top Err" />Top Err</b> - tells which device is<br />reporting the highest error rate for the link</li>
+            <li><b><MadCap:keyword term="Sum In/Sum Out" />Sum In/Sum Out</b> - the sum of all the transmitters and receivers 
+ connected to that network.<br /></li>
+        </ul>
+        <p><b>Note:</b>
+            <MadCap:keyword term="Ping/Echo" />
+            <MadCap:keyword term="FTP" />
+            <MadCap:keyword term="TCP-based" /> The traffic statistic shown are only for devices connected 
+ to this network that speak SNMP: Ping/Echo, or TCP-based devices (such as 
+ HTTP, FTP, etc. probes) do not have this information and are ignored when 
+ computing the sums and maximums displayed in the Status Window.
+  </p>
+        <h3 class="pagebreakbefore"><a name="linkpopup"></a>
+            <MadCap:keyword term="Link Status Window" />Link Status Window</h3>
+        <p class="floatright">
+            <img src="../Resources/Images/window-linkstatus.png" style="width: 333px;height: 324px;" />
+            <br />
+        </p>
+        <ul>
+            <li>Click and hold the mouse on a link, or right click the link and choose <b style="font-style: italic;">Status Window</b>. to open its <i>link status</i> window.
+        </li>
+            <li>Click and drag to tear the window off and leave it open.</li>
+        </ul>
+        <p>The <i>link status</i><MadCap:keyword term="Mac" /><MadCap:keyword term="Mbps" /> window shows the link's interface name and description, 
+ its type (10 or 100 Mbps, 1.5 Mbps T-1, etc.), its status and up-time, its 
+ IP and MAC addresses (when available), traffic statistics 
+ (transmitted from and received by the interface), and the time since the 
+ last poll. 
+      </p>
+        <p><i>Tip:</i> Certain devices do not report their link speed accurately 
+ in their SNMP responses. This causes InterMapper to report a value which 
+ is not actually correct. To work around this, switch the map to Edit mode, 
+ then right-click the link and choose <b style="font-style: italic;">Set Link Speed...</b> The Set Link Speed window appears, allowing you to set Transmit and Receive speeds.</p>
+    </body>
+</html>

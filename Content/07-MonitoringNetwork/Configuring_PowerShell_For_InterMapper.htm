@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1592" MadCap:lastWidth="725.8" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1>Configuring PowerShell For Use With InterMapper</h1>
+        <p>Before you can use PowerShell probes or notifiers, you need to configure the InterMapper machine and any target machines to allow connections. There are many options, and an exhaustive tutorial is beyond the scope of this topic.</p>
+        <p>Chris Hoffman has written an <a href="http://www.howtogeek.com/117192/how-to-run-powershell-commands-on-remote-computers/">excellent overview to using PowerShell</a> on remote computers.</p>
+        <p><b>Note:</b> This topic assumes you know how to launch PowerShell, and that the InterMapper machine and the machines you want to connect to are running Microsoft Windows.</p>
+        <h2>Enabling PowerShell Remoting</h2>
+        <p>To enable PowerShell remoting, open a PowerShell window, and run the following command (also known as a "<i>cmdlet</i>") on all the machines you want to connect to:</p>
+        <p class="code" xml:space="preserve">Enable-PSRemoting -Force</p>
+        <p>The command starts the WinRM service, configures it to start automatically, and creates a firewall rule that permits incoming connections. The <span class="code">-Force</span> attribute accepts the default settings.</p>
+        <p><b>Notes:</b> <![CDATA[ ]]></p>
+        <ul>
+            <li>You must be logged in as an administrator to execute these commands.</li>
+            <li>If both the local and remote computers are in a domain, you need to enable PowerShell Remoting only on remote machines.</li>
+            <li>If the local and remote computers are not in a domain, enabling remoting on the local machine is recommended; among other things, it allows you to access and modify TrustedHosts, which is required in order to connect to a remote computer.</li>
+        </ul>
+        <h2>Configuring TrustedHosts</h2>
+        <p><b>Note:</b> The configuration of TrustedHosts can result in security vulnerabilities. If you are not well-versed in security issues, you may want to consult an expert.</p>
+        <p>TrustedHosts is a list of trusted resources for your computer. The TrustedHosts list consists of a comma-separated list of computer names, IP addresses, and fully-qualified domain names. For a given computer, only administrators can change the TrustedHosts list.</p>
+        <p>Before you can connect to a remote computer, your TrustedHosts list must contain the IP address of that computer.</p>
+        <p>If your computers are not on a domain, you need to configure the TrustedHosts setting on the InterMapper server for all the computers you want to connect to. Execute these commands, providing an IP&#160;address, or use wildcards to specify an IP range (see below). Separate entries with commas. </p>
+        <h3>Setting the Value of TrustedHosts</h3>
+        <p>The following is a sample command that sets values in TrustedHosts. </p>
+        <p class="code" xml:space="preserve">Set-Item wsman:\localhost\client\trustedhosts [IP address],[IP&#160;address], ...
+Restart-Service WinRM</p>
+        <h3>Using Wildcards When Configuring TrustedHosts</h3>
+        <p> When configuring TrustedHosts, PowerShell accepts only a single asterisk (*) for a wild card.</p>
+        <p style="font-weight: bold;">These are not allowed:</p>
+        <p class="code" xml:space="preserve"> ...\trustedhosts *.*.*.*, 192.168.*.*</p>
+        <p style="font-weight: bold;">These are allowed:</p>
+        <p class="code" xml:space="preserve"> ...\trustedhosts *, 192.*, 192.168.*</p>
+        <h2>Testing the Connection</h2>
+        <p>To test the configuration, execute this command:</p>
+        <p class="code">Test-WsMan [COMPUTER]</p>
+        <p>A successful test shows a several lines of information. The last line is most interesting, as it shows the version of Windows Management (WsMan) running on the target machine.</p>
+        <h2>Executing a Command</h2>
+        <p>You are now ready to try a command. To determine the versions of PowerShell and several other related systems, try this command:</p>
+        <p class="code">Invoke-Command -ComputerName [Target Computer] -ScriptBlock { $PSVersionTable } -credential [UserName]</p>
+        <p>This returns a list of versions of PowerShell, WsMan, and several other systems.</p>
+        <p>If the command above works successfully, you are ready to try running PowerShell probes and notifiers.</p>
+    </body>
+</html>

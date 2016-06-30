@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="856" MadCap:lastWidth="576" class="" MadCap:fileTags="status_tags.No Changes">
+    <head><title>About D-sets</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">About D-Sets</h1>
+        <p>When you export data, you can export a generic set of information about a probe or notifier. This information is in XML format, contained in an export field in the following export tables:</p>
+        <ul>
+            <li>ProbeXML - If this field is included in the export, a 
+  D-set is included for each selected device on the map. </li>
+            <li>NotifierXML - If this field is included in the export, a D-set is included for each active notifier associated with the map.</li>
+        </ul>
+        <h2>ProbeXML D-set</h2>
+        <p>This D-set contains information about a specific probe. Depending upon the probe type, it may have more or fewer &lt;d&gt; clauses. Here is an example:</p><pre class="code">&lt;dset type='probe' hashcode='abcdef'&gt;
+&#160;&#160;&#160;&lt;d name='probe'&gt;com.dartware.snmp&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d name='snmp_ver'&gt;SNMPv3&lt;/d&gt; // present only for snmp probes<br />&#160;&#160;&#160;&lt;d name='address'&gt;192.168.1.23&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d name='username'&gt;MyName&lt;/d&gt; // present only for snmp_v3
+&#160;&#160;&#160;&lt;d name='auth_protocol'&gt;MD5&lt;/d&gt; // present only for snmp_v3
+&#160;&#160;&#160;&lt;d name='auth_passwd'&gt;somePwd&lt;/d&gt; // present only for snmp_v3<br />&#160;&#160;&#160;&lt;d name='priv_protocol'&gt;DES&lt;/d&gt; // present only for snmp_v3<br />&#160;&#160;&#160;&lt;d name='priv_passwd'&gt;somePwd2&lt;/d&gt; // present only for snmp_v3<br />&#160;&#160;&#160;&lt;d name='community'&gt;public&lt;/d&gt; // present only for snmp_v1 and snmp_v2c probes<br />&#160;&#160;&#160;&lt;d name='port'&gt;80&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d name='interval'&gt;30&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d name='timeout'&gt;3&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d name='tries'&gt;3&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d type='param' name='Disk Usage Warning %'&gt;75&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d type='param' name='Memory Usage Alarm %'&gt;90&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d type='param' ... &lt;/d&gt;<br />&lt;/dset&gt;
+</pre>
+        <h2>NotifierXML D-set</h2>
+        <p>This D-set contains information about a specific notifier. Depending upon the notifier type, it may have more or fewer &lt;d&gt; clauses. Here are some examples:</p><pre class="code">&lt;dset type='notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;smtpmail&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='email_addr'&gt;abc@dd.com&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d type='param' name='subject'&gt;This is a subject&lt;/d&gt;<br />&#160;&#160;&#160;&lt;d type='param' name='message'&gt;This is a message.&lt;/d&gt;
+&lt;/dset&gt;
+</pre><pre class="code">&lt;dset 'notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;audible&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='down_sound'&gt;name of the sound (as string)&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='up_sound'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='crit_sound'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='alarm_sound'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='warn_sound'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='ok_sound'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='trap_sound'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='down_vol'&gt;3&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='up_vol'&gt;2&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='crit_vol'&gt;1&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='alarm_vol'&gt;1&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='warn_vol'&gt;1&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='ok_vol'&gt;1&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='trap_vol'&gt;5&lt;/d&gt;
+&lt;/dset&gt;
+</pre><pre class="code">&lt;dset type='notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;snmptrap&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='address'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='community'&gt;&lt;/d&gt;
+&lt;/dset&gt;
+</pre><pre class="code">&lt;dset type='notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;snpppager&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='pager_id'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='message'&gt;&lt;/d&gt;
+&lt;/dset&gt;
+</pre><pre class="code">&lt;dset type='notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;modempager&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='pager_id'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='message'&gt;&lt;/d&gt;
+&lt;/dset&gt;
+</pre><pre class="code">&lt;dset type='notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;winpopup&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='popup_id'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='message'&gt;&lt;/d&gt;
+&lt;/dset&gt;
+</pre><pre class="code">&lt;dset type='notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;cmdline&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='cmdline'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='success'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='message'&gt;&lt;/d&gt;
+&lt;/dset&gt;
+</pre><pre class="code">&lt;dset type='notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;syslog&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='address'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='facility'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='severity'&gt;&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='message'&gt;&lt;/d&gt;
+&lt;/dset&gt;
+</pre><pre class="code">&lt;dset type='notifier'&gt;
+&#160;&#160;&#160;&lt;d name='method'&gt;group&lt;/d&gt;
+&#160;&#160;&#160;&lt;d type='param' name='id_list'&gt;&lt;/d&gt;
+&lt;/dset&gt;
+</pre>
+        <p>&#160;</p>
+    </body>
+</html>

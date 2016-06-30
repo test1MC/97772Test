@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1372" MadCap:lastWidth="873" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Notifier Rules Attributes</h1>
+        <p>The <span class="code">notifierrules</span> data type contains data to describe how a notifier is applied. All fields are READ-ONLY.</p>
+        <p>Use these attributes with the following table specification in line 1:</p><pre class="code">table=notifierrules</pre>
+        <table class="fieldtable">
+            <tr>
+                <th>Field Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="fieldname">NotifierIMID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Identifier of the notifier in the IMID format.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">EscalationIMID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Identifier of the escalation in the IMID format.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Down</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if user is notified of DOWN events.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Up</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if user is notified of UP events.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Critical</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if user is notified of CRITICAL events.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Alarm</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if user is notified of ALARM events.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Warning</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if user is notified of WARNING events.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Okay</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if user is notified of OKAY events.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Trap</td>
+                <td class="fielddesc"><b>Type: </b>BOOLEAN<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />True if user is notified of TRAP events.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Delay</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Notification delay.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Repeat</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Notification repeat.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Count</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Notification count.<br /></td>
+            </tr>
+        </table>
+    </body>
+</html>

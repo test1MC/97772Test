@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:check_list="Ran Smart Index" MadCap:status="In Progress" MadCap:lastBlockDepth="5" MadCap:lastHeight="2398" MadCap:lastWidth="607" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Understanding the Map</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Purple Oval;Map Editor" /><a name="top"></a>
+            <MadCap:keyword term="Map" />
+            <MadCap:keyword term="Map:Understanding" />Understanding the Map</h1>
+        <p>InterMapper provides visual cues to help you understand the states of 
+ the devices on your map quickly. Here is a summary of the visual indicators 
+ available in your map:</p>
+        <ul>
+            <li><a href="#Q11">Color Codes<MadCap:xref href="#Q11" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a>
+            </li>
+            <li><a href="#statusbadges">Status Badges<MadCap:xref href="#statusbadges" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a>
+            </li>
+            <li><a href="#Q10">Dotted lines (or "moving ants")<MadCap:xref href="#Q10" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a>
+            </li>
+            <li><a href="#Q6">Boxes and Ovals (or "bubbles")<MadCap:xref href="#Q6" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a>
+            </li>
+            <li><a href="#Q8">Line Styles<MadCap:xref href="#Q8" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a>
+            </li>
+            <li><a href="#Q34">Link States<MadCap:xref href="#Q34" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <h2><a name="Q11"></a>Color Codes</h2>
+        <p>Devices turn different colors depending on the magnitude of the problem detected. 
+	Links may be "haloed" with yellow or orange as utilization reaches 
+	50 and 90 percent respectively. These are coupled with status badges, described below.</p>
+        <p>These are the default color assignments. You can redefine the colors from 
+	the <a href="../08-Server_Settings/08-02-Server_Prefs/colors.html">Server 
+	Settings <MadCap:xref href="../08-Server_Settings/08-02-Server_Prefs/colors.html" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a> window.</p>
+        <h2><a name="statusbadges"></a>Status Badges</h2>
+        <p class="floatright">
+            <img src="../Resources/Images/badge-onDevice.png" alt="Badge Examples" />
+        </p>
+        <p>InterMapper uses status badges as additional visual cues to increase the ease with which you can determine the status of one among many device or links.</p>
+        <p><b>Note:</b> You can specify which badges you want appear on devices from the <a href="../03-Using_InterMapper/InterMapper_User_Preferences.htm">InterMapper User Preferences</a> window.</p>
+        <p>&#160;</p>
+        <p class="pagebreakafter">&#160;</p>
+        <table border="0" width="449" style="margin-left: 0;margin-right: auto;">
+            <col />
+            <col style="width: 60px;" />
+            <col />
+            <tr>
+                <td style="font-weight: bold;text-align: center;">Badge</td>
+                <td style="font-weight: bold;text-align: center;">Color</td>
+                <td style="font-weight: bold;text-align: center;">Meaning</td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <p>
+                        <img src="../Resources/images/legend-down.PNG" style="border-style: none;" border="0" />
+                    </p>
+                    <p>
+                        <img src="../Resources/Images/badge-red-x.png" style="border-style: none;" border="0" />
+                    </p>
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Red <br />(Flashing)</td>
+                <td width="398" valign="top">
+                    <p><b>Down</b> - No response has been received from the device or interface within 
+		 the specified timeout period.</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/images/legend-critical.PNG" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Red<br />(Solid)</td>
+                <td width="398" valign="top">
+                    <p><b>Critical</b> - The specified threshold for critical state has been 
+		 met</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/images/legend-alarm.PNG" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Orange</td>
+                <td width="398" valign="top">
+                    <p><b><MadCap:keyword term="Alarm" />Alarm</b> - The specified threshold for alarm state has been met.</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/images/legend-warning.PNG" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Yellow</td>
+                <td width="398" valign="top">
+                    <p><b><MadCap:keyword term="Warning" />Warning</b> - The specified threshold for warning state has been 
+		 met. </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/images/legend-up.PNG" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Green</td>
+                <td width="398" valign="top">
+                    <p><b>Up</b> - The device is working below the specified thresholds.</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/images/legend-unknown.PNG" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Gray</td>
+                <td width="398" valign="top">
+                    <p><b>Unknown</b> - The device is not being polled, so its state is unknown.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    <p>
+                        <img src="../Resources/Images/Discovery-purple-26x26.png" />
+                    </p>
+                </td>
+                <td style="text-align: center;vertical-align: top;">
+                    <p><b>Purple</b>
+                    </p>
+                    <p>&#160;</p>
+                </td>
+                <td>
+                    <p><b>Searching </b>- The device is searching for adjacent routers (during auto-discovery) or is 
+	tracking down unnumbered interfaces.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    <img src="../Resources/Images/badge-timed.png" style="border-style: none;height: 0.8%;width: ;" border="0" />
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Clock</td>
+                <td>
+                    <p><b>Acknowledge - Timed</b>- The device or link's problem has been acknowledged and notifications are being suppressed for a specified period of time.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    <img src="../Resources/Images/badge-maintenance.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Wrench</td>
+                <td><b>Acknowledge - Timed or Indefinite </b>- The device or link's problem has been acknowledged and notifications are being suppressed indefinitely.</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;font-weight: bold;color: #4ca0fe;font-size: 1.5em;">
+                    <p>
+                        <img src="../Resources/Images/badge-checkmark-s.PNG" style="border-style: none;" border="0" />
+                    </p>
+                    <p>
+                        <img src="../Resources/Images/badge-blue-x.png" style="border-style: none;" border="0" />
+                    </p>
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">
+                    <p>Check<br />mark<br />(devices)</p>
+                    <p>Blue X<br />(links)</p>
+                </td>
+                <td>
+                    <p><b>Acknowledge - Basic </b>- The device or link's problem has been acknowledged, and notifications are being suppressed until the device or link comes back up, at which time the check mark or X is cleared.</p>
+                </td>
+            </tr>
+        </table>
+        <p><a name="Q10"></a><a name="Q6"></a>
+        </p>
+        <h2>Dotted lines (or "moving ants")<MadCap:keyword term="ants" /></h2>
+        <p>
+            <MadCap:keyword term="User-settable" />InterMapper draws dotted lines ("ants") next to a link to indicate 
+	that its current traffic flow is above a user-settable threshold value. Use 
+	the <b><MadCap:keyword term="Thresholds&gt;Traffic" />Thresholds&gt;Traffic</b><MadCap:keyword term="Map Settings Window" /> panel of the Map Settings window, available 
+	from the      <b>Edit</b> menu, to change the settings and to view a legend of 
+	the different varieties of ants. You see the ants only in Monitor	mode (as opposed to Edit mode.) To toggle between the two modes, 
+	click lock in the upper left corner or press <b style="font-style: italic;font-weight: bold;">Tab</b>.</p>
+        <p>InterMapper regularly polls all the visible interfaces for packets, 
+ bytes, errors and discards.</p>
+        <p><span style="font-weight: bold;">Note:</span>
+            <MadCap:keyword term="IP">
+            </MadCap:keyword>
+            <MadCap:keyword term="SNMP">
+            </MadCap:keyword>
+            <MadCap:keyword term="MIB">
+            </MadCap:keyword>
+            <MadCap:keyword term="MIB:SNMP-enabled">
+            </MadCap:keyword>
+            <MadCap:keyword term="SNMP-enabled">
+            </MadCap:keyword>
+            <MadCap:keyword term="SNMP-enabled:MIB">
+            </MadCap:keyword> InterMapper uses SNMP 
+ to query the MIB of SNMP-enabled equipment to compute and display the 
+ traffic processed by each interface. Traffic indication appears only for 
+ SNMP-enabled devices.</p>
+        <h2>Boxes and ovals (or "bubbles")</h2>
+        <p>The <i>boxes</i> represent the physical equipment of your network. The              <i>ovals</i><MadCap:keyword term="Subnet" /><MadCap:keyword term="Class" /> 
+    represent the networks which link the routers together. The numbers in the 
+ bubbles are "network identifiers". For IP networks, the number is 
+ the network and the subnet portion of the IP addresses of all devices on it. 
+ For example, "192.0.16.0/24" is a network where IP addresses are 
+ in the range 192.0.16.0-192.0.16.254, and the subnet mask has 24 bits (it 
+ is a Class C network.) This is described in detail in the              <a href="../10-Troubleshooting/ipaddressing.html#subnets">Subnet 
+ Mask<MadCap:xref href="../10-Troubleshooting/ipaddressing.html#subnets" target="" title="" alt="" MadCap:conditions="Primary.print">(Pg 1)</MadCap:xref></a> FAQ.</p>
+        <p>Click and hold on a router or network to see a status window with information 
+ about that item. (This only works in "browse" mode -- press 
+ <b><i>Tab</i></b>, or click the lock in the upper left corner to lock it).<a name="Q8"></a></p>
+        <h2>Line styles</h2>
+        <p>The style of the line corresponds to the type of interface.</p>
+        <p>
+            <img src="../Resources/images/im.faq.linelegend.gif" style="width: 315px;height: 184px;border-style: none;border-style: none;" width="315" height="184" border="0" />
+        </p>
+        <p>
+            <MadCap:keyword term="Status window" />As with the networks and devices, you can click and hold a link to see 
+ a Status window, containing information about the interface type 
+ and traffic statistics.<a name="Q34"></a></p>
+        <h2>Link States</h2>
+        <table border="0" width="449" style="margin-left: 0;margin-right: auto;">
+            <col />
+            <col style="width: 96px;" />
+            <col />
+            <tr>
+                <td style="font-weight: bold;text-align: center;">Badge</td>
+                <td style="font-weight: bold;text-align: center;">State</td>
+                <td style="font-weight: bold;text-align: center;">Meaning</td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/Images/LinkStates-160330-Down.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;vertical-align: top;text-align: center;">Red <br />X<br /></td>
+                <td width="398" valign="top">
+                    <p><b>Link Down</b> - No response has been received from the interface within 
+		 the specified timeout period.</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/Images/LinkStates-160330-BasicAck.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;vertical-align: top;text-align: center;">Blue<br />X</td>
+                <td width="398" valign="top">
+                    <p><b>Basic Acknowledge</b> - The link is down, and has been set to <b style="font-style: italic;">Basic Acknowledge</b> <![CDATA[ ]]></p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/Images/LinkStates-160330-Timed.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;vertical-align: top;text-align: center;">Clock,<br />Blue link</td>
+                <td width="398" valign="top">
+                    <p><b>Timed Acknowledge</b>  - The link is down, and has been set to <b style="font-style: italic;">Timed Acknowledge</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/Images/LinkStates-160330-Indef.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;vertical-align: top;text-align: center;">Wrench,<br />Blue<br />link</td>
+                <td width="398" valign="top">
+                    <p><b>Indefinite Acknowledge</b>  - The link is down, and has been set to <b style="font-style: italic;">Indefinite Acknowledge</b> (Maintenance) </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/Images/LinkStates-160330-Halo-Warning.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;vertical-align: top;text-align: center;">Yellow link</td>
+                <td width="398" valign="top">
+                    <p><b>Warning</b> - The link is working, but has reached one of the specified warning thresholds</p>
+                </td>
+            </tr>
+            <tr>
+                <td width="41" style="text-align: center;" valign="top">
+                    <img src="../Resources/Images/LinkStates-160330-Halo-Alarm.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;vertical-align: top;text-align: center;">Orange link</td>
+                <td width="398" valign="top">
+                    <p><b>Alarm</b> - The link is working, but has reached one of the specified alarm thresholds</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    <img src="../Resources/Images/LinkStates-160330-Halo-Critical.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="vertical-align: top;text-align: center;">
+                    <p style="font-weight: bold;">Red link</p>
+                </td>
+                <td>
+                    <p><b>Critical</b>- The link is working, but has reached one of the specified critical thresholds</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    <img src="../Resources/Images/LinkStates-160330-AdminDn.png" style="border-style: none;" border="0" />
+                </td>
+                <td style="font-weight: bold;text-align: center;vertical-align: top;">Red X in circle</td>
+                <td>
+                    <p><b>Admin Down</b>- the device has responded saying that the interface's <span class="code">ifAdmin </span>status is set to <b style="font-style: italic;">Down</b>.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

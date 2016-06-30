@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="778" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">Data Collecting and Reporting</h1>
+        <p>Use the InterMapper Reports Server to collect data you can use for analysis and to create custom reports.</p>
+        <p>InterMapper Reports Server is a module of InterMapper DataCenter. <a href="datacenter.htm">InterMapper DataCenter<MadCap:xref href="datacenter.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> is installed automatically when you install InterMapper Server on Windows and Mac OS. It is a separate download on other platforms.</p>
+        <p>Use the Reports Server panel, available from the Server Configuration section of the Server Settings panel, to start and stop collecting data. You can also configure InterMapper to connect to a remote database server, and specify the intervals at which data is stored. For more information, see <a href="../../08-Server_Settings/08-03-Server_Config/IMReportsServer.htm">Reports Server<MadCap:xref href="../../08-Server_Settings/08-03-Server_Config/IMReportsServer.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <h2>Collecting Data for a Device or Interface</h2>
+        <p>You can collect data for any device in any map. Use the Set Data Retention command, available from the Monitor menu or the device or interface's <b style="font-style: italic;">Set Info</b> context menu to specify how long the data from the device or interface is retained, and at what resolution.</p>
+        <p>The default server-wide Data Retention Policy is <b style="font-style: italic;">24 Hours</b> (except for devices and interfaces associated with charts created in 4.6 or earlier). You can also create and select a different retention policy as the server-wide default policy:</p>
+        <ul>
+            <li>For all <i>maps</i>, choose       <b style="font-style: italic;">Inherit</b> to use the specified server-wide default policy, as set in the Server Settings window. You can also specify a default Data Retention policy for a map that is different from the server's default policy.</li>
+            <li>For all <i>devices</i>, choose       <b style="font-style: italic;">Inherit</b> to use the specified map-wide default policy, as set in the Map Settings window. You can also specify a default Data Retention policy for a device that is different from the map's default policy.</li>
+            <li>For all <i>interfaces</i>, choose       <b style="font-style: italic;">Inherit</b> to use the specified device policy, as set in the Device Info window. You can also specify a default Data Retention policy for an interface that is different from the device's policy.</li>
+            <li>For devices and interfaces associated with charts created in 4.6, the default Data Retention policy is <b style="font-style: italic;">IM46Charts</b>.</li>
+            <li>If you do none of the above, the default server-wide policy is applied automatically.</li>
+        </ul>
+        <p><b>Note:</b> Data Retention Policies are applied individually, not in sequence. For example, specifying an hourly data expiration of two days now causes hourly samples to be deleted after two days, instead of two days plus the raw and custom expirations.</p>
+        <h2 class="pagebreakbefore">Retention Policies in Status and Info Windows</h2>
+        <p>A device or interface's current Retention Policy is shown in the Status and Info windows. In the Status window, the information appears as follows:</p><pre class="code">Retention Policy: PolicyName, [Not] Exportable</pre>
+        <ul>
+            <li><b>Policy</b> - the policy name as created in InterMapper Reports Server.  </li>
+            <li><b>Exportable/Not Exportable</b> <br />- <b style="font-style: italic;">Exportable</b> appears if the parameters of the policy are such that they cause data to
+be exported to the database. <br />- <b style="font-style: italic;">Not Exportable</b> appears if the parameters of the
+policy are such that they will not cause data to be exported to the database
+(the None policy, for instance).
+</li>
+        </ul>
+        <h2>Getting Data From the Database</h2>
+        <p>The Reports Server is the easiest way to get data from the Reports Server database, but you can use your own method for retrieving data from the InterMapper Database using SQL&#160;queries. There are several example reports written for Crystal Reports and OpenRPT, as well as several perl scripts available. For more information, see <i>Retrieving Data From the InterMapper Reports Server</i> in the Developer Guide.</p>
+    </body>
+</html>

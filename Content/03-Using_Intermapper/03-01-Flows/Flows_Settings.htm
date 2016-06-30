@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="514" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">InterMapper Flows Settings</h1>
+        <p>Use the Flows Settings window to view and edit settings for InterMapper Flows.</p>
+        <p><b>To open the Flows Settings window:</b>
+        </p>
+        <ul>
+            <li>Click the Settings icon in the top-right corner of the Flows window: <br /><br /><img src="../../Resources/images/imf-filtertoolbar-settings-dlg.PNG" /></li>
+        </ul>
+        <p>The following tabs are available in the Settings window:</p>
+        <ul>
+            <li>Use the <b style="font-style: italic;"><a href="#exporttab">Exporters<MadCap:xref href="#exporttab"></MadCap:xref></a></b> tab to choose which exporters you want to collect from.</li>
+            <li>Use the <b style="font-style: italic;"><a href="#appearance">Appearance<MadCap:xref href="#appearance"></MadCap:xref></a></b> tab to select a coloring theme for protocols and hosts. </li>
+            <li>Use the <b style="font-style: italic;"><a href="#preferences">Preferences<MadCap:xref href="#preferences"></MadCap:xref></a></b> tab to set parameters that control behavior of InterMapper Flows.</li>
+            <li>Use the <b style="font-style: italic;"><a href="#advanced">Advanced<MadCap:xref href="#advanced"></MadCap:xref></a></b> tab to set performance-related parameters, the path to your database, and a database size.
+</li>
+            <li>Use the <b style="font-style: italic;"><a href="#registration">Registration<MadCap:xref href="#registration"></MadCap:xref></a></b> tab to view information about your current InterMapper Flows license, and to enter a new license key.
+</li>
+            <li>Use the <b style="font-style: italic;"><a href="#about">About<MadCap:xref href="#about"></MadCap:xref></a></b> tab to view version information about InterMapper Flows and its components.
+</li>
+        </ul>
+        <h3><a name="exporttab"></a>Exporters tab</h3>
+        <p>Use the Exporters tab to select the exporters from which you want to collect data.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/IMFlows-settings-Exporters-Tags.png" />
+        </p>
+        <h2 class="pagebreakbefore">Choosing and Adding Exporters</h2>
+        <p>The Exporters tab lists all available exporters.</p>
+        <p style="font-weight: bold;">To choose exporters:</p>
+        <ul>
+            <li>To enable or disable collection and analysis of data from an exporter, select or clear the <b style="font-style: italic;">Enabled</b> check for an exporter. <br /><br /><b>Note:</b> NetFlow exporters appear in the list automatically if they are properly configured. The exporter must be configured to send data to InterMapper Flows.<br /><br /></li>
+            <li style="text-align: center;">To add an sFlow exporter, click <b style="font-style: italic;">Add sFlow Exporter</b>. The Enter sFlow Information window appears as shown below. Enter information about the exporter, then click OK. InterMapper Flows sends SNMP commands to the exporter to turn on sFlow.<br /><br /><img src="../../Resources/images/IMFlows-settingsDLG-AddSFlowExp.png" /></li>
+        </ul>
+        <p style="font-weight: bold;">Enter information as follows:</p>
+        <ul>
+            <li><b>sFlow Exporter/Switch Address</b> - enter the address of an SNMPv2-capable sFlow exporter.</li>
+            <li><b>SNMP Read/Write Community String</b> - enter the community string for the exporter.</li>
+            <li><b>sFlow Destination</b> - the address of the InterMapper Flows collector. Your server may have multiple network devices, each with its own IP address. InterMapper Flows makes its best guess as to which IP address should be listed ad your sFlow collector, but it may guess wrong. If the exporter isn't registered correctly, try a different IP address.</li>
+            <li><b>Desired Flow Rate (1 per N packets)</b> - ask the exporter to send an sFlow update every <b style="font-style: italic;">N</b> packets. The exporter may not be able to honor this request, so InterMapper Flows keeps track of the actual update rate as well.<br /><br /></li>
+        </ul>
+        <h2 class="pagebreakbefore"><b>Additional Columns:</b>
+        </h2>
+        <ul>
+            <li><b>Expand</b> - click the right-pointing arrow to expand an exporter to view information for all available interfaces. Click the down-pointing arrow to collapse the exporter's interface lines.</li>
+            <li><b>Tag</b> - double-click to edit the tag for any exporter or interface. Tags appear in the Exporter/Interface selection dropdown in the Flows window. InterMapper Flows fills in these tags, if available, from every device.</li>
+            <li><b>Version</b> - shows the NetFlow or sFlow version used by the exporter.</li>
+            <li><b>Total Flows</b> - total number of Flow records exported.</li>
+            <li><b>Flows/hr</b> - average flows-per-hour from this exporter.</li>
+            <li><b>Latest Update</b> - the date and time of the last update from this exporter.</li>
+            <li><b>First Report</b> - the date and time of the first report from this exporter.</li>
+        </ul>
+        <h2><b>Additional Boxes:</b>
+        </h2>
+        <ul>
+            <li><b>NetFlow port</b> - InterMapper Flows listens for NetFlow v1, v5, v7, and v9 on this port. 2055 is the default port, but ports 9555 and 9995 are sometimes used.</li>
+            <li><b>Database remaining</b> - each exporter has an estimated flow rate, updated the last time it reported. The combined rate is used to calculate an estimated database capacity.</li>
+            <li><b>sFlow port</b> - InterMapper Flows listens for sFlow on this port. The default port is 6343. This must be different from the NetFlow port. Make sure that this port is not firewalled from any of your exporters.</li>
+            <li><b>Add sFlow Exporter button</b> - click this button to add an sFlow exporter. The  Enter sFlow Information window appears.</li>
+        </ul>
+        <h3 class="pagebreakbefore">Appearance tab<a name="appearance"></a></h3>
+        <p>Use the Appearance tab to choose the coloring scheme used to color charts in the Flows window.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/IMFlows-settings-Appearance.png" />
+        </p>
+        <p><b>Choose color schemes as follows:</b>
+        </p>
+        <ul>
+            <li><b>Service coloring</b> - choose a scheme to use for Services.</li>
+            <li><b>Host coloring</b> - choose a scheme to use for Hosts.</li>
+        </ul>
+        <p>Two different color scheme strategies are used for charts and graphs:</p>
+        <ul>
+            <li><b>By port or host</b> - colors are fixed for each port or host. This means the color for a port or host is the same in every chart in which that port or host appears. Because of the limited number of colors, it is possible for two adjacent hosts in a chart to have the same color.</li>
+            <li><b>By contrast</b> - chart colors are assigned in the same order for each chart. This provides greater contrast, but a single host or port might be colored differently in each chart, or in the same chart at different times.</li>
+        </ul>
+        <h3 class="pagebreakbefore">Preferences Tab<a name="preferences"></a></h3>
+        <p>Use the Preferences Tab to set local preferences for InterMapper Flows.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/IMFlows-settings-LocalPrefs.png" />
+        </p>
+        <p><b>Local Preferences</b>
+        </p>
+        <ul>
+            <li><b>Resolve hostnames?</b> - choose <b style="font-style: italic;">Yes</b> to resolve IP addresses to show host names. Choose <b style="font-style: italic;">No</b> to display only IP addresses. This can improve performance and security.</li>
+            <li><b>Default Refresh Rate</b> - choose a default refresh rate for a new Flows window. To override this setting in any Flows window, choose a different refresh rate from the Auto-update dropdown menu.</li>
+            <li><b>Auto bits/bytes</b> - choose a default display setting of <b style="font-style: italic;">Bits</b> or <b style="font-style: italic;">Bytes</b> for any new Flows window. To override this setting, choose a different setting from the Graph Scale dropdown menu at the upper left of the Stack Chart.</li>
+        </ul>
+        <h3 class="pagebreakbefore">Advanced tab<a name="advanced"></a></h3>
+        <p>Use the Advanced tab to set performance- and database-related parameters.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/IMFlows-settings-Advanced.png" />
+        </p>
+        <h4>Performance settings</h4>
+        <ul>
+            <li><b>Server threads</b> - the number of available query threads to start. In practice, this number can be quite small. It is the number of concurrent requests that InterMapper Flows will handle without queuing requests. A good rule of thumb for this value is the number of processors in the server, plus 1. For example, a quad-core server might use 5 threads.</li>
+            <li><b>Cache size</b> - the size of the memory session cache. Session records are written to disk regularly, but to speed up queries (for graphs and tables) a number of them are cached in memory. It is safe to set this close to the memory capacity of the server.<br /><br /><b>Notes:</b><br />- Larger values for the session cache will increase server startup/restart times as records are loaded from disk.<br />- A cache larger than 1.5Gb requires a 64-bit processor.<br /><br /></li>
+            <li><b>Storage interval</b> - the number of seconds between disk commits. Committing more often may decrease performance by using physical media more often. Committing less often requires more session cache to avoid losing data.</li>
+        </ul>
+        <h4 class="pagebreakbefore">Database Configuration settings</h4>
+        <ul>
+            <li><b>Database path</b> - specify a path to an existing directory. The server must have read/write access to this directory. <br /><br /><b>Note:</b> If you change the database path, the existing database is not copied to the new location, however, you can do this manually while the service is not running. The old database is not deleted.<br /><br /></li>
+            <li><b>Database size</b> - available sizes as shown below (calculated from the current flow rate):</li>
+        </ul>
+        <table style="caption-side: top;margin-left: auto;margin-right: auto;">
+            <col style="width: 20pt;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Size</th>
+                    <th># Session Records</th>
+                    <th>Size on disk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>tiny</td>
+                    <td style="text-align: right;">3000</td>
+                    <td style="text-align: right;">~400 KB</td>
+                </tr>
+                <tr>
+                    <td>small</td>
+                    <td style="text-align: right;">~8 million</td>
+                    <td style="text-align: right;">~1000 MB</td>
+                </tr>
+                <tr>
+                    <td>medium</td>
+                    <td style="text-align: right;">80 million</td>
+                    <td style="text-align: right;">~10 GB</td>
+                </tr>
+                <tr>
+                    <td>large</td>
+                    <td style="text-align: right;">800 million</td>
+                    <td style="text-align: right;">~100 GB</td>
+                </tr>
+                <tr>
+                    <td>very large</td>
+                    <td style="text-align: right;">2 billion</td>
+                    <td style="text-align: right;">~256 GB</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td style="text-align: right;">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="dd"><b>Note:</b> Resizing a database may be a gradual process. Growing a database simply allocates more space for session records, while shrinking a database takes longer, as records are cropped over time.</p>
+        <ul>
+            <li style="text-align: left;"><b>Current Database Information</b> button - shows the maximum size of the database, the number of records in the database, and the number of days over which those records have been collected.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/IMFlows-settings-AdvancedDLG-CurrDB.png" style="width: 622px;height: 110px;" />
+        </p>
+        <h3 class="pagebreakbefore">Registration tab<a name="registration"></a></h3>
+        <p>Use the Registration tab to enter or update your license key.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/IMFlows-settings-Registration.png" />
+        </p>
+        <ul>
+            <li><b>Registered Name</b> - the name to which the software is registered.</li>
+            <li><b>License Type</b> - Demo, Evaluation, NFR (Not for resale), Test, or Full.</li>
+            <li><b>License allows up to</b> - the number of allowed exporters.</li>
+            <li><b>License operates through</b> - for evaluation, demo and NFR serial numbers, this is the last day of operation for InterMapper Flows. For purchased licenses, the end date for the maintenance contract is shown.</li>
+            <li><b>Update License</b> button - click to enter a user name and serial number for your copy of InterMapper Flows. The Enter Serial Number dialog appears:<br /><br /><img src="../../Resources/images/IMFlows-settings-Reg-dlg.png" /></li>
+        </ul>
+        <h3 class="pagebreakbefore">About tab<a name="about"></a></h3>
+        <p>Use the About tab to view information about&#160;InterMapper Flows and the platform on which it is running. Click <b>Copy to Clipboard</b> to copy detailed information about the configuration of InterMapper Flows to the clipboard for pasting into another document. This is useful when corresponding with technical support.</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/images/IMFlows-settings-About.png" style="width: 610px;height: 353px;" />
+        </p>
+    </body>
+</html>

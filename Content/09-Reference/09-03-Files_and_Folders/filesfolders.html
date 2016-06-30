@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="7" MadCap:lastHeight="1254" MadCap:lastWidth="803" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Files &amp; Folders</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="FoldersInterMapper saves its files;Program Files;Locations;Specific folders" />
+            <MadCap:keyword term="InterMapper Files" />InterMapper Files and Folders</h1>
+        <p>InterMapper saves its files in specific folders. In particular, the following 
+ file and folders have special locations:
+
+</p>
+        <ul>
+            <li><b style="font-weight: bold;">The InterMapper application 
+ folder</b> - If applicable, it contains the actual InterMapper Application. </li>
+            <li><b style="font-weight: bold;">The InterMapper RemoteAccess application 
+ folder</b> - If applicable, it contains the actual InterMapper Application.        </li>
+            <li><b style="font-weight: bold;"><MadCap:keyword term="InterMapper Settings" />The InterMapper Settings 
+ folder</b>
+                <MadCap:keyword term="Server" /> - Contains all InterMapper server settings file as well as 
+ several folders containing various information used by InterMapper. For 
+ detailed information its contents, see     <a href="settings.html">InterMapper 
+ Settings<MadCap:xref href="settings.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. </li>
+            <li><b>The InterMapper DataCenter folder</b> - contains the data storage for all installed components of&#160;InterMapper DataCenter, as well as a number of other files. For detailed information on the contents of the InterMapper DataCenter folder, see <a href="InterMapper_DataCenter.htm">InterMapper DataCenter Folder<MadCap:xref href="InterMapper_DataCenter.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</li>
+            <li><b>The InterMapper Flows folder</b> - contains data storage for Flows data as well as a number of other files.</li>
+        </ul>
+        <h2><a name="locations"></a>File Locations</h2>
+        <p>The locations of these files and folders differ slightly between operating 
+ systems as described below.</p>
+        <h3>InterMapper Application Folder<a name="IMappsFolder"></a></h3>
+        <table style="width: 100%;x-border-left: 1px table-solid;x-border-top: 1px table-solid;x-border-right: 1px table-solid;x-border-bottom: 1px table-solid;border-collapse: separate;border-spacing: 0px;" cellspacing="0" width="100%" border="1">
+            <col style="width: 115px;" />
+            <col style="width: 441px;" />
+            <tr>
+                <th style="vertical-align: middle;">
+                    <p>OS</p>
+                </th>
+                <th style="vertical-align: middle;">
+                    <p>Location of InterMapper Application files</p>
+                </th>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;">
+                    <p>Windows 32 &amp; 64-bit</p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p><span class="code">C:\Program Files\InterMapper</span> or specified location.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;">
+                    <p>
+                        <MadCap:keyword term="Mac OS" />Mac OS X </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p>Binary files (<span class="code"><MadCap:keyword term="Intermapperd" />intermapperd</span>, <span class="code"><MadCap:keyword term="Intermapperauthd" />intermapperauthd</span>) are placed in <span class="code"><MadCap:keyword term="Usr/local/bin" />/usr/local/bin</span>, unless a different location was chosen at installation.       </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;">
+                    <p>
+                        <MadCap:keyword term="Linux" />
+ Linux</p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p>Binary files (<span class="code"><MadCap:keyword term="Intermapperd" />intermapperd</span>, <span class="code"><MadCap:keyword term="Intermapperauthd" />intermapperauthd</span>) are placed in <span class="code"><MadCap:keyword term="Usr/local/bin" />/usr/local/bin</span>, unless a different location was chosen at installation.      </p>
+                </td>
+            </tr>
+        </table>
+        <h3 class="pagebreakbefore">InterMapper Settings Folder</h3>
+        <p>For detailed information on the contents of the InterMapper Settings folder, see <a href="settings.html">InterMapper Settings<MadCap:xref href="settings.html" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</p>
+        <table style="width: 100%;x-border-left: 1px table-solid;x-border-top: 1px table-solid;x-border-right: 1px table-solid;x-border-bottom: 1px table-solid;border-collapse: separate;border-spacing: 0px;" cellspacing="0" width="100%" border="1">
+            <col style="width: 115px;" />
+            <col style="width: 441px;" />
+            <tr>
+                <th style="vertical-align: middle;">
+                    <p>OS</p>
+                </th>
+                <th style="vertical-align: middle;">
+                    <p>Location of InterMapper Settings files</p>
+                </th>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;">
+                    <p valign="top">Windows</p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p><span class="code">C:\ProgramData\InterMapper\InterMapper Settings</span> or specified location.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;font-style: italic;" valign="top">
+                    <MadCap:keyword term="Mac OS" />Mac OS X </td>
+                <td style="vertical-align: top;" valign="top">
+                    <p> As specified in <span class="code">/etc/intermapperd.conf</span> <br />(Usually <span class="code"> /Library/Application Support/InterMapper Settings/</span>)</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;">
+                    <p valign="top">
+                        <MadCap:keyword term="Linux" />
+ Linux</p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <p>As specified in <span class="code">intermapperd.conf</span><br />(Usually <span class="code"> /var/local/InterMapper_Settings/</span>)</p>
+                </td>
+            </tr>
+        </table>
+        <h3>InterMapper RemoteAccess Application Folder</h3>
+        <table style="width: 100%;x-border-left: 1px table-solid;x-border-top: 1px table-solid;x-border-right: 1px table-solid;x-border-bottom: 1px table-solid;border-collapse: separate;border-spacing: 0px;" cellspacing="0" width="100%" border="1">
+            <col style="width: 115px;" />
+            <col style="width: 441px;" />
+            <tr>
+                <th style="vertical-align: middle;">
+                    <p>OS</p>
+                </th>
+                <th style="vertical-align: middle;">
+                    <p>Location of InterMapper RemoteAccess files</p>
+                </th>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;font-style: italic;" valign="top">
+                    <p valign="top">Windows 32-bit</p>
+                </td>
+                <td style="vertical-align: top;" valign="top">
+                    <p><span class="code">C:\Program Files\InterMapper RemoteAccess</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;font-style: italic;" valign="top">
+                    <p valign="top">Windows 64-bit</p>
+                </td>
+                <td style="vertical-align: top;" valign="top">
+                    <p><span class="code">C:\Program Files (x86)\InterMapper RemoteAccess</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;font-style: italic;" valign="top">
+                    <p valign="top">
+                        <MadCap:keyword term="Mac OS" />Mac OS X</p>
+                </td>
+                <td style="vertical-align: top;" valign="top">
+                    <p>Drag and drop to location of your choice.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;font-style: italic;" valign="top">
+                    <p valign="top">
+                        <MadCap:keyword term="Linux" />
+ Linux</p>
+                </td>
+                <td style="vertical-align: top;" valign="top">
+                    <p>Installed at location where .bin file is run.</p>
+                </td>
+            </tr>
+        </table>
+        <h3 class="pagebreakbefore">InterMapper DataCenter Folder</h3>
+        <p>For detailed information on the contents of the InterMapper DataCenter folder, see <a href="InterMapper_DataCenter.htm">InterMapper DataCenter Folder<MadCap:xref href="InterMapper_DataCenter.htm" target="" title="" alt=""> (Pg 1)</MadCap:xref></a>.</p>
+        <table style="width: 100%;x-border-left: 1px table-solid;x-border-top: 1px table-solid;x-border-right: 1px table-solid;x-border-bottom: 1px table-solid;border-collapse: separate;border-spacing: 0px;" cellspacing="0" width="100%" border="1">
+            <col style="width: 115px;" />
+            <col style="width: 441px;" />
+            <tr>
+                <th style="vertical-align: middle;">
+                    <p>OS</p>
+                </th>
+                <th style="vertical-align: middle;">
+                    <p>Location of InterMapper DataCenter files</p>
+                </th>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;" valign="top">
+                    <p>Windows 32 and 64-bit</p>
+                </td>
+                <td style="vertical-align: middle;"><span class="code">C:\Program Files\intermapper\dwf</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;" valign="top">
+                    <p>
+                        <MadCap:keyword term="Mac OS" />Mac OS X and <MadCap:keyword term="Linux" />Linux</p>
+                </td>
+                <td style="vertical-align: middle;" valign="top"><span class="code">/usr/local/imdc</span>
+                </td>
+            </tr>
+        </table>
+        <h3>InterMapper Flows Folder</h3>
+        <table style="width: 100%;x-border-left: 1px table-solid;x-border-top: 1px table-solid;x-border-right: 1px table-solid;x-border-bottom: 1px table-solid;border-collapse: separate;border-spacing: 0px;" cellspacing="0" width="100%" border="1">
+            <col style="width: 115px;" />
+            <col style="width: 441px;" />
+            <tr>
+                <th style="vertical-align: middle;">
+                    <p>OS</p>
+                </th>
+                <th style="vertical-align: middle;">
+                    <p>Location of InterMapper Flows files</p>
+                </th>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;">
+                    <p>Windows 32 &amp; 64 bit</p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <ul>
+                        <li>(Flows files)<br /><span class="code">C:\Program Files\InterMapper\flows</span></li>
+                        <li>(Database)<br /><span class="code">C:\ProgramData\InterMapper\InterMapper Settings\Flows\SESSIONDB </span></li>
+                    </ul>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;">
+                    <p>
+                        <MadCap:keyword term="Mac OS" />Mac OS X </p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <ul>
+                        <li>(Flows configuration files)<br /><span class="code">/Library/Application Support/InterMapper Settings/Flows</span> <![CDATA[ ]]></li>
+                        <li>(Database)<br /><span class="code">/Library/Application Support/InterMapper Settings/Flows/SESSIONDB</span></li>
+                        <li>(Logs) <span class="code" style="white-space: normal;">/Library/Application Support/InterMapper Logs/flows-stderr.txt, flows-stdout.txt, flows.log</span></li>
+                    </ul>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;font-style: italic;">
+                    <p>
+                        <MadCap:keyword term="Linux" />
+					Linux</p>
+                </td>
+                <td style="vertical-align: middle;">
+                    <ul>
+                        <li>(Flows files)<br /><span class="code">/var/local/InterMapper_Settings/Flows</span></li>
+                        <li>(Database)<br /><span class="code">/var/local/InterMapper_Settings/Flows/SESSIONDB/</span></li>
+                    </ul>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

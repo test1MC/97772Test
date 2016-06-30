@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:id="appxe\troubleshooting.html" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:check_list="Ran Smart Index" MadCap:status="In Progress" MadCap:lastBlockDepth="6" MadCap:lastHeight="4025" MadCap:lastWidth="596" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Troubleshooting InterMapper</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>
+            <MadCap:keyword term="Ignore Interface Discards;Set Community window;Test IP;Set Behavior window;IfInErrors MIB;Show Info Window;Finding;Discontiguous subnet" />
+            <MadCap:keyword term="Troubleshooting" />
+            <MadCap:keyword term="Troubleshooting:InterMapper" />Troubleshooting InterMapper</h1>
+        <ul>
+            <li>
+                <MadCap:keyword term="Community" />
+                <MadCap:keyword term="Enter:Community" /><a href="#Q32">How do I change the community string?<MadCap:xref href="#Q32" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#Q18">How do I monitor a fixed IP address?<MadCap:xref href="#Q18" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#Q34">I still can't make my router talk...<MadCap:xref href="#Q34" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#Q35">My switches are always orange and showing 
+ lots of errors (or discards). Why?<MadCap:xref href="#Q35" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="Subnet" />
+                <MadCap:keyword term="Value:subnet" /><a href="#discontiguous">What does it mean when InterMapper 
+ says a "subnet mask is discontiguous"?<MadCap:xref href="#discontiguous" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#ovalwithstar">Why do network labels sometimes 
+ have a "/2*"?<MadCap:xref href="#ovalwithstar" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#wontconnect">Why won't a device connect to the 
+ proper subnet oval?<MadCap:xref href="#wontconnect" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#Q13">There are two separate network ovals on my 
+ map where there should only be one...<MadCap:xref href="#Q13" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#Q14">Some network ovals have more than one IP 
+ network number...<MadCap:xref href="#Q14" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li><a href="#Q25">Does InterMapper support unnumbered IP links?<MadCap:xref href="#Q25" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="IfTable" /><a href="#notiniftable">What does it mean when a Status 
+ Window shows [[ifIndex not in ifTable]] ?<MadCap:xref href="#notiniftable" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+            <li>
+                <MadCap:keyword term="MacPing:find" /><a href="#servicecount">How can I find 
+ out how many devices I'm monitoring with InterMapper. Do I have to count 
+ all the boxes on each map?<MadCap:xref href="#servicecount" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>&#160;</li>
+            <li><a href="TroubleshootingDataCenter.htm#differentURL">I get an error message: "This InterMapper Server already appears to be associated with the InterMapper
+Database. Existing UUID is associated with a different URL".<MadCap:xref href="TroubleshootingDataCenter.htm#differentURL" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>
+            </li>
+        </ul>
+        <p><a name="Q32"></a>
+        </p>
+        <h2>How do I change the community string?</h2>
+        <p>You can open the <b><i>Show Info</i></b> window on a device as described 
+ in the         <MadCap:keyword term="Monitor menu" /><a href="../09-Reference/09-01-Command-Menu-Reference/Monitor_Menu.htm#showinfo">Monitor menu<MadCap:xref href="../09-Reference/09-01-Command-Menu-Reference/Monitor_Menu.htm#showinfo" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>   
+ reference topic.</p>
+        <p><b style="FONT-WEIGHT: bold;"><MadCap:keyword term="READ-ONLY:set" /><MadCap:keyword term="Set" />To set the community string:</b>
+        </p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Select" />
+                <MadCap:keyword term="Display:Select" />Select the devices for which you want to 
+ change the community string. 
+  
+	
+	</li>
+            <li>From the Monitor menu, choose <b><i><MadCap:keyword term="Set Community" />Set Community</i></b>. The Set 
+ Community window appears. 
+  
+	
+	</li>
+            <li>
+                <MadCap:keyword term="Enter" />Enter a Community string and click <b><i><MadCap:keyword term="OK" />OK</i></b>. 
+ </li>
+        </ol>
+        <p>
+            <MadCap:keyword term="READ-ONLY" />
+            <MadCap:keyword term="Set:Read-Only" />Use this procedure to set the Read-Only community string for one or more devices 
+ at once.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="Q28"></a>
+        </p>
+        <p><a name="Q18"></a>
+        </p>
+        <h2>How do I monitor a fixed IP address?</h2>
+        <p>In the <i><b><MadCap:keyword term="Add Device" />Add Device... </b></i>dialog, enter an IP address in dotted-decimal notation <!--or an AppleTalk address in the form "net/node" (decimal notation)-->.</p>
+        <p>IP addresses discovered using the IP discovery feature are fixed by 
+ default.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="Q17"></a>
+        </p>
+        <!--h2>What is "dynamic AppleTalk and IPaddressing"?</h2>
+
+<p>AppleTalk addresses are inherently dynamic. Every time an AppleTalk device 
+  starts up, it may choose a different address on the network. IP addresses tend 
+  to be more stable, but with the advent of server-based IP addressing schemes 
+  (such as DHCP, BootP, MacIP, etc.), it's also possible that your IP address 
+  could change every time you start up.</p>
+
+<p>AppleTalk solves the problem of providing a stable service name for AppleTalk 
+  devices by using the Name Binding Protocol (NBP). A client wishing to determine 
+  the current address of some service sends a special probe to the zone where 
+  the device is known to reside. Likewise, InterMapper periodically makes sure 
+  that it is probing the right address and immediately rechecks if the device 
+  goes down.</p>
+
+<p>On the Internet, stable name identifiers are provided by the Domain Name System. 
+  InterMapper periodically resolves a device's domain name to check for changes. 
+  If it can't resolve the name to an address, it reports that the device is down. 
+  The period for checking DNS names is derived from the TTL in replying DNR messages.</p-->
+        <p><a name="Q34"></a>
+        </p>
+        <h2>I still can't make my router talk...</h2>
+        <p>If you still can't make the router work with InterMapper, try the following:</p>
+        <ul>
+            <li>From the Help Menu's Diagnostics submenu choose <b>Server Log</b>, or from the Window menu's Logs submenu, choose <b>Debug</b>. Look for any messages related to that device. 
+  
+	
+	</li>
+            <li>
+                <MadCap:keyword term="Send E-Mail" />Let us know. Send E-Mail to <a href="mailto:support@intermapper.com">support@intermapper.com</a> 
+ with information about the type of device and the trouble you're having.</li>
+        </ul>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="Q35"></a>
+        </p>
+        <h2>My switches are always orange and showing lots of errors (or discards). 
+ Why?</h2>
+        <p>We frequently hear of devices that appear to have high levels of discards 
+ and/or errors. They are usually orange on the map, and the status window 
+ shows a message like this:</p><pre class="code">Reason: Discards = 738: [1] sc0
+</pre>
+        <p>
+            <MadCap:keyword term="IP:reporting" />
+            <MadCap:keyword term="Report" />The most likely reason that InterMapper shows a high rate of discards 
+ from a device is that the device is actually reporting these errors. It's 
+ common that when InterMapper reports errors (from its SNMP queries), the 
+ manufacturers' own monitoring tools will report zero errors. (It's also 
+ normal that the affected devices are operating normally, without problems, 
+ in this state.)</p>
+        <p>
+            <MadCap:keyword term="Experiments" />Experiments and Workarounds:</p>
+        <ol>
+            <li>
+                <MadCap:keyword term="Subnet:see" />
+                <MadCap:keyword term="Telnetting" />Use the vendor's own network monitoring tool (by 
+ telnetting in, using a web browser, etc.) to see if errors are being reported 
+ through the native management interface. It's possible that there actually 
+ <i>is </i>a problem. 
+  
+	
+	</li>
+            <li>This may be a bug in the SNMP 
+ implementation of the device. You can check with your vendor to see if there's 
+ a firmware upgrade that addresses the problem. 
+  
+	
+	</li>
+            <li>
+                <MadCap:keyword term="SNMP Watcher" />
+                <MadCap:keyword term="SNMP Console" />To test InterMapper's accuracy, use another SNMP console 
+ to check out the particular MIB variables for the device. InterMapper 
+ monitors the <span class="code"><MadCap:keyword term="IfInDiscards" />ifInDiscards</span> and <span class="code">ifInErrors</span> MIB variables (and the corresponding <span class="code"><MadCap:keyword term="IfOutxxxx" />ifOutxxxx</span> variables) listed on the         <a href="../09-Reference/09-02-Probe_Reference/probes.html#polledvars">Network and Server 
+ Probes<MadCap:xref href="../09-Reference/09-02-Probe_Reference/probes.html#polledvars" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> page to compute its error &amp; discard figures. 
+	
+	<p>You can monitor these same variables with your 
+ SNMP Console to see if the same errors are reported there.</p></li>
+            <li>Run a ping test through the device that's reporting the errors. 
+	
+	<ul><li>If packets are actually being 
+ discarded, you'll see a higher than normal packet rate of dropped packets. 
+    
+		
+		</li><li><MadCap:keyword term="Subnet:value" /><MadCap:keyword term="Value" />If packets aren't being dropped, it's another 
+ clue that the values reported by SNMP are incorrect.</li></ul></li>
+            <li>
+                <MadCap:keyword term="Get Info" />
+                <MadCap:keyword term="Ignore Interface Errors" />As a workaround, if you've satisfied yourself that 
+ the error reports are bogus, you can instruct InterMapper to ignore the 
+ discards and/or errors. To do this, Get Info on the affected device and 
+ check the "Ignore Interface Errors" or "Ignore Interface 
+ Discards" box as desired.</li>
+        </ol>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="discontiguous"></a>
+        </p>
+        <h2>What does it mean when InterMapper says a "subnet mask is discontiguous"?</h2>
+        <p>
+            <MadCap:keyword term="IP:contains" />
+            <MadCap:keyword term="Subnet:indicate" />In usual network configurations, a device's subnet mask contains one 
+ bits in the left side of the number, and zero bits on the right. InterMapper 
+ can then use the convention that a subnet mask is described as the number 
+ of bits in the subnet mask, and uses the notation of "/24" to 
+ indicate a subnet mask of 24 one-bits, or "255.255.255.0". For 
+ more details, see the <a href="ipaddressing.html#subnets">IP Addressing 
+ FAQ.<MadCap:xref href="ipaddressing.html#subnets" target="" title="" alt="" MadCap:conditions="Primary.print" /></a></p>
+        <p class="floatright">
+            <img style="WIDTH: 316px;BORDER-TOP-STYLE: none;BORDER-RIGHT-STYLE: none;BORDER-LEFT-STYLE: none;HEIGHT: 86px;BORDER-BOTTOM-STYLE: none;" height="86" src="../Resources/images/discontiguous.gif" width="316" border="0" />
+        </p>
+        <p>A subnet mask that has zero bits interspersed with the one bits in the left half of the value is often 
+ a configuration error. InterMapper points this out when you click and 
+ hold on a link: the status window resembles the figure at the right. 
+</p>
+        <p>Normally, the address line contains the IP address and the subnet mask. 
+ This example shows a device whose IP address and subnet mask are set to 
+ the same value. This error is shown in the status window.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="ovalwithstar"></a>
+        </p>
+        <h2>Why do network labels sometimes have a "/2*"?</h2>
+        <p class="floatright">
+            <img style="WIDTH: 158px;BORDER-TOP-STYLE: none;BORDER-RIGHT-STYLE: none;BORDER-LEFT-STYLE: none;HEIGHT: 88px;BORDER-BOTTOM-STYLE: none;" height="88" src="../Resources/images/hpprinter.gif" width="158" border="0" />
+        </p>
+        <p>This is another indication 
+ that there's a problem with the subnet mask. The figure at the right shows 
+ the network oval with a discontiguous subnet mask. The <b>/2*</b> indicates 
+ that the subnet mask has zero bits in the left half; clicking on the link 
+ will give a status window similar to the one above. </p>
+        <p>This example comes from an HP printer that has a bug in its SNMP implementation. 
+ The subnet mask of the printer is actually configured properly, and the 
+ printer is working. However, the SNMP software in the printer is reporting 
+ the incorrect value (it's reporting the IP address) for the subnet mask. 
+ Help/Systems has reported this to HP.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="wontconnect"></a>
+        </p>
+        <h2><a name="Q13"></a>
+        </h2>
+        <h2>There are two separate network ovals on my map where I only expect 
+ one...</h2>
+        <p>
+            <MadCap:keyword term="Misconfigured subnet" />Examine the network's Status window  to determine 
+ whether the subnet masks are the same in both ovals. If the subnet masks 
+ are different, one of the devices connected to the oval with the "wrong" 
+ subnet mask probably has a misconfigured subnet mask. (Look for the device 
+ that is being polled with SNMP.)</p>
+        <p>
+            <MadCap:keyword term="ICMP" />Note: For devices polled with ICMP echoes, InterMapper tries to guess 
+ whether it should draw a link to the network that contains the IP address. 
+ If both network ovals look equally good, it may draw a link to the "wrong" 
+ one, or alternate between them.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="Q14"></a>
+        </p>
+        <h2>Some network ovals have more than one IP network number...</h2>
+        <p>
+            <MadCap:keyword term="IP subnets" />It's possible for a router or host to have two or more configured IP 
+ addresses for a particular interface. This form of secondary IP addressing 
+ can be common if your addressing is in transition. Rather than bringing 
+ everything to a halt to change IP addresses, a network administrator will 
+ support two IP subnets on the same logical wire. All the devices in the 
+ subnet can then have their IP addresses changed at their leisure, rather 
+ than forcing everyone to change them all at once. When all the addresses 
+ have changed, the administrator usually gets rid of the old network number.</p>
+        <p>It's also possible that InterMapper is only reporting what it knows, 
+ and the information it is using is incomplete. This may be true of multi-point 
+ network technologies (like frame-relay clouds). If you find a situation 
+ where InterMapper is reporting multiple networks on a logical network 
+ and you know it's wrong, please send us email (<a href="mailto:support@intermapper.com">support@intermapper.com</a>) 
+ so we can figure out a way to make InterMapper's depictions more accurate.</p>
+        <p>We would also like to hear about a network with multiple IP network 
+ numbers where InterMapper does not show them correctly.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p><a name="Q25"></a>
+        </p>
+        <h2>Does InterMapper support unnumbered IP links?</h2>
+        <p>Yes. </p>
+        <p><b style="FONT-WEIGHT: bold;"><MadCap:keyword term="Select:Display" /><MadCap:keyword term="Display" />To display unnumbered links:</b>
+        </p>
+        <ol>
+            <li>From the Monitor menu, choose <b><i><MadCap:keyword term="Set Behavior" />Set Behavior...</i></b> The Set 
+ Behavior window appears. 
+  
+	
+	</li>
+            <li>Select the <i><b>Display unnumbered interfaces</b></i> check box.
+  </li>
+            <li>Click <strong><em>OK</em></strong>. Unnumbered interfaces 
+ are now shown.</li>
+        </ol>
+        <p>For more information, see the <a href="../09-Reference/09-01-Command-Menu-Reference/Monitor_Menu.htm#setbehavior">Set Behavior<MadCap:xref href="../09-Reference/09-01-Command-Menu-Reference/Monitor_Menu.htm#setbehavior" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>  window reference section of the Monitor Menu reference topic. </p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="notiniftable"></a>
+            <MadCap:keyword term="Status window" />What does it mean when a Status Window shows 
+ [[ifIndex not in ifTable]] ?</h2>
+        <p>
+            <MadCap:keyword term="IfIndex" />
+            <MadCap:keyword term="IpAddrTable" />
+            <MadCap:keyword term="Vlans" />It is a normal situation for VLANs. InterMapper first traverses the 
+ ipAddrTable which maps IP addresses to ifIndex entries. If the ipAddrTable 
+ looks like: </p>
+        <blockquote>
+            <p>ifIndex 1 --&gt; 192.168.1.1/24<br />ifIndex 2 --&gt; 192.168.2.1/24<br />ifIndex 3 --&gt; 192.168.3.1/24</p>
+        </blockquote>
+        <p>And the ifTable looks like: </p>
+        <blockquote>
+            <p>
+                <MadCap:keyword term="Ethernet 10/100" />ifIndex 1 --&gt; Ethernet 10/100<br />ifIndex 3 --&gt; Ethernet 10/100</p>
+        </blockquote>
+        <p>Then the interface description for ifIndex 2 will be listed as "[[Not 
+ in ifTable]]".</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <h2><a name="servicecount"></a>How can I find out how many devices I'm monitoring 
+ with InterMapper. Do I have to count all the boxes on each map?</h2>
+        <p>
+            <MadCap:keyword term="Server Settings window" />
+            <MadCap:keyword term="Server Information" />The Server Information pane of the Server Settings window 
+shows the number of &#160;devices 
+ you are monitoring.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <!-- h2>Why doesn't InterMapper find AppleTalk networks?</h2>
+
+<p>To learn about AppleTalk networks, InterMapper asks SNMP-managed devices for 
+  the list of ports from their AppleTalk MIB. If the router does not support the 
+  AppleTalk MIB, InterMapper does not display the AppleTalk network numbers even 
+  if the device routes AppleTalk. Check the version number of the routing software 
+  and the router documentation to see if it supports the AppleTalk MIB.</p>
+
+<p MadCap:conditions="Primary.online"><a href="#top">Back to top</a></p -->
+        <p><a name="Q29"></a>
+        </p>
+        <h2>I discovered a multi-protocol router (TCP/IP &amp; AppleTalk) using 
+ TCP/IP, but I could not go back and change the protocol to RTMP?</h2>
+        <p>
+            <MadCap:keyword term="AppleTalk:AppleTalk-only" />This problem is related to having only one "target" address 
+ for each device, even though InterMapper knows the addresses of the other 
+ ports. When a device is discovered using TCP/IP, it gets added with a 
+ target address in IP. You can't switch to use RTMP because that's an AppleTalk-only 
+ protocol.</p>
+        <p MadCap:conditions="Primary.online"><a href="#top">Back to top</a>
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

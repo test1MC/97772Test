@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:lastBlockDepth="4" MadCap:lastHeight="613" MadCap:lastWidth="612" MadCap:fileTags="status_tags.Under Review">
+    <head>
+    </head>
+    <body>
+        <h1>Entering an IP Address Range</h1>
+        <p>You can enter IP&#160;address ranges in several ways, depending on what you need to do. These ranges are useful for configuring access in the InterMapper firewall, as well as for autodiscovery.</p>
+        <h2>Characters you can use</h2>
+        <ul>
+            <li>Use <b style="font-style: italic;">hyphens (-)</b> to separate high and low values</li>
+            <li>Use <b style="font-style: italic;">wildcards (*)</b> to indicate a full range of values. </li>
+            <li>Use <b style="font-style: italic;">slashes ( / )</b> to enter a range in <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a> notation.</li>
+        </ul>
+        <h2>Examples</h2>
+        <ul>
+            <li><b>Address range using hyphens</b> <br />Example: <span class="code"><b>192.168.1.1-31</b></span> -  
+ specifies any device in the range <span class="code">192.168.1.1</span> 
+    to <span class="code">192.168.1.31</span>.<br />Example <span class="code" style="font-weight: bold;">192.168.1-10.1-10 </span> - specifies in subnets <span class="code">192.168.1.*</span> 
+    to <span class="code">192.168.10.*</span>, and finds addresses between 1 and 10 within each subnet.</li>
+            <li><b>Address range using "*" wildcards</b>
+                <br />Each wildcard corresponds to a range 
+ of 0-255. <br />Example: <span class="code"><b>192.168.1.*</b></span> (equivalent to <span class="code">192.168.1.1-255</span>) <br />Example: <b><span class="code">192.168.*.*</span></b> (Class B range)<br />Example: <span class="code"><b>*.*.*.* </b>("all addresses")</span></li>
+            <li><b>Address range using wildcards and hyphens</b>
+                <br />Example: <b><span class="code">192.168.1-10.*</span></b> - finds 255 addresses in each of 10 subnets.<br />Example: <b><span class="code">192.168.*.1</span></b> - finds address #1 in each of 255 subnets.</li>
+            <li><b>Address range using <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a> ("slash") notation</b> which defines length in bits, often referred to as "prefix length" or "prefix bits"<br />Example: <b><span class="code">192.168.0.0/24</span></b> - (equivalent to <span class="code">192.168.0.*</span> Class C) <br />Example: <b><span class="code">192.168.0.0/16</span></b> - (equivalent to <span class="code">192.168.*.*</span> Class B) <br />Example: <b><span class="code">192.168.1.128/25</span></b> - (equivalent to <span class="code">192.168.1.128-255</span>) <br />Example: <b><span class="code">example.com/24</span></b> - the last 255 addresses at example.com (Class C)<br />Example: <b><span class="code">example.com/25</span></b> - 126 addresses beginning with either 1 or 129, depending on the value of the last octet of example.com's IP address.<br /><br /> <br /></li>
+        </ul>
+    </body>
+</html>

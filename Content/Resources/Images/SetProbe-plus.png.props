@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties fileTags="ImageTypes.Icon">
+    <ImageOverlay>
+        <OriginalImage EnableCropRectangle="true" CropRectangle="16,2,17,18" ComputedWidth="17" ComputedHeight="18" Format="png">iVBORw0KGgoAAAANSUhEUgAAADIAAAAYCAIAAAA3ajm2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAAd0SU1FB9kMEg8nEX0sQPgAAANLSURBVEhLxZfvSxNxHMedYP4FPehBT4rqQT0xiCCKhiVoUaJog+pJpAVlQVSIoSIFRgghWIRCShMpFEQx7MESg5SypluymbbfP2673d222+02N+e09+1kjbNcN8F9eTM+u+/7870Xn89nx03B+BaTydWVeHwtubq+XrCdlUjEc0gvKioWsxQKqFBRWLiruLgAWC7brMehb3r5dv+lJwUnH+RLu88332jvJd3zXvcPActp+Q6m2hb1J51lPX/LaCPB8OjFO5/HsIGFOk3OmdfyvJKTcyaQMNSSgOUwz6BxmDAotRKyVNf29WrTtCjEsnIzzYnESpTnQBJkrBvVwpcVYcVzkOr+R4dj1WSKGY084hxOSKXEIjzHBiiQsH77H6xYbDkWi+ag6jtjYNJq4ypVF+IcTkDK8nIkHAr4KY8UKxrlUwrL1YWbg6jT1BRXU9OJWG666I9EuBBL06RzM5YIxMlVxbU3Oh2r0VDV1c8Ry00X/ZFIKMRSNOnYjIU9YTurLta9PnulO1MzM8zYmKuyskNyHc6sp4kGnmfZoI/y2qVY6W04ttbp2s70jKNOYNJo3IODpsbG4ZER09DQ4sCAoa9P39MzC2fW00RDOBwMBkifZxtYJyqfijOOeULvUCcwqdUGcHR3a9NSKlvg3C5WmhrgW+tYRavwLFB1YcYxT+hdQ8MAmOrr+8rKHpeWtimVrWCC4Mx6mmjguEDA7yUJm7SJPB+EwuFAVtXWdZSceZip0VEzigQmyXU4s54mGjjOH/B7SMKaO5bkTkdONWCegIU6If5PDontn1hpajhk6dDx65hxYKF3iGXlps2hEONnCK/bIq0WuguFQn652ldyGb+7FFYLYrnpop9lGYYmPK6/YAlFArVc7T1chXkXZxyx3HTRz7I0Q7s9LrO0WultOGTp4NGqPQfKRSGWlZs2B4M+mnIRTpMUK+Wg8iU8SynS4XYuCViBjDcIhvbQNAGhx4h3UripT2D6ZbcYUliO1Lu8VYv36Mkv35y2BbvV4LAaEeykcEebed70c3Z8YgIkHEsIWIRdV9/ee+5eV//w+wX99M7LqJ8y6j6Pfhgvv9t565k6wtMCFkkY8Nn8ajDv/3xud/SHOTIa8f8G6NXyhkCyPM0AAAAASUVORK5CYII=</OriginalImage>
+        <Shapes />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <Variables />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

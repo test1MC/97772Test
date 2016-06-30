@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultProject Version="1" MasterToc="/Project/TOCs/Primary.fltoc" MasterStylesheet="/Content/default.css" MasterPageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl" SourceControlBound="false">
+    <Synchronize>
+        <Mapping ProjectPath="Project/VariableSets/hsvariables.flvar" ExternalPath="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal/Project/VariableSets/hsvariables.flvar" />
+        <Mapping ProjectPath="Content/Resources/MasterPages/PrintDoc.flmsp" ExternalPath="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal/Content/Resources/MasterPages/PrintDoc.flmsp" />
+        <Mapping ProjectPath="Content/Resources/MasterPages/MasterPage.flmsp" ExternalPath="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal/Content/Resources/MasterPages/MasterPage.flmsp" />
+        <Mapping ProjectPath="Content/Resources/MasterPages/TopicMaster.flmsp" ExternalPath="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal/Content/Resources/MasterPages/TopicMaster.flmsp" />
+        <Mapping ProjectPath="Project/VariableSets/InterMapper-Primary.flvar" ExternalPath="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal/Project/VariableSets/InterMapper-Primary.flvar" />
+        <Mapping ProjectPath="Content/Resources/Stylesheets/styles.css" ExternalPath="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal/Content/Resources/Stylesheets/styles.css" />
+    </Synchronize>
+</CatapultProject>

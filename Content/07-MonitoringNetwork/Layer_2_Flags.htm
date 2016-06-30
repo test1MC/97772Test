@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1905" MadCap:lastWidth="609" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:conditions="Primary.online">Layer 2 Flags</h1>
+        <h2 class="L2" MadCap:conditions="Primary.print">Understanding Layer 2 Flags</h2>
+        <p>The meanings of flags in the Layer 2 view depend the pane in which they appear.</p>
+        <h3>Flags in Device Filter and Endpoints panes</h3>
+        <p>In the Filter and Endpoints panes, flags indicate the following:</p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;">
+            <col style="padding: 5pt;width: 20pt;">
+            </col>
+            <col style="padding: 5pt;width: auto;">
+            </col>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/bi_connection.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Switch-to-Switch connection</b> - Connected to another switch</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/one_way_left.png" />
+                        <br />or<br /><img src="../Resources/images/Layer2icons/one_way_right.png" /></td>
+                    <td style="vertical-align: top;"><b>Interior device</b> - The device is attached to a hub or switch that is connected between ports of two managed switches. The left or right arrow points away from the spanning tree root.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/down.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Down</b> - This port is not operating.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/house.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Multi-homed device</b> - A single MAC address has multiple IP addresses. Each IP addresses is shown as a separate row in the Endpoints pane.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/ghost.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Ghost</b>- Port is not active, and the endpoint (device with this MAC address) has not been seen elsewhere in the network. It was last seen on the indicated switch port.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/fuzzy_bi.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Not present on Map</b> - Port is connected to a managed switch, but that switch is not present on a Layer 2-enabled map.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/fuzzy_left.png" />
+                        <br />or<br /><img src="../Resources/images/Layer2icons/fuzzy_right.png" /><br />or<br /><img src="../Resources/images/Layer2icons/fuzzy_down.png"></img></td>
+                    <td style="vertical-align: top;"><b>Fuzzy</b> - The Layer 2 process cannot determine the exact port where the device is attached. See <a href="#fuzzy">Understanding Fuzzy Devices<MadCap:xref href="#fuzzy" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> below.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/duplicate.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Duplicate MAC address detected</b> - The Layer 2 process has found the same MAC address on two separate switch ports.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/L2-ip-conflict.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>IP conflict</b> - The Layer 2 process has found the same IP address on two separate switch ports.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/L2-root.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Spanning tree root</b> - This switch is the root of the spanning tree.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/L2-loop.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Loop - a port is connected to another port on the same switch.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/L2-wireless.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Wireless (assigned manually) - a port or VLAN has been tagged as Wireless. The Wireless flag appears next to the port in the Filters and Endpoints panes. See <a href="#tagging">Manual Tagging<MadCap:xref href="#tagging" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> below.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/L2-vm.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Virtual machine (assigned manually) - All NICs from this manufacturer with this OUI&#160;(organizationally unique identifier) are virtual machines. The Virtual Machine flag appears next to the OUI and any endpoints that use NICs with that OUI. See <a href="#tagging">Manual Tagging<MadCap:xref href="#tagging" target="" title="" alt=""> (Pg 1)</MadCap:xref></a> below.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="pagebreakbefore">Flags in the Connections pane</h3>
+        <p>The following flags may be present in the Flags column of the Connections pane.</p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;">
+            <col style="padding: 5pt;width: 20pt;">
+            </col>
+            <col style="padding: 5pt;width: auto;">
+            </col>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/connected.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Confirmed connection</b> - (will be exported to map).</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/fuzzy_left.png" />
+                        <br />or<br /><img src="../Resources/images/Layer2icons/fuzzy_right.png" /></td>
+                    <td style="vertical-align: top;"><b>Not present on Map</b> - Port is connected to a device that is not present on a Layer 2-enabled map.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/L2-loop.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;"><b>Loop</b> - Indicates a direct port-to-port connection on this switch</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;">
+            <col style="padding: 5pt;width: 20pt;">
+            </col>
+            <col style="padding: 5pt;width: auto;">
+            </col>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/bi_connection.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Both ends see each other's CDP/LLDP advertisements.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/one_way_left.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">The left end of the connection sees the right end's CDP/LLDP advertisements.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/one_way_right.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">The right end of the connection sees the left end's CDP/LLDP advertisements.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/fuzzy_right.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Connected to a device that is not present on any map.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/connected.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Confirmed connection (will be exported to map).</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p><b>STP&#160;column:</b> In the  STP column of the Connections Pane, arrows indicate the direction of travel of STP bridge information. </p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;">
+            <col style="padding: 5pt;width: 20pt;">
+            </col>
+            <col style="padding: 5pt;width: auto;">
+            </col>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/one_way_left.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Right switch is the left switch’s path to root for one or more of the left switch’s spanning trees.
+(Right switch's port may be in blocking state, if there are loops.)</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/one_way_right.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Left switch is the right switch’s path to root for one or more of the right switches’ spanning
+trees. (Left switch's port may be in blocking state, if there are loops.)</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/Layer2icons/bi_connection.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Right switch is left switch's path to root for one or more spanning trees and left switch is right
+switch's path to root for other spanning trees. (Either switch's port may be in blocking state for
+one or more spanning trees, if there are loops.)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="pagebreakafter">&#160;</p>
+        <h2 class="L2">Understanding Fuzzy Devices<a name="fuzzy"></a></h2>
+        <p>A device with a MAC address whose location in the Layer 2 topology cannot be completely determined is considered a “fuzzy” device by InterMapper.</p>
+        <p>Fuzzy devices are quite common, and can occur for a number of reasons. The Layer 2 engine attempts to collect information from all the switches nearly simultaneously. However, some time can elapse between the times that two switches finishes collecting Layer 2 information. During this time period, a MAC address collected from one switch may "age out" of another switch. Alternatively, a device may connect to the network during Layer 2 collection, so its MAC address is reported in one switch's forwarding tables, but not in the edge switch (due to the difference in scan times for the two switches).</p>
+        <p>Devices may be classified as fuzzy due to bugs in certain switch models. For example, Help/Systems has a small managed desktop switch that doesn't report its complete forwarding table via SNMP. The extra un-reported devices appear as fuzzy, because the upstream switch reports the MAC address, but the downstream switch never reports them (even though the switch is otherwise perfectly functional.)</p>
+        <p><i>Fuzzy</i> devices are distinct from <i>Interior</i> devices. A fuzzy device appears to be in the middle of the network (between two switches) because InterMapper doesn't have complete information. An interior device appears to be in the middle of the network because there is actually another switch or hub located there, but it's not part of the Layer 2 information.</p>
+        <h2><a name="tagging"></a>Manual Tagging</h2>
+        <p>For certain kinds of connections, you may want to tag a port or endpoint device so you can see easily what kind of device it is.</p>
+        <p>Here are some tagging options:</p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;">
+            <col style="padding: 5pt;width: 20pt;">
+            </col>
+            <col style="padding: 5pt;width: auto;">
+            </col>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/L2-wireless.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Wireless (assigned manually) - Right-click a switch port or VLAN in the Filters pane and select <b style="font-style: italic;">as Wireless</b> from the Tag submenu. The Wireless icon appears next to the port or VLAN.</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: top;">
+                        <img src="../Resources/images/L2-vm.png">
+                        </img>
+                    </td>
+                    <td style="vertical-align: top;">Virtual machine (assigned manually) - Right-click a port in the NIC manufacturer's section of the Filters pane (one that is associated with a virtual machine ), and select <b style="font-style: italic;">as Virtual Machine</b> from the Tag submenu. The Virtual Machine icon appears next to the OUI and any endpoints that use NICs with that OUI. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

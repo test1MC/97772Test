@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:lastBlockDepth="4" MadCap:lastHeight="825" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">Using the InterMapper Authentication Server</h1>
+        <p>Use the InterMapper Authentication Server to authenticate InterMapper users through an external authentication directory.</p>
+        <h2>Overview<MadCap:keyword term="Authentication Server" /></h2>
+        <p>The InterMapper Authentication Server (IMAuth) is a component of the InterMapper DataCenter (IMDC) add-on package. It lets an InterMapper server authenticate users against an external authentication directory. IMAuth supports LDAP, RADIUS, ActiveDirectory, IAS, Kerberos, and DND directories.</p>
+        <p>IMAuth acts as an intermediary between an InterMapper server and the directory. If an authentication request comes in from a user whose password is not in InterMapper’s local user database, the InterMapper server forwards that request to IMAuth. IMAuth translates and passes the request to the directory server, and forwards any responses it receives back to the InterMapper server. In addition, a new user entry is created in the local database, configured for external authentication and assigned to a default group you will have specified for users created this way.
+</p>
+        <p>IMAuth is not a replacement for InterMapper's local user database. 
+You may continue to keep some user passwords in InterMapper's local 
+user database for local authentication while requiring others to be 
+authenticated via IMAuth. For each user, you must choose one method or the other.
+</p>
+        <p>Select the "Use External Authentication" check box in the <b style="font-style: italic;">Edit User</b> or <b style="font-style: italic;">Create User</b> dialog to indicate that the user should be 
+authenticated via IMAuth, in which case you should not supply a 
+password. For more information on creating and editing users, see <a href="08-03-01-Users/users.html">Users and Groups<MadCap:xref href="08-03-01-Users/users.html" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</p>
+        <h2>Installing the Authentication server</h2>
+        <p>InterMapper Authentication Server runs as a component of InterMapper DataCenter and is installed automatically when you install InterMapper. On Windows and MacOS X, IMDC is installed automatically alongside InterMapper.  On other platforms, you need to download and install IMDC separately.</p>
+        <h2>Configuring and connecting to your directory</h2>
+        <p>You need to configure the InterMapper Authentication Server to talk to your directory server. This is done from InterMapper DataCenter's web administration page. To do this, start IMAuth Server as described above, then open a web browser and navigate to: https://localhost:8182. You can also click <b style="font-style: italic;">Configure...</b> in the Reports Server pane of the Server Settings window.</p>
+        <ol>
+            <li>Configure the connection to your authentication directory (LDAP, Radius, ActiveDirectory, Microsoft IAS, Kerberos v5, DND).</li>
+            <li>Configure the connection that an InterMapper server uses to connect to IMAuth.</li>
+            <li>Configure InterMapper to connect to IMAuth.</li>
+        </ol>
+        <h2 class="pagebreakbefore">Tips and Hints for Various Authentication/Directory Servers</h2>
+        <h3>RADIUS / IAS</h3>
+        <p>IMAuth acts as a RADIUS client, and so it must be added to the clients section of your RADIUS configuration file or, for Microsoft IAS, the clients section of the IAS configuration pane. You are asked to specify a <em>secret,</em> and must then enter exactly the same secret in the IMAuth RADIUS settings.</p>
+        <h3>LDAP</h3>
+        <p>If you encounter any problems, first try un-checking the <em>Use SSL</em> option, or choose <em>Whenever Necessary</em> for the <em>Use Plaintext</em> option in the IMAuth LDAP settings.  If this works, it means your server wasn't built to include SSL or SASL DIGEST-MD5 password encryption.  You'll need to either stay with the lower IMAuth security settings, or upgrade your LDAP server.</p>
+        <p>Another thing to look at is the LDAP Base DN specified in the IMAuth LDAP settings.  This tells IMAuth where in your LDAP directory the user entries are located.  This depends on how your directory was set up, but usually takes the form: <span class="code">ou=people,dc=example,dc=com</span>, where example and com correspond to the domain name your directory was set up with.  IMAuth takes the Base DN and attaches the user's name; for example: 
+<span class="code">cn=Jane,cn=Smith,ou=people,dc=example,dc=com</span>.</p>
+        <h3>ActiveDirectory</h3>
+        <p>ActiveDirectory is based on LDAP, but differs slightly in its default configuration.  If you are encountering problems with these ActiveDirectory versions, try un-checking the <em>Use SSL</em> option or choosing <em>Whenever Necessary</em> for the <em>Use Plaintext</em> option in the IMAuth LDAP settings.The Base DN for an ActiveDirectory server will almost always be: <span class="code">cn=Users,dc=example,dc=com</span> where <em>example</em> and <em>com</em> are replaced by the name of the Windows Domain that ActiveDirectory is serving.</p>
+        <p>Since ActiveDirectory is built around the idea of domains rather than single servers, the username you use to authenticate must have your domain name attached to it. For example, if your normal Windows logon name is <em>janesmith</em> and your domain is <em>example.com</em>, the username you give when accessing a map with InterMapper or InterMapper RemoteAccess is              <em>janesmith@example.com</em>.</p>
+        <p>Almost all ActiveDirectory versions support SSL. If you have provided your own certificate, choosing the <em>Whenever Necessary</em> option for the <em>Use Plaintext</em> field in the IMAuth LDAP settings doesn't have much impact on your security. If you really do need the additional encryption, you must perform these steps:</p>
+        <ol>
+            <li>Log in to your server as an administrator, and start the <em>Active Directory Users and Computers</em> panel.</li>
+            <li>Open the properties for each user who needs to authenticate, and switch to the <em>Account</em> tab.</li>
+            <li>Under <em>Account options</em>, check the <em>Store password using reversible encryption</em> box. <br /><br /><b>Note:</b> Windows cannot apply the change immediately, so you must get that user to log on to the Windows domain as normal (by signing on to their machine, for example) before the change becomes active.</li>
+        </ol>
+        <p>In this case you might again need to use a different username.  Instead of the usual login name, you may need to use the user's full name.  For example, instead of <em>janesmith</em> you would use <em>Jane M. Smith</em>.</p>
+        <p>When setting up IMAuth, it's a good idea to try the normal login name, the login name with your domain attached, and the user's full name, to see which login your ActiveDirectory server accepts.</p>
+        <h3>Kerberos</h3>
+        <p>For a good introduction to Kerberos, see the following Knowledgebase article:</p>
+        <ul>
+            <li><a href="http://forums.intermapper.com/viewtopic.php?t=1520">Using Kerberos with InterMapper</a>
+            </li>
+            <li><a href="http://forums.intermapper.com/viewtopic.php?t=893">Supported Kerberos encryption modes</a>
+            </li>
+        </ul>
+        <p>Problems encountered when using Kerberos are usually caused by misconfiguring the InterMapper Authentication Server, or by the values used when creating the <span class="code">imauth </span>service account.  </p>
+        <ul>
+            <li><b>Kerberos Domain</b> - The name, of the Kerberos authentication realm. It is typically all uppercase (Example:<span class="code"> INTERMAPPER.COM</span>). On Windows, it is almost always the same as the ActiveDirectory domain's name, but upper-cased.</li>
+            <li><b>KeyServer Address</b> - The full domain name of the Kerberos key server.  On Windows, even on complex networks with multiple ActiveDirectory nodes, only one acts as the Key Distribution Center.  The <b style="font-style: italic;">KeyServer Address</b> value must match the machine's name <i>exactly</i>.  For example, if the machine is registered on the network as <span class="code">ad.intermapper.com</span>, the <b style="font-style: italic;">KeyServer Address</b> must be '<span class="code">ad.intermapper.com</span>'; entering the IP address of the machine, or just '<span class="code">ad</span>', causes authentication failures.</li>
+            <li><b>Service Principal</b> - The service principal name associated with IMAuth on the domain.  This is typically the service name (<span class="code">imauth</span>) followed by a forward slash and then the Kerberos key server's full domain name. For example, on Windows, assuming you follow the instructions in the Knowledgebase link above, and created an ActiveDirectory service account called '<span class="code">imauth</span>', the Service Principal value would be '<span class="code">imauth/ad.intermapper.com</span>'.  This user account <i>must also be active</i> in ActiveDirectory; disabling the account is a common mistake that causes authentication failures.</li>
+        </ul>
+    </body>
+</html>

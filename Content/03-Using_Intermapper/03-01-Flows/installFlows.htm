@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="374" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Installing InterMapper Flows</h1>
+        <p>You must follow several steps before you can begin analyzing your Flows data.</p>
+        <ul>
+            <li>InterMapper Flows is installed automatically with InterMapper. See <a href="../../02-Getting_Started/install.html">Installing and Launching InterMapper<MadCap:xref href="../../02-Getting_Started/install.html"> (Pg 1)</MadCap:xref></a> for more information. </li>
+            <li>If you are running a trial version, InterMapper Flows is fully operational. Once the trial expires, an InterMapper Flows license is required.</li>
+            <li>Be sure to <b>remove any firewalls</b> on the selected UDP ports for NetFlow  (default is 2055).  </li>
+            <li><i>Note: </i>The InterMapper Flows service/daemon may not start up if  another program is using port 2055 (or whatever port you have designated for  netflow packets). You should stop/uninstall any other netflow packages on the  system.  </li>
+            <li>You must also <b>configure one or more Flows exporters</b> to send data to the InterMapper Flows server. InterMapper Flows  automatically detects the exporters and begins collecting their data. Many switches and routers can be configured to export Flows data. There are also several software-based Flows exporters available, including nProbe, SoftFlowd, and ProQueSys.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

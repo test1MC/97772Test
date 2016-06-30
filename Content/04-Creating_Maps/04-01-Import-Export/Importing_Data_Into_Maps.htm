@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:ignoredWords="TITLE};PATH};ARGS};LAUNCHER};ADDRESS};PORT};address};port}" MadCap:lastBlockDepth="6" MadCap:lastHeight="599" MadCap:lastWidth="967" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Importing Data Into Maps</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Switches;Developer Guide" />
+            <MadCap:keyword term="Import" />
+            <MadCap:keyword term="Import:Data Into Maps" />
+            <MadCap:keyword term="Data Into Maps" />
+            <MadCap:keyword term="Data Into Maps:Importing" />Importing Data</h1>
+        <p>InterMapper can import data from a text file to update information about devices on a map, or information about Users or Groups. This is useful for: </p>
+        <ul>
+            <li>
+                <MadCap:keyword term="Devices/probe" />New customers who want to import the devices/probe types 
+	 from their current monitoring system (or information that's already present 
+	 in a spreadsheet or other format) into InterMapper. </li>
+            <li>Customers who make frequent updates to existing devices 
+ on maps. </li>
+            <li>Customers who frequently add new devices to maps. They want 
+	 to enter information about new customers to a database, then export the 
+	 new device information to a file that can be bulk-imported into InterMapper.</li>
+            <li>
+                <MadCap:keyword term="IP" />
+                <MadCap:keyword term="IP:switching" />
+                <MadCap:keyword term="Switches:IP" />
+                <MadCap:keyword term="Spreadsheet/database" />Customers who want to make systematic changes to 
+ their maps. They can export the InterMapper map as, say, tab-delimited 
+ data, then edit columns in a spreadsheet/database, then re-import, letting 
+ InterMapper merge the new information onto the existing devices. This 
+ is useful for wholesale label changes, switching IP addresses, etc. </li>
+            <li>Customers who want to import a list of users from another source for authentication purposes.</li>
+        </ul>
+        <p style="font-weight: bold;">
+            <MadCap:keyword term="Map Data" />To import data:</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Create an import file as described in <a href="Creating_An_Import_File.htm">Creating 
+	 an Import File<MadCap:xref href="Creating_An_Import_File.htm" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>.</li>
+            <li>
+                <MadCap:keyword term="InterMapper Servers window" />In the Map List window, click to select the server 
+	 to which you want to import map data, or open a map on that server.<br /><br /><b>Note:</b> The import file contains the name of the map. If the map does 
+	 not exist, it is created automatically.<br /><br /></li>
+            <li style="font-weight: normal;font-weight: normal;">From the File menu's <span style="font-style: italic;font-weight: bold;">Import...</span><MadCap:keyword term="Submenu" />submenu, choose       <b><span style="font-style: italic;">Data File...</span></b>A standard file dialog 
+	 appears.</li>
+            <li style="font-weight: normal;font-weight: normal;">Select the file you want to import and click <span style="font-weight: bold;font-style: italic;">Open</span>. If the map data is valid, devices are added or 
+	 updated on the specified maps as appropriate. If the specified map does 
+	 not exist, one is created automatically.<br /><br /><b>Note:</b><MadCap:keyword term="InterMapper RemoteAccess" /> You can automate the importing of map data by sending commands 
+	 to InterMapper RemoteAccess through its command-line interface or through the HTTP API. This allows 
+	 you to interact with InterMapper through your own scripts. For more information, 
+	 see     <a href="../../09-Reference/09-05-Advanced_Importing/IMRA-CommandLineOptions.htm">Command-line options for RemoteAccess</a>, (in this manual) as well as     <i>InterMapper HTTP API</i> in the <a href="http://intermapper.com/go.php?to=intermapper.devguide" target="_blank">Developer Guide</a>.<br /><br />When importing data in Tab/CSV/XML formats, foreign characters must be presented in 
+the same way as the output of the <b style="font-style: italic;">Export </b>command:
+			<ul><li>Characters with values less than 255 can be imported directly. </li><li>Character values greater than 255 must be escaped using the standard XML format (<span class="code">&amp;#[character code]</span>).</li></ul></li>
+        </ol>
+        <p class="pagebreakafter">&#160;</p>
+    </body>
+</html>

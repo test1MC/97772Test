@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2698" MadCap:lastWidth="560" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">InterMapper Quick Tour</h1>
+        <p>Ten things to try with InterMapper when you're first checking it out. Learn  how to create maps, make them attractive, send alerts, make charts,  etc.</p>
+        <p>This page lists ten thing you can try with InterMapper to get more familiar  with it. You can also refer to the <a title="Online WebHelp Documentation" href="http://intermapper.com/go.php?to=intermapper.userguide">InterMapper User Guide</a> for more information.</p>
+        <ol>
+            <li><strong>Try Out The Demo Maps</strong> When you install InterMapper for the first time, a set of demo maps is installed. On the Welcome page, click <b>Try Out The Demo Maps</b> and  take a couple minutes to try the steps listed in the text you'll see there. When finished, you can click <b>Disable This Map</b>. You can disable the demo map from the Enabled Maps pane of the Server Settings window.</li>
+            <li>
+                <p><strong>Building Maps</strong> There are several ways to create  maps—autodiscovery, entering addresses manually, and importing a file. Before  you proceed, you may want to download the <a title="" href="http://download.intermapper.com/docs/Hands-onExamples.zip">Hands-on  Examples</a> because it has some files for the following steps. Things to  try:</p>
+                <ul>
+                    <li>
+                        <p><strong>Autodiscovery</strong> InterMapper can scan a network to find  devices</p>
+                        <ul>
+                            <li>Create a new map by choosing <strong>File &gt; New map...</strong> Give it a  name (<em>Local Network</em>) and click Next.</li>
+                            <li>Check the Autodiscovery button in the window, then click Next. You'll see  the Autodiscover window. </li>
+                            <li>Enter a starting point address (the default value is fine) and click OK. You can also specify a range of addresses to scan.</li>
+                            <li>Autodiscovery will begin. Let it complete, or click Cancel in the top of the  map when you've discovered enough. </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Manual Entry</strong> You can also add devices manually by typing or  pasting a list of DNS names or IP addresses into the window that appears.</p>
+                        <ul>
+                            <li>Create a new map, give it the name "North America" and  click <strong>Next &gt;</strong>. Check the Manual Entry  button, then click <strong>Next &gt;</strong>. You'll see the Add Device(s)...  window. </li>
+                            <li>Type <strong>www.helpsystems.com</strong> and <strong>www.example.com</strong>  and click Add. Note that they appear as devices (rectangles) and turn green a  few moments afterward. (InterMapper is already testing them.) </li>
+                            <li>You can add a background image to make the map look better. Drag the  <em>NorthAmerica.jpg</em> from the Hands-on Extras folder to map window and it  will appear as the map's background.</li>
+                            <li>Choose <strong>Window &gt; Zoom window</strong> to resize the map to the  image.</li>
+                            <li>Drag the rectangles to the desired location on the background map.  </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Create top-level map</strong> InterMapper can have top-level maps  that indicate the most serious condition of a sub-map. We'll add icons for the  <em>Local Network</em> and the <em>Unalakleet</em> sub-maps to the North America  map. </p>
+                        <ul>
+                            <li>Open the North America map and position it and the Map List so you can see  both windows. </li>
+                            <li>Drag the icon for <em>Unalakleet</em> from the Map List into North America  map. </li>
+                            <li>Drag the icon for the <em>Local Network</em> map in a similar way. </li>
+                            <li>Drill down by double-clicking the <em>Local Network</em> icon on the  top-level North America map. You'll see the <em>Local Network</em> map open up.  </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Making Attractive Maps</strong> There are a number of techniques for  making the maps look more attractive, or to convey more information. Things to  try:</p>
+                <ul>
+                    <li><strong>Drag items around</strong> to match the way you think of your  network. Lines between devices "rubberband" to preserve the  interconnections.</li>
+                    <li><strong>Add a background image</strong> to position devices as you like.  Simply drag a PNG, JPEG, or GIF image into the map window to add it, or choose  <strong>Edit &gt; Map Settings...</strong></li>
+                    <li><strong>Select different icons and shapes for devices</strong> Choose  <strong>Format &gt; Icon...</strong> to pick new icons for the devices. </li>
+                    <li><strong>Change labels on devices</strong> The label is the text that appears  in/next to the icon on the map. To edit a device's label, choose <strong>Format  &gt; Label...</strong> or Ctl/Cmd-L. </li>
+                    <li><strong>Arrange devices on the map</strong> Use different options in the  <strong>Format &gt; Arrange...</strong> menu .</li>
+                    <li><strong>Align command</strong> The <strong>Format &gt; Align</strong>  (Ctl/Cmd-Shift-K) command aligns items vertically and/or horizontally. </li>
+                    <li><strong>Add a link between devices</strong> Select two devices, then  <strong>Insert &gt; Add link</strong> (Ctl/Cmd-E) </li>
+                    <li><strong>Connect multiple devices to a point</strong> Select the devices,  then choose the context menu <strong>Attach to...</strong> Lines will  rubberband, and stick to the object you next click.</li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Probes for Various Servers</strong> In addition to simply pinging  them, InterMapper can monitor dozens of different devices and display their  special characteristics. Right/control-click, or <strong>Monitor &gt; Set  Probe...</strong> to select the probe for one or multiple selected devices.  Things to try:</p>
+                <ul>
+                    <li><strong>Automatic</strong> This probe uses either Pings or SNMP queries to  monitor the device. If the device speaks SNMP, InterMapper will use the SNMP Traffic probe to query the device. If not, InterMapper will ping the device and  report if it ever goes down.</li>
+                    <li><strong>SNMP Traffic</strong> The SNMP Traffic probe monitors traffic on  routers, switches, etc. It works with nearly all network gear from different  vendors. </li>
+                    <li><strong>Network Devices</strong> There are many probes for monitoring  various other equipment, such as Cisco, Apple, APC and other UPS vendors, and  other equipment.</li>
+                    <li><strong>Servers-Standard</strong> Standards-based servers, such as mail,  web, LDAP, Radius, DNS, etc. </li>
+                    <li><strong>Servers-Proprietary</strong> Vendor-specific probes for Apple,  Barracuda, Big Brother, FileMaker, Lotus, and many others.</li>
+                    <li><strong>Miscellaneous</strong> Nagios, legacy probes, etc. along with other  bundles of probes for wireless and other gear.</li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Alerts and Notifications</strong> InterMapper can put a device into  one of five states: OK, Critical, Warning, Alarm, Down. Each time the device  goes into a new state, InterMapper can trigger a notification/alert.</p>
+                <ul>
+                    <li><strong>Create Notifiers</strong> Notifiers are like a robot that watches a  device and performs some action to send an alert when it changes state. Choose  <strong>Edit &gt; Server Settings</strong> and scroll to the Notifier List at  the bottom. Add an e-mail notifier for yourself.</li>
+                    <li><strong>Examine various notification types</strong> Mail, pager (analog  modem and SNPP), command line, trap, group, syslog. </li>
+                    <li><strong>Look at schedule</strong> Alerts will only be triggered during the  selected schedule, otherwise they are ignored. </li>
+                    <li>Finally, <strong>Attach a notifier to a device</strong> To attach a  notifier, choose <strong>Monitor &gt; Notifiers window</strong> and check the  boxes for the states that should trigger a notification.</li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Acknowledgement</strong> After alerts/notifications have been sent,  you probably want to set those problems aside so you can detect new ones.  Acknowledging a device turns its icon blue (to indicate that it has been  acknowledged). The device is still down, but its blue color shows that someone  has taken responsibility for it. Acknowledging also helps you know  <em>who's</em> working on the problem. Each time you ack a device, there's an  opportunity to enter an ack message, that is written to the Event log. This  contains the login name of the person who ack'd it.</p>
+                <ul>
+                    <li><strong>Monitor &gt; Acknowledge...</strong> (Ctl/Cmd-') This does three  things: <ol><li>It stops subsequent repeated notifications.</li><li>The text of the message is written to the Event Log file, along with the  name and IP address of the person who did it. </li><li>The icon stops blinking, and turns blue, to indicate that it's acknowledged,  and someone's working on it. </li></ol></li>
+                    <li><strong>Basic&#160;acknowledgement</strong> Only for duration of that state </li>
+                    <li><strong>Timed</strong> For the next n minutes, hours, or days </li>
+                    <li><strong>Indefinite</strong> Until cancelled </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Dependencies</strong> InterMapper will suppress notifications if it  can tell that a device is unreachable because of another failure. InterMapper  supports automatic dependencies—it follows the links from the <em>vantage  point</em> through the map to the failed device. If there's an outage on that  path, InterMapper won't send notifications for the dependent device. </p>
+                <ul>
+                    <li><strong>Automatic</strong> InterMapper follows the links from the Vantage  Point. </li>
+                    <li><strong>Set the Vantage Point</strong> - only one per map </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Charts</strong> View the history of selected variables. </p>
+                <ul>
+                    <li><strong>Open a status window for a device.</strong>
+                    </li>
+                    <li><strong>Tear off window</strong> by dragging outside. </li>
+                    <li><strong>Click an underlined value</strong> to create new chart. </li>
+                    <li><strong>Drag another underlined link</strong> to add it to an existing  chart. </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Edit &gt; Server Settings</strong> The server settings shows the  preferences for a server.</p>
+                <ul>
+                    <li><strong>Per server</strong> Use the <strong>Edit &gt; Server  Settings...</strong></li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>InterMapper RemoteAccess</strong> Allows you to have all this fun,  but from anywhere on the Internet </p>
+                <ul>
+                    <li><strong>Connects to multiple servers</strong> at remote locations </li>
+                    <li><strong>Works through firewall</strong> at client/remote site. You pick the  port. </li>
+                    <li><strong>SSL Encryption</strong> is the default. You can install your own SSL  certificate.</li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

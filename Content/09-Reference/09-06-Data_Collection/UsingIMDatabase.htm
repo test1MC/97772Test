@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="" MadCap:lastBlockDepth="6" MadCap:lastHeight="864" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Using an Existing Database</title>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">Using an Existing Database</h1>
+        <p>InterMapper makes it easy to install and run InterMapper Reports Server using the built-in PostgreSQL database. The database is installed, configured, and registered automatically. To use InterMapper Reports Server, you need only to start the server so that InterMapper reports to it.</p>
+        <p>If you prefer, you can use another instance of a PostgreSQL database, running on the same machine or on another machine. See Configuring the Database below.</p>
+        <h2>Configuring the Database</h2>
+        <p><b style="font-style: italic;">Use this section only if you want to use an existing PostgreSQL database</b>, regardless of whether it is running on the same machine as InterMapper or on a different machine. </p>
+        <p>
+            <img src="../../Resources/images/IMDChome-IMDB-noconfig.png" />
+            <br />
+        </p>
+        <p>Use the InterMapper Database section of the InterMapper DataCenter Administration Panel to configure the InterMapper Database used by the Reports Server.</p>
+        <h2>Configuring a New Installation</h2>
+        <p>When configuring a new installation, follow these steps.</p>
+        <ul>
+            <li><b>Step 1: Choose and configure database to connect to,</b> or use the default Built-in database.</li>
+            <li><b>Step 2: Register your InterMapper Server</b> with the InterMapper Reports server.</li>
+        </ul>
+        <p style="font-weight: bold;">Step 1: Database Configuration</p>
+        <ol style="list-style-type: upper-alpha;">
+            <li>Choose whether to use the Built-in database, or to connect to an existing external (PostgreSQL) database. <br /></li>
+            <li>If you choose to use the<b style="font-style: italic;"> Built-in</b> database, an <i>intermapper</i> account is created automatically  for InterMapper to use, so you can click<b style="font-style: italic;"> Continue </b>without adding any additional accounts. You have the option to create one or more user accounts when the database is installed. <br /><br />(You'll need an additional user account if you want to use pgAdmin, Perl, PHP, Crystal Reports, 
+or some other method to retrieve information from InterMapper Reports Server. If you wish, you can add them later.)<br /><br /></li>
+            <li>If you choose to use an existing database, enter a <b style="font-style: italic;">Host</b> , <b style="font-style: italic;">Port</b>, <b style="font-style: italic;">Database Name</b>, <b style="font-style: italic;">Database Username</b>, and <b style="font-style: italic;">Database Password</b> in the appropriate boxes and click <b style="font-style: italic;">Continue</b>. You are finished with Step 1.<br /><br /><b>Note:</b> The user you specify must have, at minimum, CREATE, TEMPORARY, and CONNECT privileges in order for InterMapper to log data to the database.<br /><br /></li>
+            <li>If you want to add users, click <b style="font-style: italic;">Add</b> to add a user. An unnamed user appears in the User List at left.<br /><br /></li>
+            <li>Enter a user name in the <b style="font-style: italic;">Username</b> box.</li>
+            <li>Enter a password in the <b style="font-style: italic;">Password</b> box and in the <b style="font-style: italic;">Confirm Password</b> box.</li>
+            <li>Select or clear the <b style="font-style: italic;">Write Access</b> check box to choose whether a user can make changes to tables (as through pgAdmin).</li>
+            <li>By default, users
+can access the database only from the same host as it is running on.  Select or clear the          <b style="font-style: italic;">Remote Login</b> check box to choose whether to grant a user access from any machine on the network.</li>
+            <li>To create more users, repeat steps D through H.</li>
+        </ol>
+        <p><b>Step 2: Register your InterMapper Server with the InterMapper Database server</b>
+        </p>
+        <ol style="list-style-type: upper-alpha;">
+            <li style="font-weight: normal;">If InterMapper Reports detects an InterMapper server running on the same machine, you are given the option to register that server to export data to the InterMapper Reports Server. <br /><ol><li>Click <b style="font-style: italic;">Register Server</b>. The existing server is registered with InterMapper Reports Server, and you are presented with the option of registering additional servers. </li><li>Click <b style="font-style: italic;">Instructions</b>, and follow the instructions for each InterMapper server you want to register.</li><li>Click <b style="font-style: italic;">Finish</b>. The InterMapper DataCenter home page appears, showing that the InterMapper Reports Server is running.</li></ol><br />If InterMapper Reports Server is installed on a different machine, you'll need to register your InterMapper server(s) manually.Click <b style="font-style: italic;">Register Server Manually</b>.<br /><br /></li>
+            <li style="font-weight: normal;">In InterMapper, view the Server Configuration &gt;&#160;Reports Server pane of the Server Settings panel, click <b style="font-style: italic;">Start</b>. InterMapper begins sending data to InterMapper DataCenter.<br /></li>
+        </ol>
+        <h2 class="pagebreakbefore">Changing Settings After Installation</h2>
+        <p>InterMapper DataCenter is installed automatically when you install InterMapper. Once you have configured InterMapper Database, you can change settings as needed from the InterMapper DataCenter Administration Panel.</p>
+        <p style="font-weight: bold;">To change the settings in the InterMapper Database:
+        </p>
+        <ul>
+            <li>From the InterMapper DataCenter's Home page, click <b style="font-style: italic;">Change Settings</b> in the InterMapper Database box. The InterMapper Database Settings Page appears.</li>
+        </ul>
+        <p style="font-weight: bold;">To view the InterMapper Database log:</p>
+        <ul>
+            <li>In the InterMapper Database section of the DataCenter Administration Panel, click the <b style="font-style: italic;">Log</b> tab. The InterMapper Database log page appears.</li>
+        </ul>
+    </body>
+</html>

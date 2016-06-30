@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="hs_short">HelpSystems</Variable>
+  <Variable
+    Comment=""
+    Name="hs_phone">+1 952-933-0609</Variable>
+  <Variable
+    Name="hs_address"
+    Comment=""
+    Definition="Some text">6455 City West Parkway, Eden Prairie, MN 55344</Variable>
+  <Variable
+    Name="hs_website"
+    Comment=""
+    Definition="Some text">www.helpsystems.com</Variable>
+  <Variable
+    Name="hs_long"
+    Comment="">HelpSystems, LLC</Variable>
+  <Variable
+    Name="hs_phone800"
+    Comment="">800-328-1000</Variable>
+  <Variable
+    Name="datetime"
+    Comment=""
+    Type="DateTime"
+    LastUpdated="2016-04-28T09:56:14.6439079-04:00"
+    EvaluatedDefinition="MM-dd-yyyy hh:mmtt">MM-dd-yyyy hh:mmtt</Variable>
+</CatapultVariableSet>

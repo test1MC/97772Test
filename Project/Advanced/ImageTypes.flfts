@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileTagSet
+  Comment="My set of file tags"
+  Type="ImgType">
+  <FileTag
+    Name="Dialog"
+    Comment=""
+    OriginalName="Dialog" />
+  <FileTag
+    Name="Example"
+    Comment=""
+    OriginalName="Example" />
+  <FileTag
+    Name="No Words"
+    Comment=""
+    OriginalName="No Words" />
+  <FileTag
+    Name="Icon"
+    Comment=""
+    OriginalName="Icon" />
+  <FileTag
+    Name="Menu-Words"
+    Comment=""
+    OriginalName="Menu-Words" />
+  <FileTag
+    Name="Menu-No Words"
+    Comment=""
+    OriginalName="Menu-No Words" />
+  <FileTag
+    Name="Img-w-Callouts"
+    Comment="" />
+</CatapultFileTagSet>

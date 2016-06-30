@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="877" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1 class="L2">Mapping With Layer 2</h1>
+        <p>You can use Layer 2 to create maps that accurately reflect your network's topology. There are several ways to do this - two methods are detailed here.</p>
+        <h2>Converting an Existing Map to use Layer 2</h2>
+        <p>For maps with a relatively small number of devices, you can convert the map directly so that it uses Layer 2 features to configure the map. You can also create a new map and use Layer 2 information to add the switches and devices.</p>
+        <p style="font-weight: bold;">To convert an existing map to Layer 2:<a name="existing"></a></p>
+        <ol>
+            <li>Open the map you want to convert and make it editable.</li>
+            <li>From the Map Settings window's Layer 2 Features pane, select the <b>Enable Layer 2 features for this map</b> check box.</li>
+            <li>From the Window menu, choose <b style="font-style: italic;">Device List</b>, and choose <b style="font-style: italic;">Layer 2</b> from the View menu or click the <b style="font-style: italic;">Layer 2 View</b> icon. The Layer 2 window appears, showing your available Layer 2 devices.</li>
+            <li>In the Layer 2 view, click the <b style="font-style: italic;">Refresh</b> button at the lower right corner of the window.</li>
+            <li>From the Map Settings window's Layer 2 Features pane, click <b style="font-style: italic;">Change Now</b>. Any Layer 2 connections are broken and reconnected using Layer 2 information.</li>
+            <li>Select all devices and choose <b style="font-style: italic;">Organic</b> from the Format menu's Arrange submenu. The map now uses Layer 2 information to connect the devices on the map.</li>
+        </ol>
+        <p style="font-weight: bold;">To create a new map using Layer 2 information:<a name="new"></a></p>
+        <ol>
+            <li>Create a new empty map and make it editable.</li>
+            <li>From the Window menu, choose <b style="font-style: italic;">Device List</b>, and choose <b style="font-style: italic;">Layer 2</b> from the View menu or click the <b style="font-style: italic;">Layer 2 View</b> icon. The Layer 2 window appears, showing your available Layer 2 devices.</li>
+            <li>In the Layer 2 view, click the <b style="font-style: italic;">Refresh</b> button at the lower right corner of the window.</li>
+            <li>In the Connections pane, select the lines for the switches you want to map and choose <b style="font-style: italic;">Copy</b> from the Edit menu.</li>
+            <li>Paste into your new map. In a few moments the switches appear on your map.</li>
+            <li>From the Map Settings window's Layer 2 Features pane, select the <b>Enable Layer 2 features for this map</b> check box.</li>
+            <li>Click <b style="font-style: italic;">Change Now</b>. The switches on the map are connected as defined by Layer 2 information.  This represents your network's switch backbone.</li>
+            <li>From the Layer 2 window's Endpoints pane, select all endpoints, copy them, and paste them into your map.</li>
+            <li>From the Map Settings window's Layer 2 Features pane, click <b style="font-style: italic;">Change Now</b>. The devices are connected as defined by Layer 2 information.</li>
+            <li>Although optional, you may find it helpful to select all devices and choose <b style="font-style: italic;">Organic</b> from the Format menu's Arrange submenu.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

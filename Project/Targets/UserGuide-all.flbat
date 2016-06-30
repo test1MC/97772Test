@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultBatchTarget
+  Version="1"
+  Comment="New Batch Target">
+  <Targets>
+    <Target
+      Name="pdf"
+      Type="PDF"
+      Build="true"
+      Publish="true"
+      LastBuilt="4/24/2014 10:56:14 AM"
+      LastPublished="" />
+    <Target
+      Name="splunk"
+      Type="HTML5"
+      Build="true"
+      Publish="true"
+      LastBuilt="4/24/2014 10:56:33 AM"
+      LastPublished="4/24/2014 11:03:30 AM" />
+    <Target
+      Name="webhelp"
+      Type="HTML5"
+      Build="true"
+      Publish="true"
+      LastBuilt="4/24/2014 10:58:11 AM"
+      LastPublished="4/24/2014 11:04:19 AM" />
+  </Targets>
+</CatapultBatchTarget>

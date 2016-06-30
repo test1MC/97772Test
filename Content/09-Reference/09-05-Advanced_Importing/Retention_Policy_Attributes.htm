@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1117" MadCap:lastWidth="873" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link href="../../default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="L2">Retention Policy Attributes</h1>
+        <p>The <span class="code">retentionpolicies</span> data type contains data to describe retention policies. All fields are READ-ONLY.</p>
+        <p>Use these attributes with the following table specification in line 1:</p><pre class="code">table=retentionpolicies</pre>
+        <ul style="list-style: disc;" type="disc">
+            <li>Fields marked with an asterisk (*) are required.</li>
+            <li>Fields marked with an plus(+) can be updated during import.<MadCap:keyword term="Auth" /></li>
+        </ul>
+        <table class="fieldtable">
+            <tr>
+                <th>Field Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td class="fieldname">IMID</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />IMID of the retention policy.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">RetentionPolicyID</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Identifier of the retention policy.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">Name</td>
+                <td class="fielddesc"><b>Type: </b>TEXT<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />Name of the retention policy.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">ServerStorageType</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />How long chart data is retained by the server; 0 = No data retained, -1 = data retained forever, -2 = data retained in memory only.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">RawExpiration</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />How long raw chart data is retained by the database in days; -1 = forever.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">FiveExpiration</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />How long five-minute sample data is retained by the database in days; -1 = forever.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">HourlyExpiration</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />How long hourly sample chart data is retained by the database in days; -1 = forever.<br /></td>
+            </tr>
+            <tr>
+                <td class="fieldname">DailyExpiration</td>
+                <td class="fielddesc"><b>Type: </b>INTEGER<br /><b>Access: </b>READ-ONLY<br /><b>Attributes: </b>none<br /><b>Description: </b><br />How long daily sample chart data is retained by the database in days; -1 = forever.<br /></td>
+            </tr>
+        </table>
+    </body>
+</html>

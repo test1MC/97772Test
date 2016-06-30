@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:id="chapter3\dependencies.html" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:check_list="Ran Smart Index" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="838" MadCap:lastWidth="585" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Using Vantage Points</title>
+        <link rel="StyleSheet" href="../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Using Notification Dependencies" />Using Vantage Points</h1>
+        <p>InterMapper can block or suppress notifications for devices that are "behind" 
+	or "shadowed by" another failed device. This helps you avoid receiving 
+	dozens (or hundreds) of notifications for devices that don't respond because 
+	there is a router or link down between InterMapper and that device. </p>
+        <p>When one device is dependent on another, you can use this dependency to 
+ suppress the notifications for devices that depend on the failed 
+ device.</p>
+        <p>
+            <MadCap:keyword term="Set" />
+            <MadCap:keyword term="Vantage Point:set" />There's no need to set the dependencies manually between devices on 
+ a map. Instead, InterMapper follows the links that are already part of 
+ the map.</p>
+        <p>To enable dependencies, you <a href="#setreferencepoint">set a <i>Vantage 
+ Point</i><MadCap:xref href="#setreferencepoint" target="" title="" alt="" MadCap:conditions="Primary.print" /></a><MadCap:keyword term="Set:Vantage Point" /><MadCap:keyword term="Remove:Vantage Point" /><MadCap:keyword term="Move:Vantage Point" /><MadCap:keyword term="Vantage Point" />. The Vantage Point indicates the position from which InterMapper 
+ views the network. You usually set the Vantage Point on the actual device 
+ where InterMapper is running. Once you've set the Vantage Point, InterMapper 
+ can determine which devices are dependent on which other devices.</p>
+        <p><b>Example 1: All devices are up</b>
+        </p>
+        <p>
+            <MadCap:keyword term="InterMapper icon" />The example below shows a map with several interconnected routers. The 
+ yellow star on the InterMapper icon shows that it is the map's vantage 
+ point.</p>
+        <p>
+            <img src="../Resources/images/VantagePoint-active2.png" style="border-style: none;width: 585px;height: 118px;" border="0" />
+        </p>
+        <p><b>Example 2: One device is down, shows dependent devices</b>
+        </p>
+        <p>In this example, Router2 has failed. InterMapper will send the normal 
+ notifications for Router2, but it will suppress notifications for any 
+ of the devices that depend on it. Those dependent devices' icons are dimmed 
+ on the map to show they're being shadowed by the failure.</p>
+        <p>
+            <img src="../Resources/images/VantagePoint-down.png" style="border-style: none;width: 585px;height: 119px;" border="0" />
+        </p>
+        <h2><a name="setreferencepoint"></a>Setting a Vantage Point</h2>
+        <p class="floatright">
+            <img src="../Resources/images/vantagepoint.png" style="border-style: none;border-style: none;" border="0" />
+            <br />
+            <br /><i style="font-style: italic;">A Vantage Point.<br />Notice the star <br />on the item.</i>
+        </p>
+        <p><b style="font-weight: bold;">To set a map's Vantage Point:</b>
+        </p>
+        <ol>
+            <li>Make the map editable.</li>
+            <li>Select the device or network you want to use as the 
+ Vantage Point.</li>
+            <li>
+                <MadCap:keyword term="Monitor menu" />
+                <MadCap:keyword term="Set Vantage Point" />From the Monitor menu's Set Info submenu, choose <b><i>Set Vantage Point </i></b>. 
+ </li>
+        </ol>
+        <p>&#160;&#160;&#160;&#160;&#160;or</p>
+        <ul>
+            <li>When the map is editable, right-click (or Ctrl-click) a device or network, then choose <b><i>Set 
+Vantage Point </i></b> from the context menu's Set Info submenu.</li>
+        </ul>
+        <p>A small star appears next to the item, as shown here. </p>
+        <h2>
+            <MadCap:keyword term="Vantage Point:Removing" />Moving and Removing a Vantage Point</h2>
+        <p>
+            <MadCap:keyword term="Remove" />
+            <MadCap:keyword term="Move" />
+            <MadCap:keyword term="Vantage Point:move" />You may remove a Vantage Point or move it to a new item. </p>
+        <p><b style="font-weight: bold;">To move a Vantage Point to a new item:</b>
+        </p>
+        <ul>
+            <li>Set the Vantage Point to the new item as described 
+ above.</li>
+        </ul>
+        <p><b style="font-weight: bold;">To remove a Vantage Point:</b>
+        </p>
+        <ol>
+            <li>Select the item to which the Vantage Point is currently 
+ assigned.</li>
+            <li>From the Monitor menu's Set Info submenu, choose <b><i>Remove Vantage 
+ Point</i></b>. </li>
+        </ol>
+        <p>&#160;&#160;&#160;&#160;&#160;or</p>
+        <ul>
+            <li>Control-click the item to which the Vantage Point 
+ is currently assigned, then choose <b><i><MadCap:keyword term="Remove Vantage Point" />Remove Vantage Point</i></b> 
+ from the dropdown menu's Set Info submenu.</li>
+        </ul>
+        <p>A star next to the item disappears, and no Vantage Point is set. Notifications 
+ are sent for all map items.</p>
+        <h2>How Vantage Points Work</h2>
+        <p>When a device goes down (when no response has been received from it),dependencies are used to determine whether to suppress the 
+ notification. </p>
+        <p>Starting at the Vantage Point, InterMapper follows the links 
+ toward the device in question. If the only path to that device passes through a device, a link, or an interface 
+ that's already down, InterMapper knows that the device is shadowed, dims 
+ its icon, and suppresses the notifications. </p>
+        <p>If there is no failure along the path, or if there is no path at all 
+ (functional or not) to the device, InterMapper allows the notification 
+ to go through.</p>
+        <p>Even though a device is shadowed (and its notifications are suppressed), 
+ InterMapper continually probes the device to show its status.</p>
+        <h2>One Vantage Point Per Map</h2>
+        <p>You can define only one Vantage Point per map.  Even if a map does not show the machine on which the server is running, you can use the Vantage Point to indicate the communication path from the InterMapper server to the devices on the map. </p>
+        <p>This allows InterMapper to know which devices are inaccessible if a switch or router goes down.</p>
+        <h2>Managing Notifications for Dependent Devices</h2>
+        <p>If a device fails but has not yet been polled, it is possible for notifications for dependent devices to be sent even though the failed device is responsible for the failure. This can result in a number of unnecessary and inaccurate alerts being sent.</p>
+        <p>In this situation, configure the notifiers for the dependent devices to have a delay that is longer than a single polling cycle of the device on which they depend. In this setup, the dependent devices do not send an alert if the device on which they depend goes down. An alert is sent only for the failed device.</p>
+    </body>
+</html>

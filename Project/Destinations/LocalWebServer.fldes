@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultDestination
+  Version="1"
+  Comment="Publish to local web server."
+  Host=""
+  User="MyAccountId"
+  Password=""
+  Directory="P:\PHP Projects\Dartware\FlareOutput\UserGuide"
+  Port=""
+  ViewUrl="http://www.madcapsoftware.com/"
+  Type="file"></CatapultDestination>

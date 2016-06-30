@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:id="Command-line_example" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="860" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head><title>Command-line example</title>
+        <link rel="StyleSheet" href="../../default.css" />
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Notification_dt Valid;Server Probes - Proprietary;Edit Message;Adding" />
+            <MadCap:keyword term="Command">
+            </MadCap:keyword>
+            <MadCap:keyword term="Command Line" />
+            <MadCap:keyword term="Command Line:Command Line Program" />
+            <MadCap:keyword term="Example Notification" />Example Notification from a Command Line Program</h1>
+        <p>
+            <MadCap:keyword term="Enter:iPing" />
+            <MadCap:keyword term="IPing" /> An interesting tool for notifications that we've found is iPing (<a href="http://www.iping.com/">http://www.iping.com/</a><MadCap:keyword term="Email" /><MadCap:keyword term="Email:making" /><MadCap:keyword term="Ping.&lt;yourAccountName&gt;@iping.com" />). 
+ This tool gives you several ways of generating by computer a notification that 
+ iPing will read to the recipient over the phone. You can use this tool in any 
+ version of InterMapper by making an email notifier where the email address is 
+ ping.&lt;yourAccountName&gt;@iping.com. 
+</p>
+        <p>
+            <MadCap:keyword term="URL" />
+            <MadCap:keyword term="Putnotification" />
+            <MadCap:keyword term="Implementing:iPing Notifier" />
+            <MadCap:keyword term="API" />
+            <MadCap:keyword term="IPing Notifier" /> However, iPing also has an API, one method of which allows more control over 
+ how the notification is carried out. This method, putnotification, is invoked 
+ via http. With a command-line tool like "curl" and InterMapper's command-line 
+ notifiers, you can create a powerful and tailored iPing notifier for InterMapper. 
+</p>
+        <h2>
+            <MadCap:keyword term="Implementing" />
+            <MadCap:keyword term="IPing Notifier:Implementing" />Implementing an iPing Notifier</h2>
+        <p>
+            <MadCap:keyword term="Windows" />
+            <MadCap:keyword term="Unix" /> The curl utility is already available on many Unix systems. If it is not available 
+ on yours, or if you are using Windows, you can find out more about it and download 
+ a copy from <a href="http://curl.haxx.se/">http://curl.haxx.se/</a><MadCap:keyword term="Putnotification API" />. You can 
+ find out more about the putnotification API method for iPing from         <a href="http://www.iping.com/ipingv2/PutNotification.aspx">http://www.iping.com/ipingv2/PutNotification.aspx</a>. 
+ The rest of this command-line notifier tutorial assumes that curl is installed 
+ and that you have an iPing account. 
+  </p>
+        <p>
+            <MadCap:keyword term="InterMapper Settings" />
+            <MadCap:keyword term="InterMapper Settings:subdirectory" />
+            <MadCap:keyword term="Subdirectory" />
+            <MadCap:keyword term="Subdirectory:InterMapper Settings" />
+            <MadCap:keyword term="Tools" /> First, make sure that curl or an alias or soft link to it is in the Tools 
+ directory on the InterMapper server. The Tools directory is a subdirectory 
+ of the InterMapper Settings directory. If you do not have a Tools directory, 
+ you will need to create one. For security reasons, only executables in this 
+ directory may be executed as notifiers. 
+  </p>
+        <p>
+            <MadCap:keyword term="InterMapper RemoteAccess" />
+            <MadCap:keyword term="Server Settings dialog" /> Open the Server Settings dialog 
+ box and click on the <b><MadCap:keyword term="Notifier List" />Notifier List</b> entry. Click on the         <b>Add...</b> 
+  button and choose a type of         <b>Command Line</b>. Give it a name. 
+</p>
+        <p>
+            <MadCap:keyword term="Enter" />
+            <MadCap:keyword term="MESSAGE" /> In the "Command" field, enter the iPing notification command you want to use. 
+ A simple example to send a message to a phone number immediately would be: 
+</p><pre class="code">
+curl <br />"https://www.iping.com/services/iping.asp?method_name=putnotification
+&amp;user_name=testdriver
+&amp;password=12345
+&amp;phone_number=8448675309
+&amp;notification_dt=now
+&amp;msg_text_body=${ESCAPED_MESSAGE}"</pre>
+        <p><![CDATA[
+]]><b>Note:</b> All the text above should be on a single line, with no blank spaces in the URL.
+</p>
+        <p>The parameters to the iPing message are:</p>
+        <ul>
+            <li><b>method_name</b> must be "putnotification"
+</li>
+            <li><b>user_name</b> the name of your iPing account
+</li>
+            <li><b>password</b> the password of your iPing account
+</li>
+            <li><b>phone_number</b> the phone number to dial
+</li>
+            <li><b>notification_dt</b>
+                <MadCap:keyword term="Date/time" /> Valid notification date/time (see the iPing documentation) or "now"
+</li>
+            <li><b>msg_text_body</b> The text of the message to be spoken.
+</li>
+        </ul>
+        <p><b>Note 1:</b> The msg_text_body must be in a form suitable for inclusion in a URL. In particular, the text should not contain spaces, ampersands (&amp;), question marks (?) or a number of other characters. InterMapper provides two macros that make it easy to enter the text:</p>
+        <ul>
+            <li><b><MadCap:keyword term="URLESCAPE" />${URLESCAPE: xxxxx}</b> This macro returns a string that contains the text ("xxxxx") with all the URL special characters escaped properly. 
+</li>
+            <li><b>${ESCAPED_MESSAGE}</b>
+                <MadCap:keyword term="URL:performs" /> This macro is a special case facility that performs the URL escaping function on the notifier's ${MESSAGE} string, as entered by the user. Click the "Edit 
+Message" button to modify the default message. The default message is 
+fairly short, as is appropriate for command-line notifications. 
+</li>
+        </ul>
+        <p><b>Note 2:</b> The        <i>curl</i> command generally exits with a code of zero. This avoids InterMapper log messages warning of unsuccessful notifications.
+
+
+</p>
+    </body>
+</html>

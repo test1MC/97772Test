@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Primary.online,Primary.print" MadCap:check_list="Ran Smart Index" MadCap:timeEstimate="0" MadCap:priority="0" MadCap:status="In Progress" MadCap:lastBlockDepth="4" MadCap:lastHeight="856" MadCap:lastWidth="576" MadCap:fileTags="status_tags.No Changes">
+    <head>
+        <link rel="StyleSheet" href="../../default.css" /><title>Notification using SNPP</title>
+    </head>
+    <body>
+        <h1 class="L2">
+            <MadCap:keyword term="Showing" />
+            <MadCap:keyword term="Send">
+            </MadCap:keyword>
+            <MadCap:keyword term="Send:Page Using SNPP" />
+            <MadCap:keyword term="Configuring" />
+            <MadCap:keyword term="Configuring:Page Notifier" />
+            <MadCap:keyword term="SNPP" />
+            <MadCap:keyword term="Page Using SNPP" />
+            <MadCap:keyword term="Page Notifier" />
+            <MadCap:keyword term="Page Notifier:Configuring" />Configuring a Page Notifier to Send a Page Using SNPP (Network)</h1>
+        <p>Use InterMapper's Simple Network Paging Protocol (SNPP) feature to send pages 
+ over a network. Using this protocol, pages can be sent quickly and reliably, 
+ without the use of an analogue modem or a separate telephone line.</p>
+        <p>
+            <img src="../../Resources/Images/window-ConfigNotifier-SNPP.png" style="width: 559px;height: 324px;" />
+            <img src="../../Resources/images/blank.gif" height="1" width="1" hspace="10" border="0" />
+        </p>
+        <p><b>To configure:</b>
+        </p>
+        <ol>
+            <li><a href="../Working_With_Notifiers.htm#createnotifier">Create a new notifier<MadCap:xref href="../Working_With_Notifiers.htm#createnotifier" target="" title="" alt="" MadCap:conditions="Primary.print" /></a>. </li>
+            <li>From the <b><i><MadCap:keyword term="Notifier Type" />Notifier Type</i></b> dropdown menu, select       <i>Alpha-numeric 
+ Pager (Network)</i><MadCap:keyword term="Showing:Configure Notifier window" /><MadCap:keyword term="Configure Notifier:Configure Notifier window" /><MadCap:keyword term="Alpha-numeric Pager" /><MadCap:keyword term="Alpha-numeric Pager:Configure Notifier window" />. The example below shows the Configure Notifier window with 
+ the Alpha-numeric Pager (Network) type.</li>
+            <li>In the <b><i><MadCap:keyword term="Enter:ID" /><MadCap:keyword term="Id" /><MadCap:keyword term="Pager ID" />Pager ID</i></b><MadCap:keyword term="IP:Enter" /><MadCap:keyword term="Enter" /> box, enter the ID of the pager you wish to 
+ call.</li>
+            <li>In the <b><i><MadCap:keyword term="Name:SNPP Server" /><MadCap:keyword term="SNPP Server" />SNPP Server</i></b><MadCap:keyword term="IP" /><MadCap:keyword term="Enter:IP" /><MadCap:keyword term="Name" /> box, enter the IP address or domain name 
+ of the SNPP Server.<br /></li>
+            <li>
+                <MadCap:keyword term="SNPP Port" />
+                <MadCap:keyword term="WAN" />If you want to use a port other than the default SNPP port, enter it in 
+ the <b><i>SNPP Port</i></b> box.<br /><br />Contact your pager provider for IP address, domain name, and SNPP port information. 
+  </li>
+            <li>Click <b><i><MadCap:keyword term="Edit Message" />Edit Message...</i></b> to edit the message that is sent to 
+ the pager.</li>
+            <li>In the <i><b><MadCap:keyword term="Notifier Schedule" />Notifier Schedule</b></i> panel, choose the hours during which 
+ the page will be sent.</li>
+            <li>When finished, click <b><i><MadCap:keyword term="OK" />OK</i></b>.</li>
+        </ol>
+        <p><b>Note:</b>
+            <MadCap:keyword term="Internet" />
+            <MadCap:keyword term="SNPP-based" /> InterMapper may not be able to reach
+your SNPP-based paging service via the Internet if your WAN
+circuits or routers are down. Be sure that you have a backup
+notification mechanism for failures to critical services. See the workaround in <a href="AlertViaCellPhone.htm#workaround">Alerts Via Cell Phone<MadCap:xref href="AlertViaCellPhone.htm#workaround" target="" title="" alt="" MadCap:conditions="Primary.print" /></a> for a possible approach.</p>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="683" MadCap:lastWidth="648" MadCap:fileTags="status_tags.No Changes">
+    <head>
+    </head>
+    <body>
+        <h1>Purging Chart Data</h1>
+        <p>Use a command line to purge the data stored with charts. You can purge all chart data, or you can specify a number of days of data you want to retain.</p>
+        <p><b>Note:</b> before running the purge command, HelpSystems recommends that you back up the InterMapper Settings folder (especially the Chart Data folder.)</p>
+        <p>To purge chart data:</p>
+        <ol>
+            <li>Stop the InterMapper server.</li>
+            <li>Execute the purge command.</li>
+            <li>Start the InterMapper server.</li>
+        </ol>
+        <p>Stopping and starting the InterMapper Server varies depending on your platform.</p>
+        <h2>Purge Command Syntax</h2>
+        <p>For Mac, Unix, and Linux, the command includes the location of the InterMapper daemon configuration file. Here's the syntax those platforms:</p><pre class="code">/usr/local/bin/intermapperd -f /usr/local/etc/intermapperd.conf --chart-purge [# of days]</pre>
+        <p>For Windows, here is the syntax:</p><pre class="code" xml:space="preserve">"C:\Program Files\InterMapper\InterMapper.exe" --chart-purge [# of days]</pre>
+        <p><b>#of days</b> specifies the number of days of chart data to retain, while purging the rest.</p>
+        <h2>Purging all Chart Data</h2>
+        <p>To purge all chart data, use a <b># of days</b> value of 0.</p>
+        <h2>Purge Notes</h2>
+        <ul>
+            <li><b>Server must not be running</b> - The InterMapper Server must not be running when you executed the command.</li>
+            <li><b>Enabled maps only</b> - Only charts from devices on enabled maps are purged.</li>
+            <li><b>Administratrative rights and write-access</b> - You must have administrative rights, and write-access to the InterMapper Settings folder.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>
