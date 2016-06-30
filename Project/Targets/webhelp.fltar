@@ -10,7 +10,6 @@
   AliasFile="/Project/Advanced/IMalias.flali"
   ConditionTagExpression="include[Primary.CurrentInfo or Primary.online] exclude[Primary.NewInfo or Primary.Omit or Primary.print or Primary.review or Primary.test] "
   MasterPage="/Content/Resources/MasterPages/TopicMaster.flmsp"
-  OutputFolder="P:\Doc Projects\HelpSystems\Flare-InterMapper\InterMapperDocs\InterMapperUserGuide"
   DisableAutoSync="false"
   conditions="Primary.online"
   InsertMOTW="true"
