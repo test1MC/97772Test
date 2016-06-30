@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CatapultProject Version="1" MasterToc="/Project/TOCs/Primary.fltoc" MasterStylesheet="/Content/default.css" MasterPageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl" SourceControlBound="false">
+<CatapultProject Version="1" MasterToc="/Project/TOCs/Primary.fltoc" MasterStylesheet="/Content/default.css" MasterPageLayout="/Content/Resources/PageLayouts/HSChapter.flpgl" SourceControlBound="true" SourceControlDatabase="C:\Users\jlourash\Documents\My Projects\97772\.git" SourceControlProviderType="Git" ProjectGuid="3cce6cd8-7f16-4b94-b6f9-dcc36c4e6ad7" SourceControlDatabaseRoot="C:\Users\jlourash\Documents\My Projects\97772">
     <Synchronize>
         <Mapping ProjectPath="Project/VariableSets/hsvariables.flvar" ExternalPath="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal/Project/VariableSets/hsvariables.flvar" />
         <Mapping ProjectPath="Content/Resources/MasterPages/PrintDoc.flmsp" ExternalPath="file:///P:/Doc Projects/HelpSystems/Flare-InterMapper/InterMapperDocs/FlareGlobal/Content/Resources/MasterPages/PrintDoc.flmsp" />
